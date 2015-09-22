@@ -18,8 +18,11 @@ addons:
 
 install:
   - pip install Nikola[extras]
+  - nikola plugin -i import_feed
 
-script: nikola build
+script:
+  - <feeds.list xargs -I % nikola import_feed --url=% -o .
+  - nikola build
 
 after_success:
   - chmod 755 ./.push_gh_pages.sh

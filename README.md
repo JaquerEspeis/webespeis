@@ -9,7 +9,7 @@ Para instalar todos los requerimientos para obtener y construir el sitio web:
     sudo apt-get install git python3-virtualenv python3-pip python3-dev \
     libxml2-dev libxslt1-dev
 
-(Probado solo en Ubuntu 15.04)
+(Probado en Ubuntu 15.10)
 
 ## Código fuente
 
@@ -26,6 +26,10 @@ mejor forma para instalar Nikola es usar pip en un virtualenv:
     source .env/bin/activate
     pip install --upgrade "Nikola[extras]"
 
+## Instalar complementos de Nikola
+
+    nikola plugin -i import_feed
+
 ## Publicar
 
 Para escribir una nueva entrada en el blog:
@@ -36,6 +40,15 @@ Para escribir una nueva entrada en el blog:
 Ingrese el título de la nueva entrada. Nikola generará dos archivos con ese
 título como nombre, uno para los metadatos y el otro para el texto de la
 entrada. Abra los archivos y llénelos.
+
+## Importar posts desde canales de redifusión
+
+Para agregar una fuente de redifusión, agregue la dirección del canal RSS o
+Atom al archivo `feeds.list`.
+
+Para importar las entradas de todas las fuentes:
+
+    <feeds.list xargs -I % nikola import_feed --url=% -o .
 
 ## Construir
 
