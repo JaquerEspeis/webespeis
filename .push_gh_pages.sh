@@ -5,6 +5,9 @@ GH_REPO="@github.com/jaquerespeis/webespeis.git"
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
 cd output
+
+echo jaquerespeis.org > CNAME
+
 git init
 git config user.name "jaquerespeis-travis"
 git config user.email "travis"
