@@ -26,4 +26,4 @@ script:
 
 after_success:
   - chmod 755 ./.push_gh_pages.sh
-  - ./.push_gh_pages.sh
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && ./.push_gh_pages.sh
