@@ -52,6 +52,10 @@ El primer comando crea el virtualenv dentro del directorio del repositorio.
 Solo es necesario hacerlo una vez. Para proponer cambios las veces siguientes
 solo active el .env con el segundo comando.
 
+## Instalar complementos de Nikola
+
+    nikola plugin -i import_feed
+
 ## Crear una nueva rama
 
 La rama `master` tiene el contenido que se publica en el sitio web. Las ramas
@@ -95,6 +99,15 @@ archivo con la entrada sería algo como:
     # Este es un título
 
     Más texto...
+
+## Importar posts desde canales de redifusión
+
+Para agregar una fuente de redifusión, agregue la dirección del canal RSS o
+Atom al archivo `feeds.list`.
+
+Para importar las entradas de todas las fuentes:
+
+    <feeds.list xargs -I % nikola import_feed --url=% -o .
 
 ## Construir
 
