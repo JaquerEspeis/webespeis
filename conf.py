@@ -81,9 +81,11 @@ DEFAULT_LANG = "es"
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
-    DEFAULT_LANG: "",
+    DEFAULT_LANG: "es_CR",
     # Example for another language:
     # "es": "./es",
+    "es": "./",
+    "en": "./en",
 }
 
 # What will translated input files be named like?
@@ -175,6 +177,9 @@ TIMEZONE = "America/Costa_Rica"
 # LOCALE_FALLBACK = locale to use when an explicit locale is unavailable
 # LOCALE_DEFAULT = locale to use for languages not mentioned in LOCALES; if
 # not set the default Nikola mapping is used.
+LOCALES = {
+    "es": "es_CR.utf-8",
+}
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 #

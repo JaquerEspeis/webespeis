@@ -1,5 +1,8 @@
 language: python
 
+sudo: required
+dist: trusty
+
 python: "3.5"
 
 env:
@@ -15,9 +18,10 @@ addons:
     packages:
       - libxml2-dev
       - libxslt1-dev
+      - language-pack-es
 
 install:
-  - pip install Nikola[extras]
+  - pip3 install --upgrade "Nikola[extras]"
   - nikola plugin -i import_feed
 
 script:
