@@ -5,10 +5,6 @@ dist: trusty
 
 python: "3.5"
 
-env:
-  global:
-    - secure: "DZ534GxRsFoAyP2KXiA0RTybfXBIQopshiNX7v2szu6gCKCA8DG2OR8ibsNnBlC10t4hwrM1AWwQjILaTLOcqOJ7nR259BcGxd/WxlttSENe/eQXyOTD6r9/2oTjV5FFp/LxIWj8v/4oZUqbb3FPngOwBk/lz2QgR8piAXnRox62FOh1CaaTlsf4pOz3MsKmvIhCoJ9IRaSpyQesGptJHuREakr3XSK0eKvKud0sV2XGG4U65r8fajtQSnjt81lmpksNcVVj8rIdldlNhqqx/8lCxBWM0L0a5Rjf6g+Vlu3nHtNCLlz41TWYfzZ+zIxg46Xl0iE0isRyeVYl7QtAmlLvDZe8vOkPPBi/5GrB9JZfKEPKwCfbfxF71xS6RaoIaZsLz9LWcBy5O6megRw/tSYc1p8ykq8Z9h216YOXonIPqj7tOZQEdT/DmBHI0/Hq4j/9TEYIAu78pcx9m8vWBJ6YO418K3N/5coReb+K/TYpxytSPyOtwsDjZFkD5X/oHFr0OOlu9s9wZv1etSEFV77YilDCOrPnaLgQvHr+KW7XmX0L1Jswg0MATD4wz2fKQeq3daWYTCr9ya2Klly4eElLSpzMHfsFTpgnZodEE/dnIeZXLHf6+c0HttWhxBDaEVsoeUc9pTKnKQLLBBYnRkNOKHaa8gOV6rzX2u1g4vY="
-
 cache:
   directories:
     - $HOME/.cache/pip
