@@ -6,8 +6,6 @@
 .. description:
 .. type: text
 
-# “Mapillaryando” en cantinas de San José
-
 -- por Marcia Ugarte y Joaquín Lizano
 
 Un sábado por la tarde resultó ser el momento perfecto para que un grupo de personas se juntara en San José para iniciar la labor de contribuir al mapeo libre esta vez de cantinas del centro de la capital. Cantina en Costa Rica hace referencia a un bar popular, que posiblemente tenga sus añitos, sin aires snobs y que tiene alcohol y comida a buen precio, o solo alcohol.
