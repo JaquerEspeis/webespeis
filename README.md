@@ -32,7 +32,7 @@ primera vez:
     git clone https://github.com/jaquerespeis/webespeis.git
     cd webespeis
 
-Si ya había descargado el código antes, entre al directorio del proyecto y
+Sí ya había descargado el código antes, entre al directorio del proyecto y
 sincronice la rama `master`:
 
     cd ~/workspace/webespeis
