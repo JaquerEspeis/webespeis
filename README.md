@@ -48,7 +48,7 @@ mejor forma para instalar Nikola es usar pip en un virtualenv:
     pip install --upgrade "Nikola[extras]"
 
 El primer comando crea el virtualenv dentro del directorio del repositorio.
-Solo es necesario hacerlo una vez. Para proponer cambios las veces siguientes
+Sólo es necesario hacerlo una vez. Para proponer cambios las veces siguientes
 solo active el .env con el segundo comando.
 
 ## Instalar complementos de Nikola
