@@ -12,8 +12,7 @@ hacer una solicitud de pull. Abajo se describe cada paso.
 ## Formar parte del jaquerespeis
 
 Si no forma parte de la organización del JáquerEspeis en github, solicite el
-acceso a [alguno o alguna de los miembros]
-(https://github.com/orgs/JaquerEspeis/people).
+acceso a [alguno o alguna de los miembros](https://github.com/orgs/JaquerEspeis/people).
 
 ## Dependencias
 
