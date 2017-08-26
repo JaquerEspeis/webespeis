@@ -155,8 +155,7 @@ Para solicitar el pull debe ir a la página de github del proyecto, seleccionar
 la rama que subió en el paso anterior, comparar las ramas y hacer clic en
 `Create pull request`.
 
-Las instrucciones están en la [ayuda de github]
-(https://help.github.com/articles/creating-a-pull-request/).
+Las instrucciones están en la [ayuda de github](https://help.github.com/articles/creating-a-pull-request/).
 
 Luego de esto, los y las demás miembros del proyecto serán notificados de que
 hay una revisión pendiente.
