@@ -4,7 +4,7 @@ Sitio web del JáquerEspeis de Costa Rica.
 
 Para agregar contenido al sitio es necesario formar parte de la organización
 del JáquerEspeis en github, instalar las dependencias, obtener el repositorio,
-instalar nikola, crear un nueva rama, escribir la entrada, subir la rama y
+instalar nikola, crear una nueva rama, escribir la entrada, subir la rama y
 hacer una solicitud de pull. Abajo se describe cada paso.
 
 (Probado solo en Ubuntu 15.04 y 15.10)
