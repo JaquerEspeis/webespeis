@@ -1,0 +1,85 @@
+<html><body><div><h2>Instalación</h2>
+<p>La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.</p>
+<p>En el directorio del repositorio del sitio</p>
+<pre class="code literal-block"><span></span>virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+</pre>
+
+
+<h3>Primeros usos</h3>
+<p>En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando <code>nikola init --demo .</code>, luego se debe de construir el sitio con el comando <code>nikola build</code>.</p>
+<p>El siguiente paso es ver el sitio, para lo que va a utilizar el comando <code>nikola serve -b</code>, pero es mucho mas fácil utilizar <code>nikola auto -b</code> para reconstrucciones automáticas.</p>
+<h2>Utilizar markdown</h2>
+<p>Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.</p>
+<p>Primero se debe de verificar que este en la estructura <strong>COMPILERS</strong></p>
+<pre class="code literal-block"><span></span># 'rest' is reStructuredText
+# 'markdown' is MarkDown
+# 'html' assumes the file is HTML and just copies it
+COMPILERS = {
+    "rest": ('.rst', '.txt'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    "textile": ('.textile',),
+    "txt2tags": ('.t2t',),
+    "bbcode": ('.bb',),
+    #"wiki": ('.wiki',),
+    "ipynb": ('.ipynb',),
+    "html": ('.html', '.htm'),
+    # PHP files are rendered the usual way (i.e. with the full templates).
+    # The resulting files have .php extensions, making it possible to run
+    # them without reconfiguring your server to recognize them.
+    "php": ('.php',),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
+}
+</pre>
+
+
+<p>Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, <code>("posts/*.md", "posts", "post.tmpl")</code> a los dos tipos de entras <strong>POST</strong> y <strong>PAGES</strong>.</p>
+<pre class="code literal-block"><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"stories/*.rst"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.md"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+</pre>
+
+
+<h2>Utilizar locales para Costa Rica</h2>
+<p>Este proceso debería funcionar para la mayoría de idiomas.</p>
+<ol>
+<li>Generar el locale necesario con `locale-get <locale></locale></li>
+<li>Definir cual es el locale que debe de utilizar Nikola por defecto.</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="c1"># What is the default language?</span>
+<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s2">"es"</span>
+
+<span class="c1"># What other languages do you have?</span>
+<span class="c1"># The format is {"translationcode" : "path/to/translation" }</span>
+<span class="c1"># the path will be used as a prefix for the generated pages location</span>
+<span class="n">TRANSLATIONS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="s2">"es_CR"</span><span class="p">,</span>
+    <span class="c1"># Example for another language:</span>
+    <span class="c1"># "es": "./es",</span>
+    <span class="s2">"es"</span><span class="p">:</span> <span class="s2">"./"</span><span class="p">,</span>
+    <span class="s2">"en"</span><span class="p">:</span> <span class="s2">"./en"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre>
+
+
+<ol>
+<li>Definir el locale que se va a utilizar para <code>es</code>, por defecto es <code>es_ES</code>.</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="n">LOCALES</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"es"</span><span class="p">:</span><span class="s2">"es_CR.utf-8"</span><span class="p">,</span>
+        <span class="p">}</span>
+</pre>
+
+
+<p>El locale a utilizar puede ser probado, importando locale <code>import locale</code> y llamando al locale necesario <code>locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')</code></p></div></body></html>

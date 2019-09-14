@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deploy to all SBCs with Gobot and a single snap package | JáquerEspeis</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="canonical" href="http://jaquerespeis.org/posts/esbloggobot-snaps/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="JáquerEspeis">
+<link rel="prev" href="../esblogtravis-snap-testing/" title="User acceptance testing of snaps, with Travis" type="text/html">
+<link rel="next" href="../esblogerrbot-snap/" title="An errbot snap for simplified chatops" type="text/html">
+<meta property="og:site_name" content="JáquerEspeis">
+<meta property="og:title" content="Deploy to all SBCs with Gobot and a single snap package">
+<meta property="og:url" content="http://jaquerespeis.org/posts/esbloggobot-snaps/">
+<meta property="og:description" content="I love playing with my prototyping boards. Here at Ubuntu we are designing
+the core operating system
+to support every single-board computer,
+and keep it safe, updated and simple. I've learned a lot ab">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-07-11T14:07:00-06:00">
+<link rel="alternate" hreflang="en" href="../../en/posts/esbloggobot-snaps/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://jaquerespeis.org/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://jaquerespeis.org/">
+
+            <span id="blog-title">JáquerEspeis</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://jaquerespeis.org/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="index.src.html" id="sourcelink" class="nav-link">Código fuente</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../stories/calendario" class="nav-link">Calendario</a>
+                </li>
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Categorías</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Deploy to all SBCs with Gobot and a single snap package</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    JáquerEspeis
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2017-07-11T14:07:00-06:00" itemprop="datePublished" title="2017-07-11 14:07">2017-07-11 14:07</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.src.html" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>I love playing with my prototyping boards. Here at Ubuntu we are designing
+the <a href="https://developer.ubuntu.com/core/get-started">core operating system</a>
+to support every <a href="https://en.wikipedia.org/wiki/Single-board_computer">single-board computer</a>,
+and keep it safe, updated and simple. I've learned a lot about physical
+computing, but I always have a big problem when my prototype is done, and I
+want to deploy it. I am working with a
+<a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Raspberry Pi</a>, a
+<a href="http://www.96boards.org/product/dragonboard410c/">DragonBoard</a>, and a
+<a href="https://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black">BeagleBone</a>. They
+are all very different, with different architectures, different pins, onboard
+capabilities and peripherals, and they can have different operating systems.
+When I started learning about this, I had to write 3 programs that were very
+different, if I wanted to try my prototype in all my boards.</p>
+<p><a href="https://archive.org/download/snappy-gobot/20170710_174806.jpg"><img alt="picture of the three different SBCs" src="https://archive.org/download/snappy-gobot/20170710_174806.jpg"></a></p>
+<p>Then I found <a href="https://gobot.io/">Gobot</a>, a framework for robotics and IoT that
+supports my three boards, and many more. With the added benefit that you can
+write all the software in the lovely and clean Go language. The Ubuntu store
+supports all their architectures too, and
+<a href="https://www.youtube.com/watch?v=b2x6mumSrpw">packaging Go projects with snapcraft</a>
+is super simple. So we can combine all of this to make a single snap package
+that with the help of Gobot will work on every board, and deploy it to all the
+users of these boards through the snaps store.</p>
+<p>Let's dig into the code with a very simple example to blink an LED, first
+for the Raspberry PI only.</p>
+<pre class="code literal-block"><span></span><span class="n">package</span> <span class="n">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+  <span class="s2">"time"</span>
+
+  <span class="s2">"gobot.io/x/gobot"</span>
+  <span class="s2">"gobot.io/x/gobot/drivers/gpio"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/raspi"</span>
+<span class="p">)</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">adaptor</span> <span class="p">:</span><span class="o">=</span> <span class="n">raspi</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+  <span class="n">led</span> <span class="p">:</span><span class="o">=</span> <span class="n">gpio</span><span class="o">.</span><span class="n">NewLedDriver</span><span class="p">(</span><span class="n">adaptor</span><span class="p">,</span> <span class="s2">"7"</span><span class="p">)</span>
+
+  <span class="n">work</span> <span class="p">:</span><span class="o">=</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">gobot</span><span class="o">.</span><span class="n">Every</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">time</span><span class="o">.</span><span class="n">Second</span><span class="p">,</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">led</span><span class="o">.</span><span class="n">Toggle</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="n">robot</span> <span class="p">:</span><span class="o">=</span> <span class="n">gobot</span><span class="o">.</span><span class="n">NewRobot</span><span class="p">(</span><span class="s2">"snapbot"</span><span class="p">,</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Connection</span><span class="p">{</span><span class="n">adaptor</span><span class="p">},</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Device</span><span class="p">{</span><span class="n">led</span><span class="p">},</span>
+    <span class="n">work</span><span class="p">,</span>
+  <span class="p">)</span>
+
+  <span class="n">robot</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+<span class="p">}</span>
+</pre>
+
+
+<p>In there you will see some of the Gobot concepts. There's an adaptor for the
+board, a driver for the specific device (in this case the LED), and a robot
+to control everything. In this program, there are only two things specific to
+the Raspberry Pi: the adaptor and the name of the GPIO pin (<code>"7"</code>).</p>
+<p><a href="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_214428.ogv"><img alt="picture of the Raspberry Pi prototype" src="https://ia601502.us.archive.org/32/items/snappy-gobot/20170710_214439.jpg"></a></p>
+<p>It works nicely in one of the boards, but let's extend the code a little to
+support the other two.</p>
+<pre class="code literal-block"><span></span><span class="n">package</span> <span class="n">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+  <span class="s2">"log"</span>
+  <span class="s2">"os/exec"</span>
+  <span class="s2">"strings"</span>
+  <span class="s2">"time"</span>
+
+  <span class="s2">"gobot.io/x/gobot"</span>
+  <span class="s2">"gobot.io/x/gobot/drivers/gpio"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/beaglebone"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/dragonboard"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/raspi"</span>
+<span class="p">)</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="k">exec</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span><span class="s2">"uname"</span><span class="p">,</span> <span class="s2">"-r"</span><span class="p">)</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="n">var</span> <span class="n">adaptor</span> <span class="n">gobot</span><span class="o">.</span><span class="n">Adaptor</span>
+  <span class="n">var</span> <span class="n">pin</span> <span class="n">string</span>
+  <span class="n">kernelRelease</span> <span class="p">:</span><span class="o">=</span> <span class="n">string</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">strings</span><span class="o">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">kernelRelease</span><span class="p">,</span> <span class="s2">"raspi2"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">adaptor</span> <span class="o">=</span> <span class="n">raspi</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+    <span class="n">pin</span> <span class="o">=</span> <span class="s2">"7"</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">strings</span><span class="o">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">kernelRelease</span><span class="p">,</span> <span class="s2">"snapdragon"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">adaptor</span> <span class="o">=</span> <span class="n">dragonboard</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+    <span class="n">pin</span> <span class="o">=</span> <span class="s2">"GPIO_A"</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">adaptor</span> <span class="o">=</span> <span class="n">beaglebone</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+    <span class="n">pin</span> <span class="o">=</span> <span class="s2">"P8_7"</span>
+  <span class="p">}</span>
+  <span class="n">digitalWriter</span><span class="p">,</span> <span class="n">ok</span> <span class="p">:</span><span class="o">=</span> <span class="n">adaptor</span><span class="o">.</span><span class="p">(</span><span class="n">gpio</span><span class="o">.</span><span class="n">DigitalWriter</span><span class="p">)</span>
+  <span class="k">if</span> <span class="err">!</span><span class="n">ok</span> <span class="p">{</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="s2">"Invalid adaptor"</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="n">led</span> <span class="p">:</span><span class="o">=</span> <span class="n">gpio</span><span class="o">.</span><span class="n">NewLedDriver</span><span class="p">(</span><span class="n">digitalWriter</span><span class="p">,</span> <span class="n">pin</span><span class="p">)</span>
+
+  <span class="n">work</span> <span class="p">:</span><span class="o">=</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">gobot</span><span class="o">.</span><span class="n">Every</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">time</span><span class="o">.</span><span class="n">Second</span><span class="p">,</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">led</span><span class="o">.</span><span class="n">Toggle</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="n">robot</span> <span class="p">:</span><span class="o">=</span> <span class="n">gobot</span><span class="o">.</span><span class="n">NewRobot</span><span class="p">(</span><span class="s2">"snapbot"</span><span class="p">,</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Connection</span><span class="p">{</span><span class="n">adaptor</span><span class="p">},</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Device</span><span class="p">{</span><span class="n">led</span><span class="p">},</span>
+    <span class="n">work</span><span class="p">,</span>
+  <span class="p">)</span>
+
+  <span class="n">robot</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+<span class="p">}</span>
+</pre>
+
+
+<p>We are basically adding in there a block to select the right adaptor and pin,
+depending on which board the code is running. Now we can compile this program,
+throw the binary in the board, and give it a try.</p>
+<p><a href="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_212605.ogv"><img alt="picture of the Dragonboard prototype" src="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_212602.jpg"></a></p>
+<p>But we can do better. If we package this in a snap, anybody with one of the
+boards and an operating system that supports snaps can easily install it. We
+also open the door to
+<a href="https://build.snapcraft.io">continuous delivery</a> and
+<a href="http://elopio.net/blog/ipfs-crowdtesting/">crowd testing</a>. And as I said
+before, super simple, just put this in the <code>snapcraft.yaml</code> file:</p>
+<pre class="code literal-block"><span></span><span class="nv">name</span>: <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span><span class="o">-</span><span class="nv">elopio</span>
+<span class="nv">version</span>: <span class="nv">master</span>
+<span class="nv">summary</span>:  <span class="nv">Blink</span> <span class="nv">snap</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">Raspberry</span> <span class="nv">Pi</span> <span class="nv">with</span> <span class="nv">Gobot</span>
+<span class="nv">description</span>: <span class="o">|</span>
+  <span class="nv">This</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">simple</span> <span class="nv">example</span> <span class="nv">to</span> <span class="nv">blink</span> <span class="nv">an</span> <span class="nv">LED</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">Raspberry</span> <span class="nv">Pi</span>
+  <span class="nv">using</span> <span class="nv">the</span> <span class="nv">Gobot</span> <span class="nv">framework</span>.
+
+<span class="nv">confinement</span>: <span class="nv">devmode</span>
+
+<span class="nv">apps</span>:
+  <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span><span class="o">-</span><span class="nv">elopio</span>:
+    <span class="nv">command</span>: <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span>
+
+<span class="nv">parts</span>:
+  <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span>:
+    <span class="nv">source</span>: .
+    <span class="nv">plugin</span>: <span class="nv">go</span>
+    <span class="nv">go</span><span class="o">-</span><span class="nv">importpath</span>: <span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">elopio</span><span class="o">/</span><span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span>
+</pre>
+
+
+<p>To build the snap, here is a cool trick thanks to the work that
+<a href="http://www.twotoasts.de/index.php/2017/06/how-to-support-cross-compilation-in-plugins/">kalikiana</a>
+recently added to snapcraft. I'm writing this code in my development machine,
+which is amd64. But the raspberry pi and beaglebone are armhf, and the
+dragonboard is arm64; so I need to cross-compile the code to get binaries
+for all the architectures:</p>
+<pre class="code literal-block"><span></span><span class="n">snapcraft</span> <span class="c1">--target-arch=armhf</span>
+<span class="n">snapcraft</span> <span class="n">clean</span>
+<span class="n">snapcraft</span> <span class="c1">--target-arch=arm64</span>
+</pre>
+
+
+<p>That will leave two .snap files in my working directory that then I can upload
+to the store with <code>snapcraft push</code>. Or I can just push the code to GitHub and
+let <a href="https://build.snapcraft.io">build.snapcraft.io</a> to take care of building
+and pushing for me.</p>
+<p>Here is the source code for this simple example:
+<a href="https://github.com/elopio/gobot-blink">https://github.com/elopio/gobot-blink</a></p>
+<p>Of course, Gobot supports many more devices that will let you build complex
+robots. Just take a look at the
+<a href="https://gobot.io/documentation/">documentation in the Gobot site</a>, and at the
+<a href="https://gobot.io/documentation/guides/snapcraft/">guide about deployable packages with Gobot and snapcraft</a>.</p>
+<p><a href="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_233319.ogv"><img alt="picture of the BeagleBone prototype" src="https://ia601502.us.archive.org/32/items/snappy-gobot/20170710_233317.jpg"></a></p>
+<p>If you have one of the boards I'm using here to play, give it a try:</p>
+<pre class="code literal-block"><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">gobot</span><span class="o">-</span><span class="n">blink</span><span class="o">-</span><span class="n">elopio</span> <span class="c1">--edge --devmode</span>
+<span class="n">sudo</span> <span class="n">gobot</span><span class="o">-</span><span class="n">blink</span><span class="o">-</span><span class="n">elopio</span>
+</pre>
+
+
+<p>Now my experiments will be to try make the snap more secure, with strict
+confinement. If you have any questions or want to help, we have a
+<a href="https://forum.snapcraft.io/t/write-your-robots-in-go-with-gobot-and-distribute-the-software-as-snaps/1086">topic in the forum</a>.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../esblogtravis-snap-testing/" rel="prev" title="User acceptance testing of snaps, with Travis">Publicación anterior</a>
+            </li>
+            <li class="next">
+                <a href="../esblogerrbot-snap/" rel="next" title="An errbot snap for simplified chatops">Siguiente publicación</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+ - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("es");
+        fancydates(1, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

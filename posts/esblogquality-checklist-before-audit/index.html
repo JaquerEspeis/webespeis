@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Follow this quality checklist before an audit | JáquerEspeis</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="canonical" href="http://jaquerespeis.org/posts/esblogquality-checklist-before-audit/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="JáquerEspeis">
+<link rel="prev" href="../la-obsolescencia-de-java-8/" title="La obsolescencia de Java 8" type="text/html">
+<link rel="next" href="../sitios-web-rapidos-sin-sacrificar-seguridad/" title="Sitios web rápidos sin sacrificar seguridad" type="text/html">
+<meta property="og:site_name" content="JáquerEspeis">
+<meta property="og:title" content="Follow this quality checklist before an audit">
+<meta property="og:url" content="http://jaquerespeis.org/posts/esblogquality-checklist-before-audit/">
+<meta property="og:description" content="At Zeppelin we help protect the core
+infrastructure of open and decentralized applications. I'm part of the Research
+team, which is in charge of conducting
+security audits.
+We review tons of lines of ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-02-08T15:02:13-06:00">
+<link rel="alternate" hreflang="en" href="../../en/posts/esblogquality-checklist-before-audit/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://jaquerespeis.org/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://jaquerespeis.org/">
+
+            <span id="blog-title">JáquerEspeis</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://jaquerespeis.org/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="index.src.html" id="sourcelink" class="nav-link">Código fuente</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../stories/calendario" class="nav-link">Calendario</a>
+                </li>
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Categorías</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Follow this quality checklist before an audit</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    JáquerEspeis
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2019-02-08T15:02:13-06:00" itemprop="datePublished" title="2019-02-08 15:02">2019-02-08 15:02</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.src.html" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>At <a href="https://zeppelin.solutions/">Zeppelin</a> we help protect the core
+infrastructure of open and decentralized applications. I'm part of the Research
+team, which is in charge of conducting
+<a href="https://zeppelin.solutions/security-audits/">security audits</a>.
+We review tons of lines of code written by very smart developers for projects
+that will shake the foundations of our society.</p>
+<p>Finding security vulnerabilities in this futuristic cypherpunk environment is
+super challenging and fun, but
+<a href="https://blog.zeppelin.solutions/">we have already covered those topics elsewhere</a>.
+I think that security actually starts in a
+pretty boring and traditional place, full of the wisdom that our elders have
+collected through millennia of developing software in community. Standing on
+their shoulders, I want to share our checklist for basic quality measures
+that your next awesome project should consider before you hand it over for an
+external audit.</p>
+<h2>✔️ Choose a free software license</h2>
+<p>Closed code is inherently insecure. If people who use your project can't inspect it,
+study it, hack it, and experiment on it, there's no way it can be trusted. If you
+hold abusive control over your users, nothing prevents you (or anyone
+more powerful than you) from making them vulnerable.</p>
+<p>Take a look at the
+<a href="https://www.gnu.org/philosophy/free-sw.en.html">Free Software Definition</a>,
+and begin with <a href="https://choosealicense.com/">choosing the license</a> that best
+suits your needs.</p>
+<p>This is a good moment to introduce our first wise elder!
+<a href="https://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a> 😜,
+who hacked copyright laws, started the free software movement, and wrote
+the above definition.</p>
+<p><a href="https://en.wikipedia.org/wiki/Richard_Stallman#/media/File:Richard_Stallman_by_gisleh_01.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Richard_Stallman_by_gisleh_01.jpg" alt="Richard Stallman" height="350"></a></p>
+<p>Richard Stallman in costume as St. IGNUcius (Monastir, Tunisia, 2012. Image taken from
+<a href="https://en.wikipedia.org/wiki/Richard_Stallman#/media/File:Richard_Stallman_by_gisleh_01.jpg">Wikipedia</a>)</p>
+<h2>✔️ Build your core team of maintainers</h2>
+<p>When your project succeeds, hundreds of external contributors will surely be supporting it. But in order to
+get to that point, you'll need to bootstrap with a strong and diverse team of core
+maintainers. They'll take care of the bulk of the work, the fun and the boring
+parts, proposing and reviewing the code of your shared project. Together,
+you all need to have strong knowledge of all points on this checklist.
+Look not only for technical knowledge, but also for a knack for cat-herding and a
+healthy work style—because, well, things will get complicated.</p>
+<p>Pay attention to your <a href="https://en.wikipedia.org/wiki/Bus_factor">bus factor</a>:
+make sure your team members are sharing their expertise, the lessons learned, and their
+responsibilities, while at the same time constantly mentoring new people
+that could potentially join the core team.</p>
+<p>And somebody will have to lead and orchestrate in order to get value out of the eternal
+tendency toward chaos. Let me introduce you to our second magician,
+<a href="http://www.camilletalk.com/">Camille Fournier</a>, who wrote THE book on technical
+management,
+<a href="https://www.goodreads.com/book/show/33369254-the-manager-s-path">The Manager's Path</a>.</p>
+<p><a href="http://www.camilletalk.com/contact/"><img src="https://static1.squarespace.com/static/56bf8b0622482edc3dc1919d/t/56bf8ef5f85082335f63196b/1455400011874/21793992240_b56cd4b3e2_o+%281%29.jpg?format=500w" alt="Camille Fournier" height="350"></a></p>
+<p>Camille Fournier (Image taken from
+<a href="http://www.camilletalk.com/contact/">her website</a>)</p>
+<h2>✔️ Write clean code</h2>
+<p><a href="https://www.osnews.com/story/19266/wtfsm/">The only valid measurement of code quality is WTFs per minute</a>. This point <em>must</em> be simple. If things get overly complicated or
+weird, you're doing it wrong. Go for a walk and try again with fresh eyes.</p>
+<p>But don't get me wrong: no interesting software project is simple. Add the
+complexity dimensions of decentralization, transparency, cryptography, and all
+these shiny ideas that are keeping us so busy these days. It's complicated by
+design. But with the correct abstractions, a well thought-out model, and proper encapsulation,
+you can start building the bank-killer app one line at a time. And each of
+those lines <em>must</em> be clean and readable.</p>
+<p>I'm not a spectacular programmer, I was just lucky to find Uncle Bob
+Martin's book
+<a href="https://www.goodreads.com/book/show/3735293-clean-code">Clean Code</a> at
+the right moment and to have read a never-ending stream of very, very ugly code.</p>
+<p><a href="https://en.wikipedia.org/wiki/Robert_C._Martin#/media/File:Robert_Cecil_Martin.png"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Robert_Cecil_Martin.png/800px-Robert_Cecil_Martin.png" alt="Robert C. Martin" height="250"></a></p>
+<p>Robert Cecil Martin (Image taken from
+<a href="https://en.wikipedia.org/wiki/Robert_C._Martin#/media/File:Robert_Cecil_Martin.png">Wikipedia</a>)</p>
+<p>Once all core maintainers reach common ground on this topic, you should
+enforce a consistent code style by running a
+<a href="https://en.wikipedia.org/wiki/Lint_(software)">linter</a> on every new line of
+code that's added. The particular rules aren't as important as
+following them strictly is, but if you can
+<a href="https://github.com/OpenZeppelin/openzeppelin-solidity/issues/1396#issuecomment-440426310">sacrifice your peculiar preferences to be consistent with the rest of the world</a>, your contributors will appreciate it a lot.</p>
+<p>I also practice slow-food... er, slow programming.
+Take your time, enjoy the journey to mastering this craft, and when you've built something you can
+proudly set free, let the masses read it and judge it.</p>
+<h2>✔️ Write unit tests</h2>
+<p>Write unit tests. Tons of them. 100% coverage. This might sound extreme, but hey, your code is now
+playing directly with somebody else's money. If you forget, or just get lazy and
+don't write a test for that super obvious line of code, you might be leaving an open
+door for an exploit later in the game that will make your project crash, and
+all this magic internet money will disappear in no time. It <em>has</em> happened.</p>
+<p>I feel immediately more secure when I do test-driven development. At least give
+an honest try to writing the tests first, and get into a cycle of
+red-green-refactor. There are other techniques that can achieve the same
+result, but I suggest starting there and then deviating if you find good
+reasons to do so. Never worked this way? Read
+<a href="https://www.goodreads.com/book/show/387190.Test_Driven_Development">Test Driven Development: By Example</a>
+by Kent Beck. It's a quick read that will help you avoid the temptation of
+just jumping into code without thinking it through.</p>
+<p>Then, even if you design for testability, you'll find many scenarios that are
+hard to test. Gerard Meszaros provides all the answers in
+<a href="https://www.goodreads.com/book/show/337302.xUnit_Test_Patterns">xUnit Test Patterns</a>.
+This book is huge, so I recommend choosing a designated test expert on your
+team.</p>
+<p><a href="https://en.wikipedia.org/wiki/Kent_Beck#/media/File:Kent_Beck_1.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Kent_Beck_1.jpg" alt="Kent Beck" height="350"></a> <a href="https://twitter.com/gerardmes"><img src="https://pbs.twimg.com/profile_images/71233259/Gerard_in_Vancouver__Brian_Foote-O-O_Canada_012_.jpg" alt="Gerard Meszaros" height="350"></a></p>
+<p>Left: Kent Beck speaking in 2001 (Image taken from
+<a href="https://en.wikipedia.org/wiki/Kent_Beck#/media/File:Kent_Beck_1.jpg">Wikipedia</a>)
+Right: Gerard Meszaros (Image taken from <a href="https://twitter.com/gerardmes">Twitter</a>)</p>
+<p>Finally, make sure to run your unit tests on every single pull request, and make sure
+they're <em>all</em> green before merging the changes. In addition, you can set up a
+test coverage report to ensure that test coverage never goes down.</p>
+<h2>✔️ Test early, test often, test agile</h2>
+<p>Now that you have your first layer of tests covered with tons of unit tests,
+what comes next is...more tests! You need to test the integration between
+all of your components, then go one level higher to test your
+application from the point of view of a real user, and then go even
+higher to test the interactions with other systems end-to-end.</p>
+<p>To me, this is the biggest challenge, and designing a good process that
+keeps many bugs out of your system can be as difficult as designing the system
+itself. Iterate, automate as much as possible, share the load of manual
+testing...and let your community help.</p>
+<p>We'll talk later about community, but I think this is the reason for
+publishing your code as early as possible: you can get help from early adopters
+and enthusiasts to validate your system, not only for correctness but also to
+verify that you're focusing on the right user stories and that you're tackling a
+real problem with a user-friendly solution.</p>
+<p>A lot has been written about iterative development processes that deliver
+functionalities in progressive sprints and milestones. I found Mike Cohn's
+<a href="https://www.goodreads.com/book/show/6707987-succeeding-with-agile">Succeeding with Agile: Software Development Using Scrum</a>
+a good place to start, but keep in mind that any methodology will have to be
+adjusted to your team, your users, and your context. There are a lot fewer
+resources focused on the quality and testing part; that's why I was so happy
+when I read
+<a href="https://www.goodreads.com/book/show/5341009-agile-testing">Agile Testing</a> by
+Lisa Crispin and Janet Gregory, which is full of good ideas and advice. But
+let me stress again: nothing you read will perfectly fit your project, so take your
+time to design the testing process with as much love and care as you use when
+designing the system's architecture.</p>
+<p><a href="https://en.wikipedia.org/wiki/Mike_Cohn#/media/File:Mike_Cohn_2013-06-12.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mike_Cohn_2013-06-12.jpg/1280px-Mike_Cohn_2013-06-12.jpg" alt="Mike Cohn" height="350"></a> <a href="https://agiletester.ca/about-the-authors/"><img src="https://agiletester.ca/wp-content/uploads/sites/26/2013/09/Lisa-Crispin-and-Janet-Gregory.jpg" alt="Lisa Crispin and Janet Gregory" height="350"></a></p>
+<p>Left: Mike Cohn in 2013 (Image taken from
+<a href="https://en.wikipedia.org/wiki/Mike_Cohn#/media/File:Mike_Cohn_2013-06-12.jpg">Wikipedia</a>)
+Right: Right: Lisa Crispin and Janet Gregory (Image taken from their
+<a href="https://agiletester.ca/about-the-authors/">website</a>)</p>
+<p>While there's still some debate about the perfect moment for auditing a project (i.e, before or after the code is
+published), I think audits should be performed when there's a release candidate
+ready to be deployed to mainnet, after you have performed extensive alpha and
+beta testing. I see room for auditing before the code has been published,
+but in this case, the audit would be more related to checking that the development
+process will lead to a high-quality, properly tested release candidate and
+validating the bases of your project than to performing a deep and thorough
+inspection of the codebase.</p>
+<p>However, this doesn’t mean that you have to wait until the end of a long
+development phase to prepare for a release and audit. Once you start writing and
+testing clean code in incremental iterations, it becomes easier to think about
+your complex system. Many smaller independent parts will start to pop up, which
+can be extracted, generalized, and packaged for reuse, reducing anxiety for
+developers and auditors. These packages are the focus of
+<a href="https://zeppelinos.org/">ZeppelinOS</a> for this year, to know more take a look at
+the <a href="https://blog.zeppelinos.org/state-of-evm-packages-end-of-2018/">State of EVM Packages</a>.</p>
+<h2>✔️ Write documentation</h2>
+<p>This is my least favorite part, by far. So let's keep it simple, starting at
+the beginning: the README, the most important file of your repository.
+And yet, it's usually either empty or bloated, outdated, and ugly. Ideally, as it's the
+first thing developers and potential contributors will read, it should work as a clear, straightforward index of
+your project.</p>
+<p>It's best not to get creative here. Just follow this simple specification that
+works for all cases, proposed by Richard Littauer in
+<a href="https://github.com/RichardLitt/standard-readme/blob/master/spec.md">Standard Readme</a>.
+<em>Do not forget</em> to include a specific section in the main README that states how people should disclose any security
+vulnerabilities found in your project.</p>
+<p><a href="https://twitter.com/richlitt"><img src="https://pbs.twimg.com/profile_images/853672023511490561/m_RAvJfy.jpg" alt="Richard Littauer" height="350"></a></p>
+<p>Richard Littauer (Image taken from <a href="https://twitter.com/richlitt">Twitter</a>)</p>
+<p>Next come the docstrings, the documentation inside your code files. We hit
+an apparent conflict here, since in theory, if your code is clean,
+it will not require documentation. However, note that we are no longer
+designing standalone systems that work as a black box. We are building
+protocols for decentralized applications, and your code will be called by all sorts
+of external agents. So by all means, document every function that's part
+of the contract's public API, following the
+<a href="https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format">NatSpec format</a>.</p>
+<p>Which brings me to the next point. I highly recommend that you document the
+specification of your protocol—that's how others will know what to call and
+what to expect. But more related to the topic at hand, in an audit, we check that
+the implemented code works as intended by the specification. That's why this
+document is a <em>must</em>: without it, auditors will just guess at your intentions, which
+might result in some issues getting missed because they're completely consistent
+within the system but take it to a state that you want to avoid.</p>
+<p>Finally, there's the user documentation. For high-quality systems,
+writing the user documentation should be mostly painless. The moment things get cumbersome
+while documenting, consider re-evaluating your user stories, and don't be afraid to go back to iterate on
+them.</p>
+<h2>✔️ Check your dependencies</h2>
+<p>Your project builds on top of many, many others. It will probably depend at least
+on the Ethereum protocol and its network of nodes, and on Solidity, a bunch of
+Ethereum Improvement Proposals and their implementation, libraries for testing and UI, and maybe hundreds
+of other small projects. Even if yours is secure, you need to check how healthy your dependencies are,
+since they can easily become the source of
+vulnerabilities.</p>
+<p>Earlier, I mentioned that your team should have strong and diverse knowledge.
+That includes knowledge of all the projects that surround you. You should be able to
+write idiomatic code following the best practices of the language, to identify
+and avoid known issues, always keeping an eye on new
+<a href="https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures">CVEs</a>
+that may directly (or indirectly, through third-party dependencies) affect your project. Moreover, try to participate in the communities around your
+dependencies, as it's an excellent way to see firsthand how safe and trustworthy they are.
+You should also consider <em>actively</em> participating in those communities, to gain some karma that will surely come in
+handy later when you need new features and bug fixes.</p>
+<p>Moreover, don't forget to pay attention to your dependencies' finances. When making your project's budget,
+take into account a share for your dependencies, as they may need it in order
+to remain actively maintained. There's a very nice project called
+<a href="https://opencollective.com/discover">OpenCollective</a>,
+led by Pia Mancini, which is making it extremely easy to transparently support
+the organizations and developers you depend on.</p>
+<p><a href="https://www.piamancini.com/"><img src="https://static.wixstatic.com/media/a7bdaa_ab650ff17e804731b7cf560bc5ee9a02~mv2.jpg/v1/crop/x_0,y_120,w_961,h_961/fill/w_530,h_530,al_c,q_80,usm_0.66_1.00_0.01/Pia%20Mancini%20-%20headshot.jpg" alt="Pia Mancini" height="350"></a></p>
+<p>Pia Mancini (Image taken from her <a href="https://www.piamancini.com/">website</a>)</p>
+<p>And, of course, with <a href="https://zeppelinos.org/">ZeppelinOS</a>, we're building a
+platform that will let you vouch for the security of a package. It's in beta
+testing, so expect exciting news very soon.</p>
+<p>Specific to Ethereum and Solidity, the community is collecting the lessons
+learned (usually in a painful way). You can learn a lot about interesting
+and tricky vulnerabilities playing the
+<a href="https://ethernaut.zeppelin.solutions/">Ethernaut capture-the-flag game</a>.
+We've
+<a href="https://blog.zeppelin.solutions/tagged/security">published many of our past audits</a>
+with descriptions of the issues found, recommendations, and usually a link
+to the patch that fixes them. All of our learnings from audits are distilled into
+the <a href="https://openzeppelin.org/">OpenZeppelin package</a>, which you should definitely add
+to your list of dependencies—if you're not one of the thousands that already did. The
+<a href="https://smartcontractsecurity.github.io/SWC-registry/">Smart Contracts Weakness Registry</a>
+maintained by the Mythril team is also a great resource for learning from the
+experience of others.</p>
+<p>Whatever approach you take, remember that as the Ethereum space is very young and unexplored, we're learning many things as we go, so <em>always</em>
+proceed with caution.</p>
+<h2>✔️ Build your community</h2>
+<p>This is a complement to the first point: code without a community is insecure.
+The community gives you eyes to monitor the project, hands to test it in a
+real environment, support to survive challenging problems, and resilience to
+adjust to the unexpected. No amount of money, experience, or knowledge
+can substitute for this.</p>
+<p>Once you publish the code, you can get started engaging your community. If your
+project is interesting, they will come, and this is where the cat-herding
+abilities of your team will shine. However, you definitely need to set up proper and fluent communication channels,
+invest in some marketing, and hire a bold community manager with a plan to disentangle
+and wisely leverage all the opportunities your community brings. I can't
+recommend highly enough the writings and videos by
+<a href="https://www.jonobacon.com/">Jono Bacon</a>, who has covered all the topics you
+can imagine about community management.</p>
+<p><a href="https://www.flickr.com/photos/jonobacon/12622356185/"><img src="https://farm4.staticflickr.com/3740/12622356185_b89d134675_k.jpg" alt="Jono Bacon" height="350"></a></p>
+<p>Jono Bacon in 2014 (Image taken from <a href="https://www.flickr.com/photos/jonobacon/12622356185/">Flickr</a>)</p>
+<p>You should be thoughtful and caring with your community. A small step that
+goes a long way is to adopt and enforce a
+<a href="https://www.contributor-covenant.org/">code of conduct</a> so you can all feel
+safe. Then, write some contribution guidelines to make sure that all of their
+enthusiasm can be put to good use and they don't get lost. Lastly, think about
+setting up a <a href="https://www.hackerone.com/">bug bounty program</a> that will
+encourage your community to watch out for vulnerabilities in the wild,
+providing hackers with enough incentives to disclose security issues in a responsible way.</p>
+<hr>
+<p>tldr:</p>
+<p>✅ Choose a free software license.</p>
+<p>✅ Build a strong and diverse team of core maintainers.</p>
+<p>✅️ Increase your bus factor: share knowledge and responsibilities.</p>
+<p>✅ Choose a good leader.</p>
+<p>✅️ Write clean code.</p>
+<p>✅️ Enforce a consistent code style.</p>
+<p>✅️ Ensure 100% unit test coverage.</p>
+<p>✅️ Enforce green tests on all your pull requests.</p>
+<p>✅️ Design your iterative development and testing process.</p>
+<p>✅️ Publish your code.</p>
+<p>✅️ Write a good README.</p>
+<p>✅️ Document the functions of your public API.</p>
+<p>✅️ Document your protocol.</p>
+<p>✅️ Write the end-user documentation.</p>
+<p>✅️ Make sure that your dependencies can be trusted.</p>
+<p>✅️ Review known issues and keep an eye out for new ones.</p>
+<p>✅️ Use OpenZeppelin, the community-vetted standard for smart contract development.</p>
+<p>✅️ Build and care for your community.</p>
+<hr>
+<h2>Ready to hire an auditing team?</h2>
+<p>That's us! :) The Zeppelin team can help you assess the quality of your project and
+processes. We'll take a deep and thorough dive into your code, with years of experience hacking,
+researching, and developing on blockchains, plus a little touch of Latin
+American fire, to give you and your users all the confidence you need to
+continue building the core systems of this new decentralized, global, and open economy.</p>
+<p>We're available for auditing services, so check out this information about
+<a href="https://zeppelin.solutions/security-audits/">security audits</a>.</p>
+<p>Thanks to <a href="https://notonlyowner.com/">Martín Abbatemarco</a> for editing this
+post, to the Zeppelin team for the continuous experimentation and feedback,
+and to <a href="https://blog.zeppelin.solutions/tagged/security">our customers</a> for
+trusting us and helping us better understand what makes a free software
+project awesome.</p>
+<hr>
+<h2>Be part of our community</h2>
+<ul>
+<li>Continue the discussion on our <a href="https://forum.zeppelin.solutions/">forum</a>
+</li>
+<li>Request a <a href="https://zeppelin.solutions/security-audits/">security audit</a>
+</li>
+<li>Even better, <a href="https://zeppelin.solutions/jobs/">join the team</a> 🚀</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../la-obsolescencia-de-java-8/" rel="prev" title="La obsolescencia de Java 8">Publicación anterior</a>
+            </li>
+            <li class="next">
+                <a href="../sitios-web-rapidos-sin-sacrificar-seguridad/" rel="next" title="Sitios web rápidos sin sacrificar seguridad">Siguiente publicación</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+ - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("es");
+        fancydates(1, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

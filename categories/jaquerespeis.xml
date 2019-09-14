@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre jaquerespeis)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/jaquerespeis.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Road to #MozillaActivate, El Salvador 2018</title><link>http://jaquerespeis.org/posts/20180726road-to-mozillaactivate-el-salvador-2018/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Holi,&lt;/p&gt;
+&lt;p&gt;No se ustedes, pero de tanto estar viajando no me ha quedado demasiado tiempo para hacer tutoriales, pero me encanta documentar las cosas asi que esta vez vamos a hablar sobre la fundación Mozilla y porque fue que pare una semana en El Salvador. Bienvenidos.&lt;/p&gt;
+&lt;h2&gt;Antecedentes ( esto ya parece un informe jajaja, pero vamos a hacerlo bonito).&lt;/h2&gt;
+&lt;p&gt;El año pasado para &lt;a href="https://themicrofcontrol.wordpress.com/2017/08/06/experiencias-encuentro-centroamericano-de-software-libre-costa-rica-2017/"&gt;el encuentro Centroamericano de Software Libre, Costa Rica 2017 &lt;/a&gt;hubo un evento alterno llamado #mozillaActivate, resulta que en el mismo encuentro hubo gente de #mozillaCentroamerica invitando a mas gente a unirse al movimiento de una internet libre, respetuosa con la privacidad y los derechos ( sí sé que suena medio raro,  pero lo que mozilla incentiva es que tengamos una internet libre y que todos seamos tratados por igual) a mi me parece excelente muchas cosas que esta haciendo Mozilla hasta que me dieron en el kokoro con algo llamado &lt;em&gt;Web of things&lt;/em&gt;, que es una solución para el internet de las cosas preparada por Mozilla que realmente tiene un muy muy buen punto a su favor, Es realmente sencillo crear soluciones con su propuesta.&lt;br&gt;
+El contacto directo con Mozilla Centroamérica fue MoziKarlita, que amablemente nos invito a ser parte de Mozilla Centroamérica y pues con Lexo, dijimos esta bien.&lt;/p&gt;
+&lt;h2&gt;Preparación del evento&lt;/h2&gt;
+&lt;p&gt;Ponernos de acuerdo fue lento, tedioso y complicado.&lt;br&gt;
+Lo sé son palabras duras para un equipo que ya había trabajado junto, en este caso nosotros como integrantes nuevos de Mozilla Centroamérica y primeros miembros de Mozilla Guatemala fue un poco confuso saber como ayudar, ellos tenían sus métodos para hacer las cosas y yo y mis manías por andar mandando no se sintieron bien.&lt;/p&gt;
+&lt;p&gt;Realmente de lo único que puedo quejarme fue de que entre todo dejamos muchas cosas para el ultimo minuto, como yo por ejemplo perdiendo mi tarjeta del banco sin haber comprado los boletos de ida y vuelta a El Salvador, los que me siguen en Instagram, facebook y Twitter (@yeffrimic) se dieron cuenta de que mi mente andaba en otro lado y pues aquí oficialmente me disculpo, La cague jajaja.&lt;/p&gt;
+&lt;p&gt;La parte mas complicada de todo fue el hecho de que nadie quiso tomar la batuta de líder al principio  y se tuvieron que hacer malabares para que mozilla nos autorizara el evento y nos patrocinara. Al final y lo que importa fue que Mozilla nos aprobó el patrocinio (gracias David) y pues bueno ya teníamos todo preparado, charlas, presentaciones, lugar para dar las charlas asi que yeii, ya había viaje confirmado para El Salvador, Mozilla Activate y ECSL alla vamos.&lt;/p&gt;
+&lt;h3&gt;Nos vamos a San Salvador, Gracias Mozilla&lt;/h3&gt;
+&lt;p&gt;&lt;img data-attachment-id="2262" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/20180710_083538/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg" data-orig-size="3264,2448" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1531211737","copyright":"","focal_length":"2.95","iso":"100","shutter_speed":"0.02","title":"","orientation":"1"}' data-image-title="20180710_083538" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=740" class="alignnone size-full wp-image-2262" src="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=740" alt="20180710_083538" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;Él es Lexo, vive a 12 horas de la Ciudad de Guatemala y como a 24 de San Salvador.&lt;/p&gt;
+&lt;p&gt;Bueno al final llegamos a San Salvador, salimos mas o menos a las 7 am y llegamos al medio día, listos para descansar y preparar todo para el día D&lt;/p&gt;
+&lt;h2&gt;Día de exposiciones&lt;/h2&gt;
+&lt;p&gt;Dejo la hermosa agenda aqui y dare mis impresiones de todos.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.google.com/document/d/1v9SlhDQ9EHm0Tdn14UlzivmkibtT08yIvotK7XAawcI/edit?usp=sharing" rel="nofollow"&gt;https://docs.google.com/document/d/1v9SlhDQ9EHm0Tdn14UlzivmkibtT08yIvotK7XAawcI/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Todos y cada uno de los que están en Mozilla CentroAmerica como representantes o asistieron como conferencistas al Mozilla Activate son unos putos cracks.&lt;/p&gt;
+&lt;p&gt;Empezando con Aaron y su increible manera de exponer porque Mozilla y no solo firefox sino todo lo que representa la fundación es de las mejores cosas en internet hoy en dia.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2286" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059894245955053519/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059894245955053519" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=740" class="alignnone size-full wp-image-2286" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=740" alt="photo5059894245955053519" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Roni y su dominio con los temas de privacidad en la red&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2274" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428666/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428666" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=740" class="alignnone size-full wp-image-2274" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=740" alt="photo5059856768070428666" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;no hablemos de Lexo, Carcamo con Rust que los vi por allí haciendo travesuras con uno de los lenguajes mas nuevos y potentes del momento.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2285" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428659/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428659" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=740" class="alignnone size-full wp-image-2285" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=740" alt="photo5059856768070428659" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2273" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428660/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428660" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=740" class="alignnone size-full wp-image-2273" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=740" alt="photo5059856768070428660" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Me impresiono bastante lo que puede hacer Firefox con web VR a cargo de David&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2284" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059894245955053522/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059894245955053522" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=740" class="alignnone size-full wp-image-2284" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=740" alt="photo5059894245955053522" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Jorge estuvo hablando sobre programacion de videojuegos pero murphy fue su enemigo mortal no pudiendo proyectar porque el adaptador que tenía no funcionaba &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f626.png" alt="😦" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;br&gt;
+&lt;img data-attachment-id="2272" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428656/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428656" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=740" class="alignnone size-full wp-image-2272" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=740" alt="photo5059856768070428656" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;br&gt;
+aqui esta con lexo tratando de solucionarlo, no se para que usan mac jajaja&lt;/p&gt;
+&lt;p&gt;moziKarlita hablando sobre la comunidad de mozilla y como ser parte de ella tambien alentó a muchos jovenes que estaban presentes.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2282" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428664/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428664" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=740" class="alignnone size-full wp-image-2282" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=740" alt="photo5059856768070428664" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;y yo merengues hablando sobre lo que me encanta Internet de las cosas con al go llamado Mozilla IOT, y su web de las cosas, adjunto la &lt;a href="https://docs.google.com/presentation/d/1sSc-7YYbH4M4ftplGg6r0cOlX0hKRHsp60Yn5rNCEB0/edit?usp=sharing" target="_blank" rel="noopener"&gt;presentación&lt;/a&gt; para que le echen un ojo, como he dicho antes esta es una excelente iniciativa de parte de Mozilla y todos los voluntarios para el internet de las cosas&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2287" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428668/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428668" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=740" class="alignnone size-full wp-image-2287" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=740" alt="photo5059856768070428668" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Bueno, después de organizar, moverse y el calor de San Salvador cada uno fue cayendo a lo largo de la semana dormido por el cansancio unos en el ECSL y otros en el dia social y yo que siempre andaba con sueño.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2275" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059894245955053517-2/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg" data-orig-size="1280,960" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059894245955053517" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=740" class="alignnone size-full wp-image-2275" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=740" alt="photo5059894245955053517" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=1024 1024w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg 1280w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Al final fue una experiencia increible hablandole a poco mas de 100 patojos( jovenes ) acerca de las bondades de fundación mozilla el proximo año será en Guatemala asi que quedan todos invitados a asistir.  No les conté muchas cosas que sucedieron para que el proximo año nos acompañen en Guatemala jajaja.&lt;/p&gt;
+&lt;p&gt;Con esto termino el articulo del dia de hoy pronto mas acerca de las microfaventuras .&lt;/p&gt;
+&lt;p&gt;Recuerden, solo necesitan una excusa para cambiar el mundo.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</description><category>internet de las cosas</category><category>jaquerespeis</category><category>mozilla</category><category>mozillaca</category><category>mozillaGT</category><category>opinion</category><guid>http://jaquerespeis.org/posts/20180726road-to-mozillaactivate-el-salvador-2018/</guid><pubDate>Thu, 26 Jul 2018 22:07:36 GMT</pubDate></item><item><title>Cambiar el mundo ¿Es posible?</title><link>http://jaquerespeis.org/posts/20180228cambiar-el-mundo-es-posible/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;
+&lt;div class=""&gt;
+&lt;div class="_1mf _1mj"&gt;Si ustedes han estado conmigo los últimos meses creo que se han dado cuenta de que este ha sido un a;o diferente para mi en algunas cosas demasiado mal, pero el 90% del tiempo ha ido demasiado bien, la &lt;span class="_247o"&gt;Comunidad Arduino Guatemala&lt;/span&gt; esta creciendo, he estado ayudando a mas personas con sus problemas tecnológicos (extra;o porque hace un par de a;os era otro tipo de ayuda la que normalmente ofrecía, pero bueno esos son otros 20 pesos :V), realmente ha sido un inicio de a;o espectacular trabajo aquí, trabajo allá, conferencia aquí, conferencia allá, ahora el que ha cambiado de cierta manera he sido yo, ya no comparto tanto en lo digital pero si me he vuelto mas allegado a las personas reales mas a un grupo de amigos de CCCGT.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;No se, creo que crecer ya casi cumplo los 24 me ha hecho mas reservado con que cosas comparto en internet y cuales no, pero heme aqui compartiendo con todos ustedes algo que a día de hoy 27 de febrero, no puedo no compartirlo ( en eso me desahogo y tal vez llore, pero eso no lo sabrán porque están del otro lado de la pantalla, pero se que mis lectores van a intuirlo por las palabras que utilizare), Gracias a Luis Olivet por recomendarme compartirlo.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;div class=""&gt;
+&lt;div class="_1mf _1mj"&gt;Pero bueno muy pocos saben que formo parte de un emprendimiento llamado &lt;span class="_247o"&gt;Antigua Makerspace, el cual a groso modo esta orientado a utilizar STEEM (science, technology, engineering, entreprenuership and Math) ya un año desde que iniciamos este viaje y si ustedes piensan que es publicidad pues pueden cerrar la ventanita y seguir con sus vidas. No suelo contar mis proyectos personales por la misma razon que muchas personas lo suelen tomar a mal, pero en realidad hay muchas veces que no se como hacerlo. Bueno dejaremos mis problemas mentales para otra publicación jajaja.&lt;br&gt;
+&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Todo empezó con un mensaje, el cual decía que si podíamos apoyar para dar un taller de Robótica  a una escuela de niños con discapacidad visual( total, parcial, visión baja) la cual unas horas antes de llegar supe que era la escuela Santa Lucia( como el pueblo donde vivo ) del Comité pro ciegos y sordos. Si por aquí va la cosa, pero créanme no es el típico post donde uno se sorprende de que los niños con discapacidad tienen las mismas capacidades cognitivas que los demás, mi publicación va un poco mas allá.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Y como siempre digo que si, me gustan los retos aparte de que nunca digo que no, asi que allí empezaba el reto, el mensaje decía son 25 niños ciegos y yo en mi cabeza “Mierda, si me cuesta con niños ahora con niños ciegos me va a costar mucho mas(algo de lo cual me iba a sorprender mas adelante)”, pero como siempre he dicho la mejor manera de aprender es enseñar así que me puse en contacto con mi llamada de emergencia, para que me hiciera ganas para poder ir a la capital en la madrugada. Un par de tropiezos en nuestra logística para movernos la noche del 26 pero estábamos seguros de que de cualquier manera íbamos a ir.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Estuve bastante emocionado, durante la noche que no podía dormir ( aparte de que tenia un dolor del cuello tan feo que no podía voltear a ver a ningún lado, aun lo tengo pero ya es menos), yo y mis planes perfectos donde todo sale bien decían irse a dormir a las 10 para despertarse a las 4 bañarse e irse, la realidad fue otra, dormir a las 12:30 despertar a las 4:30 y levantarse a las 5:10, aún no estaba seguro el transporte hasta que veo el mensaje, ya voy para allá. Como buen trabajador me fui sin desayunar, madrugando por una cosa estúpida llamada trafico, yo soy del pensamiento de madrugar para viajar 300kms es una buena idea; madrugar para viajar 30-40 kms es una estupidez.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Llegando a la escuela que de fuera parece algo súper chiquito, del tamaño de unos cuantos cuartos y dos niveles, pensé: “tengo hambre”, así que fuimos a un canasto de comida que estaba en la esquina a “desayunar” con mi amigo MDR, con la pena de que de verdad yo no tenia idea de como iba a ser la cosa, fui y hable con el guardia que no tenia ni idea de que le estaba diciendo no porque no entendiera, sino que no estaba enterado de la actividad así que decidimos esperar, una hora para ser exactos, los que me  han intentado contactar saben que yo sin acceso a internet no funciono así que estaba pidiendo wifi del cel de MDR, nos acabamos 60 megas en 20 minutos ya solo nos quedaban 40 para el resto del día jaja eran las 8 am.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Ya cansado y con sueño decidí ir con el guardia e inventarle la casaca de que quería hablar con la directora aunque no sabia si era hombre o mujer el encargado, asi que le dije: “poli, mire no esta la directora es que ya es tarde”, pura casualidad fue que si era mujer xD le conté que eramos los de robótica y pues nos dejo pasar.&lt;/div&gt;
+&lt;div&gt;Era un centro educativo bastante grande, muy limpio y acogedor realmente amplio y hasta tenia parqueo en la parte de atrás. (adiós prejuicio 1), ah olvide mencionar que este proyecto es conjunto con la secretaria nacional de ciencia y tecnología, SENACYT. Realmente esperaba una mejor bienvenida de parte de uno de sus miembros, pero creo que se molesto al ver que tenia el pelo verde e iba con playera, pantalón y tenis, mientras el iba con su traje super presentable. Cuestión de gustos y comodidad supongo, que bueno que me quite los aretes del labio y no tengo tatuajes, sino ni me deja participar. No es la primera vez que me topo con personas así, así que lo mejor es ser profesionales y hacer bien tu trabajo que para eso fue que te llamaron, cuando entro en modo trabajo me irrito fácilmente cuando se meten con lo que hago, no hubo nunca discusiones ni nada solo se sentía la mala vibra. ( aclaro de una vez que de ninguna manera me insulto ni hizo ningún desprecio, fue mas como subestimacion hacia mi persona), empezamos a sacar los robots y yo no tenia ni idea de como hacerle para explicar a los niños, se me acerco el encargado y nos empezó a explicar como había sido el taller anterior ( si este era el segundo y yo aun trataba de descifrar como le hicieron el anterior).&lt;/div&gt;
+&lt;div&gt;Empezaron a llegar los niños se sentaron, empezaron a tocar la mesa cuando objeto robotico no identificado aparece. &lt;img data-attachment-id="2204" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1266/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta='{"aperture":"5","credit":"","camera":"Canon EOS REBEL T3i","caption":"","created_timestamp":"1519722380","copyright":"","focal_length":"40","iso":"200","shutter_speed":"0.016666666666667","title":"","orientation":"1"}' data-image-title="IMG_1266" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=740" class="alignnone size-full wp-image-2204" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=740" alt="IMG_1266" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1266.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Al igual que todo niño con juguete nuevo no querían soltarlo ni compartir con nadie, pero hubieron algunos veteranos ( que ya habían tomado el curso) que dijeron a su compañero mas cercano, “mira estos son los ojos” y le ponían las manos al compañero en el sensor de proximidad. Eso fue lo mejor de la mañana, compartir lo que saben y enseñar. Dejamos que los niños jugaran y como buenos niños hacían bulla y no ponían atención y aquí mi miedo porque no sabia si iban a entender o no lo que les iba a decir.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Hubo un acto protocolario pequeño y fugaz agradeciendo a todos y bueno empezamos&lt;/div&gt;
+&lt;div&gt;“Hola niños mi nombre es Yeffri soy su profesor de robótica y tengo el pelo verde”, instantáneamente las risas de los niños en ese momento se fue mi miedo y empezó mi seguridad, seguía sin saber que hacer pero estaba seguro de que iba a funcionar.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Les dimos los des armadores sin instrucciones de como desarmarlos y pum.&lt;/div&gt;
+&lt;div&gt;Entre tanto y tanto empezaron a desarmar los robots, había de todo niños que se les caían los tornillos, niños que los guardaban en el pantalón y luego estaban ellos. Aunque he de admitir que normalmente se pierden 8-10 tornillos en este caso de todos los robots se perdio 1 tornillo.&lt;/div&gt;
+&lt;p&gt;&lt;img data-attachment-id="2205" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1282/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta='{"aperture":"5.6","credit":"","camera":"Canon EOS REBEL T3i","caption":"","created_timestamp":"1519723835","copyright":"","focal_length":"30","iso":"100","shutter_speed":"0.016666666666667","title":"","orientation":"1"}' data-image-title="IMG_1282" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=740" class="alignnone size-full wp-image-2205" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=740" alt="IMG_1282" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1282.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Me estoy centrando en cosas que me sorprendieron, la mayoría buenas pero no todo es bueno mas adelante vamos a verlo.&lt;/p&gt;
+&lt;p&gt;Al final pues la idea era primero memorizar o conocer el robot, desarmarlo y luego volver a armarlo. y que creen Si es posible armarlo sin ver nada. Yo no puedo hacerlo.&lt;/p&gt;
+&lt;p&gt;Hubieron algunas cosas como el hecho de que no conocían que el desarmado tenia dos cabezas una de cruz y la otra hexagonal así que perdieron bastante tiempo intentando atornillar con la cabeza equivocada.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2206" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1286/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta='{"aperture":"4.5","credit":"","camera":"Canon EOS REBEL T3i","caption":"","created_timestamp":"1519724330","copyright":"","focal_length":"18","iso":"100","shutter_speed":"0.02","title":"","orientation":"1"}' data-image-title="IMG_1286" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=740" class="alignnone size-full wp-image-2206" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=740" alt="IMG_1286.JPG" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1286.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Armados ya los robots pos vamoaprogramar&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2207" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1296/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta='{"aperture":"3.5","credit":"","camera":"Canon EOS REBEL T3i","caption":"","created_timestamp":"1519729986","copyright":"","focal_length":"18","iso":"1250","shutter_speed":"0.025","title":"","orientation":"1"}' data-image-title="IMG_1296" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=740" class="alignnone size-full wp-image-2207" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=740" alt="IMG_1296.JPG" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1296.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;y he aquí el mayor de los problemas de la inclusión de personas con discapacidad que si bien es cierto que estamos tan avanzados que ya podemos hablar con una cosa para decirle que compre papel de baño por amazon, no hemos podido crear un software lo suficientemente bueno para personas ciegas, aquí hay un gran problema y es que muy pocos estamos trabajando en ello, digo trabajando por Sonar.&lt;/p&gt;
+&lt;p&gt;Normalmente para programar a los Mbots se utiliza mblock que es un software basado en Scratch y S4A, bastante bueno e intuitivo, estos de makeblock le han metido bastante dinero a esto. mblock, no funciona con el text to speech de windows XP, baaaaaad. Entonces lo que hicimos fue abrir el bloc de notas y con el text to speech de la computadora pudimos esquivar algunas cosas, pero de nuevo mas problemas el código esta en ingles con funciones, programación pura que los niños jamas en la vida habían escuchado. Vomo pude y con ayuda de los profesores pudimos liarla y logramos programar el Mbot para utilizarlo como detector de obstáculos. Nuestras mentes de adultos siempre intentando meterles conocimiento mientras ellos lo único que quieren es jugar( quédense con esta frase).&lt;/p&gt;
+&lt;p&gt;Todo esta bien hasta que te empiezas a fijar bien en los detalles, como toda sociedad hay personas que no se incluyen aquí también, pues los niños con ceguera total se mantenían sentados y callados mientras los demás gritaban y jugaban en el piso con los robots.&lt;/p&gt;
+&lt;p&gt;Esta nena estuvo parada por 5 minutos esperando a que alguien le hablara.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2208" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/20180227_120915/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180227_120915.jpg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1519733355","copyright":"","focal_length":"4.2","iso":"640","shutter_speed":"0.029411764705882","title":"","orientation":"1"}' data-image-title="20180227_120915" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180227_120915.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180227_120915.jpg?w=740" class="alignnone size-full wp-image-2208" src="https://themicrofcontrol.files.wordpress.com/2018/02/20180227_120915.jpg?w=4032" alt="20180227_120915.jpg" width="4032" height="3024"&gt;&lt;/p&gt;
+&lt;p&gt;Les enseñamos algunas cosas que imprimimos en 3D como una etiqueta braille que podían leer perfectamente.&lt;/p&gt;
+&lt;p&gt;Bueno ya terminado el curso era hora de los diplomas, yeei&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2209" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1309/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg" data-orig-size="4940,2666" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="IMG_1309" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=740" class="alignnone size-full wp-image-2209" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=740" alt="img_1309.jpg" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1309-e1519797592710.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Asi que gracias a SENACYT los niños pudieron tener un robot en sus manos.&lt;/p&gt;
+&lt;p&gt;Y los niños ya pudieron volver a ser niños y jugar con los robots el resto del día.&lt;/p&gt;
+
+&lt;a href="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1301/"&gt;&lt;img width="150" height="100" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1301.jpg?w=150&amp;amp;h=100" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1301.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1301.jpg?w=300 300w" sizes="(max-width: 150px) 100vw, 150px" data-attachment-id="2210" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1301/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1301.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta='{"aperture":"3.5","credit":"","camera":"Canon EOS REBEL T3i","caption":"","created_timestamp":"1519731872","copyright":"","focal_length":"18","iso":"640","shutter_speed":"0.033333333333333","title":"","orientation":"1"}' data-image-title="IMG_1301" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1301.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1301.jpg?w=740"&gt;&lt;/a&gt;
+&lt;a href="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1307/"&gt;&lt;img width="150" height="100" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1307.jpg?w=150&amp;amp;h=100" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1307.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1307.jpg?w=300 300w" sizes="(max-width: 150px) 100vw, 150px" data-attachment-id="2211" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1307/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1307.jpg" data-orig-size="5184,3456" data-comments-opened="1" data-image-meta='{"aperture":"3.5","credit":"","camera":"Canon EOS REBEL T3i","caption":"","created_timestamp":"1519731992","copyright":"","focal_length":"21","iso":"1000","shutter_speed":"0.025","title":"","orientation":"1"}' data-image-title="IMG_1307" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1307.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1307.jpg?w=740"&gt;&lt;/a&gt;
+
+&lt;p&gt;Teniendo en cuenta que no se dispone de herramientas necesarias para que la inclusion de personas con discapacidad en muchos ámbitos aparte de las laborales, estamos hablando de cosas sociales, lúdicas y sobre todo de aprendizaje, cuando esas barreras se rompan o podamos saltarlas por cualquier medio estoy seguro que vamos a poder cambiar el mundo, es una necesidad del mundo. Yo por mi parte seguiré luchando intentando hacer el mundo un poco mas humano y mas accesible para todas las personas, con proyectos como estos con sonar, la matriz braille etc.&lt;/p&gt;
+&lt;p&gt;Realmente hay muchos proyectos que tienen el potencial de cambiar el mundo, luego están los proyectos que gracias a SENACYT buscan cambiar el mundo de los olvidados, de los despreciados dándoles herramientas para que dentro de algunos años puedan hacer algo con este conocimiento. El proximo taller es con niños con discapacidad auditiva, seguire informando que tal nos va.&lt;/p&gt;
+&lt;p&gt;Si ustedes me preguntan a dia de hoy y con esta experiencia si es posible cambiar el mundo yo puedo decir abiertamente SI juntos podemos lograrlo.&lt;/p&gt;
+&lt;p&gt;Asi que los dejo con esta  hermosa sonrisa para que puedan sentirse mejor.&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2212" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/28/cambiar-el-mundo-es-posible/img_1284/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg" data-orig-size="5184,2053" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="IMG_1284" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=740" class="alignnone size-full wp-image-2212" src="https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=740" alt="img_1284.jpg" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/02/img_1284-e1519798978774.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;PD: al terminar de redactar esta publicación estaba lleno de lágrimas, malditas injusticias, los niños no tienen porque nacer asi. Pero estamos hablando de que cerca del 10% de la población guatemalteca tiene alguna discapacidad y la mayoría es discapacidad visual producida por falta de control pre y post natal, pero es que como quieren que las personas lleguen a comprar prenatales y pastillas a las farmacias caminando kilómetros si no tienen ni para comer, realmente esto es una cadena y me siento bien basura al pensar que no puedo realmente ayudar de una mejor manera, asi que lo mejor que puedo hacer es seguir compartiendo el conocimiento que tengo y tratar de nunca despreciar a nadie. Sé que es un placebo para que mi corazón no sufra, pero aun no se como ayudarlos.&lt;/p&gt;</description><category>antiguamakerspace</category><category>Electronica</category><category>Emprendimiento</category><category>experiencia</category><category>jaquerespeis</category><category>opinion</category><guid>http://jaquerespeis.org/posts/20180228cambiar-el-mundo-es-posible/</guid><pubDate>Wed, 28 Feb 2018 12:02:43 GMT</pubDate></item><item><title>Error programadora ESP8266-01: Solucion.</title><link>http://jaquerespeis.org/posts/20180224error-programadora-esp8266-01-solucion/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Houston tenemos un problema. La programadora barata que encontramos en ebay no funciona &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f626.png" alt="😦" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-attachment-id="2195" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/24/error-programadora-esp8266-01-solucion/20180223_183857/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1519411137","copyright":"","focal_length":"4.2","iso":"320","shutter_speed":"0.1","title":"","orientation":"1"}' data-image-title="20180223_183857" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=740" class="alignnone size-full wp-image-2195" src="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=740" alt="20180223_183857" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_183857.jpg?w=768 768w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Holi, Bienvenidos de nuevo a the microfcontrol, ha sido un año bastante bueno en Guatemala con respecto a tecnología e internet de las cosas y especialmente para la comunidad que mañana 24 de febrero tendrá su primera reunion, Asi que nos vemos mañana en Teclab, edificio Tec, 4 grados norte, Junto con &lt;a href="https://www.facebook.com/giangoolabs/" target="_blank" rel="noopener"&gt;Giangoolabs&lt;/a&gt; Yeii.&lt;/p&gt;
+&lt;p&gt;Entrando en materia, hace un año aproximadamente que Oscar Leche (Fundador de la comunidad) me dijo, mira esta programadora para el ESP esta cool, yo ya llevaba cerca de un año de estar jugando con los ESP8266 (ay, como pasa el tiempo… Gracias al sensei kestler por haberme iniciado en el camino del IoT ), la cosa es que no pude hacer nada con ella, ya que no había ni nombre de la placa ni información, pero gracias a internet y un poco de research, logré dar con la solución.&lt;/p&gt;
+&lt;p&gt;Bueno antes vamos a poner un poco en contexto que es el ESP8266, bueno ya llevamos poco mas de dos años desde que empezamos a hablar sobre IoT en Guatemala con la comunidad y con los miembros, yendo y viniendo de departamento en departamento incentivando a jóvenes (algunos universitarios, otros como yo que no lo son) a que inventen y se unan a la ola de internet de las cosas. Pueden leer un poco mas en esta &lt;a href="https://themicrofcontrol.wordpress.com/2016/02/15/2016-ano-de-iot-en-guatemala/"&gt;publicación&lt;/a&gt;. Dos años después de verdad ha dado frutos, he recibido solicitudes de ayuda de 4-5 tesis, he visto proyectos de IoT materializarse y realmente es gratificante como esta cambiando el movimiento.&lt;/p&gt;
+&lt;p&gt;Bueno y toda esta casaca para que es, pues los primeros dispositivos de IoT que empezamos a usar fueron efectivamente los ESP8266, del cual pueden ver que casi todo lo que hay en este blog con WiFi esta hecho con ello, es uno de los favoritos a nivel mundial por la comunidad maker por el costo principalmente, pero tiene sus ventajas grandes.&lt;/p&gt;
+&lt;p&gt;De fabrica vienen para programarse o interactuar con LUA, que tambien tengo una&lt;a href="https://themicrofcontrol.wordpress.com/2015/11/16/nodemcu-101-guia-rapida-para-iot/"&gt; guia &lt;/a&gt;lo interesante es que los makers vieron su potencial asi que ahora ya podemos utilizar micropython o arduino para poder utilizarlo, haciendo un Flasheo a la memoria e insertando un binario nuevo con el código, en micropython solo se flashea una vez para que se pueda ejecutar el interprete y luego por comunicación serial o &lt;a href="https://themicrofcontrol.wordpress.com/2017/07/01/web-repl-comunicacion-con-micropython-por-medio-de-wifi/"&gt;por medio de wifi&lt;/a&gt; para poder reprogramarlo necesitamos que el pin0 cuando se enciende el ESP8266 reciba un pulso de GND, esto lo podemos hacer bastante bien con un jumper o un pedazo de alambre, lo mejor es usar un boton para ponerlo en modo &lt;em&gt;programming.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;El problema&lt;/h2&gt;
+&lt;p&gt;El problema con la programadora es que sirve unicamente para poder comunicarnos via serial a el esp8266, cuando queremos usarla para reprogramar no funciona porque no esta en modo programar.&lt;/p&gt;
+&lt;h2&gt;Solución&lt;/h2&gt;
+&lt;p&gt;Poner un jumper entre el pin 0 y GND, para así poder ponerlo en modo programar el problema con soldar directamente un cable entre gnd y pin0 es que cada vez que conectemos nuestro esp8266 va a entrar en modo programación y no sabremos si nuestro codigo funciona o no hasta que recarguemos el Binario.&lt;/p&gt;
+&lt;h3&gt;Solución de la solución&lt;/h3&gt;
+&lt;p&gt;&lt;img data-attachment-id="2197" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/24/error-programadora-esp8266-01-solucion/20180223_212256/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1519420976","copyright":"","focal_length":"4.2","iso":"200","shutter_speed":"0.033333333333333","title":"","orientation":"1"}' data-image-title="20180223_212256" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=740" class="alignnone size-full wp-image-2197" src="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=740" alt="20180223_212256" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_212256.jpg?w=768 768w" sizes="(max-width: 740px) 100vw, 740px"&gt;&lt;/p&gt;
+&lt;p&gt;Un botón, un pin conectado a GND y el otro a pin0 y se acabo el problema.&lt;/p&gt;
+&lt;p&gt;Quedaría algo así:&lt;/p&gt;
+
+&lt;a href="https://themicrofcontrol.wordpress.com/2018/02/24/error-programadora-esp8266-01-solucion/20180223_213722/"&gt;&lt;img width="113" height="150" src="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213722.jpg?w=113&amp;amp;h=150" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213722.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213722.jpg?w=226 226w" sizes="(max-width: 113px) 100vw, 113px" data-attachment-id="2198" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/24/error-programadora-esp8266-01-solucion/20180223_213722/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213722.jpg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1519421841","copyright":"","focal_length":"4.2","iso":"200","shutter_speed":"0.071428571428571","title":"","orientation":"1"}' data-image-title="20180223_213722" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213722.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213722.jpg?w=740"&gt;&lt;/a&gt;
+&lt;a href="https://themicrofcontrol.wordpress.com/2018/02/24/error-programadora-esp8266-01-solucion/20180223_213735/"&gt;&lt;img width="113" height="150" src="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213735.jpg?w=113&amp;amp;h=150" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213735.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213735.jpg?w=226 226w" sizes="(max-width: 113px) 100vw, 113px" data-attachment-id="2199" data-permalink="https://themicrofcontrol.wordpress.com/2018/02/24/error-programadora-esp8266-01-solucion/20180223_213735/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213735.jpg" data-orig-size="3024,4032" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1519421855","copyright":"","focal_length":"4.2","iso":"200","shutter_speed":"0.076923076923077","title":"","orientation":"1"}' data-image-title="20180223_213735" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213735.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/02/20180223_213735.jpg?w=740"&gt;&lt;/a&gt;
+
+&lt;p&gt; &lt;/p&gt;
+&lt;blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BfkIAHsjF0s/?utm_source=ig_embed&amp;amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;
+&lt;div style="padding:16px;"&gt; &lt;a href="https://www.instagram.com/p/BfkIAHsjF0s/?utm_source=ig_embed&amp;amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"&gt; 
+&lt;div style=" display: flex; flex-direction: row; align-items: center;"&gt;
+&lt;div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"&gt;&lt;/div&gt;
+&lt;div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"&gt;
+&lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"&gt;&lt;/div&gt;
+&lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="padding: 19% 0;"&gt;&lt;/div&gt;
+&lt;div style="display:block; height:50px; margin:0 auto 12px; width:50px;"&gt;&lt;svg width="50px" height="50px" viewbox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"&gt;&lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"&gt;&lt;g transform="translate(-511.000000, -20.000000)" fill="#000000"&gt;&lt;g&gt;&lt;path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;div style="padding-top: 8px;"&gt;
+&lt;div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"&gt; View this post on Instagram&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="padding: 12.5% 0;"&gt;&lt;/div&gt;
+&lt;div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"&gt;
+&lt;div&gt;
+&lt;div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"&gt;&lt;/div&gt;
+&lt;div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"&gt;&lt;/div&gt;
+&lt;div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="margin-left: 8px;"&gt;
+&lt;div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"&gt;&lt;/div&gt;
+&lt;div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="margin-left: auto;"&gt;
+&lt;div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"&gt;&lt;/div&gt;
+&lt;div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"&gt;&lt;/div&gt;
+&lt;div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/a&gt; 
+&lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/BfkIAHsjF0s/?utm_source=ig_embed&amp;amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Como programar un esp8266-01 #HackerspaceXibalba #arduinogt @oleche mira ya funciona c:&lt;/a&gt;&lt;/p&gt;
+&lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A post shared by &lt;a href="https://www.instagram.com/yeffrimic/?utm_source=ig_embed&amp;amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"&gt; Yeffri J. Salazar&lt;/a&gt; (@yeffrimic) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-02-24T03:33:32+00:00"&gt;Feb 23, 2018 at 7:33pm PST&lt;/time&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;y pues bueno realmente no es la gran solución, pero es La solución así que cualquier cosa por favor háganla saber.&lt;/p&gt;
+&lt;p&gt;Nos vemos en la siguiente publicación.&lt;/p&gt;
+&lt;p&gt;Y recuerden solo necesitan una excusa para cambiar el mundo &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/2764.png" alt="❤" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;/p&gt;
+&lt;p&gt;PD: se me olvido mencionar que este modelo de ESP8266 es el mas barato de todos asi que es mejor que compren una sola quemadora y luego tengan una placa especificamente hecha para poder usarlo despues, les va a salir mas barato que un nodemcu y aprovechan mejor el hardware.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</description><category>Emprendimiento</category><category>Guatemala</category><category>Hardware</category><category>internet de las cosas</category><category>Internet of Things</category><category>jaquerespeis</category><category>Node-red</category><category>NodeMCU</category><category>open-source</category><guid>http://jaquerespeis.org/posts/20180224error-programadora-esp8266-01-solucion/</guid><pubDate>Sat, 24 Feb 2018 09:02:59 GMT</pubDate></item><item><title>Domotica con Telegram: Como utilizar un chatbot para controlar cosas conectadas a internet</title><link>http://jaquerespeis.org/posts/20180105domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Holi, lo sé no es el mejor titulo del mundo, pero mi &lt;a href="http://www.undergroundpage.com/2018/01/raspberry-pi-kali-linux-smartphone.html" target="_blank" rel="noopener"&gt;compañero&lt;/a&gt; (me robo la idea ). Pero bueno a dejar de llorar y empezar a crear,&lt;/p&gt;
+&lt;p&gt;El dia de hoy vamos a crear un chatbot para poder controlar nuestras cosas conectadas a internet por medio de MQTT y python. WUJU&lt;/p&gt;
+&lt;p&gt;Lo que necesitamos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Telegram app&lt;br&gt;
+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python3&lt;br&gt;
+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mosquitto&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arduino IDE&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ESP8266&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ledes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DHT11&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos a empezar por lo que ya conocemos y es la parte electronica, hay una serie de complicaciones con respecto a nuestro querido ESP8266, es que no es tolerante a 5v, por lo que tendremos que tener bastante cuidado a la hora de meterle sensores analogicos o señales de 5v, podemos utilizar un divisor de voltaje o un nivelador de voltaje.&lt;/p&gt;
+&lt;p&gt;ARDUINO IDE&lt;/p&gt;
+&lt;p&gt;Necesitamos Algunas librerias, a estas alturas del partido no creo que sea necesario que tener que explicar como instalar las librerias, pero si eres nuevo en mi blog te recomiendo que leas la serie de IOT de mi blog y estés en lo ultimo a nivel mundial como nosotros.( ja, ja, ja( asi se escribe la risa xD))&lt;/p&gt;
+&lt;p&gt;La logica del codigo es la siguiente, por medio de WIFI, nos conectamos a un broker ( en este caso local) pero puede ser en la nube aunque uno local funciona muy bien, se suscribe a los topicos para controlar las salidas en este caso /salida1, hasta la /salida4 recibiendo un CHAR o Caracter 0 o 1 para apagar y encender respectivamente. luego veran que la luz de su esp8266 azul se queda parpadeando, eso quiere decir que funciona correctamente el codigo, cada 5 segundos envia el estado del sensore humedad y temperatura respectivamente.&lt;/p&gt;
+&lt;pre&gt;Codigo:
+
+/*
+ Este sketch es para controlar 4 salidas digitales distintas
+ tambien tiene un dht11 para enviar la temperatura y un bluetooth para conectarse de manera local.
+
+Circuito:
+ NodeMCU v1.0
+ DHT11
+ Modulo Blutooth hc-06 o hc-05
+ 4 modulos de relay o relays
+ led amarillo, rojo.
+ resistencia 10k para el dht11
+
+
+
+
+Yeffri J. Salazar
+ Hackerspace Xibalba y Comunidad Arduino Guatemala
+ Themicrofcontrol.wordpress.com
+
+*/
+/************************************
+ ** Librerias **
+ ***********************************/
+#include 
+#include 
+#include "DHT.h"
+/************************************
+ ** constantes **
+ ***********************************/
+#define salida1 D5
+#define salida2 D6
+#define salida3 D7
+#define salida4 D8
+#define ledAmarillo D4
+#define ledRojo D1
+#define pinDHT 9
+#define puertoMqtt 1883
+/***********************************
+ ** objetos y variables **
+ ***********************************/
+DHT dht;
+WiFiClient clienteWifi;//este cliente se encarga de la comunicacion con el wifi
+PubSubClient clienteMQTT(clienteWifi);//este utiliza el cliente anterior para hacer poder crear la conexion mqtt
+//si pasan por el hackerspace Xibalba pues ya tienen la clave
+const char * ssid = "Hackerspace";
+const char * claveWifi = "IOT12345";
+const char * brokerMqtt = "192.168.1.10";// ip del broker sin http ni nada solo los numeros
+uint32_t ultimoIntentoReconexion;
+uint32_t timerEnvioDatos;
+uint32_t cambioEstado = 0;
+uint8_t estadoLed = 0;
+uint16_t tiempoParpadeo = 350;
+float humedad, temperatura;
+
+
+
+
+void parpadeo(uint8_t led) {
+ //Serial.println(millis() - cambioEstado);
+ if ( millis() - cambioEstado &amp;gt; tiempoParpadeo) {
+ // Serial.println(pasoSemaforo);
+ cambioEstado = millis();
+ estadoLed = !estadoLed;
+ }
+ digitalWrite(led, estadoLed);
+}
+
+
+
+
+void conectarAlWifi() {
+
+WiFi.begin(ssid, claveWifi);
+ Serial.print("conectando a");
+ Serial.println(ssid);
+ while (WiFi.status() != WL_CONNECTED) {
+ delay(500);
+ Serial.print(".");
+ }
+
+Serial.println("");
+ Serial.println("Wifi Conectado ");
+ Serial.println("direccion IP: ");
+ Serial.println(WiFi.localIP());
+}
+
+void callback(char* topic, byte* mensaje, unsigned int length) {
+ String topico = topic;
+ Serial.print("Mensaje Recibido del topico: ");
+ Serial.println(topico);
+ Serial.print("mensaje : ");
+ for (uint8_t i = 0; i &amp;lt; length; i++) {  Serial.print(mensaje[i]);  }  //le restamos -48 para que el valor sea 0 o 1  //restamos el valor ascii para hacerlo un entero if (topico == "/salida1") {  digitalWrite(salida1, mensaje[0] - 48);  Serial.println("Salida 1 ");  }  else if (topico == "/salida2") {  digitalWrite(salida2, mensaje[0] - 48);  Serial.println("Salida 2 ");  }  else if (topico == "/salida3") {  digitalWrite(salida3, mensaje[0] - 48);  Serial.println("Salida 3 ");  }  else if (topico == "/salida4") {  digitalWrite(salida4, mensaje[0] - 48);  Serial.println("Salida 4 ");  }  else if (topico == "/temperatura") {  Serial.println(temperatura);  char msg[3];  snprintf (msg, 3, "%ld", (int)temperatura);  clienteMQTT.publish("/respuestaTemperatura", msg);  }  else if (topico == "/humedad") {  Serial.println(humedad);  char msg[3];  snprintf (msg, 3, "%ld", (int)temperatura);  clienteMQTT.publish("/respuestaTemperatura", msg);  }  else {  Serial.println("error de mensaje");  } } boolean reconexion() {  Serial.print("Conectando al broker mqtt");  //intentando conectar al broker  if (clienteMQTT.connect("ESP8266Client")) {  Serial.println("Conectado");  //publicamos que estamos conectados  clienteMQTT.publish("/conexion", "Conectado");  //nos suscribimos a los topicos para controlar los ledes  clienteMQTT.subscribe("/salida1");  clienteMQTT.subscribe("/salida2");  clienteMQTT.subscribe("/salida3");  clienteMQTT.subscribe("/salida4");  clienteMQTT.subscribe("/temperatura");  clienteMQTT.subscribe("/humedad");  } else {  Serial.print("falló, rc=");  Serial.print(clienteMQTT.state());  }  return clienteMQTT.connected(); } void entradaSerial() {  if (Serial.available()) {  char dato = Serial.read();  if (dato == 'a') {  digitalWrite(salida1, HIGH);  Serial.println("Salida 1 ");  }  else if (dato == 's') {  digitalWrite(salida2, HIGH);  Serial.println("Salida 2 ");  }  else if (dato == 'd') {  digitalWrite(salida3, HIGH);  Serial.println("Salida 3 ");  }  else if (dato == 'f') {  digitalWrite(salida4, HIGH);  Serial.println("Salida 4 ");  }  else if (dato == 'q') {  digitalWrite(salida1, LOW);  Serial.println("Salida 1 ");  }  else if (dato == 'w') {  digitalWrite(salida2, LOW);  Serial.println("Salida 2 ");  }  else if (dato == 'e') {  digitalWrite(salida3, LOW);  Serial.println("Salida 3 ");  }  else if (dato == 'r') {  digitalWrite(salida4, LOW);  Serial.println("Salida 4 ");  }  else if (dato == ' ') {  digitalWrite(salida4, LOW);  digitalWrite(salida3, LOW);  digitalWrite(salida2, LOW);  digitalWrite(salida1, LOW);  Serial.println("apagando todo");  }  else if (dato == '1') {  digitalWrite(salida4, HIGH);  digitalWrite(salida3, HIGH);  digitalWrite(salida2, HIGH);  digitalWrite(salida1, HIGH);  Serial.println("encendiendo todo");  } else {  Serial.println("error de mensaje");  }  } } void setup() {  Serial.begin(9600);  Serial.println("iniciando programa Holi mami");  dht.setup(pinDHT); // dht PIN  pinMode(salida1, OUTPUT);  pinMode(salida2, OUTPUT);  pinMode(salida3, OUTPUT);  pinMode(salida4, OUTPUT);  pinMode(ledAmarillo, OUTPUT);  pinMode(ledRojo, OUTPUT);  digitalWrite(ledAmarillo, HIGH);  digitalWrite(ledRojo, HIGH);  conectarAlWifi();  clienteMQTT.setServer(brokerMqtt, puertoMqtt); //le decimos cual es el servidor y el puerto al que se debe conectar  clienteMQTT.setCallback(callback);//le decimos como se llama la funcion de callback } void loop() {  entradaSerial();  if (!clienteMQTT.connected()) {  if (millis() - ultimoIntentoReconexion &amp;gt; 5000) {
+ ultimoIntentoReconexion = millis();
+ // Attempt to reconnect
+ if (reconexion()) {
+ ultimoIntentoReconexion = 0;
+ }
+ }
+ } else {
+ //cliente conectado
+ if (millis() - timerEnvioDatos &amp;gt; 5000) {
+ timerEnvioDatos = millis();
+ //a falta de sensores enviamos valores aleatorios
+ char msg[3];
+ humedad = dht.getHumidity();
+ temperatura = dht.getTemperature();
+ snprintf (msg, 3, "%ld", (int)temperatura);
+ clienteMQTT.publish("/temperatura", msg);
+ snprintf (msg, 3, "%ld", (int)humedad);
+ clienteMQTT.publish("/humedad", msg);
+ Serial.print(dht.getStatusString());
+ Serial.print("\t");
+ Serial.print(humedad);
+ Serial.print("\t\t");
+ Serial.print(temperatura);
+ }
+ clienteMQTT.loop();
+ parpadeo(D1);
+ parpadeo(D4);
+ }
+}&lt;/pre&gt;
+&lt;p&gt;He tratado la manera de hacer el codigo lo mejor legible posible asi que si no le entienden no duden en comentar abajo &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;/p&gt;
+&lt;p&gt;Esto al final es algo que ya hemos visto anteriormente solo un poco tuneado, para que funcione para nuestros propositos la verdadera magia al final de todo esto la hará python ( ay python :3 ), eso quiere decir que necesitamos una computadora o un servidor para que corra nuestro script.&lt;/p&gt;
+&lt;h2&gt;CHATBOT&lt;/h2&gt;
+&lt;p&gt;Antes de empezar a programar y configurar nuestro servidor o maquina local, vamos a crear de manera super sencilla nuestro bot en telegram. Para quien no sepa que es telegram, pues es una aplicacion de mensajeria instantanea que funciona en web, escritorio y movil. yo suelo utilizarla mucho por su versatilidad y que aparte es open source gracias a ello tiene demasiadas features muy buenas que poco a poco la competencia como whatsapp ha ido implementando(copiando).&lt;/p&gt;
+&lt;p&gt;El papa de todos los bots.&lt;/p&gt;
+&lt;p&gt;Lo primero que debemos hacer es hablar con el padre de todos los bots el @BotFather, es super sencillo crear nuestro bot, al final nos dara un TOKEN  el cual usaremos para poder acceder a los servicios de la API de telegram. Este token es super secreto asi que tengan cuidado donde lo almacenan, por favor usen keypassxc (promocion gracias a que me ha ayudado mucho a guardar las 123873102937 contraseñas que utilizo ).&lt;/p&gt;
+&lt;p&gt;Asi que vamos a lo nuestro. Con esta serie de capturas de pantalla  veremos lo facil que es configurar el bot.  Pero si no quieres ver estos son los comandos&lt;/p&gt;
+&lt;p&gt;En el chat con BotFather,&lt;/p&gt;
+&lt;pre&gt;/start
+/newbot
+Nombre del bot
+usuario del bot&lt;/pre&gt;
+&lt;a href="https://themicrofcontrol.wordpress.com/2018/01/05/domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/#gallery-2183-1-slideshow"&gt;Haga click para ver el pase de diapositivas.&lt;/a&gt;
+&lt;h2&gt;&lt;strong&gt;Servidor o maquina local&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Como mencionaba en el parrafo anterior lo que necesitamos es una computadora para correr nuestro script de python3, pero bien puede ser una rpi como cerebro de nuestra casa.&lt;/p&gt;
+&lt;p&gt;Mosquitto&lt;/p&gt;
+&lt;pre&gt;Sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients&lt;/pre&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;p&gt;La ultima vez que pregunte si era mejor usar python 2 o python 3 me regañaron demasiado fuerte asi que de ahora en adelante todo sera python 3&lt;br&gt;
+Utilizaremos esta muy bonita y facil de implementar libreria, tambien una libreria que nos ayudara en la comunicacion con el broker MQTT&lt;/p&gt;
+&lt;pre&gt;https://github.com/eternnoir/pyTelegramBotAPI #telegram api 
+https://www.eclipse.org/paho/clients/python/&lt;/pre&gt;
+&lt;p&gt;Asi que la mejor manera de instalarla es como dice en el repositorio:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip3 install pyTelegramBotAPI&lt;/code&gt; pip3 install paho-mqtt&lt;/pre&gt;
+&lt;p&gt;Vamos entonces a probar un poco de codigo seguirmos las instrucciones del repositorio, pero traducido para mejor entendimiento. Cualquier duda consultar en el repositorio o escribir en los comentarios jovenes &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;span class="pl-k"&gt;import&lt;/span&gt; telebot
+
+bot &lt;span class="pl-k"&gt;=&lt;/span&gt; telebot.TeleBot(&lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;"&lt;/span&gt;TOKEN&lt;span class="pl-pds"&gt;"&lt;/span&gt;&lt;/span&gt;) #la cadena que nos dio nuestro botfather
+
+&lt;span class="pl-en"&gt;@bot.message_handler&lt;/span&gt;(&lt;span class="pl-v"&gt;commands&lt;/span&gt;&lt;span class="pl-k"&gt;=&lt;/span&gt;[&lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;'&lt;/span&gt;start&lt;span class="pl-pds"&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;'&lt;/span&gt;help&lt;span class="pl-pds"&gt;'&lt;/span&gt;&lt;/span&gt;])
+&lt;span class="pl-k"&gt;def&lt;/span&gt; &lt;span class="pl-en"&gt;bienvenida&lt;/span&gt;(&lt;span class="pl-smi"&gt;message&lt;/span&gt;):
+	bot.reply_to(message, &lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;"&lt;/span&gt;Holi, bienvenido a themicrofcontrol&lt;span class="pl-pds"&gt;"&lt;/span&gt;&lt;/span&gt;)
+
+&lt;span class="pl-en"&gt;@bot.message_handler&lt;/span&gt;(&lt;span class="pl-v"&gt;func&lt;/span&gt;&lt;span class="pl-k"&gt;=&lt;/span&gt;&lt;span class="pl-k"&gt;lambda&lt;/span&gt; &lt;span class="pl-smi"&gt;message&lt;/span&gt;: &lt;span class="pl-c1"&gt;True&lt;/span&gt;)
+&lt;span class="pl-k"&gt;def&lt;/span&gt; repetirTodo(&lt;span class="pl-smi"&gt;message&lt;/span&gt;):
+	bot.reply_to(message, message.text)
+
+bot.polling(timeout=30)&lt;/pre&gt;
+&lt;p&gt;Algo que deben de saber es que las funciones handler se ejecutan en el orden en el que fueron declaradas asi que cuidado.&lt;/p&gt;
+&lt;p&gt;Ahora vamos a hacer un pequeño script que publica por medio de mqtt al broker que deseamos.&lt;/p&gt;
+&lt;p&gt;Primero ejecutamos el siguiente comando en la terminal para habilitar nuestro broker local&lt;/p&gt;
+&lt;pre&gt;mosquitto -d&lt;/pre&gt;
+&lt;p&gt;ahora ya podemos probar nuestro codigo en python3&lt;/p&gt;
+&lt;pre&gt;import paho.mqtt.publish as publish
+from time import sleep
+while True:
+    publish.single('/TopicoPrueba','holi',hostname='localhost')
+    sleep(1)&lt;/pre&gt;
+&lt;p&gt;Para verificar si estamos enviando correctamente los datos utilizaremos mosquitto_sub&lt;/p&gt;
+&lt;pre&gt;mosquitto_sub -h localhost -t /TopicoPrueba&lt;/pre&gt;
+&lt;p&gt;&lt;img data-attachment-id="2191" data-permalink="https://themicrofcontrol.wordpress.com/2018/01/05/domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/deepinscreenshot_select-area_20180104171051/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png" data-orig-size="735,90" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="DeepinScreenshot_select-area_20180104171051" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=735" class="alignnone size-full wp-image-2191" src="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=740" alt="DeepinScreenshot_select-area_20180104171051" srcset="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png 735w, https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=300 300w" sizes="(max-width: 735px) 100vw, 735px"&gt;&lt;/p&gt;
+&lt;p&gt;Una vez hecho esto cada segundo estaremos recibiendo informacion en este caso Holi.&lt;/p&gt;
+&lt;p&gt;Si bien es cierto que no soy un experto programador quise hacer este codigo lo mejor legible posible, se puede mejorar mucho, como todo en la vida.&lt;/p&gt;
+&lt;p&gt;La idea es la siguiente&lt;br&gt;
+Hablamos con nuestro chatbot corriendo este script en python para que pueda ejecutar las ordenes que le damos. El comando /start inicia la conversacion y nos dice los comandos (aun debo trabajar en la parte de la interfaz pero poco a poco), las ordenes son sencillas y descriptivas EncenderSalida1 enciende la salida 1 ja, ja, ApagarSalida1 la apaga y es lo mismo con las 4 salidas o las que queramos poner solo agregamos mas elif en la funcion.&lt;/p&gt;
+&lt;p&gt;Bueno sin mas les dejo el codigo y el &lt;a href="https://github.com/yeffrimic/DomoticaConTelegramYArduino/blob/master/chatbot.py"&gt;repositorio&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Por alguna extraña razon,  no me aparece el codigo indentado, pero de igual manera se los dejo, por favor copienlo del repositorio.&lt;/p&gt;
+&lt;pre&gt; import paho.mqtt.publish as publish
+ import telebot
+ bot = telebot.TeleBot(token)
+ @bot.message_handler(commands=['start', 'help'])
+ def send_welcome(message):
+ bot.reply_to(message, "Holi, bienvenido al chatbot mas kulz &amp;lt;3")
+ bot.reply_to(message, "Comandos: \n EncenderSalida1, EncenderSalida2, EncenderSalida3, EncenderSalida4, EncenderSalida4, EncenderTodo.\n ApagarSalida1, ApagarSalida2, ApagarSalida3, ApagarSalida4, ApagarTodo\n Gracias")
+ @bot.message_handler(func=lambda message: True)
+ def echo_all(message):
+ bot.reply_to(message, message.text)
+ if(message.text == 'EncenderSalida1'):
+ publish.single('/salida1','1',hostname='localhost')
+ print("Salida 1 encendida.")
+ bot.reply_to(message, "Salida 1 encendida.")
+ elif(message.text == 'ApagarSalida1'):
+ publish.single('/salida1','0',hostname='localhost')
+ print("Salida 1 apagada")
+ bot.reply_to(message, "Salida 1 apagada.")
+ elif(message.text == 'EncenderSalida2'):
+ publish.single('/salida2','1',hostname='localhost')
+ print("Salida 2 encendida.")
+ bot.reply_to(message, "Salida 2 encendida.")
+ elif(message.text == 'ApagarSalida2'):
+ publish.single('/salida2','0',hostname='localhost')
+ print("Salida 2 apagada.")
+ bot.reply_to(message, "Salida 2 apagada.")
+ elif(message.text == 'EncenderSalida3'):
+ publish.single('/salida3','1',hostname='localhost')
+ print("Salida 3 encendida.")
+ bot.reply_to(message, "Salida 3 encendida.")
+ elif(message.text == 'ApagarSalida3'):
+ publish.single('/salida3','0',hostname='localhost')
+ print("Salida 3 apagada.") 
+ bot.reply_to(message, "Salida 3 apagada.")
+ elif(message.text == 'EncenderSalida4'):
+ publish.single('/salida4','1',hostname='localhost')
+ print("Salida 4 encendida.")
+ bot.reply_to(message, "Salida 4 encendida.")
+ elif(message.text == 'ApagarSalida4'):
+ publish.single('/salida4','0',hostname='localhost')
+ print("Salida 4 apagada.") 
+ bot.reply_to(message, "Salida 4 apagada."
+ elif(message.text == 'ApagarTodo'):
+ publish.single('/salida4','0',hostname='localhost')
+ publish.single('/salida1','0',hostname='localhost')
+ publish.single('/salida2','0',hostname='localhost')
+ publish.single('/salida3','0',hostname='localhost')
+ bot.reply_to(message, "Todo encendido.")
+ print("apagando todo.") 
+ elif(message.text == 'EncenderTodo'):
+ publish.single('/salida4','1',hostname='localhost')
+ publish.single('/salida1','1',hostname='localhost')
+ publish.single('/salida2','1',hostname='localhost')
+ publish.single('/salida3','1',hostname='localhost')
+ print("apagando todo.") 
+ bot.reply_to(message, "Todo apagado")
+ #print(message)
+ print(message.text)
+ print("iniciando programa")
+ bot.polling(none_stop=False,timeout=30)&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class="jetpack-video-wrapper"&gt;&lt;iframe class="youtube-player" type="text/html" width="740" height="417" src="https://www.youtube.com/embed/5i6b5EFAOhA?version=3&amp;amp;rel=1&amp;amp;fs=1&amp;amp;autohide=2&amp;amp;showsearch=0&amp;amp;showinfo=1&amp;amp;iv_load_policy=1&amp;amp;wmode=transparent" allowfullscreen="true" style="border:0;"&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;Bueno y con eso concluye el tutorial del dia de hoy no olviden comentar y compartir.&lt;/p&gt;
+&lt;p&gt;y recuerden, Solo necesitan una excusa para cambiar el mundo.&lt;/p&gt;</description><category>Arduino</category><category>Guatemala</category><category>Hardware</category><category>ideas</category><category>internet de las cosas</category><category>Internet of Things</category><category>jaquerespeis</category><category>Node-red</category><category>NodeMCU</category><category>open-source</category><category>Raspberry Pi</category><guid>http://jaquerespeis.org/posts/20180105domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/</guid><pubDate>Fri, 05 Jan 2018 08:01:50 GMT</pubDate></item><item><title>HolaMundo con ethereum</title><link>http://jaquerespeis.org/posts/postsholamundo-ethereum/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Lista de herramientas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;testRPC&lt;/li&gt;
+&lt;li&gt;nvm&lt;/li&gt;
+&lt;li&gt;web3&lt;/li&gt;
+&lt;li&gt;geth&lt;/li&gt;
+&lt;li&gt;solc&lt;/li&gt;
+&lt;li&gt;web3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;h3&gt;Linux&lt;/h3&gt;
+&lt;p&gt;Los siguientes pasos muestras como instalar las herramientas necesarias en Ubuntu 17.04&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+nvm ls-remote
+nvm install &amp;lt;la ultima LTS&amp;gt;
+npm install -g ethereumjs-testrpc
+npm install solc
+npm install web3
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Mac&lt;/h3&gt;
+&lt;p&gt;Para instalar nvm es necesario tener &lt;a href="https://brew.sh/"&gt;brew&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;brew install nvm
+nvm ls-remote
+nvm install &amp;lt;la ultima LTS&amp;gt;
+npm install -g ethereumjs-testrpc
+npm install solc
+npm install web3
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Desarrollo&lt;/h2&gt;
+&lt;p&gt;Con el editor preferido, escribir el contrato, para esto se va a utilizar el lenguage &lt;a href="https://solidity.readthedocs.io/en/develop/"&gt;&lt;strong&gt;solidity&lt;/strong&gt;&lt;/a&gt;, sin embargo existen otras opciones como &lt;a href="https://github.com/ethereum/wiki/wiki/Serpent"&gt;&lt;strong&gt;serpent&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para compilar el contrato vamos a utilizar el comando &lt;code&gt;solc --bin --optimize &amp;lt;archivo.sol&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Escribit el siguiente contrato en un archivo llamado Voting.sol&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pragma solidity ^0.4.11;
+// We have to specify what version of compiler this code will compile with
+
+contract Voting {
+  /* mapping field below is equivalent to an associative array or hash.
+  The key of the mapping is candidate name stored as type bytes32 and value is
+  an unsigned integer to store the vote count
+  */
+
+  mapping (bytes32 =&amp;gt; uint8) public votesReceived;
+
+  /* Solidity doesn't let you pass in an array of strings in the constructor (yet).
+  We will use an array of bytes32 instead to store the list of candidates
+  */
+
+  bytes32[] public candidateList;
+
+  /* This is the constructor which will be called once when you
+  deploy the contract to the blockchain. When we deploy the contract,
+  we will pass an array of candidates who will be contesting in the election
+  */
+  function Voting(bytes32[] candidateNames) {
+    candidateList = candidateNames;
+  }
+
+  // This function returns the total votes a candidate has received so far
+  function totalVotesFor(bytes32 candidate) returns (uint8) {
+    if (validCandidate(candidate) == false) throw;
+    return votesReceived[candidate];
+  }
+
+  // This function increments the vote count for the specified candidate. This
+  // is equivalent to casting a vote
+  function voteForCandidate(bytes32 candidate) {
+    if (validCandidate(candidate) == false) throw;
+    votesReceived[candidate] += 1;
+  }
+
+  function validCandidate(bytes32 candidate) returns (bool) {
+    for(uint i = 0; i &amp;lt; candidateList.length; i++) {
+      if (candidateList[i] == candidate) {
+        return true;
+      }
+    }
+    return false;
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Pasos para desplegar el contrato&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Ejecutar node&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Mientras se ejecutan los comandos, se puede ver su salida y analizarla.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Web3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'web3'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;web3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;providers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;HttpProvider&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"http://localhost:8545"&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Listar las cuentas existentes en la red&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Compilar el código &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;readFileSync&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Voting.sol'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nx"&gt;solc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'solc'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;compiledCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;solc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="kr"&gt;interface&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;VotingContract&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;byteCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;bytecode&lt;/span&gt;
+&lt;span class="nx"&gt;deployedContract&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Nick'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Jose'&lt;/span&gt;&lt;span class="p"&gt;],{&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;byteCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;gas&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4700000&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;
+&lt;span class="nx"&gt;contractInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;at&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;String&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+
+&lt;span class="s1"&gt;'0xdedc7ae544c3dde74ab5a0b07422c5a51b5240603d31074f5b75c0ebc786bf53'&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+
+&lt;span class="s1"&gt;'0x02c054d238038d68b65d55770fabfca592a5cf6590229ab91bbe7cd72da46de9'&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+
+&lt;span class="s1"&gt;'0x3da069a09577514f2baaa11bc3015a16edf26aad28dffbcd126bde2e71f2b76f'&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toLocaleString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="s1"&gt;'3'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Opcodes de la EVM&lt;/h2&gt;
+&lt;h3&gt;0s: Stop and Arithmetic Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x00    STOP        Halts execution
+0x01    ADD         Addition operation
+0x02    MUL         Multiplication operation
+0x03    SUB         Subtraction operation
+0x04    DIV         Integer division operation
+0x05    SDIV        Signed integer
+0x06    MOD         Modulo
+0x07    SMOD        Signed modulo
+0x08    ADDMOD      Modulo
+0x09    MULMOD      Modulo
+0x0a    EXP         Exponential operation
+0x0b    SIGNEXTEND  Extend length of two's complement signed integer
+&lt;/pre&gt;
+
+
+&lt;h3&gt;10s: Comparison &amp;amp; Bitwise Logic Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x10    LT      Lesser-than comparison
+0x11    GT      Greater-than comparison
+0x12    SLT     Signed less-than comparison
+0x13    SGT     Signed greater-than comparison
+0x14    EQ      Equality  comparison
+0x15    ISZERO  Simple not operator
+0x16    AND     Bitwise AND operation
+0x17    OR      Bitwise OR operation
+0x18    XOR     Bitwise XOR operation
+0x19    NOT     Bitwise NOT operation
+0x1a    BYTE    Retrieve single byte from word
+&lt;/pre&gt;
+
+
+&lt;h3&gt;20s: SHA3&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x20    SHA3    Compute Keccak-256 hash
+&lt;/pre&gt;
+
+
+&lt;h3&gt;30s: Environmental Information&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x30    ADDRESS         Get address of currently executing account
+0x31    BALANCE         Get balance of the given account
+0x32    ORIGIN          Get execution origination address
+0x33    CALLER          Get caller address. This is the address of the account that is directly responsible for this execution
+0x34    CALLVALUE       Get deposited value by the instruction/transaction responsible for this execution
+0x35    CALLDATALOAD    Get input data of current environment
+0x36    CALLDATASIZE    Get size of input data in current environment
+0x37    CALLDATACOPY    Copy input data in current environment to memory This pertains to the input data passed with the message call instruction or transaction
+0x38    CODESIZE        Get size of code running in current environment
+0x39    CODECOPY        Copy code running in current environment to memory
+0x3a    GASPRICE        Get price of gas in current environment
+0x3b    EXTCODESIZE     Get size of an account's code
+0x3c    EXTCODECOPY     Copy an account's code to memory
+&lt;/pre&gt;
+
+
+&lt;h3&gt;40s: Block Information&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x40    BLOCKHASH   Get the hash of one of the 256 most recent complete blocks
+0x41    COINBASE    Get the block's beneficiary address
+0x42    TIMESTAMP   Get the block's timestamp
+0x43    NUMBER      Get the block's number
+0x44    DIFFICULTY  Get the block's difficulty
+0x45    GASLIMIT    Get the block's gas limit
+&lt;/pre&gt;
+
+
+&lt;h3&gt;50s Stack, Memory, Storage and Flow Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x50    POP         Remove item from stack
+0x51    MLOAD       Load word from memory
+0x52    MSTORE      Save word to memory
+0x53    MSTORE8     Save byte to memory
+0x54    SLOAD       Load word from storage
+0x55    SSTORE      Save word to storage
+0x56    JUMP        Alter the program counter
+0x57    JUMPI       Conditionally alter the program counter
+0x58    PC          Get the value of the program counter prior to the increment
+0x59    MSIZE       Get the size of active memory in bytes
+0x5a    GAS         Get the amount of available gas, including the corresponding reduction
+0x5b    JUMPDEST    Mark a valid destination for jumps
+&lt;/pre&gt;
+
+
+&lt;h3&gt;60s &amp;amp; 70s: Push Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x60    PUSH1   Place 1 byte item on stack
+0x61    PUSH2   Place 2-byte item on stack
+…
+0x7f    PUSH32  Place 32-byte (full word) item on stack
+&lt;/pre&gt;
+
+
+&lt;h3&gt;80s: Duplication Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x80    DUP1    Duplicate 1st stack item
+0x81    DUP2    Duplicate 2nd stack item
+…
+0x8f    DUP16   Duplicate 16th stack item
+&lt;/pre&gt;
+
+
+&lt;h3&gt;90s: Exchange Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x90    SWAP1   Exchange 1st and 2nd stack items
+0x91    SWAP2   Exchange 1st and 3rd stack items
+…   …
+0x9f    SWAP16  Exchange 1st and 17th stack items
+&lt;/pre&gt;
+
+
+&lt;h3&gt;a0s: Logging Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xa0    LOG0    Append log record with no topics
+0xa1    LOG1    Append log record with one topic
+…   …
+0xa4    LOG4    Append log record with four topics
+&lt;/pre&gt;
+
+
+&lt;h3&gt;f0s: System operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xf0    CREATE          Create a new account with associated code
+0xf1    CALL            Message-call into an account
+0xf2    CALLCODE        Message-call into this account with alternative account's code
+0xf3    RETURN          Halt execution returning output data
+0xf4    DELEGATECALL    Message-call into this account with an alternative account's code, but persisting the current values for `sender` and `value`
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Halt Execution, Mark for deletion&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xff    SELFDESTRUCT    Halt execution and register account for later deletion
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;https://github.com/creationix/nvm&lt;/li&gt;
+&lt;li&gt;https://github.com/ethereumjs/testrpc&lt;/li&gt;
+&lt;li&gt;https://en.wikipedia.org/wiki/Remote_procedure_call&lt;/li&gt;
+&lt;li&gt;http://ethdocs.org/en/latest/network/test-networks.html&lt;/li&gt;
+&lt;li&gt;https://medium.com/@doart3/ethereum-dapps-without-truffle-compile-deploy-use-it-e6daeefcf919&lt;/li&gt;
+&lt;li&gt;https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2&lt;/li&gt;
+&lt;li&gt;https://github.com/ethereum/yellowpaper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notas&lt;/h2&gt;
+&lt;p&gt;testrpc -n5&lt;/p&gt;&lt;/div&gt;</description><category>ethereum</category><category>jaquerespeis</category><category>smart contracts</category><guid>http://jaquerespeis.org/posts/postsholamundo-ethereum/</guid><pubDate>Wed, 19 Jul 2017 11:07:00 GMT</pubDate></item><item><title>Minar ethereum</title><link>http://jaquerespeis.org/posts/postsminar-ethereum/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Requerimientos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Minador&lt;/li&gt;
+&lt;li&gt;Ubuntu Server 16.04&lt;/li&gt;
+&lt;li&gt;Opcional(tarjeta de video)&lt;/li&gt;
+&lt;li&gt;Python y python-twisted&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;cpp-ethereum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Se considera Ubuntu Server, en caso de Ubuntu Desktop algunos requerimientos ya vienen instalados en el sistema.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar ubuntu 16.04&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar python y python-wisted&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install python
+sudo apt-get install python-twisted
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar cpp-ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install cpp-ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar el repositorio de &lt;a href="https://github.com/Atrides/eth-proxy"&gt;eth-proxy&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Crear un wallet con &lt;a href="https://github.com/ethereum/go-ethereum/wiki/geth"&gt;geth&lt;/a&gt; o &lt;a href="https://github.com/paritytech/parity"&gt;parity&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modificar el archivo de configuración de eth-proxy para usar el wallet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;En el directorio eth-proxy, ejecutar &lt;code&gt;eth-proxy.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo python eth-proxy/eth-proxy.py
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Ejecutar &lt;code&gt;ethminer&lt;/code&gt; apuntando a localhost&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ethminer -F http://127.0.0.1:8080/minador -G
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; La opción &lt;code&gt;-G&lt;/code&gt; indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice &lt;code&gt;--allow-opencl-cpu&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;https://github.com/paritytech/parity
+https://github.com/Atrides/eth-proxy
+https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html&lt;/p&gt;&lt;/div&gt;</description><category>cryptomoneda</category><category>ethereum</category><category>jaquerespeis</category><category>minar</category><guid>http://jaquerespeis.org/posts/postsminar-ethereum/</guid><pubDate>Fri, 31 Mar 2017 00:03:00 GMT</pubDate></item><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://jaquerespeis.org/posts/postsprogramar20microcontrolador20stm322/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Microcontrolador STM322&lt;/li&gt;
+&lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
+&lt;li&gt;Una maquina con Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Requerimientos con Gnu/Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices&lt;/li&gt;
+&lt;li&gt;vim – Editor de texto&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Terminos importantes&lt;/h2&gt;
+&lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://jaquerespeis.org/posts/postsprogramar20microcontrolador20stm322/</guid><pubDate>Mon, 28 Dec 2015 11:12:00 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://jaquerespeis.org/posts/postsutilizar-nikola/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.&lt;/p&gt;
+&lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Primeros usos&lt;/h3&gt;
+&lt;p&gt;En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando &lt;code&gt;nikola init --demo .&lt;/code&gt;, luego se debe de construir el sitio con el comando &lt;code&gt;nikola build&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es ver el sitio, para lo que va a utilizar el comando &lt;code&gt;nikola serve -b&lt;/code&gt;, pero es mucho mas fácil utilizar &lt;code&gt;nikola auto -b&lt;/code&gt; para reconstrucciones automáticas.&lt;/p&gt;
+&lt;h2&gt;Utilizar markdown&lt;/h2&gt;
+&lt;p&gt;Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.&lt;/p&gt;
+&lt;p&gt;Primero se debe de verificar que este en la estructura &lt;strong&gt;COMPILERS&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# 'rest' is reStructuredText
+# 'markdown' is MarkDown
+# 'html' assumes the file is HTML and just copies it
+COMPILERS = {
+    "rest": ('.rst', '.txt'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    "textile": ('.textile',),
+    "txt2tags": ('.t2t',),
+    "bbcode": ('.bb',),
+    #"wiki": ('.wiki',),
+    "ipynb": ('.ipynb',),
+    "html": ('.html', '.htm'),
+    # PHP files are rendered the usual way (i.e. with the full templates).
+    # The resulting files have .php extensions, making it possible to run
+    # them without reconfiguring your server to recognize them.
+    "php": ('.php',),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, &lt;code&gt;("posts/*.md", "posts", "post.tmpl")&lt;/code&gt; a los dos tipos de entras &lt;strong&gt;POST&lt;/strong&gt; y &lt;strong&gt;PAGES&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Utilizar locales para Costa Rica&lt;/h2&gt;
+&lt;p&gt;Este proceso debería funcionar para la mayoría de idiomas.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Generar el locale necesario con `locale-get &lt;locale&gt;&lt;/locale&gt;&lt;/li&gt;
+&lt;li&gt;Definir cual es el locale que debe de utilizar Nikola por defecto.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What is the default language?&lt;/span&gt;
+&lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"es"&lt;/span&gt;
+
+&lt;span class="c1"&gt;# What other languages do you have?&lt;/span&gt;
+&lt;span class="c1"&gt;# The format is {"translationcode" : "path/to/translation" }&lt;/span&gt;
+&lt;span class="c1"&gt;# the path will be used as a prefix for the generated pages location&lt;/span&gt;
+&lt;span class="n"&gt;TRANSLATIONS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"es_CR"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="c1"&gt;# Example for another language:&lt;/span&gt;
+    &lt;span class="c1"&gt;# "es": "./es",&lt;/span&gt;
+    &lt;span class="s2"&gt;"es"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"./"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;"en"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"./en"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Definir el locale que se va a utilizar para &lt;code&gt;es&lt;/code&gt;, por defecto es &lt;code&gt;es_ES&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LOCALES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"es"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;"es_CR.utf-8"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;El locale a utilizar puede ser probado, importando locale &lt;code&gt;import locale&lt;/code&gt; y llamando al locale necesario &lt;code&gt;locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>jaquerespeis</category><category>markdown</category><category>nikola</category><category>python</category><guid>http://jaquerespeis.org/posts/postsutilizar-nikola/</guid><pubDate>Fri, 21 Aug 2015 11:08:00 GMT</pubDate></item></channel></rss>

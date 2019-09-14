@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JáquerEspeis (publicaciones antiguas, página 1) | JáquerEspeis</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="rss.xml">
+<link rel="canonical" href="http://jaquerespeis.org/index-1.html">
+<link rel="prev" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://jaquerespeis.org/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://jaquerespeis.org/">
+
+            <span id="blog-title">JáquerEspeis</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://jaquerespeis.org/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="stories/calendario" class="nav-link">Calendario</a>
+                </li>
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="categories/" class="nav-link">Categorías</a>
+                </li>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+    
+        
+
+    
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/esbloggobot-snaps/" class="u-url">Deploy to all SBCs with Gobot and a single snap package</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/esbloggobot-snaps/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-07-11T14:07:00-06:00" itemprop="datePublished" title="2017-07-11 14:07">2017-07-11 14:07</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I love playing with my prototyping boards. Here at Ubuntu we are designing
+the <a href="https://developer.ubuntu.com/core/get-started">core operating system</a>
+to support every <a href="https://en.wikipedia.org/wiki/Single-board_computer">single-board computer</a>,
+and keep it safe, updated and simple. I've learned a lot about physical
+computing, but I always have a big problem when my prototype is done, and I
+want to deploy it. I am working with a
+<a href="https://en.wikipedia.org/wiki/Raspberry_Pi">Raspberry Pi</a>, a
+<a href="http://www.96boards.org/product/dragonboard410c/">DragonBoard</a>, and a
+<a href="https://en.wikipedia.org/wiki/BeagleBoard#BeagleBone_Black">BeagleBone</a>. They
+are all very different, with different architectures, different pins, onboard
+capabilities and peripherals, and they can have different operating systems.
+When I started learning about this, I had to write 3 programs that were very
+different, if I wanted to try my prototype in all my boards.</p>
+<p><a href="https://archive.org/download/snappy-gobot/20170710_174806.jpg"><img alt="picture of the three different SBCs" src="https://archive.org/download/snappy-gobot/20170710_174806.jpg"></a></p>
+<p>Then I found <a href="https://gobot.io/">Gobot</a>, a framework for robotics and IoT that
+supports my three boards, and many more. With the added benefit that you can
+write all the software in the lovely and clean Go language. The Ubuntu store
+supports all their architectures too, and
+<a href="https://www.youtube.com/watch?v=b2x6mumSrpw">packaging Go projects with snapcraft</a>
+is super simple. So we can combine all of this to make a single snap package
+that with the help of Gobot will work on every board, and deploy it to all the
+users of these boards through the snaps store.</p>
+<p>Let's dig into the code with a very simple example to blink an LED, first
+for the Raspberry PI only.</p>
+<pre class="code literal-block"><span></span><span class="n">package</span> <span class="n">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+  <span class="s2">"time"</span>
+
+  <span class="s2">"gobot.io/x/gobot"</span>
+  <span class="s2">"gobot.io/x/gobot/drivers/gpio"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/raspi"</span>
+<span class="p">)</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">adaptor</span> <span class="p">:</span><span class="o">=</span> <span class="n">raspi</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+  <span class="n">led</span> <span class="p">:</span><span class="o">=</span> <span class="n">gpio</span><span class="o">.</span><span class="n">NewLedDriver</span><span class="p">(</span><span class="n">adaptor</span><span class="p">,</span> <span class="s2">"7"</span><span class="p">)</span>
+
+  <span class="n">work</span> <span class="p">:</span><span class="o">=</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">gobot</span><span class="o">.</span><span class="n">Every</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">time</span><span class="o">.</span><span class="n">Second</span><span class="p">,</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">led</span><span class="o">.</span><span class="n">Toggle</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="n">robot</span> <span class="p">:</span><span class="o">=</span> <span class="n">gobot</span><span class="o">.</span><span class="n">NewRobot</span><span class="p">(</span><span class="s2">"snapbot"</span><span class="p">,</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Connection</span><span class="p">{</span><span class="n">adaptor</span><span class="p">},</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Device</span><span class="p">{</span><span class="n">led</span><span class="p">},</span>
+    <span class="n">work</span><span class="p">,</span>
+  <span class="p">)</span>
+
+  <span class="n">robot</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+<span class="p">}</span>
+</pre>
+
+
+<p>In there you will see some of the Gobot concepts. There's an adaptor for the
+board, a driver for the specific device (in this case the LED), and a robot
+to control everything. In this program, there are only two things specific to
+the Raspberry Pi: the adaptor and the name of the GPIO pin (<code>"7"</code>).</p>
+<p><a href="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_214428.ogv"><img alt="picture of the Raspberry Pi prototype" src="https://ia601502.us.archive.org/32/items/snappy-gobot/20170710_214439.jpg"></a></p>
+<p>It works nicely in one of the boards, but let's extend the code a little to
+support the other two.</p>
+<pre class="code literal-block"><span></span><span class="n">package</span> <span class="n">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+  <span class="s2">"log"</span>
+  <span class="s2">"os/exec"</span>
+  <span class="s2">"strings"</span>
+  <span class="s2">"time"</span>
+
+  <span class="s2">"gobot.io/x/gobot"</span>
+  <span class="s2">"gobot.io/x/gobot/drivers/gpio"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/beaglebone"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/dragonboard"</span>
+  <span class="s2">"gobot.io/x/gobot/platforms/raspi"</span>
+<span class="p">)</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="k">exec</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span><span class="s2">"uname"</span><span class="p">,</span> <span class="s2">"-r"</span><span class="p">)</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="n">var</span> <span class="n">adaptor</span> <span class="n">gobot</span><span class="o">.</span><span class="n">Adaptor</span>
+  <span class="n">var</span> <span class="n">pin</span> <span class="n">string</span>
+  <span class="n">kernelRelease</span> <span class="p">:</span><span class="o">=</span> <span class="n">string</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">strings</span><span class="o">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">kernelRelease</span><span class="p">,</span> <span class="s2">"raspi2"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">adaptor</span> <span class="o">=</span> <span class="n">raspi</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+    <span class="n">pin</span> <span class="o">=</span> <span class="s2">"7"</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">strings</span><span class="o">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">kernelRelease</span><span class="p">,</span> <span class="s2">"snapdragon"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">adaptor</span> <span class="o">=</span> <span class="n">dragonboard</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+    <span class="n">pin</span> <span class="o">=</span> <span class="s2">"GPIO_A"</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">adaptor</span> <span class="o">=</span> <span class="n">beaglebone</span><span class="o">.</span><span class="n">NewAdaptor</span><span class="p">()</span>
+    <span class="n">pin</span> <span class="o">=</span> <span class="s2">"P8_7"</span>
+  <span class="p">}</span>
+  <span class="n">digitalWriter</span><span class="p">,</span> <span class="n">ok</span> <span class="p">:</span><span class="o">=</span> <span class="n">adaptor</span><span class="o">.</span><span class="p">(</span><span class="n">gpio</span><span class="o">.</span><span class="n">DigitalWriter</span><span class="p">)</span>
+  <span class="k">if</span> <span class="err">!</span><span class="n">ok</span> <span class="p">{</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="s2">"Invalid adaptor"</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="n">led</span> <span class="p">:</span><span class="o">=</span> <span class="n">gpio</span><span class="o">.</span><span class="n">NewLedDriver</span><span class="p">(</span><span class="n">digitalWriter</span><span class="p">,</span> <span class="n">pin</span><span class="p">)</span>
+
+  <span class="n">work</span> <span class="p">:</span><span class="o">=</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">gobot</span><span class="o">.</span><span class="n">Every</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">time</span><span class="o">.</span><span class="n">Second</span><span class="p">,</span> <span class="n">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">led</span><span class="o">.</span><span class="n">Toggle</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="n">robot</span> <span class="p">:</span><span class="o">=</span> <span class="n">gobot</span><span class="o">.</span><span class="n">NewRobot</span><span class="p">(</span><span class="s2">"snapbot"</span><span class="p">,</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Connection</span><span class="p">{</span><span class="n">adaptor</span><span class="p">},</span>
+    <span class="p">[]</span><span class="n">gobot</span><span class="o">.</span><span class="n">Device</span><span class="p">{</span><span class="n">led</span><span class="p">},</span>
+    <span class="n">work</span><span class="p">,</span>
+  <span class="p">)</span>
+
+  <span class="n">robot</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+<span class="p">}</span>
+</pre>
+
+
+<p>We are basically adding in there a block to select the right adaptor and pin,
+depending on which board the code is running. Now we can compile this program,
+throw the binary in the board, and give it a try.</p>
+<p><a href="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_212605.ogv"><img alt="picture of the Dragonboard prototype" src="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_212602.jpg"></a></p>
+<p>But we can do better. If we package this in a snap, anybody with one of the
+boards and an operating system that supports snaps can easily install it. We
+also open the door to
+<a href="https://build.snapcraft.io">continuous delivery</a> and
+<a href="http://elopio.net/blog/ipfs-crowdtesting/">crowd testing</a>. And as I said
+before, super simple, just put this in the <code>snapcraft.yaml</code> file:</p>
+<pre class="code literal-block"><span></span><span class="nv">name</span>: <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span><span class="o">-</span><span class="nv">elopio</span>
+<span class="nv">version</span>: <span class="nv">master</span>
+<span class="nv">summary</span>:  <span class="nv">Blink</span> <span class="nv">snap</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">Raspberry</span> <span class="nv">Pi</span> <span class="nv">with</span> <span class="nv">Gobot</span>
+<span class="nv">description</span>: <span class="o">|</span>
+  <span class="nv">This</span> <span class="nv">is</span> <span class="nv">a</span> <span class="nv">simple</span> <span class="nv">example</span> <span class="nv">to</span> <span class="nv">blink</span> <span class="nv">an</span> <span class="nv">LED</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">Raspberry</span> <span class="nv">Pi</span>
+  <span class="nv">using</span> <span class="nv">the</span> <span class="nv">Gobot</span> <span class="nv">framework</span>.
+
+<span class="nv">confinement</span>: <span class="nv">devmode</span>
+
+<span class="nv">apps</span>:
+  <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span><span class="o">-</span><span class="nv">elopio</span>:
+    <span class="nv">command</span>: <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span>
+
+<span class="nv">parts</span>:
+  <span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span>:
+    <span class="nv">source</span>: .
+    <span class="nv">plugin</span>: <span class="nv">go</span>
+    <span class="nv">go</span><span class="o">-</span><span class="nv">importpath</span>: <span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">elopio</span><span class="o">/</span><span class="nv">gobot</span><span class="o">-</span><span class="nv">blink</span>
+</pre>
+
+
+<p>To build the snap, here is a cool trick thanks to the work that
+<a href="http://www.twotoasts.de/index.php/2017/06/how-to-support-cross-compilation-in-plugins/">kalikiana</a>
+recently added to snapcraft. I'm writing this code in my development machine,
+which is amd64. But the raspberry pi and beaglebone are armhf, and the
+dragonboard is arm64; so I need to cross-compile the code to get binaries
+for all the architectures:</p>
+<pre class="code literal-block"><span></span><span class="n">snapcraft</span> <span class="c1">--target-arch=armhf</span>
+<span class="n">snapcraft</span> <span class="n">clean</span>
+<span class="n">snapcraft</span> <span class="c1">--target-arch=arm64</span>
+</pre>
+
+
+<p>That will leave two .snap files in my working directory that then I can upload
+to the store with <code>snapcraft push</code>. Or I can just push the code to GitHub and
+let <a href="https://build.snapcraft.io">build.snapcraft.io</a> to take care of building
+and pushing for me.</p>
+<p>Here is the source code for this simple example:
+<a href="https://github.com/elopio/gobot-blink">https://github.com/elopio/gobot-blink</a></p>
+<p>Of course, Gobot supports many more devices that will let you build complex
+robots. Just take a look at the
+<a href="https://gobot.io/documentation/">documentation in the Gobot site</a>, and at the
+<a href="https://gobot.io/documentation/guides/snapcraft/">guide about deployable packages with Gobot and snapcraft</a>.</p>
+<p><a href="https://ia801502.us.archive.org/32/items/snappy-gobot/20170710_233319.ogv"><img alt="picture of the BeagleBone prototype" src="https://ia601502.us.archive.org/32/items/snappy-gobot/20170710_233317.jpg"></a></p>
+<p>If you have one of the boards I'm using here to play, give it a try:</p>
+<pre class="code literal-block"><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">gobot</span><span class="o">-</span><span class="n">blink</span><span class="o">-</span><span class="n">elopio</span> <span class="c1">--edge --devmode</span>
+<span class="n">sudo</span> <span class="n">gobot</span><span class="o">-</span><span class="n">blink</span><span class="o">-</span><span class="n">elopio</span>
+</pre>
+
+
+<p>Now my experiments will be to try make the snap more secure, with strict
+confinement. If you have any questions or want to help, we have a
+<a href="https://forum.snapcraft.io/t/write-your-robots-in-go-with-gobot-and-distribute-the-software-as-snaps/1086">topic in the forum</a>.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/esblogtravis-snap-testing/" class="u-url">User acceptance testing of snaps, with Travis</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/esblogtravis-snap-testing/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-06-29T03:06:00-06:00" itemprop="datePublished" title="2017-06-29 03:06">2017-06-29 03:06</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p><a href="https://travis-ci.org/">Travis CI</a> offers a great continuous integration
+service for the projects hosted on GitHub. With it, you can run tests, deliver
+artifacts and deploy applications every time you push a commit, on pull requests, after they are merged, or with some other frequency.</p>
+<p>Last week Travis CI
+<a href="https://blog.travis-ci.com/2017-06-21-trusty-updates-2017-Q2-launch">updated the Ubuntu 14.04 (Trusty) machines</a>
+that run your tests and deployment steps. This update came with a nice surprise for everybody
+working to deliver software to Linux users, because it is now possible to
+install <a href="https://snapcraft.io">snaps</a> in Travis!</p>
+<p>I've been excited all week telling people about all the doors that this opens;
+but if you have been following my adventures in the Ubuntu world, by now you
+can probably guess that I'm mostly thinking about all the potential this has
+for automated testing. For the automation of user acceptance tests.</p>
+<p>User acceptance tests are executed from the point of view of the user, with
+your software presented as a black box to them. The tests can only interact
+with the software through the entry points you define for your users. If it's
+a CLI application, then the tests will call commands and subcommands and check
+the outputs. If it's a website or a desktop application, the tests will click
+things, enter text and check the changes on this GUI. If it's a service with
+an HTTP API, the tests will make requests and check the responses. On these
+tests, the closer you can get to simulate the environment and behaviour of your
+real users, the better.</p>
+<p>Snaps are great for the automation of user acceptance tests because they are
+immutable and they bundle all their dependencies. With this we can make sure
+that your snap will work the same on any of the operating systems and
+architectures that support snaps. The <a href="https://snapcraft.io/docs/core/snapd">snapd</a> service takes care of hiding
+the differences and presenting a consistent execution environment for the snap.
+So, getting a green execution of these tests in the Trusty machine of Travis is
+a pretty good indication that it will work on all the active releases of
+Ubuntu, Debian, Fedora and even on a Raspberry Pi.</p>
+<p>Let me show you an example of what I'm talking about, obviously using my
+favourite snap called IPFS. There is
+<a href="http://elopio.net/blog/ipfs-crowdtesting/">more information about IPFS in my previous post</a>.</p>
+<p>Check below the packaging metadata for the IPFS snap, a single <code>snapcraft.yaml</code>
+file:</p>
+<pre class="code literal-block"><span></span><span class="nl">name</span><span class="p">:</span><span class="w"> </span><span class="n">ipfs</span><span class="w"></span>
+<span class="nl">version</span><span class="p">:</span><span class="w"> </span><span class="n">master</span><span class="w"></span>
+<span class="nl">summary</span><span class="p">:</span><span class="w"> </span><span class="k">global</span><span class="p">,</span><span class="w"> </span><span class="n">versioned</span><span class="p">,</span><span class="w"> </span><span class="n">peer</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">peer</span><span class="w"> </span><span class="n">filesystem</span><span class="w"></span>
+<span class="nl">description</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">  </span><span class="n">IPFS</span><span class="w"> </span><span class="n">combines</span><span class="w"> </span><span class="n">good</span><span class="w"> </span><span class="n">ideas</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Git</span><span class="p">,</span><span class="w"> </span><span class="n">BitTorrent</span><span class="p">,</span><span class="w"> </span><span class="n">Kademlia</span><span class="p">,</span><span class="w"> </span><span class="n">SFS</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Web</span><span class="p">.</span><span class="w"></span>
+<span class="w">  </span><span class="n">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">like</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">bittorrent</span><span class="w"> </span><span class="n">swarm</span><span class="p">,</span><span class="w"> </span><span class="n">exchanging</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">objects</span><span class="p">.</span><span class="w"> </span><span class="n">IPFS</span><span class="w"> </span><span class="n">provides</span><span class="w"></span>
+<span class="w">  </span><span class="n">an</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">simple</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="n">web</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">permanence</span><span class="w"> </span><span class="n">built</span><span class="w"> </span><span class="ow">in</span><span class="p">.</span><span class="w"> </span><span class="n">You</span><span class="w"></span>
+<span class="w">  </span><span class="n">can</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">mount</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">world</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="o">/</span><span class="n">ipfs</span><span class="p">.</span><span class="w"></span>
+<span class="nl">confinement</span><span class="p">:</span><span class="w"> </span><span class="n">strict</span><span class="w"></span>
+
+<span class="nl">apps</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nl">ipfs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nl">command</span><span class="p">:</span><span class="w"> </span><span class="n">ipfs</span><span class="w"></span>
+<span class="w">    </span><span class="nl">plugs</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">home, network, network-bind</span><span class="o">]</span><span class="w"></span>
+
+<span class="nl">parts</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nl">ipfs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nl">source</span><span class="p">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+<span class="w">    </span><span class="nl">plugin</span><span class="p">:</span><span class="w"> </span><span class="n">nil</span><span class="w"></span>
+<span class="w">    </span><span class="n">build</span><span class="o">-</span><span class="nl">packages</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">make, wget</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">prepare</span><span class="err">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">      </span><span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="w"></span>
+<span class="w">      </span><span class="n">cp</span><span class="w"> </span><span class="o">-</span><span class="n">R</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="w"></span>
+<span class="w">    </span><span class="nl">build</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">      </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="w"> </span><span class="n">install</span><span class="w"></span>
+<span class="w">    </span><span class="nl">install</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">      </span><span class="n">mkdir</span><span class="w"> </span><span class="err">$</span><span class="n">SNAPCRAFT_PART_INSTALL</span><span class="o">/</span><span class="n">bin</span><span class="w"></span>
+<span class="w">      </span><span class="n">mv</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">ipfs</span><span class="w"> </span><span class="err">$</span><span class="n">SNAPCRAFT_PART_INSTALL</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span><span class="k">after</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">go</span><span class="o">]</span><span class="w"></span>
+<span class="w">  </span><span class="k">go</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">source</span><span class="o">-</span><span class="nl">tag</span><span class="p">:</span><span class="w"> </span><span class="n">go1</span><span class="mf">.7.5</span><span class="w"></span>
+</pre>
+
+
+<p>It's not the most simple snap because they use their own build tool to get the
+go dependencies and compile; but it's also not too complex. If you are new to
+snaps and want to understand every detail of this file, or you want to package
+your own project, the
+<a href="https://tutorials.ubuntu.com/tutorial/create-first-snap">tutorial to create your first snap</a>
+is a good place to start.</p>
+<p>What's important here is that if you run <code>snapcraft</code> using the snapcraft.yaml file above, you
+will get the IPFS snap. If you install that snap, then you can test it from the
+point of view of the user. And if the tests work well, you can push it to the
+edge channel of the Ubuntu store to start the crowdtesting with your community.</p>
+<p>We can automate all of this with Travis. The <code>snapcraft.yaml</code> for the project
+must be already in the GitHub repository, and we will add there a <code>.travis.yml</code>
+file. They have
+<a href="https://docs.travis-ci.com/">good docs to prepare your Travis account</a>.
+First, let's see what's required to build the snap:</p>
+<pre class="code literal-block"><span></span><span class="nl">sudo</span><span class="p">:</span><span class="w"> </span><span class="n">required</span><span class="w"></span>
+<span class="nl">services</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">docker</span><span class="o">]</span><span class="w"></span>
+
+<span class="nl">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="err">:$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="w"> </span><span class="n">snapcore</span><span class="o">/</span><span class="n">snapcraft</span><span class="w"> </span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="ss">"apt update &amp;&amp; snapcraft"</span><span class="w"></span>
+</pre>
+
+
+<p>For now, we build the snap in a docker container to keep things simple. We have
+work in progress to be able to install snapcraft in Trusty as a snap, so soon
+this will be even nicer running everything directly in the Travis machine.</p>
+<p>This previous step will leave the packaged .snap file in the current directory.
+So we can install it adding a few more steps to the Travis script:</p>
+<pre class="code literal-block"><span></span><span class="k">[...]</span>
+
+<span class="na">script:</span>
+  <span class="na">- docker [...]</span>
+  <span class="na">- sudo apt install --yes snapd</span>
+  <span class="na">- sudo snap install *.snap --dangerous</span>
+</pre>
+
+
+<p>And once the snap is installed, we can run it and check that it works as expected.
+Those checks are our automated user acceptance test. IPFS has a CLI
+client, so we can just run commands and verify outputs with grep. Or we can get
+fancier using <a href="https://github.com/kward/shunit2">shunit2</a> or
+<a href="https://github.com/sstephenson/bats/">bats</a>. But the basic idea would be to
+add to the Travis script something like this:</p>
+<pre class="code literal-block"><span></span><span class="k">[...]</span>
+
+<span class="na">script:</span>
+  <span class="k">[...]</span>
+  <span class="na">- /snap/bin/ipfs init</span>
+  <span class="na">- /snap/bin/ipfs cat /ipfs/QmVLDAhCY3X9P2uRudKAryuQFPM5zqA3Yij1dY8FpGbL7T/readme | grep -z "^Hello and Welcome to IPFS!.*$"</span>
+  <span class="na">- [...]</span>
+</pre>
+
+
+<p>If one of those checks fail, Travis will mark the execution as failed and stop
+our release process until we fix them. If instead, all of the checks pass, then this version
+is good enough to put into the store, where people can take it and run
+exploratory tests to try to find problems caused by weird scenarios that we
+missed in the automation. To help with that we have the
+<code>snapcraft enable-ci travis</code> command, and a tutorial to guide you
+step by step
+<a href="https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-travis-ci#0">setting up the continuous delivery from Travis CI</a>.</p>
+<p>For the IPFS snap we had for a long time a manual smoke suite, that our amazing
+<a href="https://forum.snapcraft.io/t/call-for-testing-ipfs/97">community of testers</a>
+have been executing over and over again, every time we want to publish a new
+release. I've turned it into
+<a href="https://github.com/elopio/ipfs-snap/blob/master/tests/smoke_test.sh">a simple bash script</a>
+that from now on will be executed frequently by Travis, and will tell us if
+there's something wrong before anybody gives it a try manually. With this our
+community of testers will have more time to run new and interesting scenarios,
+trying to break the application in clever ways, instead of running the same
+repetitive steps many times.</p>
+<p>Thanks to Travis and snapcraft we no longer have to worry about a big part of
+or release process. Continuous integration and delivery can be fully automated,
+and we will have to take a look only when something breaks.</p>
+<p>As for IPFS, it will keep being my guinea pig to guide new features for
+snapcraft and showcase them when ready. It has many more commands that
+have to be added to the automated test suite, and it also has a web UI and
+an HTTP API. Lots of things to play with! If you would like to help, and
+on the way learn about snaps, automation and the decentralized web, please
+let me know. You can take a look on my
+<a href="https://github.com/elopio/ipfs-snap">IPFS snap repo</a> for more details about
+testing snaps in Travis, and other tricks for the build and deployment.</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/travis/ipsf-travis.png"><img alt="screenshot of the IPFS smoke test running in travis" src="https://archive.org/download/elopio-screenshots2/travis/ipsf-travis.png"></a></p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/maperespeis-cantinas/" class="u-url">“Mapillaryando” en cantinas de San José</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/maperespeis-cantinas/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-16T12:18:31-06:00" itemprop="datePublished" title="2017-05-16 12:18">2017-05-16 12:18</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>-- por Marcia Ugarte y Joaquín Lizano</p>
+<p>Un sábado por la tarde resultó ser el momento perfecto para que un grupo de personas se juntara en San José para iniciar la labor de contribuir al mapeo libre esta vez de cantinas del centro de la capital. Cantina en Costa Rica hace referencia a un bar popular, que posiblemente tenga sus añitos, sin aires snobs y que tiene alcohol y comida a buen precio, o solo alcohol.</p>
+<p>Este grupo sacrificado trazó un plan de visita y mínimas normas para el proceso de mapeo: tomar máximo una cerveza en cada sitio y comer donde se pudiera ojalá una boca conocida del bar correspondiente. La ruta inició en El Gran Vicio, cantina de toda la vida dentro del Mercado Central; continuó al Ballestero, la única cantina que queda en una de las cuatro esquinas de entrada al San José de antaño y que dicen tiene uno de los mejores chifrijos; luego pasamos a La Embajada, bar chirrión con una barra larga larga y famoso por el gallo de chorizo; después le tocó al turno a El Faro, cantina de 3 pisos con hora feliz de cerveza a menos de mil colones y buena costilla; el siguiente fue La Bohemia, después Wongs y lxs últimxs valientes terminaron de madrugada en Area City.</p>
+<p>Detallando el recorrido, el punto de inicio, “El Gran Vicio”, es probablemente una de las cantinas más viejas de San José. Ubicado en el Mercado Central de la ciudad, abrió sus puertas en 1880. Podríamos decir que es tan viejo que pareciera que es solo para hombres. El orinal está en una esquina del bar y la puerta no cierra ni abre, está como medio puesta y no resguarda aquella privacidad que se espera de un servicio sanitario. ¿Baño de mujeres? no hay. La pared opuesta a la barra de este espacio, que funciona como un pasillo debido a su estrechez, está llena de firmas, mensajes y memorias gráficas.</p>
+<iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=C_lJZW-k0qYNyz23N4q0-A&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=photo" frameborder="0"></iframe>
+
+<blockquote>
+<ul>
+<li>clientela que se conoce entre sí, algunos con sus uniformes de trabajo del mercado</li>
+<li>el cantinero no era muy amable con los extraños (nosotros…)</li>
+<li>es un bar de paso (paso a tomarme una cerveza y/o un trago y me voy)</li>
+<li>interesante experiencia</li>
+</ul>
+</blockquote>
+<p>De ahí partimos al “Ballestero”. Pocas cantinas tienen plantas naturales a la entrada. Seña que vamos por una experiencia diferente. Está situada en una de las esquinas del cierre de la calle ancha que da entrada a la ciudad capital desde el Norte. Desde la mesa de la esquina consumimos felices las bocas (dar fe que los patacones con frijoles son de lo mejor de la ciudad) mientras admiramos la bola disco de espejitos en el centro del techo (sin luces dirigidas, sin mecanismos para que gire), un antojo de los dueños para dar simbolismos fiesteros al lugar. Tal vez no combina la bola con la colección de vasos y las fotos familiares en la paredes, tal vez ese es justo el estilo que andaban buscando.</p>
+<iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=0Wdy1J_6R8u573dsK4W8ow&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=photo" frameborder="0"></iframe>
+
+<blockquote>
+<ul>
+<li>música texmex</li>
+<li>chilera de la casa</li>
+<li>tarjetas de crédito no bienvenidas (pero aceptadas si se insiste mucho)</li>
+<li>mejor llevar cash</li>
+</ul>
+</blockquote>
+<p>Debería haber también mención a los trayectos. Las caminatas de unxs jóvenes (y otros no tanto) caminando con sus celulares en posición horizontal y más arriba de sus cabezas, grabando el camino, siguiendo a su “líder” que camina con un báculo tecnológico con un ojo en las alturas. Digamos que no pasamos desapercibidxs por el público josefino. Posiblemente si unx nos viera pasar así de la nada… seguramente que tampoco sabría qué pensar… turistas, extraterrestres, geeks haciendo una peli/docu de chepe, buscando pokemones…?</p>
+<p>El siguiente bar fue “La Embajada” que terminó siendo denominada la nueva embajada de Mapillary en Costa Rica. Su principal característica es la barra enorme que abarca gran parte del espacio y que da la impresión de que si nos animamos a llegar al final nos comerá la oscuridad, pero no. El fondo está repleto de mesas y hay suficiente espacio para todo el grupo y un mariachi que se acomoda al final de la barra. Realmente sorprende que exista un espacio tan grande y que fácilmente unx pase por fuera sin darse cuenta de lo que hay dentro.</p>
+<iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=o3exL2ctP3FsUdzqFZzqRg&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=photo" frameborder="0"></iframe>
+
+<blockquote>
+<ul>
+<li>la birra a 900 parece que era una publicidad vieja que no han eliminado. Costaba 1000</li>
+<li>barra muy larga</li>
+<li>los gallos de chorizo o salchichón vienen sin tortilla</li>
+<li>mariachi compite con “música de cabina”</li>
+<li>no se separan cuentas</li>
+<li>muy concurrido</li>
+</ul>
+</blockquote>
+<p>Seguimos el trayecto en un atardecer que afectaba, dada la cada vez menos luz, la posibilidad de mapear al caminar; pero “sacrificadamente” hicimos todo lo que estaba en nuestras manos para no frenar el mapeo. Caminamos por el puro centro de Chepe y llegamos al Faro. Una vieja edificación de tres pisos con vista al sur de San José. Ya cuan lejos logre ver unx desde este faro dependerá, entre otras cosas, de cuanto se enfieste en el lugar. Cada piso es un ambiente; de hecho, el tercer piso es para fiestas y no está abierto normalmente. Abajo estaba lleno por lo que fuimos al segundo piso, que además tenía un rock/pop ochentero apreciado por la mayoría del grupo. Las ventanas abiertas generaban un nivel de ventolero que, de querer enviajarse, podria referir al faro y ambientarse unx quien sabe donde.</p>
+<iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=WXetF2EpH5my8NQuZNGk_Q&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=photo" frameborder="0"></iframe>
+
+<blockquote>
+<ul>
+<li>buena atención</li>
+<li>separan cuentas</li>
+<li>aceptan tarjetas</li>
+<li>distintos ambientes</li>
+<li>buena música</li>
+</ul>
+</blockquote>
+<p>Ya enrumbados (más de rumba que de rumbo) bajamos una cuadra y llegamos a La Bohemia. Cantina de tradición hasta para algunxs de lxs miembrxs del grupo mapeante.</p>
+<iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=61pGPoM6EurW4o6BjKsccQ&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=photo" frameborder="0"></iframe>
+
+<blockquote>
+<ul>
+<li>fácil sentirse bienvenidx en el lugar</li>
+<li>fuerte conexión entre los clientes habituales</li>
+<li>hasta nos regalaron del queque de un cumpleaños que estaban celebrando</li>
+<li>pocas bocas</li>
+<li>separan cuentas</li>
+<li>aceptan tarjetas</li>
+</ul>
+</blockquote>
+<p>Ya para esas horas de la noche, el trayecto se hacía inmapeable pero la intención sacrificada no se acababa. Fuimos a chequear otro par de lugares que podríamos incluir en futuras misiones. Wongs es un restaurante más que una cantina y en lugar de bocas fueron dumplings, generando un momento de excepción en la ruta. Terminamos en la madrugada del día siguiente en Area City celebrando ya un cumpleaños de alguien de nuestro grupo mapeante. Gran salida que, de seguir con ese espíritu festivo, puede generar muchxs sacrificadxs voluntarixs futurxs que nos permitan conocer más de esas cantinas tradicionales que aún quedan en San José.</p>
+<p><a href="https://ia601502.us.archive.org/18/items/maperespeis-bares/san_jose/la_embajada/C87imwsUAAACDw7.jpglarge.jpeg"><img alt="La embajada de Mapillary en Costa Rica" src="https://ia601502.us.archive.org/18/items/maperespeis-bares/san_jose/la_embajada/C87imwsUAAACDw7.jpglarge.jpeg"></a></p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/postsminar-ethereum/" class="u-url">Minar ethereum</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/postsminar-ethereum/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-30T18:03:00-06:00" itemprop="datePublished" title="2017-03-30 18:03">2017-03-30 18:03</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<h2>Requerimientos</h2>
+<ul>
+<li>Minador</li>
+<li>Ubuntu Server 16.04</li>
+<li>Opcional(tarjeta de video)</li>
+<li>Python y python-twisted</li>
+<li>Ethereum</li>
+<li>cpp-ethereum</li>
+</ul>
+<p><em><strong>NOTA:</strong> Se considera Ubuntu Server, en caso de Ubuntu Desktop algunos requerimientos ya vienen instalados en el sistema.</em></p>
+<h2>Instalación</h2>
+<ol>
+<li>
+<p>Instalar ubuntu 16.04</p>
+</li>
+<li>
+<p>Instalar python y python-wisted</p>
+</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo apt-get install python
+sudo apt-get install python-twisted
+</pre>
+
+
+<ol>
+<li>Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+</pre>
+
+
+<ol>
+<li>Instalar ethereum</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo apt-get install ethereum
+</pre>
+
+
+<ol>
+<li>Instalar cpp-ethereum</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo apt-get install cpp-ethereum
+</pre>
+
+
+<ol>
+<li>
+<p>Clonar el repositorio de <a href="https://github.com/Atrides/eth-proxy">eth-proxy</a>.</p>
+</li>
+<li>
+<p>Crear un wallet con <a href="https://github.com/ethereum/go-ethereum/wiki/geth">geth</a> o <a href="https://github.com/paritytech/parity">parity</a>.</p>
+</li>
+<li>
+<p>Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.</p>
+</li>
+<li>
+<p>Modificar el archivo de configuración de eth-proxy para usar el wallet.</p>
+</li>
+<li>
+<p>En el directorio eth-proxy, ejecutar <code>eth-proxy.py</code></p>
+</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo python eth-proxy/eth-proxy.py
+</pre>
+
+
+<ol>
+<li>Ejecutar <code>ethminer</code> apuntando a localhost</li>
+</ol>
+<pre class="code literal-block"><span></span>ethminer -F http://127.0.0.1:8080/minador -G
+</pre>
+
+
+<p><em><strong>NOTA:</strong> La opción <code>-G</code> indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice <code>--allow-opencl-cpu</code>.</em></p>
+<h2>Referencias</h2>
+<p>https://github.com/paritytech/parity
+https://github.com/Atrides/eth-proxy
+https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/esblogipfs-crowdtesting/" class="u-url">Crowdtesting with the Ubuntu community: the case of IPFS</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/esblogipfs-crowdtesting/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-06T16:03:00-06:00" itemprop="datePublished" title="2017-03-06 16:03">2017-03-06 16:03</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>Here at Ubuntu we are working hard on the future of free software distribution.
+We want developers to release their software to any Linux distro in a way
+that's safe, simple and flexible. You can read more about this at
+<a href="https://snapcraft.io/">snapcraft.io</a>.</p>
+<p>This work is extremely fun because we have to work constantly with a wild
+variety of free software projects to make sure that the tools we write are
+usable and that the workflow we are proposing makes sense to developers and
+gives them a lot of value in return. Today I want to talk about one of those
+projects: IPFS.</p>
+<p>IPFS is the permanent and decentralized web. How cool is that? You get a
+peer-to-peer distributed file system where you store and retrieve files. They
+have a nice demo <a href="https://ipfs.io/">in their website</a>, and you can give it a
+try on Ubuntu Trusty, Xenial or later by running:</p>
+<pre class="code literal-block"><span></span>$ sudo snap install ipfs
+</pre>
+
+
+<p><a href="https://archive.org/download/elopio-screenshots2/ipfs-peers.png"><img alt="screenshot of the IPFS peers" src="https://archive.org/download/elopio-screenshots2/ipfs-peers.png"></a></p>
+<p>So, here's one of the problems we are trying to solve. We have millions of users
+on the Trusty version of Ubuntu, released during 2014. We also have millions of
+users on the Xenial version, released during 2016. Those two versions are stable
+now, and following the Ubuntu policies, they will get only security updates for
+5 years. That means that it's very hard, almost impossible, for a young project
+like IPFS to get into the Ubuntu archives for those releases. There will be no
+simple way for all those users to enjoy IPFS, they would have to use a
+<a href="https://en.wikipedia.org/wiki/Personal_Package_Archive">Personal Package Archive</a>
+or install the software from a
+<a href="https://en.wikipedia.org/wiki/Tar_(computing)">tarball</a>. Both methods are
+complex with high security risks, and both require the users to put a lot of
+trust on the developers, more than what they should ever trust anybody.</p>
+<p>We are closing the Zesty release cycle which will go out in April, so it's
+too late there too. IPFS could make a
+<a href="https://en.wikipedia.org/wiki/Deb_(file_format)">deb</a>, put it into Debian,
+wait for it to sync to Ubuntu, and then it's likely that it will be ready for
+the October release. Aside from the fact that we have to wait until October,
+there are a few other problems. First, making a deb is not simple. It's not
+too hard either, but it requires quite some time to learn to do it right.
+Second, I mentioned that IPFS is young, they are on the 0.4.6 version. So, it's
+very unlikely that they will want to support this early version for such a long
+time as Debian and Ubuntu require. And they are not only young, they are also
+fast. They add new features and bug fixes every day and make new releases almost
+every week, so they need a feedback loop that's just as fast. A 6 months release
+cycle is way too slow. That works nicely for some kinds of free software
+projects, but not for one like IPFS.</p>
+<p>They have been kind enough to let me play with their project and use it as a
+test subject to verify our end-to-end workflow. My passion is testing, so I have
+been focusing on continuous delivery to get happy early adopters and constant
+feedback about the most recent changes in the project.</p>
+<p>I started by making a
+<a href="https://github.com/elopio/ipfs-snap/blob/master/snapcraft.yaml">snapcraft.yaml</a>
+file that contains all the metadata required for the snap package. The file is
+pretty simple and to make the first version it took me just a couple of minutes,
+true story. Since then I've been slowly improving and updating it with small
+changes. If you are interested in doing the same for your project, you can read
+<a href="https://tutorials.ubuntu.com/tutorial/create-first-snap">the tutorial to create a snap</a>.</p>
+<p>I built and tested this snap locally on my machines. It worked nicely, so I
+pushed it to the edge channel of the Ubuntu Store. Here, the snap is not visible
+on user searches, only the people who know about the snap will be able to
+install it. I told a couple of my friends to give it a try, and they came back
+telling me how cool IPFS was. Great choice for my first test subject, no
+doubt.</p>
+<p>At this point, following the pace of the project by manually building and
+pushing new versions to the store was too demanding, they go too fast. So, I
+started working on continuous delivery by translating everything I did manually
+into scripts and hooking them to travis-ci. After a few days, it got pretty
+fancy, take a look at
+<a href="https://github.com/elopio/ipfs-snap">the github repo of the IPFS snap</a> if you
+are curious. Every day, a new version is packaged from the latest state of the
+master branch of IPFS and it is pushed to the edge channel, so we have a constant
+flow of new releases for hardcore early adopters. After they install IPFS from
+the edge channel once, the package will be automatically updated in their
+machines every day, so they don't have to do anything else, just use IPFS as
+they normally would.</p>
+<p>Now with this constant stream of updates, me and my two friends were not enough
+to validate all the new features. We could never be sure if the project was
+stable enough to be pushed to the stable channel and make it available to the
+millions and millions of Ubuntu users out there.</p>
+<p>Luckily, the Ubuntu community is huge, and they are very nice people. It was
+time to use the wisdom of the crowds. I invited the most brave of them to keep
+the snap installed from edge and I defined a simple pipeline that leads to the
+stable release using the four available channels in the Ubuntu store:</p>
+<ul>
+<li>When a revision is tagged in the IPFS master repo, it is automatically pushed
+   to edge channel from travis, just as with any other revision.</li>
+<li>Travis notifies me about this revision.</li>
+<li>I install this tagged revision from edge, and run a super quick test to make
+   sure that the IPFS server starts.</li>
+<li>If it starts, I push the snap to the beta channel.</li>
+<li>With a couple of my friends, we run a
+   <a href="https://gist.github.com/elopio/7492a28bd1aef6c4a86b5dcf5d5cb65b#file-ipfs-smoke-tests-md">suite of smoke tests</a>.</li>
+<li>If everything goes well, I push the snap to the candidate channel.</li>
+<li>I notify the community of Ubuntu testers about a new version in the candidate
+   channel. This is were the magic of crowd testing happens.</li>
+<li>The Ubuntu testers run the smoke tests in all their machines, which gives us
+   the confidence we need because we are confirming that the new version works
+   on different platforms, distros, distro releases, countries, network
+   topologies, you name it.</li>
+<li>This candidate release is left for some time in this channel, to let the
+   community run thorough exploratory tests, trying to find weird usage
+   combinations that could break the software.</li>
+<li>If the tag was for a final upstream release, the community also runs
+   <a href="https://gist.github.com/elopio/7492a28bd1aef6c4a86b5dcf5d5cb65b#file-ipfs-update-tests-md">update tests</a>
+   to make sure that the users with the stable snap installed will get this new
+   version without issues.</li>
+<li>After all the problems found by the community have been resolved or at least
+   acknowledged and triaged as not blockers, I move the snap from candidate
+   to the stable channel.</li>
+<li>All the users following the stable channel will automatically get a very well
+   tested version, thanks to the community who contributed with the testing and
+   accepted a higher level of risk.</li>
+<li>And we start again, the never-ending cycle of making free software :)</li>
+</ul>
+<p>Now, let's go back to the discussion about trust. Debian and Ubuntu, and most of
+the other distros, rely on maintainers and distro developers to package and
+review every change on the software that they put in their archives. That is
+a lot of work, and it slows down the feedback loop a lot, as we have seen. In
+here we automated most of the tasks of a distro maintainer, and the new
+revisions can be delivered directly to the users without any reviews. So the
+users are trusting directly their upstream developers without intermediaries,
+but it's very different from the previously existing and unsafe methods. The
+code of snaps is installed read-only, very well constrained with access only to
+their own safe space. Any other access needs to be declared by the snap, and
+the user is always in control of which access is permitted to the application.</p>
+<p>This way upstream developers can go faster but without exposing their users to
+unnecessary risks. And they just need a simple snapcraft.yaml file and to define
+their own continuous delivery pipeline, on their own timeline.</p>
+<p>By removing the distro as the intermediary between the developers and their
+users, we are also making a new world full of possibilities for the Ubuntu
+community. Now they can collaborate constantly and directly with upstream
+developers, closing this quick feedback loop. In the future we will tell our
+children of the good old days when we had to report a bug in Ubuntu, which
+would be copied to Debian, then sent upstream to the developers, and after 6
+months, the fix would arrive. It was fun, and it lead us to where we are today,
+but I will not miss it at all.</p>
+<p>Finally, what's next for IPFS? After this experiment we got more than 200
+unique testers and almost 300 test installs. I now have great confidence on
+this workflow, new revisions were delivered on time, existing Ubuntu
+testers became new IPFS contributors and I now can safely recommend IPFS
+users to install the stable snap. But there's still plenty of work ahead.
+There are still manual steps in the pipeline that can be scripted, the smoke
+tests can be automated to leave more free time for exploratory testing, we can
+release also to armhf and arm64 architectures to get IPFS into the
+<a href="https://www.ubuntu.com/internet-of-things">IoT world</a>, and well, of course the
+developers are not stopping, they keep releasing new interesting features. As I
+said, plenty of opportunities for us as distro contributors.</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/ipfs-stats.png"><img alt="screenshot of the IPFS snap stats" src="https://archive.org/download/elopio-screenshots2/ipfs-stats.png"></a></p>
+<p>I'd like to thank everybody who tested the IPFS snap, specially the following
+people for their help and feedback:</p>
+<ul>
+<li>freekvh</li>
+<li>urcminister</li>
+<li>Carla Sella</li>
+<li>casept</li>
+<li>Colin Law</li>
+<li>ventrical</li>
+<li>cariboo</li>
+<li>howefield</li>
+</ul>
+<p>&lt;3</p>
+<p>If you want to release your project to the Ubuntu store, take a look at the
+<a href="https://snapcraft.io/">snapcraft docs</a>, the
+<a href="https://tutorials.ubuntu.com/">Ubuntu tutorials</a>, and come talk to us in
+<a href="https://rocket.ubuntu.com/channel/snapcraft">Rocket Chat</a>.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/esblogmaperespeis-poas/" class="u-url">Maperespeis #2: Volcán Poás</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/esblogmaperespeis-poas/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-01T03:03:35-06:00" itemprop="datePublished" title="2017-03-01 03:03">2017-03-01 03:03</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>El domingo pasado fuimos a hacer mapas libres al
+<a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Po%C3%A1s">Volcán Poás</a>.</p>
+<iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=BHp7eM8RAbbhkLWc6XyR6g&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=photo" frameborder="0"></iframe>
+
+<p>Esta es la segunda excursión geek del JaquerEspéis. De la primera aprendimos
+que había que esperar al verano porque
+<a href="https://archive.org/download/jaquerespeis-mapas/photo484953803566260.jpg">con tormenta no se puede mapear</a>.
+Y el día fue perfecto. No sólo estuvo soleado, sino que el cráter estaba
+totalmente despejado y así pudimos agregar un nuevo lugar al tour virtual de
+Costa Rica.</p>
+<p>Además, esta vez llegamos mucho mejor preparados, con varios teléfonos con
+<a href="https://www.mapillary.com/">mapillary</a>, <a href="http://osmand.net/">osmand</a> y
+<a href="http://wiki.openstreetmap.org/wiki/OSMTracker_(Android)">OSMTracker</a>, una
+<a href="https://theta360.com/en/">cámara 360</a>, un
+<a href="https://buy.garmin.com/en-US/US/p/140022">GPS Garmin</a>, un dron y hasta
+<a href="https://twitter.com/elotrojames">una libreta</a> y dos biólogos.</p>
+<p><a href="https://archive.org/download/maperespeis-poas/image20170226_104505408.jpg"><img alt="La procesión del MaperEspeis" src="https://archive.org/download/maperespeis-poas/image20170226_104505408.jpg"></a></p>
+<p>Así funciona el asunto. Todos y todas con el GPS del teléfono activado
+esperamos a que el teléfono encuentre la ubicación. Después cada persona usa la
+aplicación que prefiere para recolectar datos: fotos, audios, videos, notas de
+texto, <a href="https://es.wikipedia.org/wiki/GPX">trazas</a>, anotaciones en la libreta...</p>
+<p>Luego, en nuestras respectivas casas, subimos, publicamos y compartimos todos
+los datos recolectados. Estos nos sirven para mejorar los mapas libres de
+<a href="https://es.wikipedia.org/wiki/OpenStreetMap">OpenStreetMap</a>. Agregamos desde
+cosas tan sencillas como
+<a href="https://archive.org/download/maperespeis-poas/20170226_105554.jpg">la ubicación de un basurero</a>
+hasta cosas tan importantes como qué tan accesible es el lugar para una persona
+en silla de ruedas, junto con la ubicación de todos estos accesos o las partes
+en las que faltan. Cada persona mejora el mapa un poquito, en la zona que
+conoce o por la que pasó. Con más de 3 millones de usuarios, OpenStreetMap es
+el mejor mapa del mundo que existe; y es de particular importancia en zonas
+como la nuestra, que tienen poco potencial económico para las
+<a href="https://en.wikipedia.org/wiki/Don't_be_evil#The_End_of_.22Don.27t_Be_Evil.22">megacorporaciones que hacen y venden mapas cerrados robando datos privados a sus usuarios</a>.</p>
+<p>Como los mapas que hacemos son libres, lo que sigue no tiene límites. Hay
+grupos trabajando en reconstrucción de modelos tridimensionales a partir de las
+fotos, identificación e interpretación de señales y rótulos, aplicaciones que
+calculan la ruta óptima para llegar a cualquier lugar usando cualquier
+combinación de medios de transporte, aplicaciones para asistir en la toma de
+decisiones al diseñar el futuro de una ciudad, y muchas otras cosas más. Todo
+basado en conocimiento compartido y comunidad.</p>
+<iframe width="800" height="600" src="https://embed-v1.mapillary.com/embed?version=1&amp;filter=%5B%22all%22%5D&amp;map_filter=%5B%22all%22%5D&amp;image_key=dYPJnZINW7nHTEgJ7g9OEA&amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;style=classic" frameborder="0"></iframe>
+
+<p>La imagen de arriba es el tour virtual en Mapillary. Como
+lo grabamos con la cámara 360, pueden hacer clic y arrastrar con el mouse para
+ver todos los ángulos. También pueden hacer clic arriba, en el botón de
+reproducir para seguir el camino que tomamos. O pueden hacer clic en cualquier
+punto verde en el mapa para seguir su propio camino.</p>
+<p>Muchas gracias a todos y todas por apuntarse a mapear, en especial a Denisse y
+Charles por servirnos de guías y llenar el paseo de datos interesantes sobre la
+flora, fauna, geología e importancia histórica del Poás.</p>
+<p><a href="https://archive.org/download/maperespeis-poas/20170226_110006.jpg"><img alt="Miembros del MaperEspeis" src="https://archive.org/download/maperespeis-poas/20170226_110006.jpg"></a>
+(<a href="https://archive.org/details/maperespeis-poas">Aquí más fotos y videos</a>)</p>
+<p>El próximo maperespeis será el 12 de marzo.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/esblogcall-for-testing-mysql/" class="u-url">Call for testing: MySQL</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/esblogcall-for-testing-mysql/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-02-28T17:02:00-06:00" itemprop="datePublished" title="2017-02-28 17:02">2017-02-28 17:02</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I promised that more interesting things were going to be available soon for
+testing in Ubuntu. There's plenty coming, but today here is one of the
+greatest:</p>
+<pre class="code literal-block"><span></span>$ sudo snap install mysql --channel<span class="o">=</span><span class="m">8</span>.0/beta
+</pre>
+
+
+<p><a href="https://archive.org/download/elopio-screenshots2/Screenshot_ubuntu-xenial-20170228_2017-02-28_093217.png"><img alt="screenshot of mysql snap running" src="https://archive.org/download/elopio-screenshots2/Screenshot_ubuntu-xenial-20170228_2017-02-28_093217.png"></a></p>
+<p>Lars Tangvald and other people at MySQL have been working on this snap for some
+time, and now they are ready to give it to the community for crowd testing. If
+you have some minutes, please give them a hand.</p>
+<p>We have a
+<a href="https://gist.github.com/elopio/c868bc68bf8640b0b49b39aeb1fae8f5">testing guide</a>
+to help you getting started.</p>
+<p>Remember that this should run in trusty, xenial, yakkety, zesty and in all
+flavours of Ubuntu. It would be great to get a diverse pool of platforms and
+test it everywhere.</p>
+<p>In here we are introducing a new concept:
+<a href="https://snapcraft.io/docs/reference/channels">tracks</a>. Notice that we are
+using <code>--channel=8.0/beta</code>, instead of only <code>--beta</code> as we used to do before.
+That's because mysql has two different major versions currently active. In order
+to try the other one:</p>
+<pre class="code literal-block"><span></span>$ sudo snap install mysql --channel<span class="o">=</span><span class="m">5</span>.7/beta
+</pre>
+
+
+<p>Please report back your results. Any kind of feedback will be highly appreciated,
+and if you have doubts or need a hand to get started, I'm hanging around in
+<a href="https://rocket.ubuntu.com/channel/community">Rocket Chat</a>.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/postsprogramar20microcontrolador20stm322/" class="u-url">Como programar un microcontrolador stm32 con cpp</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/postsprogramar20microcontrolador20stm322/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-12-28T05:12:00-06:00" itemprop="datePublished" title="2015-12-28 05:12">2015-12-28 05:12</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<h2>Que se necesita</h2>
+<ul>
+<li>Microcontrolador STM322</li>
+<li>GDB o un debugger, editor de texto o IDE</li>
+<li>Una maquina con Linux</li>
+</ul>
+<h2>Requerimientos con Gnu/Linux</h2>
+<ul>
+<li>arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)</li>
+<li>arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target</li>
+<li>arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target</li>
+<li>openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices</li>
+<li>vim – Editor de texto</li>
+</ul>
+<h2>Terminos importantes</h2>
+<p>CMSIS = Cortex Microcontroller Software Interface Standard <a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php">info</a></p>
+<h2>Referencias</h2>
+<p>http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/laferiacr/" class="u-url">laferia.cr</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/laferiacr/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-10-11T13:04:31-06:00" itemprop="datePublished" title="2015-10-11 13:04">2015-10-11 13:04</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<h2>Necesidad</h2>
+<p>En este momento de la historia, en la mayoría de los casos el consumidor no conoce el origen de los productos. Con una plataforma que brinde la posibilidad de compartir información entre productores y consumidores, se pueden solucionar varios problemas que presenta esta cadena de consumo.</p>
+<h2>Plataforma</h2>
+<p>Una plataforma, diseñada para compartir información entre productores, proveedores y consumidores, fue creada en Australia por la fundación Open Food Network.</p>
+<p>Esta plataforma permite conocer el origen de los productos, la situación del productor, métodos de producción y otros factores que pueden tener alto impacto en la decisión del consumidor de orientarse a un producto o a otro.</p>
+<p><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=q1S2DfuiEh4" target="_blank"><img src="http://img.youtube.com/vi/q1S2DfuiEh4/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10"></a> </p>
+
+<h2>Avance</h2>
+<p>Por el momento lo que hemos logrado:</p>
+<ul>
+<li>Comprar el dominio</li>
+<li>Configurar ofn en ubuntu 14.04</li>
+<li>Necesitamos alguien con experiencia en ruby y rails para que revise</li>
+<li>Tenemos un ambiente de pruebas</li>
+</ul>
+<h2>Instalación</h2>
+<h3>Ambiente de Producción</h3>
+<ol>
+<li>Agregar el "Host" a la configuración de la Base de datos en <code>config/database.yml</code>:</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="n">production</span><span class="o">:</span>
+  <span class="n">adapter</span><span class="o">:</span> <span class="n">postgresql</span>
+  <span class="n">encoding</span><span class="o">:</span> <span class="n">unicode</span>
+  <span class="n">database</span><span class="o">:</span> <span class="n">open_food_network_prod</span>
+  <span class="n">pool</span><span class="o">:</span> <span class="mi">5</span>
+  <span class="n">host</span><span class="o">:</span> <span class="n">localhost</span>
+  <span class="n">username</span><span class="o">:</span> <span class="n">ofn_user</span>
+  <span class="n">password</span><span class="o">:</span> <span class="n">toor</span>
+</pre>
+
+
+<ol>
+<li>Crear la base de datos:</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openfoodnetwork</span><span class="o">/</span><span class="n">www</span><span class="o">#</span> <span class="n">RAILS_ENV</span><span class="o">=</span><span class="n">production</span> <span class="n">rake</span> <span class="n">db</span><span class="p">:</span><span class="k">schema</span><span class="p">:</span><span class="k">load</span> <span class="n">db</span><span class="p">:</span><span class="n">seed</span>
+</pre>
+
+
+<ol>
+<li>Precompilar los activos en el ambiente de producción:</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openfoodnetwork</span><span class="o">/</span><span class="n">www</span><span class="o">#</span> <span class="n">RAILS_ENV</span><span class="o">=</span><span class="n">production</span> <span class="n">rake</span> <span class="n">assets</span><span class="p">:</span><span class="n">clean</span>
+<span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openfoodnetwork</span><span class="o">/</span><span class="n">www</span><span class="o">#</span> <span class="n">RAILS_ENV</span><span class="o">=</span><span class="n">production</span> <span class="n">rake</span> <span class="n">assets</span><span class="p">:</span><span class="n">precompile</span>
+</pre>
+
+
+<ol>
+<li>Correr Unicorn en producción manualmente</li>
+</ol>
+<pre class="code literal-block"><span></span> <span class="nv">cd</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">openfoodnetwork</span><span class="o">/</span><span class="nv">www</span> <span class="o">&amp;&amp;</span> <span class="nv">bundle</span> <span class="k">exec</span> <span class="nv">unicorn</span> <span class="o">-</span><span class="nv">c</span> ..<span class="o">/</span><span class="nv">shared</span><span class="o">/</span><span class="nv">config</span><span class="o">/</span><span class="nv">unicorn</span>.<span class="nv">rb</span> <span class="o">-</span><span class="nv">E</span> <span class="nv">production</span> <span class="o">-</span><span class="nv">D</span>
+</pre>
+
+
+<h2>Solucion de Problemas</h2>
+<ul>
+<li>Información del Log de Unicorn:</li>
+</ul>
+<pre class="code literal-block"><span></span>$ tail -f /opt/openfoodnetwork/shared/log/unicorn.log
+</pre>
+
+
+<ul>
+<li>
+<p>Encontrar la ubicación del Unix Socket en /opt/openfoodnetwork/shared/config/unicorn.rb</p>
+</li>
+<li>
+<p>Verificar que el Unix socket se encuentre creado:</p>
+</li>
+</ul>
+<pre class="code literal-block"><span></span>$ ls -lah /tmp/unicorn.openfoodnetwork.sock
+</pre>
+
+
+<ul>
+<li>Verificar que Unicorn esté corriendo:</li>
+</ul>
+<pre class="code literal-block"><span></span>$ ps aux <span class="p">|</span> grep unicorn
+</pre>
+
+
+<h2>Referencias</h2>
+<p>(1) http://teotti.com/use-of-rails-environments/
+(2) https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/postsutilizar-nikola/" class="u-url">Utilizar Nikola por primera vez</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/postsutilizar-nikola/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-08-21T05:08:00-06:00" itemprop="datePublished" title="2015-08-21 05:08">2015-08-21 05:08</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<h2>Instalación</h2>
+<p>La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.</p>
+<p>En el directorio del repositorio del sitio</p>
+<pre class="code literal-block"><span></span>virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+</pre>
+
+
+<h3>Primeros usos</h3>
+<p>En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando <code>nikola init --demo .</code>, luego se debe de construir el sitio con el comando <code>nikola build</code>.</p>
+<p>El siguiente paso es ver el sitio, para lo que va a utilizar el comando <code>nikola serve -b</code>, pero es mucho mas fácil utilizar <code>nikola auto -b</code> para reconstrucciones automáticas.</p>
+<h2>Utilizar markdown</h2>
+<p>Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.</p>
+<p>Primero se debe de verificar que este en la estructura <strong>COMPILERS</strong></p>
+<pre class="code literal-block"><span></span># 'rest' is reStructuredText
+# 'markdown' is MarkDown
+# 'html' assumes the file is HTML and just copies it
+COMPILERS = {
+    "rest": ('.rst', '.txt'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    "textile": ('.textile',),
+    "txt2tags": ('.t2t',),
+    "bbcode": ('.bb',),
+    #"wiki": ('.wiki',),
+    "ipynb": ('.ipynb',),
+    "html": ('.html', '.htm'),
+    # PHP files are rendered the usual way (i.e. with the full templates).
+    # The resulting files have .php extensions, making it possible to run
+    # them without reconfiguring your server to recognize them.
+    "php": ('.php',),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
+}
+</pre>
+
+
+<p>Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, <code>("posts/*.md", "posts", "post.tmpl")</code> a los dos tipos de entras <strong>POST</strong> y <strong>PAGES</strong>.</p>
+<pre class="code literal-block"><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"stories/*.rst"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.md"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+<span class="p">)</span>
+</pre>
+
+
+<h2>Utilizar locales para Costa Rica</h2>
+<p>Este proceso debería funcionar para la mayoría de idiomas.</p>
+<ol>
+<li>Generar el locale necesario con `locale-get <locale></locale>
+</li>
+<li>Definir cual es el locale que debe de utilizar Nikola por defecto.</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="c1"># What is the default language?</span>
+<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s2">"es"</span>
+
+<span class="c1"># What other languages do you have?</span>
+<span class="c1"># The format is {"translationcode" : "path/to/translation" }</span>
+<span class="c1"># the path will be used as a prefix for the generated pages location</span>
+<span class="n">TRANSLATIONS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="s2">"es_CR"</span><span class="p">,</span>
+    <span class="c1"># Example for another language:</span>
+    <span class="c1"># "es": "./es",</span>
+    <span class="s2">"es"</span><span class="p">:</span> <span class="s2">"./"</span><span class="p">,</span>
+    <span class="s2">"en"</span><span class="p">:</span> <span class="s2">"./en"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre>
+
+
+<ol>
+<li>Definir el locale que se va a utilizar para <code>es</code>, por defecto es <code>es_ES</code>.</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="n">LOCALES</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"es"</span><span class="p">:</span><span class="s2">"es_CR.utf-8"</span><span class="p">,</span>
+        <span class="p">}</span>
+</pre>
+
+
+<p>El locale a utilizar puede ser probado, importando locale <code>import locale</code> y llamando al locale necesario <code>locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')</code></p>
+</div>
+                </div>
+            </article>
+</div>
+    
+        <ul class="pager postindexpager clearfix">
+<li class="previous"><a href="index-2.html" rel="prev">Publicaciones posteriores</a></li>
+        </ul>
+<!--End of body content--><footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+ - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="assets/js/all-nocdn.js"></script><script src="assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("es");
+        fancydates(1, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

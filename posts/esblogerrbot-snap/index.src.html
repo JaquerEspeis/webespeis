@@ -1,0 +1,160 @@
+<html><body><div><p>I'm a Quality Assurance Engineer. A big part of my job is to find problems,
+then make sure that they are fixed and <em>automated</em> so they don't regress. If I
+do my job well, then our process will identify new and potential problems early
+<em>without manual intervention</em> from anybody in the team. It's like trying to
+automate myself, everyday, until I'm no longer needed and have to jump to
+another project.</p>
+<p>However, as we work in the project, it's unavoidable that many small manual
+tasks accumulate on my hands. This happens because I set up the continuous
+integration infrastructure, so I'm the one who knows more about it and have
+easier access, or because I'm the one who requested access to the build farm
+so I'm the one with the password, or because I configured the staging
+environment and I'm the only one who knows the details. This is a great way
+to achieve job security, but it doesn't lead us to higher quality. It's a job
+half done, and it's terribly boring to be a bottleneck and a silo of
+information about testing and the release process. All of these tasks should be
+shared by the whole team, as with all the other tasks in the project.</p>
+<p>There are two problems. First, most of these tasks involve delicate credentials
+that shouldn't be freely shared with everybody. Second, even if the task itself
+is simple and quick to execute, it's not very simple to document how to set up
+the environment to be able to execute them, nor how to make sure that the right
+task is executed in the right moment.</p>
+<p>Chatops is how I like to solve all of this. The idea is that every task that
+requires manual intervention is implemented in a script that can be executed by
+a bot. This bot joins the communication channel where the entire team is
+present, and it will execute the tasks and report about their results as a
+response to external events that happen somewhere in the project
+infrastructure, or as a response to the direct request of a team member in the
+channel. The credentials are kept safe, they only have to be shared with the
+bot and the permissions can be handled with access control lists or membership
+to the channel. And the operative knowledge is shared with all the team,
+because they are all listening in the same channel with the bot. This means
+that anybody can execute the tasks, and the bot assists them to make it simple.</p>
+<p>In snapcraft we started writing our bot not so long ago. It's called snappy-m-o
+(<a href="http://pixar.wikia.com/wiki/M-O">Microbe Obliterator</a>), and it's written
+in python with <a href="http://errbot.io/">errbot</a>. We, of course, packaged it as a
+snap so we have automated delivery every time we change it's source code, and
+the bot is also autoupdated in the server, so in the chat we are always
+interacting with the latest and greatest.</p>
+<p>Let me show you how we started it, in case you want to get your own. But let's
+call this one Baymax, and let's make a virtual environment with errbot, to
+experiment.</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/en/2/2c/Baymax_from_Disney%27s_Big_Hero_6.png"><img alt="drawing of the Baymax bot" src="https://upload.wikimedia.org/wikipedia/en/2/2c/Baymax_from_Disney%27s_Big_Hero_6.png"></a></p>
+<pre class="code literal-block"><span></span>$ mkdir -p ~/workspace/baymax
+$ <span class="nb">cd</span> ~/workspace/baymax
+$ sudo apt install python3-venv
+$ python3 -m venv .venv
+$ <span class="nb">source</span> .venv/bin/activate
+$ pip install errbot
+$ errbot --init
+</pre>
+
+
+<p>The last command will initialize this bot with a super simple plugin, and
+will configure it to work in text mode. This means that the bot won't be
+listening on any channel, you can just interact with it through the command
+line (the ops, without the chat). Let's try it:</p>
+<pre class="code literal-block"><span></span>$ <span class="nv">errbot</span>
+[...]
+<span class="o">&gt;&gt;&gt;</span> <span class="o">!</span><span class="nv">help</span>
+<span class="nv">All</span> <span class="nv">commands</span>
+[...]
+<span class="o">!</span><span class="nv">tryme</span> <span class="o">-</span> <span class="nv">Execute</span> <span class="nv">to</span> <span class="nv">check</span> <span class="k">if</span> <span class="nv">Errbot</span> <span class="nv">responds</span> <span class="nv">to</span> <span class="nv">command</span>.
+[...]
+<span class="o">&gt;&gt;&gt;</span> <span class="o">!</span><span class="nv">tryme</span>
+<span class="nv">It</span> <span class="nv">works</span> <span class="o">!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">!</span><span class="nv">shutdown</span> <span class="o">--</span><span class="nv">confirm</span>
+</pre>
+
+
+<p><code>tryme</code> is the command provided by the example plugin that <code>errbot --init</code>
+created. Take a look at the file <code>plugins/err-example/example.py</code>, errbot is
+just lovely. In order to define your own plugin you will just need a class that
+inherits from <code>errbot.BotPlugin</code>, and the commands are methods decorated with
+<code>@errbot.botcmd</code>. I won't dig into how to write plugins, because they have an
+amazing
+<a href="http://errbot.io/en/latest/user_guide/plugin_development/index.html">documentation about Plugin development</a>.
+You can also read the plugins we have in our snappy-m-o, one for
+<a href="https://github.com/elopio/snappy-m-o/blob/master/plugins/autopkgtest_github/autopkgtest_github.py">triggering autopkgtests on GitHub pull requests</a>,
+and the other for
+<a href="https://github.com/elopio/snappy-m-o/blob/master/plugins/snapcraft_github/snapcraft_github.py">subscribing to the results of the pull requests tests</a>.</p>
+<p>Let's change the config of Baymax to put it in an IRC chat:</p>
+<pre class="code literal-block"><span></span>$ pip install irc
+</pre>
+
+
+<p>And in the <code>config.py</code> file, set the following values:</p>
+<pre class="code literal-block"><span></span><span class="n">BACKEND</span> <span class="o">=</span> <span class="s1">'IRC'</span>
+<span class="n">BOT_IDENTITY</span> <span class="o">=</span> <span class="err">{</span>
+    <span class="s1">'nickname'</span> <span class="p">:</span> <span class="s1">'baymax-elopio'</span><span class="p">,</span>  <span class="o">#</span> <span class="n">Nicknames</span> <span class="n">need</span> <span class="k">to</span> <span class="n">be</span> <span class="k">unique</span><span class="p">,</span> <span class="n">so</span> <span class="n">append</span> <span class="n">your</span> <span class="n">own</span><span class="p">.</span>
+                                   <span class="o">#</span> <span class="n">Remember</span> <span class="k">to</span> <span class="k">replace</span> <span class="s1">'elopio'</span> <span class="k">with</span> <span class="n">your</span> <span class="n">nick</span> <span class="n">everywhere</span>
+                                   <span class="o">#</span> <span class="k">from</span> <span class="n">now</span> <span class="k">on</span><span class="p">.</span>
+    <span class="s1">'server'</span> <span class="p">:</span> <span class="s1">'irc.freenode.net'</span><span class="p">,</span>
+<span class="err">}</span>
+<span class="n">CHATROOM_PRESENCE</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'#snappy'</span><span class="p">,)</span>
+</pre>
+
+
+<p>Run it again with the errbot command, but this time join the #snappy channel
+in irc.freenode.net, and write in there <code>!tryme</code>. It works ! :)</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/errbot/errbot-snap.png"><img alt="screenshot of errbot on IRC" src="https://archive.org/download/elopio-screenshots2/errbot/errbot-snap.png"></a></p>
+<p>So, this is very simple, but let's package it now to start with the good
+practice of continuous delivery before it gets more complicated. As usual, it
+just requires a <code>snapcraft.yaml</code> file with all the packaging info and metadata:</p>
+<pre class="code literal-block"><span></span><span class="nv">name</span>: <span class="nv">baymax</span><span class="o">-</span><span class="nv">elopio</span>
+<span class="nv">version</span>: <span class="s1">'</span><span class="s">0.1-dev</span><span class="s1">'</span>
+<span class="nv">summary</span>: <span class="nv">A</span> <span class="nv">test</span> <span class="nv">bot</span> <span class="nv">with</span> <span class="nv">errbot</span>.
+<span class="nv">description</span>: <span class="nv">Chat</span> <span class="nv">ops</span> <span class="nv">bot</span> <span class="k">for</span> <span class="nv">my</span> <span class="nv">team</span>.
+<span class="nv">grade</span>: <span class="nv">stable</span>
+<span class="nv">confinement</span>: <span class="nv">strict</span>
+
+<span class="nv">apps</span>:
+  <span class="nv">baymax</span><span class="o">-</span><span class="nv">elopio</span>:
+    <span class="nv">command</span>: <span class="nv">env</span> <span class="nv">LC_ALL</span><span class="o">=</span><span class="nv">C</span>.<span class="nv">UTF</span><span class="o">-</span><span class="mi">8</span> <span class="nv">errbot</span> <span class="o">-</span><span class="nv">c</span> $<span class="nv">SNAP</span><span class="o">/</span><span class="nv">config</span>.<span class="nv">py</span>
+    <span class="nv">plugs</span>: [<span class="nv">home</span>, <span class="nv">network</span>, <span class="nv">network</span><span class="o">-</span><span class="nv">bind</span>]
+
+<span class="nv">parts</span>:
+  <span class="nv">errbot</span>:
+    <span class="nv">plugin</span>: <span class="nv">python</span>
+    <span class="nv">python</span><span class="o">-</span><span class="nv">packages</span>: [<span class="nv">errbot</span>, <span class="nv">irc</span>]
+  <span class="nv">baymax</span>:
+    <span class="nv">source</span>: .
+    <span class="nv">plugin</span>: <span class="nv">dump</span>
+    <span class="nv">stage</span>:
+      <span class="o">-</span> <span class="nv">config</span>.<span class="nv">py</span>
+      <span class="o">-</span> <span class="nv">plugins</span>
+    <span class="nv">after</span>: [<span class="nv">errbot</span>]
+</pre>
+
+
+<p>And we need to change a few more values in <code>config.py</code> to make sure that the
+bot is relocatable, that we can run it in the isolated snap environment, and
+that we can add plugins after it has been installed:</p>
+<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">BOT_DATA_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'SNAP_USER_DATA'</span><span class="p">)</span>
+<span class="n">BOT_EXTRA_PLUGIN_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'SNAP'</span><span class="p">),</span> <span class="s1">'plugins'</span><span class="p">)</span>
+<span class="n">BOT_LOG_FILE</span> <span class="o">=</span> <span class="n">BOT_DATA_DIR</span> <span class="o">+</span> <span class="s1">'/err.log'</span>
+</pre>
+
+
+<p>One final try, this time from the snap:</p>
+<pre class="code literal-block"><span></span>$ sudo apt install snapcraft
+$ snapcraft
+$ sudo snap install baymax*.snap --dangerous
+$ baymax-elopio
+</pre>
+
+
+<p>And go back to IRC to check.</p>
+<p>Last thing would be to push the source code we have just written to a GitHub
+repo, and enable the continuous delivery in build.snapcraft.io. Go to your
+server and install the bot with <code>sudo snap install baymax-elopio --edge</code>.
+Now everytime somebody from your team makes a change in the master repo in
+GitHub, the bot in your server will be automatically updated to get those
+changes within a few hours without any work from your side.</p>
+<p>If you are into chatops, make sure that every time you do a manual task, you
+also plan for some time to turn that task into a script that can be executed
+by your bot. And get ready to enjoy tons and tons of free time, or just keep
+going through those <a href="https://bugs.launchpad.net/snapcraft">400 open bugs</a>,
+whichever you prefer :)</p></div></body></html>

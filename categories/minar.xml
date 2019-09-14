@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre minar)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/minar.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Minar ethereum</title><link>http://jaquerespeis.org/posts/postsminar-ethereum/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Requerimientos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Minador&lt;/li&gt;
+&lt;li&gt;Ubuntu Server 16.04&lt;/li&gt;
+&lt;li&gt;Opcional(tarjeta de video)&lt;/li&gt;
+&lt;li&gt;Python y python-twisted&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;cpp-ethereum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Se considera Ubuntu Server, en caso de Ubuntu Desktop algunos requerimientos ya vienen instalados en el sistema.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar ubuntu 16.04&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar python y python-wisted&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install python
+sudo apt-get install python-twisted
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar cpp-ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install cpp-ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar el repositorio de &lt;a href="https://github.com/Atrides/eth-proxy"&gt;eth-proxy&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Crear un wallet con &lt;a href="https://github.com/ethereum/go-ethereum/wiki/geth"&gt;geth&lt;/a&gt; o &lt;a href="https://github.com/paritytech/parity"&gt;parity&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modificar el archivo de configuración de eth-proxy para usar el wallet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;En el directorio eth-proxy, ejecutar &lt;code&gt;eth-proxy.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo python eth-proxy/eth-proxy.py
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Ejecutar &lt;code&gt;ethminer&lt;/code&gt; apuntando a localhost&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ethminer -F http://127.0.0.1:8080/minador -G
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; La opción &lt;code&gt;-G&lt;/code&gt; indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice &lt;code&gt;--allow-opencl-cpu&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;https://github.com/paritytech/parity
+https://github.com/Atrides/eth-proxy
+https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html&lt;/p&gt;&lt;/div&gt;</description><category>cryptomoneda</category><category>ethereum</category><category>jaquerespeis</category><category>minar</category><guid>http://jaquerespeis.org/posts/postsminar-ethereum/</guid><pubDate>Fri, 31 Mar 2017 00:03:00 GMT</pubDate></item></channel></rss>

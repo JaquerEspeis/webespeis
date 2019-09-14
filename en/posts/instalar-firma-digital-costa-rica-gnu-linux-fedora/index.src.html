@@ -1,0 +1,90 @@
+<html><body><p>Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en el sistema operativo Fedora Workstation 30.<span id="more-14"></span></p>
+<p>Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones openSUSE Leap y Suse Linux Enterprise Server y Desktop, existe la guía sobre <a href="/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/">cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1</a>. Para Debian y Ubuntu está la guía de <a href="/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/">cómo instalar Firma Digital de Costa Rica en Debian y Ubuntu</a>.</p>
+<p>Esta guía de instalación tiene los siguientes propósitos:</p>
+<ul>
+<li>Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.</li>
+<li>Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.</li>
+<li>Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales).</li>
+</ul>
+<h2>Instalación de las dependencias</h2>
+<ul>
+<li>Instalar el soporte CCID de PC/SC para que reconozca el lector de tarjetas e IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets java, ya no es posible usar el del sitio web de la CCSS) y OpenJFX si pretende usarse algún firmador que lo use (NexU, por ejemplo).
+<pre>sudo dnf -y install pcsc-lite icedtea-web java-1.8.0-openjdk-openjfx</pre>
+</li>
+</ul>
+<h2>Descarga del “instalador”</h2>
+<ul>
+<li>Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de <a href="https://www.soportefirmadigital.com/">Soporte Firma Digital de Costa Rica</a>, introduciendo el número de serie de la tarjeta y aceptando las condiciones.</li>
+<li>Descomprimir el archivo zip descargado con <kbd>unzip</kbd>, en el momento de escribir esta documentación se llama <kbd>sfd_ClientesLinux_RPM64_Rev11.zip</kbd>. Se creará una carpeta llamada <kbd>Firma Digital</kbd>. Se asume que el archivo zip se ha descargado en la carpeta <kbd>Descargas</kbd>:
+<pre>cd ~/Descargas/
+
+unzip sfd_ClientesLinux_RPM64_Rev11.zip
+</pre>
+</li>
+</ul>
+<h2>Instalación de los certificados</h2>
+<p>Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. Para ello, un conjunto de comandos:</p>
+<ul>
+<li>Copiar los certificados:
+<pre>sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/share/pki/ca-trust-source/anchors/
+</pre>
+</li>
+<li>Regenerar los archivos de certificados para todas las aplicaciones:
+<pre>sudo update-ca-trust
+</pre>
+</li>
+</ul>
+<h2>Instalación del módulo PKCS#11</h2>
+<p>Aunque hay un módulo en el directorio <kbd>Librerías</kbd>, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.</p>
+<ul>
+<li>Instalar el módulo PKCS#11 privativo en <kbd>/usr/lib64/</kbd>:
+<pre>cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/RPM/
+
+rpm2cpio idprotectclient-641.01-0.x86_64.rpm | cpio -dim ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib64/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/
+</pre>
+</li>
+<li>Permitir temporalmente al usuario local cargar aplicaciones gráficas con sudo (para gedit):
+<pre>xhost si:localuser:root
+</pre>
+</li>
+<li>Crear el fichero <kbd>/etc/Athena/IDPClientDB.xml</kbd> y abrirlo para edición:
+<pre>sudo mkdir /etc/Athena/
+
+sudo gedit /etc/Athena/IDPClientDB.xml
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;IDProtect&gt;
+ &lt;TokenLibs&gt;
+  &lt;IDProtect&gt;
+   &lt;Cards&gt;
+    &lt;IDProtectXF&gt;
+     &lt;ATR type='hexBinary'&gt;3BDC00FF8091FE1FC38073C821106600000000000000&lt;/ATR&gt;
+     &lt;ATRMask type='hexBinary'&gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&lt;/ATRMask&gt;
+    &lt;/IDProtectXF&gt;
+   &lt;/Cards&gt;
+  &lt;/IDProtect&gt;
+ &lt;/TokenLibs&gt;
+&lt;/IDProtect&gt;
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/usr/share/p11-kit/modules/firma-digital.module</kbd> y abrirlo para edición:
+<pre>sudo gedit /usr/share/p11-kit/modules/firma-digital.module
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --symlink /usr/lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib64/libASEP11.so
+</pre>
+</li>
+</ul>
+<p>Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios.</p>
+<p>Quizás resulte interesante utilizar la herramienta <a href="https://firmador.app" target="_blank" rel="noopener noreferrer">Firmador</a>, software libre para firmar documentos.</p></body></html>

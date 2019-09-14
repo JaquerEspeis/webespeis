@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre ethereum)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/ethereum.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HolaMundo con ethereum</title><link>http://jaquerespeis.org/posts/postsholamundo-ethereum/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Lista de herramientas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;testRPC&lt;/li&gt;
+&lt;li&gt;nvm&lt;/li&gt;
+&lt;li&gt;web3&lt;/li&gt;
+&lt;li&gt;geth&lt;/li&gt;
+&lt;li&gt;solc&lt;/li&gt;
+&lt;li&gt;web3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;h3&gt;Linux&lt;/h3&gt;
+&lt;p&gt;Los siguientes pasos muestras como instalar las herramientas necesarias en Ubuntu 17.04&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+nvm ls-remote
+nvm install &amp;lt;la ultima LTS&amp;gt;
+npm install -g ethereumjs-testrpc
+npm install solc
+npm install web3
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Mac&lt;/h3&gt;
+&lt;p&gt;Para instalar nvm es necesario tener &lt;a href="https://brew.sh/"&gt;brew&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;brew install nvm
+nvm ls-remote
+nvm install &amp;lt;la ultima LTS&amp;gt;
+npm install -g ethereumjs-testrpc
+npm install solc
+npm install web3
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Desarrollo&lt;/h2&gt;
+&lt;p&gt;Con el editor preferido, escribir el contrato, para esto se va a utilizar el lenguage &lt;a href="https://solidity.readthedocs.io/en/develop/"&gt;&lt;strong&gt;solidity&lt;/strong&gt;&lt;/a&gt;, sin embargo existen otras opciones como &lt;a href="https://github.com/ethereum/wiki/wiki/Serpent"&gt;&lt;strong&gt;serpent&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para compilar el contrato vamos a utilizar el comando &lt;code&gt;solc --bin --optimize &amp;lt;archivo.sol&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Escribit el siguiente contrato en un archivo llamado Voting.sol&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pragma solidity ^0.4.11;
+// We have to specify what version of compiler this code will compile with
+
+contract Voting {
+  /* mapping field below is equivalent to an associative array or hash.
+  The key of the mapping is candidate name stored as type bytes32 and value is
+  an unsigned integer to store the vote count
+  */
+
+  mapping (bytes32 =&amp;gt; uint8) public votesReceived;
+
+  /* Solidity doesn't let you pass in an array of strings in the constructor (yet).
+  We will use an array of bytes32 instead to store the list of candidates
+  */
+
+  bytes32[] public candidateList;
+
+  /* This is the constructor which will be called once when you
+  deploy the contract to the blockchain. When we deploy the contract,
+  we will pass an array of candidates who will be contesting in the election
+  */
+  function Voting(bytes32[] candidateNames) {
+    candidateList = candidateNames;
+  }
+
+  // This function returns the total votes a candidate has received so far
+  function totalVotesFor(bytes32 candidate) returns (uint8) {
+    if (validCandidate(candidate) == false) throw;
+    return votesReceived[candidate];
+  }
+
+  // This function increments the vote count for the specified candidate. This
+  // is equivalent to casting a vote
+  function voteForCandidate(bytes32 candidate) {
+    if (validCandidate(candidate) == false) throw;
+    votesReceived[candidate] += 1;
+  }
+
+  function validCandidate(bytes32 candidate) returns (bool) {
+    for(uint i = 0; i &amp;lt; candidateList.length; i++) {
+      if (candidateList[i] == candidate) {
+        return true;
+      }
+    }
+    return false;
+  }
+}
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Pasos para desplegar el contrato&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Ejecutar node&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Mientras se ejecutan los comandos, se puede ver su salida y analizarla.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Web3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'web3'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;web3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;providers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;HttpProvider&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"http://localhost:8545"&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Listar las cuentas existentes en la red&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Compilar el código &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;readFileSync&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Voting.sol'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nx"&gt;solc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'solc'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;compiledCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;solc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="kr"&gt;interface&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;VotingContract&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;byteCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;bytecode&lt;/span&gt;
+&lt;span class="nx"&gt;deployedContract&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Nick'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Jose'&lt;/span&gt;&lt;span class="p"&gt;],{&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;byteCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;gas&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4700000&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;
+&lt;span class="nx"&gt;contractInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;at&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;String&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+
+&lt;span class="s1"&gt;'0xdedc7ae544c3dde74ab5a0b07422c5a51b5240603d31074f5b75c0ebc786bf53'&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+
+&lt;span class="s1"&gt;'0x02c054d238038d68b65d55770fabfca592a5cf6590229ab91bbe7cd72da46de9'&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+
+&lt;span class="s1"&gt;'0x3da069a09577514f2baaa11bc3015a16edf26aad28dffbcd126bde2e71f2b76f'&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toLocaleString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="s1"&gt;'3'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Opcodes de la EVM&lt;/h2&gt;
+&lt;h3&gt;0s: Stop and Arithmetic Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x00    STOP        Halts execution
+0x01    ADD         Addition operation
+0x02    MUL         Multiplication operation
+0x03    SUB         Subtraction operation
+0x04    DIV         Integer division operation
+0x05    SDIV        Signed integer
+0x06    MOD         Modulo
+0x07    SMOD        Signed modulo
+0x08    ADDMOD      Modulo
+0x09    MULMOD      Modulo
+0x0a    EXP         Exponential operation
+0x0b    SIGNEXTEND  Extend length of two's complement signed integer
+&lt;/pre&gt;
+
+
+&lt;h3&gt;10s: Comparison &amp;amp; Bitwise Logic Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x10    LT      Lesser-than comparison
+0x11    GT      Greater-than comparison
+0x12    SLT     Signed less-than comparison
+0x13    SGT     Signed greater-than comparison
+0x14    EQ      Equality  comparison
+0x15    ISZERO  Simple not operator
+0x16    AND     Bitwise AND operation
+0x17    OR      Bitwise OR operation
+0x18    XOR     Bitwise XOR operation
+0x19    NOT     Bitwise NOT operation
+0x1a    BYTE    Retrieve single byte from word
+&lt;/pre&gt;
+
+
+&lt;h3&gt;20s: SHA3&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x20    SHA3    Compute Keccak-256 hash
+&lt;/pre&gt;
+
+
+&lt;h3&gt;30s: Environmental Information&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x30    ADDRESS         Get address of currently executing account
+0x31    BALANCE         Get balance of the given account
+0x32    ORIGIN          Get execution origination address
+0x33    CALLER          Get caller address. This is the address of the account that is directly responsible for this execution
+0x34    CALLVALUE       Get deposited value by the instruction/transaction responsible for this execution
+0x35    CALLDATALOAD    Get input data of current environment
+0x36    CALLDATASIZE    Get size of input data in current environment
+0x37    CALLDATACOPY    Copy input data in current environment to memory This pertains to the input data passed with the message call instruction or transaction
+0x38    CODESIZE        Get size of code running in current environment
+0x39    CODECOPY        Copy code running in current environment to memory
+0x3a    GASPRICE        Get price of gas in current environment
+0x3b    EXTCODESIZE     Get size of an account's code
+0x3c    EXTCODECOPY     Copy an account's code to memory
+&lt;/pre&gt;
+
+
+&lt;h3&gt;40s: Block Information&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x40    BLOCKHASH   Get the hash of one of the 256 most recent complete blocks
+0x41    COINBASE    Get the block's beneficiary address
+0x42    TIMESTAMP   Get the block's timestamp
+0x43    NUMBER      Get the block's number
+0x44    DIFFICULTY  Get the block's difficulty
+0x45    GASLIMIT    Get the block's gas limit
+&lt;/pre&gt;
+
+
+&lt;h3&gt;50s Stack, Memory, Storage and Flow Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x50    POP         Remove item from stack
+0x51    MLOAD       Load word from memory
+0x52    MSTORE      Save word to memory
+0x53    MSTORE8     Save byte to memory
+0x54    SLOAD       Load word from storage
+0x55    SSTORE      Save word to storage
+0x56    JUMP        Alter the program counter
+0x57    JUMPI       Conditionally alter the program counter
+0x58    PC          Get the value of the program counter prior to the increment
+0x59    MSIZE       Get the size of active memory in bytes
+0x5a    GAS         Get the amount of available gas, including the corresponding reduction
+0x5b    JUMPDEST    Mark a valid destination for jumps
+&lt;/pre&gt;
+
+
+&lt;h3&gt;60s &amp;amp; 70s: Push Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x60    PUSH1   Place 1 byte item on stack
+0x61    PUSH2   Place 2-byte item on stack
+…
+0x7f    PUSH32  Place 32-byte (full word) item on stack
+&lt;/pre&gt;
+
+
+&lt;h3&gt;80s: Duplication Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x80    DUP1    Duplicate 1st stack item
+0x81    DUP2    Duplicate 2nd stack item
+…
+0x8f    DUP16   Duplicate 16th stack item
+&lt;/pre&gt;
+
+
+&lt;h3&gt;90s: Exchange Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x90    SWAP1   Exchange 1st and 2nd stack items
+0x91    SWAP2   Exchange 1st and 3rd stack items
+…   …
+0x9f    SWAP16  Exchange 1st and 17th stack items
+&lt;/pre&gt;
+
+
+&lt;h3&gt;a0s: Logging Operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xa0    LOG0    Append log record with no topics
+0xa1    LOG1    Append log record with one topic
+…   …
+0xa4    LOG4    Append log record with four topics
+&lt;/pre&gt;
+
+
+&lt;h3&gt;f0s: System operations&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xf0    CREATE          Create a new account with associated code
+0xf1    CALL            Message-call into an account
+0xf2    CALLCODE        Message-call into this account with alternative account's code
+0xf3    RETURN          Halt execution returning output data
+0xf4    DELEGATECALL    Message-call into this account with an alternative account's code, but persisting the current values for `sender` and `value`
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Halt Execution, Mark for deletion&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xff    SELFDESTRUCT    Halt execution and register account for later deletion
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;https://github.com/creationix/nvm&lt;/li&gt;
+&lt;li&gt;https://github.com/ethereumjs/testrpc&lt;/li&gt;
+&lt;li&gt;https://en.wikipedia.org/wiki/Remote_procedure_call&lt;/li&gt;
+&lt;li&gt;http://ethdocs.org/en/latest/network/test-networks.html&lt;/li&gt;
+&lt;li&gt;https://medium.com/@doart3/ethereum-dapps-without-truffle-compile-deploy-use-it-e6daeefcf919&lt;/li&gt;
+&lt;li&gt;https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2&lt;/li&gt;
+&lt;li&gt;https://github.com/ethereum/yellowpaper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notas&lt;/h2&gt;
+&lt;p&gt;testrpc -n5&lt;/p&gt;&lt;/div&gt;</description><category>ethereum</category><category>jaquerespeis</category><category>smart contracts</category><guid>http://jaquerespeis.org/posts/postsholamundo-ethereum/</guid><pubDate>Wed, 19 Jul 2017 11:07:00 GMT</pubDate></item><item><title>Minar ethereum</title><link>http://jaquerespeis.org/posts/postsminar-ethereum/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Requerimientos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Minador&lt;/li&gt;
+&lt;li&gt;Ubuntu Server 16.04&lt;/li&gt;
+&lt;li&gt;Opcional(tarjeta de video)&lt;/li&gt;
+&lt;li&gt;Python y python-twisted&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;cpp-ethereum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Se considera Ubuntu Server, en caso de Ubuntu Desktop algunos requerimientos ya vienen instalados en el sistema.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar ubuntu 16.04&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar python y python-wisted&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install python
+sudo apt-get install python-twisted
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar cpp-ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install cpp-ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar el repositorio de &lt;a href="https://github.com/Atrides/eth-proxy"&gt;eth-proxy&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Crear un wallet con &lt;a href="https://github.com/ethereum/go-ethereum/wiki/geth"&gt;geth&lt;/a&gt; o &lt;a href="https://github.com/paritytech/parity"&gt;parity&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modificar el archivo de configuración de eth-proxy para usar el wallet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;En el directorio eth-proxy, ejecutar &lt;code&gt;eth-proxy.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo python eth-proxy/eth-proxy.py
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Ejecutar &lt;code&gt;ethminer&lt;/code&gt; apuntando a localhost&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ethminer -F http://127.0.0.1:8080/minador -G
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; La opción &lt;code&gt;-G&lt;/code&gt; indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice &lt;code&gt;--allow-opencl-cpu&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;https://github.com/paritytech/parity
+https://github.com/Atrides/eth-proxy
+https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html&lt;/p&gt;&lt;/div&gt;</description><category>cryptomoneda</category><category>ethereum</category><category>jaquerespeis</category><category>minar</category><guid>http://jaquerespeis.org/posts/postsminar-ethereum/</guid><pubDate>Fri, 31 Mar 2017 00:03:00 GMT</pubDate></item></channel></rss>

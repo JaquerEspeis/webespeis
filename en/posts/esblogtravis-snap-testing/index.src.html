@@ -1,0 +1,151 @@
+<html><body><div><p><a href="https://travis-ci.org/">Travis CI</a> offers a great continuous integration
+service for the projects hosted on GitHub. With it, you can run tests, deliver
+artifacts and deploy applications every time you push a commit, on pull requests, after they are merged, or with some other frequency.</p>
+<p>Last week Travis CI
+<a href="https://blog.travis-ci.com/2017-06-21-trusty-updates-2017-Q2-launch">updated the Ubuntu 14.04 (Trusty) machines</a>
+that run your tests and deployment steps. This update came with a nice surprise for everybody
+working to deliver software to Linux users, because it is now possible to
+install <a href="https://snapcraft.io">snaps</a> in Travis!</p>
+<p>I've been excited all week telling people about all the doors that this opens;
+but if you have been following my adventures in the Ubuntu world, by now you
+can probably guess that I'm mostly thinking about all the potential this has
+for automated testing. For the automation of user acceptance tests.</p>
+<p>User acceptance tests are executed from the point of view of the user, with
+your software presented as a black box to them. The tests can only interact
+with the software through the entry points you define for your users. If it's
+a CLI application, then the tests will call commands and subcommands and check
+the outputs. If it's a website or a desktop application, the tests will click
+things, enter text and check the changes on this GUI. If it's a service with
+an HTTP API, the tests will make requests and check the responses. On these
+tests, the closer you can get to simulate the environment and behaviour of your
+real users, the better.</p>
+<p>Snaps are great for the automation of user acceptance tests because they are
+immutable and they bundle all their dependencies. With this we can make sure
+that your snap will work the same on any of the operating systems and
+architectures that support snaps. The <a href="https://snapcraft.io/docs/core/snapd">snapd</a> service takes care of hiding
+the differences and presenting a consistent execution environment for the snap.
+So, getting a green execution of these tests in the Trusty machine of Travis is
+a pretty good indication that it will work on all the active releases of
+Ubuntu, Debian, Fedora and even on a Raspberry Pi.</p>
+<p>Let me show you an example of what I'm talking about, obviously using my
+favourite snap called IPFS. There is
+<a href="http://elopio.net/blog/ipfs-crowdtesting/">more information about IPFS in my previous post</a>.</p>
+<p>Check below the packaging metadata for the IPFS snap, a single <code>snapcraft.yaml</code>
+file:</p>
+<pre class="code literal-block"><span></span><span class="nl">name</span><span class="p">:</span><span class="w"> </span><span class="n">ipfs</span><span class="w"></span>
+<span class="nl">version</span><span class="p">:</span><span class="w"> </span><span class="n">master</span><span class="w"></span>
+<span class="nl">summary</span><span class="p">:</span><span class="w"> </span><span class="k">global</span><span class="p">,</span><span class="w"> </span><span class="n">versioned</span><span class="p">,</span><span class="w"> </span><span class="n">peer</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">peer</span><span class="w"> </span><span class="n">filesystem</span><span class="w"></span>
+<span class="nl">description</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">  </span><span class="n">IPFS</span><span class="w"> </span><span class="n">combines</span><span class="w"> </span><span class="n">good</span><span class="w"> </span><span class="n">ideas</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Git</span><span class="p">,</span><span class="w"> </span><span class="n">BitTorrent</span><span class="p">,</span><span class="w"> </span><span class="n">Kademlia</span><span class="p">,</span><span class="w"> </span><span class="n">SFS</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Web</span><span class="p">.</span><span class="w"></span>
+<span class="w">  </span><span class="n">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">like</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">bittorrent</span><span class="w"> </span><span class="n">swarm</span><span class="p">,</span><span class="w"> </span><span class="n">exchanging</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">objects</span><span class="p">.</span><span class="w"> </span><span class="n">IPFS</span><span class="w"> </span><span class="n">provides</span><span class="w"></span>
+<span class="w">  </span><span class="n">an</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">simple</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="n">web</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">permanence</span><span class="w"> </span><span class="n">built</span><span class="w"> </span><span class="ow">in</span><span class="p">.</span><span class="w"> </span><span class="n">You</span><span class="w"></span>
+<span class="w">  </span><span class="n">can</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">mount</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">world</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="o">/</span><span class="n">ipfs</span><span class="p">.</span><span class="w"></span>
+<span class="nl">confinement</span><span class="p">:</span><span class="w"> </span><span class="n">strict</span><span class="w"></span>
+
+<span class="nl">apps</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nl">ipfs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nl">command</span><span class="p">:</span><span class="w"> </span><span class="n">ipfs</span><span class="w"></span>
+<span class="w">    </span><span class="nl">plugs</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">home, network, network-bind</span><span class="o">]</span><span class="w"></span>
+
+<span class="nl">parts</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nl">ipfs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nl">source</span><span class="p">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+<span class="w">    </span><span class="nl">plugin</span><span class="p">:</span><span class="w"> </span><span class="n">nil</span><span class="w"></span>
+<span class="w">    </span><span class="n">build</span><span class="o">-</span><span class="nl">packages</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">make, wget</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="k">prepare</span><span class="err">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">      </span><span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="w"></span>
+<span class="w">      </span><span class="n">cp</span><span class="w"> </span><span class="o">-</span><span class="n">R</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="w"></span>
+<span class="w">    </span><span class="nl">build</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">      </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ipfs</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="n">ipfs</span><span class="w"> </span><span class="n">install</span><span class="w"></span>
+<span class="w">    </span><span class="nl">install</span><span class="p">:</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">      </span><span class="n">mkdir</span><span class="w"> </span><span class="err">$</span><span class="n">SNAPCRAFT_PART_INSTALL</span><span class="o">/</span><span class="n">bin</span><span class="w"></span>
+<span class="w">      </span><span class="n">mv</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">ipfs</span><span class="w"> </span><span class="err">$</span><span class="n">SNAPCRAFT_PART_INSTALL</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span><span class="k">after</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">go</span><span class="o">]</span><span class="w"></span>
+<span class="w">  </span><span class="k">go</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">source</span><span class="o">-</span><span class="nl">tag</span><span class="p">:</span><span class="w"> </span><span class="n">go1</span><span class="mf">.7.5</span><span class="w"></span>
+</pre>
+
+
+<p>It's not the most simple snap because they use their own build tool to get the
+go dependencies and compile; but it's also not too complex. If you are new to
+snaps and want to understand every detail of this file, or you want to package
+your own project, the
+<a href="https://tutorials.ubuntu.com/tutorial/create-first-snap">tutorial to create your first snap</a>
+is a good place to start.</p>
+<p>What's important here is that if you run <code>snapcraft</code> using the snapcraft.yaml file above, you
+will get the IPFS snap. If you install that snap, then you can test it from the
+point of view of the user. And if the tests work well, you can push it to the
+edge channel of the Ubuntu store to start the crowdtesting with your community.</p>
+<p>We can automate all of this with Travis. The <code>snapcraft.yaml</code> for the project
+must be already in the GitHub repository, and we will add there a <code>.travis.yml</code>
+file. They have
+<a href="https://docs.travis-ci.com/">good docs to prepare your Travis account</a>.
+First, let's see what's required to build the snap:</p>
+<pre class="code literal-block"><span></span><span class="nl">sudo</span><span class="p">:</span><span class="w"> </span><span class="n">required</span><span class="w"></span>
+<span class="nl">services</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">docker</span><span class="o">]</span><span class="w"></span>
+
+<span class="nl">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="err">:$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span><span class="w"> </span><span class="n">snapcore</span><span class="o">/</span><span class="n">snapcraft</span><span class="w"> </span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="ss">"apt update &amp;&amp; snapcraft"</span><span class="w"></span>
+</pre>
+
+
+<p>For now, we build the snap in a docker container to keep things simple. We have
+work in progress to be able to install snapcraft in Trusty as a snap, so soon
+this will be even nicer running everything directly in the Travis machine.</p>
+<p>This previous step will leave the packaged .snap file in the current directory.
+So we can install it adding a few more steps to the Travis script:</p>
+<pre class="code literal-block"><span></span><span class="k">[...]</span>
+
+<span class="na">script:</span>
+  <span class="na">- docker [...]</span>
+  <span class="na">- sudo apt install --yes snapd</span>
+  <span class="na">- sudo snap install *.snap --dangerous</span>
+</pre>
+
+
+<p>And once the snap is installed, we can run it and check that it works as expected.
+Those checks are our automated user acceptance test. IPFS has a CLI
+client, so we can just run commands and verify outputs with grep. Or we can get
+fancier using <a href="https://github.com/kward/shunit2">shunit2</a> or
+<a href="https://github.com/sstephenson/bats/">bats</a>. But the basic idea would be to
+add to the Travis script something like this:</p>
+<pre class="code literal-block"><span></span><span class="k">[...]</span>
+
+<span class="na">script:</span>
+  <span class="k">[...]</span>
+  <span class="na">- /snap/bin/ipfs init</span>
+  <span class="na">- /snap/bin/ipfs cat /ipfs/QmVLDAhCY3X9P2uRudKAryuQFPM5zqA3Yij1dY8FpGbL7T/readme | grep -z "^Hello and Welcome to IPFS!.*$"</span>
+  <span class="na">- [...]</span>
+</pre>
+
+
+<p>If one of those checks fail, Travis will mark the execution as failed and stop
+our release process until we fix them. If instead, all of the checks pass, then this version
+is good enough to put into the store, where people can take it and run
+exploratory tests to try to find problems caused by weird scenarios that we
+missed in the automation. To help with that we have the
+<code>snapcraft enable-ci travis</code> command, and a tutorial to guide you
+step by step
+<a href="https://tutorials.ubuntu.com/tutorial/continuous-snap-delivery-from-travis-ci#0">setting up the continuous delivery from Travis CI</a>.</p>
+<p>For the IPFS snap we had for a long time a manual smoke suite, that our amazing
+<a href="https://forum.snapcraft.io/t/call-for-testing-ipfs/97">community of testers</a>
+have been executing over and over again, every time we want to publish a new
+release. I've turned it into
+<a href="https://github.com/elopio/ipfs-snap/blob/master/tests/smoke_test.sh">a simple bash script</a>
+that from now on will be executed frequently by Travis, and will tell us if
+there's something wrong before anybody gives it a try manually. With this our
+community of testers will have more time to run new and interesting scenarios,
+trying to break the application in clever ways, instead of running the same
+repetitive steps many times.</p>
+<p>Thanks to Travis and snapcraft we no longer have to worry about a big part of
+or release process. Continuous integration and delivery can be fully automated,
+and we will have to take a look only when something breaks.</p>
+<p>As for IPFS, it will keep being my guinea pig to guide new features for
+snapcraft and showcase them when ready. It has many more commands that
+have to be added to the automated test suite, and it also has a web UI and
+an HTTP API. Lots of things to play with! If you would like to help, and
+on the way learn about snaps, automation and the decentralized web, please
+let me know. You can take a look on my
+<a href="https://github.com/elopio/ipfs-snap">IPFS snap repo</a> for more details about
+testing snaps in Travis, and other tricks for the build and deployment.</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/travis/ipsf-travis.png"><img alt="screenshot of the IPFS smoke test running in travis" src="https://archive.org/download/elopio-screenshots2/travis/ipsf-travis.png"></a></p></div></body></html>

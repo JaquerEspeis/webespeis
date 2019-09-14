@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On crowdsales and multiple inheritance | JáquerEspeis</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../../rss.xml">
+<link rel="canonical" href="http://jaquerespeis.org/en/posts/esblogcrowdsales-and-multiple-inheritance/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="JáquerEspeis">
+<link rel="prev" href="../20180228cambiar-el-mundo-es-posible/" title="Cambiar el mundo ¿Es posible?" type="text/html">
+<link rel="next" href="../firmador-digital-de-documentos-para-costa-rica/" title="Firmador digital de documentos para Costa Rica" type="text/html">
+<meta property="og:site_name" content="JáquerEspeis">
+<meta property="og:title" content="On crowdsales and multiple inheritance">
+<meta property="og:url" content="http://jaquerespeis.org/en/posts/esblogcrowdsales-and-multiple-inheritance/">
+<meta property="og:description" content="On 2017 we saw a mind-blowing number of crowdsales and ICOs running in the
+Ethereum blockchain. They have proven to be a
+powerful tool to collect the funds required to start a project, and they are
+on">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-04-08T15:04:13-06:00">
+<link rel="alternate" hreflang="es" href="../../../posts/esblogcrowdsales-and-multiple-inheritance/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://jaquerespeis.org/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://jaquerespeis.org/en/">
+
+            <span id="blog-title">JáquerEspeis</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://jaquerespeis.org/" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="index.src.html" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Categories</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">On crowdsales and multiple inheritance</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    JáquerEspeis
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2018-04-08T15:04:13-06:00" itemprop="datePublished" title="2018-04-08 15:04">2018-04-08 15:04</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.src.html" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>On 2017 we saw a mind-blowing number of crowdsales and ICOs running in the
+Ethereum blockchain. They have proven to be a
+powerful tool to collect the funds required to start a project, and they are
+one of the most common uses for smart contracts right now. The Zeppelin team
+has been very involved in this topic,
+<a href="https://blog.zeppelin.solutions/tagged/audit">auditing many crowdsale contracts</a>,
+and supporting <a href="https://openzeppelin.org/">OpenZeppelin</a>, the most popular
+framework to build these crowdsales. What we found was a lot of contracts
+repeating the same basic concepts, with very similar code, and common
+vulnerabilities.</p>
+<p>Earlier this year, part of the team took the task to redesign our base
+<code>Crowdsale</code> contract in order to support a lot of new crowdsale flavors out of
+the box and to make the experience of building and publishing your own
+crowdsale more clear and secure. The idea is to make audits less necessary,
+with an architecture that is modular, that encourages reuse and that will be
+collectively reviewed. These new contracts were added to OpenZeppelin version
+<code>1.7.0</code>, and since the release they have been widely used by our community with
+ great success. So, this is a good moment to show off :)</p>
+<p>Let's start with a dive into
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/crowdsale/Crowdsale.sol">the source code of the <code>Crowdsale</code> base contract</a>.
+The first thing you will notice is a lot of comments, guiding you through the
+details of the OpenZeppelin crowdsale architecture. They explain that some
+functions are the core of the architecture and should not be overriden, like
+<code>buyTokens</code>. Some others like <code>_preValidatePurchase</code> can be overriden to
+implement the requirements of your crowdsale, but that extra behavior should
+be concatenated with the one of the parent by calling <code>super</code>, to preserve the
+validations from the  base contract. Some functions like
+<code>_postValidatePurchase</code> can be just added as hooks in other parts of the
+crowdsale's lifecycle.</p>
+<p>Building on top of this base, we now provide some contracts for common
+crowdsale scenarios involving
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale/distribution">distribution</a>,
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale/emission">emission</a>,
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale/price">price</a>,
+and
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale/validation">validation</a>.</p>
+<p>So, let's say that you want to set a goal for your crowdsale and if it's not
+met by the time the sale finishes, you want to refund all your investors. For
+that, you can use the
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/crowdsale/distribution/RefundableCrowdsale.sol">RefundableCrowdsale contract</a>,
+which overrides the base <code>_forwardFunds</code> behavior to send the funds to a fancy
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/crowdsale/distribution/utils/RefundVault.sol">RefundVault</a>
+while the crowdsale is in progress, instead of sending them directly to the
+wallet of the crowdsale owner.</p>
+<p>Another common scenario is when you want the tokens to be minted when they are
+purchased. For that, take a look at the
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/crowdsale/emission/MintedCrowdsale.sol">MintedCrowdsale contract</a>,
+which overrides the simple <code>_deliverTokens</code> behavior of the base class to call
+instead the <code>mint</code> function of an
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/token/ERC20/MintableToken.sol">ERC20 Mintable token</a>.</p>
+<p>What if we want to do something more interesting with the price of the tokens?
+The base <code>Crowdsale</code> contract defines a constant rate between tokens and wei,
+but if we override <code>_getTokenAmount</code>, we could do something like increasing
+the price as the closing time of the crowdsale approaches. That's exactly what
+the
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/crowdsale/price/IncreasingPriceCrowdsale.sol">IncreasingPriceCrowdsale contract</a>
+does.</p>
+<p>To get started developing and deploying a crowdsale using the OpenZeppelin
+framework, Gustavo Guimaraes published a nice
+<a href="https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6">guide where you will see in action a crowdsale that is timed <strong>and</strong> minted</a>.</p>
+<p>These are just a few examples. I invite you to explore the
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale">OpenZeppelin crowdsale contracts</a>
+to see all the new flavors that you can easily use to fund your cool idea;
+and take a look at the
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/examples/SampleCrowdsale.sol">SampleCrowdsale contract</a>,
+a more complex scenario that comes with full
+<a href="https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/test/examples/SampleCrowdsale.test.js">test coverage</a>.
+If you like OpenZeppelin, remember that you are welcome into
+<a href="https://slack.openzeppelin.org/">our vibrating community</a> to help us adding new
+contracts or improving the existing ones.</p>
+<p>On the repo you will also find that all these contracts are very well tested. And
+as we have seen, the new architecture is clearer and safer, with each contract
+explaining the functions that you can or can't override, and how to do it.
+However, you should be extra careful when combining them. It's not the same to
+have three contracts with one condition than to have one contract with three
+conditions. The combination increases the attack surface, so you need to have
+a good idea of what you want to achieve, and know the implementation details of
+the tools you are using.</p>
+<p>Before you go ahead and deploy a complex crowdsale that combines some of our
+contracts, I would like to spend some time going deep into how Solidity works
+when you combine contracts through multiple inheritance, like Gustavo did in
+his guide to make a contract that inherits from <code>TimedCrowdsale</code> <strong>and</strong> from
+<code>MintedCrowdsale</code>.</p>
+<p>Multiple inheritance is hard, and it can get very confusing if you abuse it.
+Some languages don't support it at all; but it is becoming a very common
+pattern on Solidity.</p>
+<p>The problem, from the point of view of the programmer, is to understand the
+order of the calls when a contract has multiple parents. Let's say we have a
+base contract <code>A</code>, with a function named <code>f</code>:</p>
+<pre class="code literal-block"><span></span><span class="n">contract</span> <span class="n">A</span> <span class="err">{</span>
+  <span class="k">function</span> <span class="n">f</span><span class="p">()</span> <span class="err">{</span>
+    <span class="n">somethingA</span><span class="p">();</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</pre>
+
+
+<p>Then we have two contracts <code>B</code> and <code>C</code>, both inherit from <code>A</code> and override <code>f</code>:</p>
+<pre class="code literal-block"><span></span><span class="n">contract</span> <span class="n">B</span> <span class="k">is</span> <span class="n">A</span> <span class="err">{</span>
+  <span class="k">function</span> <span class="n">f</span><span class="p">()</span> <span class="err">{</span>
+    <span class="n">somethingB</span><span class="p">();</span>
+    <span class="n">super</span><span class="p">.</span><span class="n">f</span><span class="p">();</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="n">contract</span> <span class="k">C</span> <span class="k">is</span> <span class="n">A</span> <span class="err">{</span>
+  <span class="k">function</span> <span class="n">f</span><span class="p">()</span> <span class="err">{</span>
+    <span class="n">somethingC</span><span class="p">();</span>
+    <span class="n">super</span><span class="p">.</span><span class="n">f</span><span class="p">();</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</pre>
+
+
+<p>And finaly we have a contract <code>D</code>, which inherits from <code>B</code> and <code>C</code>, and
+overrides <code>f</code> too:</p>
+<pre class="code literal-block"><span></span><span class="n">contract</span> <span class="n">D</span> <span class="k">is</span> <span class="n">B</span><span class="p">,</span> <span class="k">C</span> <span class="err">{</span>
+  <span class="k">function</span> <span class="n">f</span><span class="p">()</span> <span class="err">{</span>
+    <span class="n">somethingD</span><span class="p">();</span>
+    <span class="n">super</span><span class="p">.</span><span class="n">f</span><span class="p">();</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</pre>
+
+
+<p>What happens when you call <code>D.f</code>?</p>
+<p>This is called the diamond problem, because we end up with a diamond-shaped
+inheritance diagram:</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/180px-Diamond_inheritance.svg.png"><img alt="Diamond inheritance problem" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Diamond_inheritance.svg/180px-Diamond_inheritance.svg.png"></a></p>
+<p>(the image is from wikipedia)</p>
+<p>To solve it, Solidity uses C3 linearization, also called Method Resolution
+Order (MRO). This means that it will linearize the inheritance graph. If <code>D</code>
+is defined as:</p>
+<pre class="code literal-block"><span></span><span class="n">contract</span> <span class="n">D</span> <span class="k">is</span> <span class="n">B</span><span class="p">,</span> <span class="k">C</span> <span class="err">{}</span>
+</pre>
+
+
+<p>then <code>D.f</code> will call:</p>
+<pre class="code literal-block"><span></span><span class="n">somethingD</span><span class="p">();</span>
+<span class="n">somethingC</span><span class="p">();</span>
+<span class="n">somethingB</span><span class="p">();</span>
+<span class="n">somethingA</span><span class="p">();</span>
+</pre>
+
+
+<p>When <code>D</code> inherits from <code>B, C</code>, the linearization results in D→ C→ B→ A. This
+means that <code>super</code> on <code>D</code> calls <code>C</code>. And you might be a little surprised by the
+fact that calling <code>super</code> on <code>C</code> will result on a call to <code>B</code> instead of <code>A</code>,
+even though <code>C</code> doesn't inherit from <code>B</code>. Finally, <code>super</code> on <code>B</code> will call
+<code>A</code>.</p>
+<p>If <code>D</code> is instead defined as:</p>
+<pre class="code literal-block"><span></span><span class="n">contract</span> <span class="n">D</span> <span class="k">is</span> <span class="k">C</span><span class="p">,</span> <span class="n">B</span> <span class="err">{}</span>
+</pre>
+
+
+<p>then <code>D.f</code> will call:</p>
+<pre class="code literal-block"><span></span><span class="n">somethingD</span><span class="p">();</span>
+<span class="n">somethingB</span><span class="p">();</span>
+<span class="n">somethingC</span><span class="p">();</span>
+<span class="n">somethingA</span><span class="p">();</span>
+</pre>
+
+
+<p>When <code>D</code> inherits from <code>C, B</code>, the linearization results in D→ B→ C→ A.</p>
+<p>Notice here that the order in which you declare the parent contracts matters a
+lot. If the inheritance graph is not too complex, it will be easy to see that
+the order of calls will follow the order in which the parents were declared,
+right to left. If your inheritance is more complicated than this and the
+hierarchy is not very clear, you should probably stop using multiple
+inheritance and look for an alternate solution.</p>
+<p>I recommend you to read the wikipedia pages of
+<a href="https://en.wikipedia.org/wiki/Multiple_inheritance">Multiple inheritance</a> and
+<a href="https://en.wikipedia.org/wiki/C3_linearization">C3 linearization</a>, and the
+<a href="https://solidity.readthedocs.io/en/latest/contracts.html#multiple-inheritance-and-linearization">Solidity docs about multiple inheritance</a>.
+You will find in there a complete explanation of the C3 algorithm, and an
+example with a more complicated inheritance graph.</p>
+<p>To better understand how this can impact your crowdsales, take a look at the
+case that Philip Daian brilliantly explains on his blog post
+<a href="https://pdaian.com/blog/solidity-anti-patterns-fun-with-inheritance-dag-abuse/">Solidity anti-patterns: Fun with inheritance DAG abuse</a>.
+There, he presents a Crowdsale contract that needs "to have a whitelist
+pool of preferred investors able to buy in the pre-sale [...], along with a
+hard cap of the number of [...] tokens that can be distributed." On his first
+(deliberately) faulty implementation, he ends up with a crowdsale that checks:</p>
+<pre class="code literal-block"><span></span><span class="p">((</span><span class="n">withinPeriod</span> <span class="o">&amp;&amp;</span> <span class="n">nonZeroPurchase</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">withinCap</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">whitelist</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">hasEnded</span><span class="p">())</span>
+</pre>
+
+
+<p>Pay close attention to the resulting condition, and notice that if a
+whitelisted investor buys tokens before the crowdsale has ended, she will be
+able to bypass the hard cap, and buy as many tokens as she wants.</p>
+<p>By just inverting the order on which the parents are defined, he fixes the
+contract which will now check for:</p>
+<pre class="code literal-block"><span></span><span class="p">(</span><span class="n">withinPeriod</span> <span class="o">&amp;&amp;</span> <span class="n">nonZeroPurchase</span> <span class="o">||</span> <span class="p">(</span><span class="n">whitelist</span><span class="p">[</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">hasEnded</span><span class="p">()))</span> <span class="o">&amp;&amp;</span> <span class="n">withinCap</span>
+</pre>
+
+
+<p>Now, if the purchase attempt goes above the cap, the transaction will be
+reverted even if the sender is whitelisted.</p>
+<p>There are some simple cases, where the order of the conditions is not
+important. By now, you should have started to suspect that the contract above
+became complicated because of the <code>||</code> (<em>or</em>) condition. Things are a lot easier
+when all our conditions are merged with <code>&amp;&amp;</code> (<em>and</em>), because in that case the
+order of the conditions doesn't alter the result.</p>
+<p>Our new architecture was crafted for using <code>require</code> instead of returning
+booleans, which works nicely to combine <em>and</em> conditions, and to revert the
+transaction when one fails. Let's say that we have a crowdsale that should
+<strong>only</strong> allow whitelisted investors to buy tokens while the sale is open
+<strong>and</strong> the cap has not been reached. In this
+case, the condition to check would be (in pseudocode):</p>
+<pre class="code literal-block"><span></span><span class="n">require</span><span class="p">(</span><span class="n">hasStarted</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">hasEnded</span><span class="p">())</span>
+<span class="n">require</span><span class="p">(</span><span class="n">isInWhiteList</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">sender</span><span class="p">))</span>
+<span class="n">require</span><span class="p">(</span><span class="n">isWithinCap</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">value</span><span class="p">))</span>
+</pre>
+
+
+<p>Our contract would be as simple as:</p>
+<pre class="code literal-block"><span></span><span class="n">pragma</span> <span class="n">solidity</span> <span class="o">^</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">18</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="s2">"zeppelin-solidity/contracts/crowdsale/validation/TimedCrowdsale.sol"</span><span class="p">;</span>
+<span class="kn">import</span> <span class="s2">"zeppelin-solidity/contracts/crowdsale/validation/WhitelistedCrowdsale.sol"</span><span class="p">;</span>
+<span class="kn">import</span> <span class="s2">"zeppelin-solidity/contracts/crowdsale/validation/CappedCrowdsale.sol"</span><span class="p">;</span>
+
+<span class="n">contract</span> <span class="n">WhitelistedTimedCappedCrowdsale</span> <span class="ow">is</span> <span class="n">TimedCrowdsale</span><span class="p">,</span> <span class="n">WhitelistedCrowdsale</span><span class="p">,</span> <span class="n">CappedCrowdsale</span> <span class="p">{</span>
+
+  <span class="n">function</span> <span class="n">WhitelistedTimedCappedCrowdsale</span><span class="p">(</span>
+    <span class="n">uint256</span> <span class="n">_rate</span><span class="p">,</span>
+    <span class="n">address</span> <span class="n">_wallet</span><span class="p">,</span>
+    <span class="n">ERC20</span> <span class="n">_token</span><span class="p">,</span>
+    <span class="n">uint256</span> <span class="n">_openingTime</span><span class="p">,</span>
+    <span class="n">uint256</span> <span class="n">_closingTime</span><span class="p">,</span>
+    <span class="n">uint256</span> <span class="n">_cap</span>
+  <span class="p">)</span>
+    <span class="n">public</span>
+    <span class="n">Crowdsale</span><span class="p">(</span><span class="n">_rate</span><span class="p">,</span> <span class="n">_wallet</span><span class="p">,</span> <span class="n">_token</span><span class="p">)</span>
+    <span class="n">TimedCrowdsale</span><span class="p">(</span><span class="n">_openingTime</span><span class="p">,</span> <span class="n">_closingTime</span><span class="p">)</span>
+    <span class="n">CappedCrowdsale</span><span class="p">(</span><span class="n">_cap</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre>
+
+
+<p>It doesn't matter how you order the parents, all the conditions will be
+checked always. But take this with a grain of salt. All the conditions will be
+checked, but the order will be different. This can have different side-effects
+on Solidity, as some paths will execute statements that other paths won't, and
+it could lead an attacker to find a specific path that is vulnerable. Also, if
+your parent contracts are not super clear, they might be hiding an <code>||</code>
+condition in a few hard-to-read code statements.</p>
+<p>It's very easy to think that the parent contracts will just be magically merged
+into something that will make sense for our use case, or to make a mistake when
+we linearize them in our mind. Every use case will be different, so our
+framework can't save you from the work of organizing your contracts' hierarchy.
+You must analyze the linearization of the inheritance graph to get a clear view
+of the functions that will be called and their order, and always always add a
+full suite of automated tests for your final crowdsale contract to make sure
+that it enforces all the conditions.</p>
+<p>To finish, I wanted to show you my repo where I will be doing
+experiments with crowdsales and their tests:
+<a href="https://github.com/elopio/zeppelin-crowdsales">https://github.com/elopio/zeppelin-crowdsales</a></p>
+<p>Take a look at my
+<a href="https://github.com/elopio/zeppelin-crowdsales/blob/master/contracts/PreSaleWithCapCrowdsale.sol">PreSaleWithCapCrowdsale contract</a>.
+You will see that I preferred to be explicit about the conditions instead of
+using <code>super</code>:</p>
+<pre class="code literal-block"><span></span><span class="k">function</span><span class="w"> </span><span class="n">_preValidatePurchase</span><span class="p">(</span><span class="n">address</span><span class="w"> </span><span class="n">_beneficiary</span><span class="p">,</span><span class="w"> </span><span class="n">uint256</span><span class="w"> </span><span class="n">_weiAmount</span><span class="p">)</span><span class="w"> </span><span class="n">internal</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">require</span><span class="p">(</span><span class="n">_beneficiary</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">address</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">require</span><span class="p">(</span><span class="n">_weiAmount</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">require</span><span class="p">(</span><span class="n">block</span><span class="p">.</span><span class="nc">timestamp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">openingTime</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">whitelist</span><span class="o">[</span><span class="n">_beneficiary</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">require</span><span class="p">(</span><span class="n">block</span><span class="p">.</span><span class="nc">timestamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">closingTime</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">require</span><span class="p">(</span><span class="n">weiRaised</span><span class="p">.</span><span class="k">add</span><span class="p">(</span><span class="n">_weiAmount</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">cap</span><span class="p">);</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
+</pre>
+
+
+<p>I encourage you to join me on these experiments, to try different combinations
+of crowdsales and to play switching the order of the inheritance graph. We will
+learn more about the resulting code that Solidity compiles, we will improve our
+mental picture of the execution stack, and we will practice writing tests
+that fully cover all the possible paths. If you have questions, find
+errors on the implementations in OpenZeppelin, or find an alternative
+implementation that will make it easier to develop crowdsales on top of our
+contracts, please
+<a href="https://slack.openzeppelin.org/">let us know by sending a message to the slack channel</a>.
+I am <em>elopio</em> in there.</p>
+<p>A relevant experiment here is to use
+<a href="https://en.wikipedia.org/wiki/Composition_over_inheritance#Benefits">composition over inheritance</a>.
+In OpenZeppelin we couldn't implement an architecture based on composition
+because of the high gas costs implied, especially during deployment. That is
+one of the reasons we are now hard at work
+on <a href="https://zeppelinos.org/">zeppelin_os</a>, which minimizes deployment costs
+by helping you use libraries that are already on-chain. Expect exciting news
+very soon!</p>
+<p>Thanks a lot to <a href="https://github.com/ajsantander">Ale</a> and
+<a href="https://github.com/fiiiu">Alejo</a>, who worked on these new contracts and helped
+me to understand them. &lt;3</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../20180228cambiar-el-mundo-es-posible/" rel="prev" title="Cambiar el mundo ¿Es posible?">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../firmador-digital-de-documentos-para-costa-rica/" rel="next" title="Firmador digital de documentos para Costa Rica">Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+ - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script src="../../../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("en");
+        fancydates(1, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

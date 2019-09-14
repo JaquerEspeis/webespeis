@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre stm32)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/stm32.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://jaquerespeis.org/posts/postsprogramar20microcontrolador20stm322/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Microcontrolador STM322&lt;/li&gt;
+&lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
+&lt;li&gt;Una maquina con Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Requerimientos con Gnu/Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices&lt;/li&gt;
+&lt;li&gt;vim – Editor de texto&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Terminos importantes&lt;/h2&gt;
+&lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://jaquerespeis.org/posts/postsprogramar20microcontrolador20stm322/</guid><pubDate>Mon, 28 Dec 2015 11:12:00 GMT</pubDate></item></channel></rss>

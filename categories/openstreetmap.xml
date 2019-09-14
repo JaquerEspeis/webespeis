@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre openstreetmap)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/openstreetmap.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Maperespeis #2: Volcán Poás</title><link>http://jaquerespeis.org/posts/esblogmaperespeis-poas/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;p&gt;El domingo pasado fuimos a hacer mapas libres al
+&lt;a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Po%C3%A1s"&gt;Volcán Poás&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe width="640" height="480" src="https://embed-v1.mapillary.com/embed?version=1&amp;amp;filter=%5B%22all%22%5D&amp;amp;map_filter=%5B%22all%22%5D&amp;amp;image_key=BHp7eM8RAbbhkLWc6XyR6g&amp;amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;amp;style=photo" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Esta es la segunda excursión geek del JaquerEspéis. De la primera aprendimos
+que había que esperar al verano porque
+&lt;a href="https://archive.org/download/jaquerespeis-mapas/photo484953803566260.jpg"&gt;con tormenta no se puede mapear&lt;/a&gt;.
+Y el día fue perfecto. No sólo estuvo soleado, sino que el cráter estaba
+totalmente despejado y así pudimos agregar un nuevo lugar al tour virtual de
+Costa Rica.&lt;/p&gt;
+&lt;p&gt;Además, esta vez llegamos mucho mejor preparados, con varios teléfonos con
+&lt;a href="https://www.mapillary.com/"&gt;mapillary&lt;/a&gt;, &lt;a href="http://osmand.net/"&gt;osmand&lt;/a&gt; y
+&lt;a href="http://wiki.openstreetmap.org/wiki/OSMTracker_(Android)"&gt;OSMTracker&lt;/a&gt;, una
+&lt;a href="https://theta360.com/en/"&gt;cámara 360&lt;/a&gt;, un
+&lt;a href="https://buy.garmin.com/en-US/US/p/140022"&gt;GPS Garmin&lt;/a&gt;, un dron y hasta
+&lt;a href="https://twitter.com/elotrojames"&gt;una libreta&lt;/a&gt; y dos biólogos.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://archive.org/download/maperespeis-poas/image20170226_104505408.jpg"&gt;&lt;img alt="La procesión del MaperEspeis" src="https://archive.org/download/maperespeis-poas/image20170226_104505408.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Así funciona el asunto. Todos y todas con el GPS del teléfono activado
+esperamos a que el teléfono encuentre la ubicación. Después cada persona usa la
+aplicación que prefiere para recolectar datos: fotos, audios, videos, notas de
+texto, &lt;a href="https://es.wikipedia.org/wiki/GPX"&gt;trazas&lt;/a&gt;, anotaciones en la libreta...&lt;/p&gt;
+&lt;p&gt;Luego, en nuestras respectivas casas, subimos, publicamos y compartimos todos
+los datos recolectados. Estos nos sirven para mejorar los mapas libres de
+&lt;a href="https://es.wikipedia.org/wiki/OpenStreetMap"&gt;OpenStreetMap&lt;/a&gt;. Agregamos desde
+cosas tan sencillas como
+&lt;a href="https://archive.org/download/maperespeis-poas/20170226_105554.jpg"&gt;la ubicación de un basurero&lt;/a&gt;
+hasta cosas tan importantes como qué tan accesible es el lugar para una persona
+en silla de ruedas, junto con la ubicación de todos estos accesos o las partes
+en las que faltan. Cada persona mejora el mapa un poquito, en la zona que
+conoce o por la que pasó. Con más de 3 millones de usuarios, OpenStreetMap es
+el mejor mapa del mundo que existe; y es de particular importancia en zonas
+como la nuestra, que tienen poco potencial económico para las
+&lt;a href="https://en.wikipedia.org/wiki/Don't_be_evil#The_End_of_.22Don.27t_Be_Evil.22"&gt;megacorporaciones que hacen y venden mapas cerrados robando datos privados a sus usuarios&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Como los mapas que hacemos son libres, lo que sigue no tiene límites. Hay
+grupos trabajando en reconstrucción de modelos tridimensionales a partir de las
+fotos, identificación e interpretación de señales y rótulos, aplicaciones que
+calculan la ruta óptima para llegar a cualquier lugar usando cualquier
+combinación de medios de transporte, aplicaciones para asistir en la toma de
+decisiones al diseñar el futuro de una ciudad, y muchas otras cosas más. Todo
+basado en conocimiento compartido y comunidad.&lt;/p&gt;
+&lt;iframe width="800" height="600" src="https://embed-v1.mapillary.com/embed?version=1&amp;amp;filter=%5B%22all%22%5D&amp;amp;map_filter=%5B%22all%22%5D&amp;amp;image_key=dYPJnZINW7nHTEgJ7g9OEA&amp;amp;client_id=WHJxWW40RWhyVGR6ajVEci1saHZNUTozZDQ5NjRmM2I4ZjBiNjc2&amp;amp;style=classic" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;La imagen de arriba es el tour virtual en Mapillary. Como
+lo grabamos con la cámara 360, pueden hacer clic y arrastrar con el mouse para
+ver todos los ángulos. También pueden hacer clic arriba, en el botón de
+reproducir para seguir el camino que tomamos. O pueden hacer clic en cualquier
+punto verde en el mapa para seguir su propio camino.&lt;/p&gt;
+&lt;p&gt;Muchas gracias a todos y todas por apuntarse a mapear, en especial a Denisse y
+Charles por servirnos de guías y llenar el paseo de datos interesantes sobre la
+flora, fauna, geología e importancia histórica del Poás.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://archive.org/download/maperespeis-poas/20170226_110006.jpg"&gt;&lt;img alt="Miembros del MaperEspeis" src="https://archive.org/download/maperespeis-poas/20170226_110006.jpg"&gt;&lt;/a&gt;
+(&lt;a href="https://archive.org/details/maperespeis-poas"&gt;Aquí más fotos y videos&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;El próximo maperespeis será el 12 de marzo.&lt;/p&gt;&lt;/div&gt;</description><category>free software</category><category>openstreetmap</category><guid>http://jaquerespeis.org/posts/esblogmaperespeis-poas/</guid><pubDate>Wed, 01 Mar 2017 09:03:35 GMT</pubDate></item></channel></rss>

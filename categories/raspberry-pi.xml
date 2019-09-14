@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre Raspberry Pi)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/raspberry-pi.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Domotica con Telegram: Como utilizar un chatbot para controlar cosas conectadas a internet</title><link>http://jaquerespeis.org/posts/20180105domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Holi, lo sé no es el mejor titulo del mundo, pero mi &lt;a href="http://www.undergroundpage.com/2018/01/raspberry-pi-kali-linux-smartphone.html" target="_blank" rel="noopener"&gt;compañero&lt;/a&gt; (me robo la idea ). Pero bueno a dejar de llorar y empezar a crear,&lt;/p&gt;
+&lt;p&gt;El dia de hoy vamos a crear un chatbot para poder controlar nuestras cosas conectadas a internet por medio de MQTT y python. WUJU&lt;/p&gt;
+&lt;p&gt;Lo que necesitamos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Telegram app&lt;br&gt;
+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python3&lt;br&gt;
+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mosquitto&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arduino IDE&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ESP8266&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ledes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DHT11&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos a empezar por lo que ya conocemos y es la parte electronica, hay una serie de complicaciones con respecto a nuestro querido ESP8266, es que no es tolerante a 5v, por lo que tendremos que tener bastante cuidado a la hora de meterle sensores analogicos o señales de 5v, podemos utilizar un divisor de voltaje o un nivelador de voltaje.&lt;/p&gt;
+&lt;p&gt;ARDUINO IDE&lt;/p&gt;
+&lt;p&gt;Necesitamos Algunas librerias, a estas alturas del partido no creo que sea necesario que tener que explicar como instalar las librerias, pero si eres nuevo en mi blog te recomiendo que leas la serie de IOT de mi blog y estés en lo ultimo a nivel mundial como nosotros.( ja, ja, ja( asi se escribe la risa xD))&lt;/p&gt;
+&lt;p&gt;La logica del codigo es la siguiente, por medio de WIFI, nos conectamos a un broker ( en este caso local) pero puede ser en la nube aunque uno local funciona muy bien, se suscribe a los topicos para controlar las salidas en este caso /salida1, hasta la /salida4 recibiendo un CHAR o Caracter 0 o 1 para apagar y encender respectivamente. luego veran que la luz de su esp8266 azul se queda parpadeando, eso quiere decir que funciona correctamente el codigo, cada 5 segundos envia el estado del sensore humedad y temperatura respectivamente.&lt;/p&gt;
+&lt;pre&gt;Codigo:
+
+/*
+ Este sketch es para controlar 4 salidas digitales distintas
+ tambien tiene un dht11 para enviar la temperatura y un bluetooth para conectarse de manera local.
+
+Circuito:
+ NodeMCU v1.0
+ DHT11
+ Modulo Blutooth hc-06 o hc-05
+ 4 modulos de relay o relays
+ led amarillo, rojo.
+ resistencia 10k para el dht11
+
+
+
+
+Yeffri J. Salazar
+ Hackerspace Xibalba y Comunidad Arduino Guatemala
+ Themicrofcontrol.wordpress.com
+
+*/
+/************************************
+ ** Librerias **
+ ***********************************/
+#include 
+#include 
+#include "DHT.h"
+/************************************
+ ** constantes **
+ ***********************************/
+#define salida1 D5
+#define salida2 D6
+#define salida3 D7
+#define salida4 D8
+#define ledAmarillo D4
+#define ledRojo D1
+#define pinDHT 9
+#define puertoMqtt 1883
+/***********************************
+ ** objetos y variables **
+ ***********************************/
+DHT dht;
+WiFiClient clienteWifi;//este cliente se encarga de la comunicacion con el wifi
+PubSubClient clienteMQTT(clienteWifi);//este utiliza el cliente anterior para hacer poder crear la conexion mqtt
+//si pasan por el hackerspace Xibalba pues ya tienen la clave
+const char * ssid = "Hackerspace";
+const char * claveWifi = "IOT12345";
+const char * brokerMqtt = "192.168.1.10";// ip del broker sin http ni nada solo los numeros
+uint32_t ultimoIntentoReconexion;
+uint32_t timerEnvioDatos;
+uint32_t cambioEstado = 0;
+uint8_t estadoLed = 0;
+uint16_t tiempoParpadeo = 350;
+float humedad, temperatura;
+
+
+
+
+void parpadeo(uint8_t led) {
+ //Serial.println(millis() - cambioEstado);
+ if ( millis() - cambioEstado &amp;gt; tiempoParpadeo) {
+ // Serial.println(pasoSemaforo);
+ cambioEstado = millis();
+ estadoLed = !estadoLed;
+ }
+ digitalWrite(led, estadoLed);
+}
+
+
+
+
+void conectarAlWifi() {
+
+WiFi.begin(ssid, claveWifi);
+ Serial.print("conectando a");
+ Serial.println(ssid);
+ while (WiFi.status() != WL_CONNECTED) {
+ delay(500);
+ Serial.print(".");
+ }
+
+Serial.println("");
+ Serial.println("Wifi Conectado ");
+ Serial.println("direccion IP: ");
+ Serial.println(WiFi.localIP());
+}
+
+void callback(char* topic, byte* mensaje, unsigned int length) {
+ String topico = topic;
+ Serial.print("Mensaje Recibido del topico: ");
+ Serial.println(topico);
+ Serial.print("mensaje : ");
+ for (uint8_t i = 0; i &amp;lt; length; i++) {  Serial.print(mensaje[i]);  }  //le restamos -48 para que el valor sea 0 o 1  //restamos el valor ascii para hacerlo un entero if (topico == "/salida1") {  digitalWrite(salida1, mensaje[0] - 48);  Serial.println("Salida 1 ");  }  else if (topico == "/salida2") {  digitalWrite(salida2, mensaje[0] - 48);  Serial.println("Salida 2 ");  }  else if (topico == "/salida3") {  digitalWrite(salida3, mensaje[0] - 48);  Serial.println("Salida 3 ");  }  else if (topico == "/salida4") {  digitalWrite(salida4, mensaje[0] - 48);  Serial.println("Salida 4 ");  }  else if (topico == "/temperatura") {  Serial.println(temperatura);  char msg[3];  snprintf (msg, 3, "%ld", (int)temperatura);  clienteMQTT.publish("/respuestaTemperatura", msg);  }  else if (topico == "/humedad") {  Serial.println(humedad);  char msg[3];  snprintf (msg, 3, "%ld", (int)temperatura);  clienteMQTT.publish("/respuestaTemperatura", msg);  }  else {  Serial.println("error de mensaje");  } } boolean reconexion() {  Serial.print("Conectando al broker mqtt");  //intentando conectar al broker  if (clienteMQTT.connect("ESP8266Client")) {  Serial.println("Conectado");  //publicamos que estamos conectados  clienteMQTT.publish("/conexion", "Conectado");  //nos suscribimos a los topicos para controlar los ledes  clienteMQTT.subscribe("/salida1");  clienteMQTT.subscribe("/salida2");  clienteMQTT.subscribe("/salida3");  clienteMQTT.subscribe("/salida4");  clienteMQTT.subscribe("/temperatura");  clienteMQTT.subscribe("/humedad");  } else {  Serial.print("falló, rc=");  Serial.print(clienteMQTT.state());  }  return clienteMQTT.connected(); } void entradaSerial() {  if (Serial.available()) {  char dato = Serial.read();  if (dato == 'a') {  digitalWrite(salida1, HIGH);  Serial.println("Salida 1 ");  }  else if (dato == 's') {  digitalWrite(salida2, HIGH);  Serial.println("Salida 2 ");  }  else if (dato == 'd') {  digitalWrite(salida3, HIGH);  Serial.println("Salida 3 ");  }  else if (dato == 'f') {  digitalWrite(salida4, HIGH);  Serial.println("Salida 4 ");  }  else if (dato == 'q') {  digitalWrite(salida1, LOW);  Serial.println("Salida 1 ");  }  else if (dato == 'w') {  digitalWrite(salida2, LOW);  Serial.println("Salida 2 ");  }  else if (dato == 'e') {  digitalWrite(salida3, LOW);  Serial.println("Salida 3 ");  }  else if (dato == 'r') {  digitalWrite(salida4, LOW);  Serial.println("Salida 4 ");  }  else if (dato == ' ') {  digitalWrite(salida4, LOW);  digitalWrite(salida3, LOW);  digitalWrite(salida2, LOW);  digitalWrite(salida1, LOW);  Serial.println("apagando todo");  }  else if (dato == '1') {  digitalWrite(salida4, HIGH);  digitalWrite(salida3, HIGH);  digitalWrite(salida2, HIGH);  digitalWrite(salida1, HIGH);  Serial.println("encendiendo todo");  } else {  Serial.println("error de mensaje");  }  } } void setup() {  Serial.begin(9600);  Serial.println("iniciando programa Holi mami");  dht.setup(pinDHT); // dht PIN  pinMode(salida1, OUTPUT);  pinMode(salida2, OUTPUT);  pinMode(salida3, OUTPUT);  pinMode(salida4, OUTPUT);  pinMode(ledAmarillo, OUTPUT);  pinMode(ledRojo, OUTPUT);  digitalWrite(ledAmarillo, HIGH);  digitalWrite(ledRojo, HIGH);  conectarAlWifi();  clienteMQTT.setServer(brokerMqtt, puertoMqtt); //le decimos cual es el servidor y el puerto al que se debe conectar  clienteMQTT.setCallback(callback);//le decimos como se llama la funcion de callback } void loop() {  entradaSerial();  if (!clienteMQTT.connected()) {  if (millis() - ultimoIntentoReconexion &amp;gt; 5000) {
+ ultimoIntentoReconexion = millis();
+ // Attempt to reconnect
+ if (reconexion()) {
+ ultimoIntentoReconexion = 0;
+ }
+ }
+ } else {
+ //cliente conectado
+ if (millis() - timerEnvioDatos &amp;gt; 5000) {
+ timerEnvioDatos = millis();
+ //a falta de sensores enviamos valores aleatorios
+ char msg[3];
+ humedad = dht.getHumidity();
+ temperatura = dht.getTemperature();
+ snprintf (msg, 3, "%ld", (int)temperatura);
+ clienteMQTT.publish("/temperatura", msg);
+ snprintf (msg, 3, "%ld", (int)humedad);
+ clienteMQTT.publish("/humedad", msg);
+ Serial.print(dht.getStatusString());
+ Serial.print("\t");
+ Serial.print(humedad);
+ Serial.print("\t\t");
+ Serial.print(temperatura);
+ }
+ clienteMQTT.loop();
+ parpadeo(D1);
+ parpadeo(D4);
+ }
+}&lt;/pre&gt;
+&lt;p&gt;He tratado la manera de hacer el codigo lo mejor legible posible asi que si no le entienden no duden en comentar abajo &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;/p&gt;
+&lt;p&gt;Esto al final es algo que ya hemos visto anteriormente solo un poco tuneado, para que funcione para nuestros propositos la verdadera magia al final de todo esto la hará python ( ay python :3 ), eso quiere decir que necesitamos una computadora o un servidor para que corra nuestro script.&lt;/p&gt;
+&lt;h2&gt;CHATBOT&lt;/h2&gt;
+&lt;p&gt;Antes de empezar a programar y configurar nuestro servidor o maquina local, vamos a crear de manera super sencilla nuestro bot en telegram. Para quien no sepa que es telegram, pues es una aplicacion de mensajeria instantanea que funciona en web, escritorio y movil. yo suelo utilizarla mucho por su versatilidad y que aparte es open source gracias a ello tiene demasiadas features muy buenas que poco a poco la competencia como whatsapp ha ido implementando(copiando).&lt;/p&gt;
+&lt;p&gt;El papa de todos los bots.&lt;/p&gt;
+&lt;p&gt;Lo primero que debemos hacer es hablar con el padre de todos los bots el @BotFather, es super sencillo crear nuestro bot, al final nos dara un TOKEN  el cual usaremos para poder acceder a los servicios de la API de telegram. Este token es super secreto asi que tengan cuidado donde lo almacenan, por favor usen keypassxc (promocion gracias a que me ha ayudado mucho a guardar las 123873102937 contraseñas que utilizo ).&lt;/p&gt;
+&lt;p&gt;Asi que vamos a lo nuestro. Con esta serie de capturas de pantalla  veremos lo facil que es configurar el bot.  Pero si no quieres ver estos son los comandos&lt;/p&gt;
+&lt;p&gt;En el chat con BotFather,&lt;/p&gt;
+&lt;pre&gt;/start
+/newbot
+Nombre del bot
+usuario del bot&lt;/pre&gt;
+&lt;a href="https://themicrofcontrol.wordpress.com/2018/01/05/domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/#gallery-2183-1-slideshow"&gt;Haga click para ver el pase de diapositivas.&lt;/a&gt;
+&lt;h2&gt;&lt;strong&gt;Servidor o maquina local&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Como mencionaba en el parrafo anterior lo que necesitamos es una computadora para correr nuestro script de python3, pero bien puede ser una rpi como cerebro de nuestra casa.&lt;/p&gt;
+&lt;p&gt;Mosquitto&lt;/p&gt;
+&lt;pre&gt;Sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients&lt;/pre&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;p&gt;La ultima vez que pregunte si era mejor usar python 2 o python 3 me regañaron demasiado fuerte asi que de ahora en adelante todo sera python 3&lt;br&gt;
+Utilizaremos esta muy bonita y facil de implementar libreria, tambien una libreria que nos ayudara en la comunicacion con el broker MQTT&lt;/p&gt;
+&lt;pre&gt;https://github.com/eternnoir/pyTelegramBotAPI #telegram api 
+https://www.eclipse.org/paho/clients/python/&lt;/pre&gt;
+&lt;p&gt;Asi que la mejor manera de instalarla es como dice en el repositorio:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip3 install pyTelegramBotAPI&lt;/code&gt; pip3 install paho-mqtt&lt;/pre&gt;
+&lt;p&gt;Vamos entonces a probar un poco de codigo seguirmos las instrucciones del repositorio, pero traducido para mejor entendimiento. Cualquier duda consultar en el repositorio o escribir en los comentarios jovenes &lt;img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;span class="pl-k"&gt;import&lt;/span&gt; telebot
+
+bot &lt;span class="pl-k"&gt;=&lt;/span&gt; telebot.TeleBot(&lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;"&lt;/span&gt;TOKEN&lt;span class="pl-pds"&gt;"&lt;/span&gt;&lt;/span&gt;) #la cadena que nos dio nuestro botfather
+
+&lt;span class="pl-en"&gt;@bot.message_handler&lt;/span&gt;(&lt;span class="pl-v"&gt;commands&lt;/span&gt;&lt;span class="pl-k"&gt;=&lt;/span&gt;[&lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;'&lt;/span&gt;start&lt;span class="pl-pds"&gt;'&lt;/span&gt;&lt;/span&gt;, &lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;'&lt;/span&gt;help&lt;span class="pl-pds"&gt;'&lt;/span&gt;&lt;/span&gt;])
+&lt;span class="pl-k"&gt;def&lt;/span&gt; &lt;span class="pl-en"&gt;bienvenida&lt;/span&gt;(&lt;span class="pl-smi"&gt;message&lt;/span&gt;):
+	bot.reply_to(message, &lt;span class="pl-s"&gt;&lt;span class="pl-pds"&gt;"&lt;/span&gt;Holi, bienvenido a themicrofcontrol&lt;span class="pl-pds"&gt;"&lt;/span&gt;&lt;/span&gt;)
+
+&lt;span class="pl-en"&gt;@bot.message_handler&lt;/span&gt;(&lt;span class="pl-v"&gt;func&lt;/span&gt;&lt;span class="pl-k"&gt;=&lt;/span&gt;&lt;span class="pl-k"&gt;lambda&lt;/span&gt; &lt;span class="pl-smi"&gt;message&lt;/span&gt;: &lt;span class="pl-c1"&gt;True&lt;/span&gt;)
+&lt;span class="pl-k"&gt;def&lt;/span&gt; repetirTodo(&lt;span class="pl-smi"&gt;message&lt;/span&gt;):
+	bot.reply_to(message, message.text)
+
+bot.polling(timeout=30)&lt;/pre&gt;
+&lt;p&gt;Algo que deben de saber es que las funciones handler se ejecutan en el orden en el que fueron declaradas asi que cuidado.&lt;/p&gt;
+&lt;p&gt;Ahora vamos a hacer un pequeño script que publica por medio de mqtt al broker que deseamos.&lt;/p&gt;
+&lt;p&gt;Primero ejecutamos el siguiente comando en la terminal para habilitar nuestro broker local&lt;/p&gt;
+&lt;pre&gt;mosquitto -d&lt;/pre&gt;
+&lt;p&gt;ahora ya podemos probar nuestro codigo en python3&lt;/p&gt;
+&lt;pre&gt;import paho.mqtt.publish as publish
+from time import sleep
+while True:
+    publish.single('/TopicoPrueba','holi',hostname='localhost')
+    sleep(1)&lt;/pre&gt;
+&lt;p&gt;Para verificar si estamos enviando correctamente los datos utilizaremos mosquitto_sub&lt;/p&gt;
+&lt;pre&gt;mosquitto_sub -h localhost -t /TopicoPrueba&lt;/pre&gt;
+&lt;p&gt;&lt;img data-attachment-id="2191" data-permalink="https://themicrofcontrol.wordpress.com/2018/01/05/domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/deepinscreenshot_select-area_20180104171051/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png" data-orig-size="735,90" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="DeepinScreenshot_select-area_20180104171051" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=735" class="alignnone size-full wp-image-2191" src="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=740" alt="DeepinScreenshot_select-area_20180104171051" srcset="https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png 735w, https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/01/deepinscreenshot_select-area_20180104171051.png?w=300 300w" sizes="(max-width: 735px) 100vw, 735px"&gt;&lt;/p&gt;
+&lt;p&gt;Una vez hecho esto cada segundo estaremos recibiendo informacion en este caso Holi.&lt;/p&gt;
+&lt;p&gt;Si bien es cierto que no soy un experto programador quise hacer este codigo lo mejor legible posible, se puede mejorar mucho, como todo en la vida.&lt;/p&gt;
+&lt;p&gt;La idea es la siguiente&lt;br&gt;
+Hablamos con nuestro chatbot corriendo este script en python para que pueda ejecutar las ordenes que le damos. El comando /start inicia la conversacion y nos dice los comandos (aun debo trabajar en la parte de la interfaz pero poco a poco), las ordenes son sencillas y descriptivas EncenderSalida1 enciende la salida 1 ja, ja, ApagarSalida1 la apaga y es lo mismo con las 4 salidas o las que queramos poner solo agregamos mas elif en la funcion.&lt;/p&gt;
+&lt;p&gt;Bueno sin mas les dejo el codigo y el &lt;a href="https://github.com/yeffrimic/DomoticaConTelegramYArduino/blob/master/chatbot.py"&gt;repositorio&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Por alguna extraña razon,  no me aparece el codigo indentado, pero de igual manera se los dejo, por favor copienlo del repositorio.&lt;/p&gt;
+&lt;pre&gt; import paho.mqtt.publish as publish
+ import telebot
+ bot = telebot.TeleBot(token)
+ @bot.message_handler(commands=['start', 'help'])
+ def send_welcome(message):
+ bot.reply_to(message, "Holi, bienvenido al chatbot mas kulz &amp;lt;3")
+ bot.reply_to(message, "Comandos: \n EncenderSalida1, EncenderSalida2, EncenderSalida3, EncenderSalida4, EncenderSalida4, EncenderTodo.\n ApagarSalida1, ApagarSalida2, ApagarSalida3, ApagarSalida4, ApagarTodo\n Gracias")
+ @bot.message_handler(func=lambda message: True)
+ def echo_all(message):
+ bot.reply_to(message, message.text)
+ if(message.text == 'EncenderSalida1'):
+ publish.single('/salida1','1',hostname='localhost')
+ print("Salida 1 encendida.")
+ bot.reply_to(message, "Salida 1 encendida.")
+ elif(message.text == 'ApagarSalida1'):
+ publish.single('/salida1','0',hostname='localhost')
+ print("Salida 1 apagada")
+ bot.reply_to(message, "Salida 1 apagada.")
+ elif(message.text == 'EncenderSalida2'):
+ publish.single('/salida2','1',hostname='localhost')
+ print("Salida 2 encendida.")
+ bot.reply_to(message, "Salida 2 encendida.")
+ elif(message.text == 'ApagarSalida2'):
+ publish.single('/salida2','0',hostname='localhost')
+ print("Salida 2 apagada.")
+ bot.reply_to(message, "Salida 2 apagada.")
+ elif(message.text == 'EncenderSalida3'):
+ publish.single('/salida3','1',hostname='localhost')
+ print("Salida 3 encendida.")
+ bot.reply_to(message, "Salida 3 encendida.")
+ elif(message.text == 'ApagarSalida3'):
+ publish.single('/salida3','0',hostname='localhost')
+ print("Salida 3 apagada.") 
+ bot.reply_to(message, "Salida 3 apagada.")
+ elif(message.text == 'EncenderSalida4'):
+ publish.single('/salida4','1',hostname='localhost')
+ print("Salida 4 encendida.")
+ bot.reply_to(message, "Salida 4 encendida.")
+ elif(message.text == 'ApagarSalida4'):
+ publish.single('/salida4','0',hostname='localhost')
+ print("Salida 4 apagada.") 
+ bot.reply_to(message, "Salida 4 apagada."
+ elif(message.text == 'ApagarTodo'):
+ publish.single('/salida4','0',hostname='localhost')
+ publish.single('/salida1','0',hostname='localhost')
+ publish.single('/salida2','0',hostname='localhost')
+ publish.single('/salida3','0',hostname='localhost')
+ bot.reply_to(message, "Todo encendido.")
+ print("apagando todo.") 
+ elif(message.text == 'EncenderTodo'):
+ publish.single('/salida4','1',hostname='localhost')
+ publish.single('/salida1','1',hostname='localhost')
+ publish.single('/salida2','1',hostname='localhost')
+ publish.single('/salida3','1',hostname='localhost')
+ print("apagando todo.") 
+ bot.reply_to(message, "Todo apagado")
+ #print(message)
+ print(message.text)
+ print("iniciando programa")
+ bot.polling(none_stop=False,timeout=30)&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class="jetpack-video-wrapper"&gt;&lt;iframe class="youtube-player" type="text/html" width="740" height="417" src="https://www.youtube.com/embed/5i6b5EFAOhA?version=3&amp;amp;rel=1&amp;amp;fs=1&amp;amp;autohide=2&amp;amp;showsearch=0&amp;amp;showinfo=1&amp;amp;iv_load_policy=1&amp;amp;wmode=transparent" allowfullscreen="true" style="border:0;"&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;Bueno y con eso concluye el tutorial del dia de hoy no olviden comentar y compartir.&lt;/p&gt;
+&lt;p&gt;y recuerden, Solo necesitan una excusa para cambiar el mundo.&lt;/p&gt;</description><category>Arduino</category><category>Guatemala</category><category>Hardware</category><category>ideas</category><category>internet de las cosas</category><category>Internet of Things</category><category>jaquerespeis</category><category>Node-red</category><category>NodeMCU</category><category>open-source</category><category>Raspberry Pi</category><guid>http://jaquerespeis.org/posts/20180105domotica-con-telegram-como-utilizar-un-chatbot-para-controlar-cosas-conectadas-a-internet/</guid><pubDate>Fri, 05 Jan 2018 08:01:50 GMT</pubDate></item></channel></rss>

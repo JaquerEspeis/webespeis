@@ -1,0 +1,82 @@
+<html><body><div><h2>Requerimientos</h2>
+<ul>
+<li>Minador</li>
+<li>Ubuntu Server 16.04</li>
+<li>Opcional(tarjeta de video)</li>
+<li>Python y python-twisted</li>
+<li>Ethereum</li>
+<li>cpp-ethereum</li>
+</ul>
+<p><em><strong>NOTA:</strong> Se considera Ubuntu Server, en caso de Ubuntu Desktop algunos requerimientos ya vienen instalados en el sistema.</em></p>
+<h2>Instalación</h2>
+<ol>
+<li>
+<p>Instalar ubuntu 16.04</p>
+</li>
+<li>
+<p>Instalar python y python-wisted</p>
+</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo apt-get install python
+sudo apt-get install python-twisted
+</pre>
+
+
+<ol>
+<li>Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+</pre>
+
+
+<ol>
+<li>Instalar ethereum</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo apt-get install ethereum
+</pre>
+
+
+<ol>
+<li>Instalar cpp-ethereum</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo apt-get install cpp-ethereum
+</pre>
+
+
+<ol>
+<li>
+<p>Clonar el repositorio de <a href="https://github.com/Atrides/eth-proxy">eth-proxy</a>.</p>
+</li>
+<li>
+<p>Crear un wallet con <a href="https://github.com/ethereum/go-ethereum/wiki/geth">geth</a> o <a href="https://github.com/paritytech/parity">parity</a>.</p>
+</li>
+<li>
+<p>Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.</p>
+</li>
+<li>
+<p>Modificar el archivo de configuración de eth-proxy para usar el wallet.</p>
+</li>
+<li>
+<p>En el directorio eth-proxy, ejecutar <code>eth-proxy.py</code></p>
+</li>
+</ol>
+<pre class="code literal-block"><span></span>sudo python eth-proxy/eth-proxy.py
+</pre>
+
+
+<ol>
+<li>Ejecutar <code>ethminer</code> apuntando a localhost</li>
+</ol>
+<pre class="code literal-block"><span></span>ethminer -F http://127.0.0.1:8080/minador -G
+</pre>
+
+
+<p><em><strong>NOTA:</strong> La opción <code>-G</code> indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice <code>--allow-opencl-cpu</code>.</em></p>
+<h2>Referencias</h2>
+<p>https://github.com/paritytech/parity
+https://github.com/Atrides/eth-proxy
+https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html</p></div></body></html>

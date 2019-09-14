@@ -1,0 +1,18 @@
+<html><body><p>Para quien utilice el sitio web del SICOP sabrá que se hace uso de un componente de firma. Este componente en la actualidad se ha publicado para Windows y macOS pero también funciona en GNU/Linux y no sería necesario usar Windows para estas tareas.<span id="more-444"></span></p>
+<p>Para hacerlo funcionar, se pueden seguir los siguientes pasos:</p>
+<ul>
+<li>Para que el componente inicie, ha de existir una carpeta llamada Documents dentro de nuestra carpeta de usuario (algo así como /home/tunombredeusuario/Documents/). La forma universal para crearla es mediante el comando <kbd>mkdir ~/Documents</kbd>. Ojo porque es Documents, no Documentos.
+</li><li>Dirigirse al sitio web del Componente Firma, <a href="http://www.componentefirmacr.go.cr" target="_blank" rel="noopener noreferrer">www.componentefirmacr.go.cr</a>.</li>
+<li>Clic en Descargas, clic en el botón Seleccionar a la derecha del Instalador Mac OS X (no importa si es para Mac aunque tengamos GNU/Linux).</li>
+<li>Pedirá una dirección de correo electrónico por si se quieren recibir notificación de actualizaciones. Finalmente clic en Descargar.</li>
+<li>Una vez descargado, el fichero Componente_Firma.pkg se puede desempaquetar con doble clic en Nautilus del entorno de escritorio GNOME. Si se utiliza otro entorno y la herramienta de descompresión no reconoce archivos pkg (xar) se puede descomprimir con la herramienta xar mediante <kbd>xar -xf Componente_Firma.pkg</kbd>. Se creará una carpeta Componente_Firma.</li>
+<li>Doble clic en la carpeta y dentro habrá una carpeta llamada Main.pkg.</li>
+<li>Doble clic en la carpeta y dentro habrá un archivo comprimido llamado Payload.</li>
+<li>En Nautilus en algunos escritorios se puede desempaquetar con doble clic o se abrirá una herramienta de descompresión. Si no, se puede hacer clic secundario -&gt; Extraer a… y elegir por ejemplo la carpeta actual, donde creará una carpeta Payload (1) o similar. También se puede descomprimir de la forma tradicional con <kbd>tar xf Payload</kbd>.</li>
+<li>Doble clic en la carpeta descomprimida de Payload y aparecerá otra carpeta dentro llamada Componente_Firma.app.</li>
+<li>Doble clic en la carpeta Componente_Firma.app y aparecerá otra carpeta dentro llamada Contents.</li>
+<li>Doble clic en la carpeta Contents y aparecerán varias carpetas, entre ellas una llamada Java.</li>
+<li>Doble clic en la carpeta Java. Aparecerá un archivo llamado MerlinkSignMV.jar.</li>
+<li>En algunos sistemas se puede lanzar el jar con doble clic (Ubuntu) y se quedará cargado en memoria (no se abre ninguna ventana), en otros se puede lanzar desde la terminal con <kbd>java -jar MerlinkSignMV.jar</kbd>. Se ha verificado que funciona con OpenJDK 8.
+</li></ul>
+<p>Eso es todo. Tras realizar estos pasos se debería poder cargar el sitio web de SICOP en el navegador Chromium y hacer uso de Firma Digital para las operaciones habituales. En navegadores como Firefox o Epiphany el sitio web de SICOP no funciona porque usa protocolos y cifrados de seguridad obsoletos e inseguros y Firefox o Epiphany prefieren protegen a sus usuarios.</p></body></html>

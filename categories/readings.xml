@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Publicaciones sobre readings)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/categories/readings.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Quipus incas y cifrado con factorización de números primos</title><link>http://jaquerespeis.org/posts/esblogfactorizacion-primos-incas/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Quipu#/media/File:Nueva_cor%C3%B3nica_y_buen_gobierno_(1936_facsimile)_p360.png"&gt;&lt;img alt="Dibujo de un inca y su quipu" src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Nueva_cor%C3%B3nica_y_buen_gobierno_%281936_facsimile%29_p360.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Según este sabio [Nordenskiöld], los indios colocaban en las tumbas
+únicamente quipus con números que a sus ojos tenían valor mágico,
+expresándolos no en forma directa sino mediante otros que los incluyen o que
+son sus múltiplos y tratando de hacerlos coincidir con la numeración
+resultante de cálculos obtenidos de la consulta de los astros. [...].
+La finalidad que llevó a los indios a tal práctica fue entretener, mediante
+estos complicados «rebus», a los espíritus malignos, quienes se esforzarían
+para desanudar las cuerdas y encontrar esta numeración mágica [...].&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;en Estudio sobre los quipus, de Carlos Radicati di Primeglio.&lt;/p&gt;
+&lt;p&gt;Y así fue como lxs incas inventaron el cifrado con factorización de números
+primos, la base de todas las comunicaciones seguras y criptomonedas de hoy. :D&lt;/p&gt;&lt;/div&gt;</description><category>free software</category><category>readings</category><guid>http://jaquerespeis.org/posts/esblogfactorizacion-primos-incas/</guid><pubDate>Tue, 09 Jan 2018 22:01:35 GMT</pubDate></item></channel></rss>

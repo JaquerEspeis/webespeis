@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JáquerEspeis</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../rss.xml">
+<link rel="canonical" href="http://jaquerespeis.org/en/">
+<link rel="next" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://jaquerespeis.org/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://jaquerespeis.org/en/">
+
+            <span id="blog-title">JáquerEspeis</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://jaquerespeis.org/" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
+
+                    
+                    
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="categories/" class="nav-link">Categories</a>
+                </li>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+    
+        
+
+    
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/como-usar-firma-digital-en-sicop-desde-gnu-linux/" class="u-url">Cómo usar Firma Digital en SICOP desde GNU/Linux</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/como-usar-firma-digital-en-sicop-desde-gnu-linux/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-09-12T04:09:00-06:00" itemprop="datePublished" title="2019-09-12 04:09">2019-09-12 04:09</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Para quien utilice el sitio web del SICOP sabrá que se hace uso de un componente de firma. Este componente en la actualidad se ha publicado para Windows y macOS pero también funciona en GNU/Linux y no sería necesario usar Windows para estas tareas.<span id="more-444"></span></p>
+<p>Para hacerlo funcionar, se pueden seguir los siguientes pasos:</p>
+<ul>
+<li>Para que el componente inicie, ha de existir una carpeta llamada Documents dentro de nuestra carpeta de usuario (algo así como /home/tunombredeusuario/Documents/). La forma universal para crearla es mediante el comando <kbd>mkdir ~/Documents</kbd>. Ojo porque es Documents, no Documentos.
+</li>
+<li>Dirigirse al sitio web del Componente Firma, <a href="http://www.componentefirmacr.go.cr" target="_blank" rel="noopener noreferrer">www.componentefirmacr.go.cr</a>.</li>
+<li>Clic en Descargas, clic en el botón Seleccionar a la derecha del Instalador Mac OS X (no importa si es para Mac aunque tengamos GNU/Linux).</li>
+<li>Pedirá una dirección de correo electrónico por si se quieren recibir notificación de actualizaciones. Finalmente clic en Descargar.</li>
+<li>Una vez descargado, el fichero Componente_Firma.pkg se puede desempaquetar con doble clic en Nautilus del entorno de escritorio GNOME. Si se utiliza otro entorno y la herramienta de descompresión no reconoce archivos pkg (xar) se puede descomprimir con la herramienta xar mediante <kbd>xar -xf Componente_Firma.pkg</kbd>. Se creará una carpeta Componente_Firma.</li>
+<li>Doble clic en la carpeta y dentro habrá una carpeta llamada Main.pkg.</li>
+<li>Doble clic en la carpeta y dentro habrá un archivo comprimido llamado Payload.</li>
+<li>En Nautilus en algunos escritorios se puede desempaquetar con doble clic o se abrirá una herramienta de descompresión. Si no, se puede hacer clic secundario -&gt; Extraer a… y elegir por ejemplo la carpeta actual, donde creará una carpeta Payload (1) o similar. También se puede descomprimir de la forma tradicional con <kbd>tar xf Payload</kbd>.</li>
+<li>Doble clic en la carpeta descomprimida de Payload y aparecerá otra carpeta dentro llamada Componente_Firma.app.</li>
+<li>Doble clic en la carpeta Componente_Firma.app y aparecerá otra carpeta dentro llamada Contents.</li>
+<li>Doble clic en la carpeta Contents y aparecerán varias carpetas, entre ellas una llamada Java.</li>
+<li>Doble clic en la carpeta Java. Aparecerá un archivo llamado MerlinkSignMV.jar.</li>
+<li>En algunos sistemas se puede lanzar el jar con doble clic (Ubuntu) y se quedará cargado en memoria (no se abre ninguna ventana), en otros se puede lanzar desde la terminal con <kbd>java -jar MerlinkSignMV.jar</kbd>. Se ha verificado que funciona con OpenJDK 8.
+</li>
+</ul>
+<p>Eso es todo. Tras realizar estos pasos se debería poder cargar el sitio web de SICOP en el navegador Chromium y hacer uso de Firma Digital para las operaciones habituales. En navegadores como Firefox o Epiphany el sitio web de SICOP no funciona porque usa protocolos y cifrados de seguridad obsoletos e inseguros y Firefox o Epiphany prefieren protegen a sus usuarios.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/" class="u-url">Cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-06-03T07:06:37-06:00" itemprop="datePublished" title="2019-06-03 07:06">2019-06-03 07:06</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en el sistema operativo openSUSE Leap 15.1, SUSE Linux Enterprise Server 15 SP1 y SUSE Linux Enterprise Desktop 15 SP1.<span id="more-396"></span></p>
+<p>Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones Fedora y Red Hat Enterprise Linux, existe la guía sobre <a href="../instalar-firma-digital-costa-rica-gnu-linux-fedora/">cómo instalar Firma Digital de Costa Rica en Fedora, Red Hat Enterprise Linux 8 y CentOS 8</a>. Para Debian y Ubuntu está la guía de <a href="../instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/">cómo instalar Firma Digital de Costa Rica en Debian y Ubuntu</a>.</p>
+<p>Esta guía de instalación tiene los siguientes propósitos:</p>
+<ul>
+<li>Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.</li>
+<li>Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.</li>
+<li>Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales).</li>
+</ul>
+<h2>Instalación de las dependencias</h2>
+<ul>
+<li>Instalar el soporte CCID de PC/SC para que reconozca el protocolo usado por el lector de tarjetas Instalar IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets Java, ya no es posible usar el del sitio web de la CCSS).
+<pre>sudo zypper install -y pcsc-ccid icedtea-web
+
+sudo systemctl restart pcscd.socket
+</pre>
+</li>
+</ul>
+<h2>Descarga del “instalador”</h2>
+<ul>
+<li>Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de <a href="https://www.soportefirmadigital.com/">Soporte Firma Digital de Costa Rica</a>, introduciendo el número de serie de la tarjeta y aceptando las condiciones.</li>
+<li>Descomprimir el archivo zip descargado con <kbd>unzip</kbd>, en el momento de escribir esta documentación se llama <kbd>sfd_ClientesLinux_RPM64_Rev11.zip</kbd>. Se creará una carpeta llamada <kbd>Firma Digital</kbd>. Se asume que el archivo zip se ha descargado en la carpeta <kbd>Descargas</kbd>:
+<pre>cd ~/Descargas/
+
+unzip sfd_ClientesLinux_RPM64_Rev11.zip
+</pre>
+</li>
+</ul>
+<h2>Instalación de los certificados</h2>
+<p>Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. Para ello, un conjunto de comandos:</p>
+<ul>
+<li>Copiar los certificados:
+<pre>sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/share/pki/trust/anchors/
+</pre>
+</li>
+</ul>
+<h2>Instalación del módulo PKCS#11</h2>
+<p>Aunque hay un módulo en el directorio <kbd>Librerías</kbd>, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.</p>
+<ul>
+<li>Instalar el módulo PKCS#11 privativo en <kbd>/usr/lib64/</kbd>:
+<pre>cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/RPM/
+
+rpm2cpio idprotectclient-641.01-0.x86_64.rpm | cpio -dim ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib64/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/
+</pre>
+</li>
+<li>Permitir temporalmente al usuario local cargar aplicaciones gráficas con sudo (kate o gedit, según se use KDE o GNOME):
+<pre>export SUDO_EDITOR=kate
+</pre>
+</li>
+<li>Crear el fichero <kbd>/etc/Athena/IDPClientDB.xml</kbd> y abrirlo para edición:
+<pre>sudo mkdir /etc/Athena/
+
+sudoedit /etc/Athena/IDPClientDB.xml
+</pre>
+</li>
+<li>En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;IDProtect&gt;
+ &lt;TokenLibs&gt;
+  &lt;IDProtect&gt;
+   &lt;Cards&gt;
+    &lt;IDProtectXF&gt;
+     &lt;ATR type='hexBinary'&gt;3BDC00FF8091FE1FC38073C821106600000000000000&lt;/ATR&gt;
+     &lt;ATRMask type='hexBinary'&gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&lt;/ATRMask&gt;
+    &lt;/IDProtectXF&gt;
+   &lt;/Cards&gt;
+  &lt;/IDProtect&gt;
+ &lt;/TokenLibs&gt;
+&lt;/IDProtect&gt;
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/usr/share/p11-kit/modules/firma-digital.module</kbd> y abrirlo para edición:
+<pre>sudoedit /usr/share/p11-kit/modules/firma-digital.module
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --ro-bind /lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib64/libASEP11.so
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/usr/sbin/update-p11-kit-nss-proxy</kbd> y abrirlo para edición:
+<pre>sudoedit /usr/sbin/update-p11-kit-nss-proxy
+</pre>
+</li>
+<li>En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>#!/bin/sh
+
+if ! [ -L /usr/lib64/libnssckbi.so ]
+then
+    echo libnssckbi.so is not a symbolic link. Backing up...
+    mv -f /usr/lib64/libnssckbi.so /usr/lib64/libnssckbi.so.bak
+fi
+
+if ! [ "$(readlink /usr/lib64/libnssckbi.so)" = p11-kit-proxy.so ]
+then
+    echo libnssckbi.so is not pointing to p11-kit-proxy.so. Fixing...
+    ln -sf p11-kit-proxy.so /usr/lib64/libnssckbi.so
+fi
+</pre>
+</li>
+<li>Agregar el atributo de ejecutable al script:
+<pre>sudo chmod +x /usr/sbin/update-p11-kit-nss-proxy
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/etc/systemd/system/p11-kit-nss-proxy.service</kbd> y abrirlo para edición:
+<pre>sudoedit /etc/systemd/system/p11-kit-nss-proxy.service 
+</pre>
+</li>
+<li>En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>[Unit]
+Description=Update libnssckbi.so symbolic link
+Wants=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/update-p11-kit-nss-proxy
+
+[Install]
+WantedBy=default.target
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/etc/systemd/system/p11-kit-nss-proxy.path</kbd> y abrirlo para edición:
+<pre>sudoedit /etc/systemd/system/p11-kit-nss-proxy.path
+</pre>
+</li>
+<li>En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>[Unit]
+Description=Watch for changes in libnssckbi.so
+After=local-fs.target
+
+[Path]
+Unit=p11-kit-nss-proxy.service
+PathChanged=/usr/lib64/libnssckbi.so
+
+[Install]
+WantedBy=default.target
+</pre>
+</li>
+<li>Activar el servicio para que se ejecute al detectar cambios en la ruta:
+<pre>sudo systemctl enable --now p11-kit-nss-proxy.path
+
+sudo touch /usr/lib64/libnssckbi.so
+</pre>
+</li>
+</ul>
+<p>Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios.</p>
+<p>Quizás resulte interesante utilizar la herramienta <a href="https://firmador.app" target="_blank" rel="noopener noreferrer">Firmador</a>, software libre para firmar documentos.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/firma-pdf-avanzada-cuando-ltv-no-es-lo-mismo-que-ltv/" class="u-url">Firma PDF avanzada: cuando LTV no es lo mismo que LTV</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/firma-pdf-avanzada-cuando-ltv-no-es-lo-mismo-que-ltv/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-05-23T20:05:53-06:00" itemprop="datePublished" title="2019-05-23 20:05">2019-05-23 20:05</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>En Costa Rica, la “Política de Formatos Oficiales de los Documentos Electrónicos Firmados Digitalmente”, versión 1.0, indica en su punto 5, “Especificación de los Formatos Oficiales”, los formatos avanzados y configuración de niveles de los documentos firmados. Para el caso del formato PDF, indica que se basa en la norma técnica “ETSI TS 102 778”, indicado textualmente como “<em>PAdES Long Term</em> (PAdES LTV)”.<span id="more-372"></span> Lo que hay entre paréntesis se refiere al perfil PAdES-LTV, que se especifica en la parte 4 de esa norma de la ETSI (TS 102 778-4).</p>
+<p>LTV puede resultar engañoso. Es un acrónimo que significa <em>Long Term Validation</em> o validación a largo plazo. Sin embargo, hay dos interpretaciones: la de los estándares de la ETSI y la de Adobe. Y esto es un problema.</p>
+<p>Quienes hayan utilizado <em>Adobe Acrobat Reader DC</em> para validar firmas digitales habrán visto en el panel de firmas el texto “Activada para LTV” o “No activada para LTV y expirará el xx/xx/xxxx”. De hecho, en las guías oficiales de validación en los sitios de mifirmadigital.co.cr o incluso en las de soportefirmadigital.com indican que este es el mecanismo para indicar si una firma tiene el nivel necesario, aunque discrepo y por esa razón escribo esta entrada de blog tratando de explicar por qué.</p>
+<h2>¿Qué es LTV, según Adobe?</h2>
+<p>No hay una definición oficial o documentada por parte de Adobe. Algunos empleados de esa empresa han indicado su opinión sobre qué entienden ellos por LTV para que su validador lo muestre. Una <a href="https://stackoverflow.com/a/26124267" target="_blank" rel="noopener noreferrer">respuesta en StackOverflow sobre el significado de activación LTV</a> detalla que lo que interpreta Adobe sobre activación LTV no solo no es lo mismo que PAdES-LTV sino que su validador Adobe Acrobat Reader DC puede interpretar documentos que cumplan perfectamente la especificación PAdES-LTV como que no están activados como LTV. No obstante, la herramienta Firmador hace uso de la librería implementación de referencia de la Unión Europea y en las pruebas realizadas con el validador de Adobe Acrobat Reader DC en sus últimas versiones, habría mejorado para ser más compatible con PAdES e incluso tiene un apartado algo escondido donde indica el nivel de firma PAdES <em>Baseline</em>, pero esto no se refleja en las guías de verificación de firma del país porque es un poco más complicado encontrarlo.</p>
+<p>A su vez, validadores que no son de Adobe, como es el caso de la herramienta Firmador, pueden indicar que un documento no cumple con el nivel PAdES-LTV y sin embargo aparecer como “activada para LTV” en Adobe Acrobat Reader DC.</p>
+<p>Si en Adobe Acrobat Reader DC se instalan los certificados intermedios en la lista de certificados confiados (tal y como sugiere la guía oficial de instalación de certificados para este programa), el documento puede mostrar para un documento PDF que su firma está activada para LTV, aunque el documento no contenga los certificados intermedios tal y como indica la especificación PAdES requerido para el nivel PAdES-LTV o también como lo menciona explícitamente la normativa nacional. Ni siquiera es necesario que el documento tenga un sello de tiempo a nivel firma, por lo que podría incluso ser un nivel tipo PAdES-B y aun así mostraría que está activada para LTV en Adobe Acrobat Reader DC. Si se instalara solamente el certificado raíz nacional y no los intermedios (como sería lo ideal) y se desconecta de Internet, la validación en Adobe Acrobat Reader DC probablemente fracasará, al no poder verificar CRL y OCSP en línea y también fallará al no poder descargar desde las URLs especificadas en la extensión <em>Authority Information Access</em> (AIA) los certificados intermedios faltantes. Los documentos firmados con la herramienta Firmador sí pueden validarse sin conexión a Internet, como otra demostración de que incluyen toda la información necesaria para su validación.</p>
+<h2>¿Qué es LTV, según ETSI? (PAdES-LTV)</h2>
+<p>PAdES-LTV es un nivel de perfil que está especificado en el el documento ETSI TS 102 778-4. De toda la norma, hay un punto especialmente importante que no contempla Adobe pero que sí está en el estándar y es necesario para cumplir con él. Sin embargo, pocos firmadores en el país realizan este procedimiento correctamente: el PDF firmado requiere que incluya al menos un <strong>sello de tiempo a nivel documento</strong> para cumplir con el nivel PAdES-LTV.</p>
+<p>El sello de tiempo a nivel documento no es lo mismo que el sello de tiempo que llevan las firmas. Este sello cubre todo el documento, por lo que también cubre la información de revocación, para demostrar desde el momento que tiene el sello, la información no solo no se había modificado y por tanto que la información de validación de la firma (CRL y OCSP), sino que esta información existía así en ese momento, así como que los certificados eran vigentes y que todo ello era válido. Esto permite que aunque los certificados venzan, esta información siga siendo válida porque en su momento lo era. Esto está claramente especificado en la parte 4 de la norma, concretamente en el punto 4.2 párrafo b) y además indica en el anexo B que incluso en el nivel de perfil equivalente a CAdES-X-L debe llevar un sello de tiempo a nivel documento en los PDF.</p>
+<p>Si un documento no incluye un sello de tiempo a nivel documento, cuando los certificados venzan, aunque la información fuera válida en su momento, el documento no podrá ampliar su nivel de firma a PAdES-LTV porque debería haberse añadido este sello de tiempo antes de que vencieran. No se resuelve intentando agregar este sello de tiempo cuando ya están vencidos. Un ejemplo práctico de este caso se puede comprobar con el validador de la herramienta Firmador y abriendo el documento PDF de la política de formatos oficiales. Aparecerá un error indicando que el estado de validación es indeterminado con el código de error interno “NO_POE”. PoE es <em>Proof of Existence</em> o prueba de existencia, que está especificado en nuevas normas técnicas de ETSI que indican formalmente qué significa el sello de tiempo a nivel documento y sus implicaciones. Lo que indica esta definición es que no hay manera de demostrar si los certificados intermedios eran válidos antes de que vencieran, en el hipotético caso de que pudiera comprometerse la seguridad y emitir nuevos certificados equivalentes para la infraestructura. En Costa Rica no hay una definición de validación basada en especificaciones técnicas que se publicaron después, aunque el documento de formato oficial indica claramente en el punto (5.2.2) un conjunto de atributos que son comunes a todos los perfiles AdES <em>long term</em> y que en el caso de Adobe en su validador de PDF puede indicar “activado para LTV” incluso aunque le falten los atributos de sello de tiempo, rutas de certificación e información de revocación dentro del documento.</p>
+<h2>Firmador, LTV y LTA</h2>
+<p>Los problemas con la confusión y acceso en aspectos de Firma Digital, más específicamente en documentos PDF, además de la falta de un software libre con código fuente de acceso público fueron las motivaciones por las que se creó la herramienta Firmador: disponer de una herramienta que firme y valide ajustándose lo mejor posible a los estándares y a la normativa de Costa Rica.</p>
+<p>Tal y como indica la política de formato oficial del país, las implementaciones a medida pueden utilizar el perfil Baseline. Este perfil, especificado en la norma técnica TS 103 172 de ETSI, es bastante similar al anterior, aunque <a href="https://ec.europa.eu/cefdigital/DSS/webapp-demo/doc/dss-documentation.html#_signatures_profile_simplification" target="_blank" rel="noopener noreferrer">simplifica los niveles con ciertas equivalencias</a>, por ejemplo el nivel B incorpora BES y EPES, el nivel X-L equivale a LT y el nivel A o LTV equivale LTA. Por este motivo, la herramienta validador puede mostrar PAdES-BASELINE-LTA en lugar de PAdES-LTV, ya que utiliza los nombres simplificados del nuevo estándar, aunque a efectos prácticos se trate prácticamente de lo mismo.</p>
+<p>La Unión Europea financió la creación de una librería como implementación de referencia que permitiera firmar documentos llamada <em>Digital Signature Services</em> (no confundir con el estándar de la OASIS), que permite firmar con los formatos estándar XAdES, CAdES y PAdES, parte de los cuales son los estándares en Costa Rica, así como la validación, basada en nuevos estándares no contemplados por la normativa nacional hasta la fecha. Puesto que todo software puede contener errores, es conveniente utilizar siempre la versión más reciente de la librería. Por ejemplo, para la versión 5.4 de esta librería implementaron una opción para poder incluir sellos de tiempo de jerarquías no confiadas, ya que el servidor de la TSA del SINPE está firmado con la jerarquía de certificados nacional, entonces al agregar el nivel LT no se estaban incluyendo los certificados intermedios de la TSA y al realizar la validación LT sin conexión a Internet fallaba al no detectar los certificados intermedios que se utilizaban para el proceso de validación OCSP. También corrigen diversas vulnerabilidades, como las de tipo XXE.</p>
+<p>Pueda o no gustar desarrollar en Java, que es con el lenguaje con el que se desarrolla esta implementación de referencia, es probablemente la mejor apuesta para trabajar con estos formatos, ya que simplifica enormemente el proceso de firma, requiriendo unas pocas líneas de código para firmar un documento, a diferencia de librerías como iText, con las que además se pueden agregar errores con facilidad con respecto a la especificación del formato.</p>
+<h2>Compatibilidad con las implementaciones</h2>
+<p>En el momento de escribir este artículo, el validador de documentos del Poder Judicial, bastante utilizado para presentar recursos en línea, no funciona correctamente cuando el documento incluye el sello de tiempo a nivel documento. Este problema se ha notificado al departamento correspondiente y se está a la espera de que se confirme una posible corrección.</p>
+<p>Muchos firmadores no incluyen este sello de tiempo pero debería agregarse eventualmente por los motivos indicados. Si todavía son válidos, con la herramienta Firmador puede realizarse este procedimiento, no es necesario disponer de dispositivo de Firma Digital. Es conveniente que para un archivado longevo de documentos este proceso sea realizado por todas aquellas personas que almacenen documentos firmados.</p>
+<p>La herramienta Firmador es capaz de firmar documentos sin conexión a Internet y agregar en otra ocasión todos los atributos necesarios sin intervención del firmante sino que lo puede hacer otra persona como puede ser quien reciba los documentos (receptor), tal y como indican los puntos 5.2.1 y 5.2.3 de la especificación del formato oficial de Costa Rica. Sin embargo, algunos validadores no reconocen bien la firma ampliada/extendida desde el nivel PAdES B-B a B-LTA posteriormente (lo que en el documento del formato oficial se refiere a “incluir los atributos” de niveles superiores), ya que agregar el sello de tiempo a la firma no se representa de la misma manera a como lo entienden los validadores de iText o el validador de Adobe, aunque este último sí reconocerá la inclusión de los atributos de la firma como “activada para LTV”.</p>
+<p>Existen numerosos firmadores en el país que no agregan los atributos con los nombres adecuados y conforme al estándar, provocando que el validador que usa Firmador muestre la firma como PKCS7-T o similar en lugar de PAdES-T o superior. Aunque la firma básica sea válida en estos casos, no es conforme al estándar que rige. En estos casos en los que la firma no es conforme al estándar y no se resuelve extendiéndola, o en otros supuestos como de certificados vencidos y no extendida con sello de tiempo a nivel documento, la única solución pasa por eliminar la firma del documento y crear una nueva. Quizás en el caso en el que una especificación local relajara la exigencia sobre el formato de firma, un validador podría ser menos estricto por motivos de compatibilidad con documentos heredados de una herramienta que no se adaptó tan bien a los estándares en el pasado.</p>
+<h2>Conclusiones y recomendaciones</h2>
+<p>Es un hecho que debido a la evolución de las implementaciones del software y de los estándares se han ido acumulando dificultades en cómo deben firmarse los documentos de forma correcta y adaptada a los estándares. En los casos en que el software por ejemplo no indicaba si el LTV se refería al estándar PAdES y la falta de herramientas años atrás de mecanismos para validar si se estaba realizando correctamente causa estas asperezas, suponiendo que haya que realizar una mejora continua para actualizar los procesos que hagan uso de Firma Digital y tener conciencia de ello por parte de las personas encargadas en lo personal y en instituciones públicas y privadas.</p>
+<p>El documento actual de la especificación del formato oficial está escrito cuidadosamente y de manera más sencilla posible para el entendimiento de personas no capacitadas técnicamente sobre cómo deben ser firmados los documentos, los tipos y especificaciones técnicas que deben cumplir y qué deben contener (atributos), así como lo más genérico posible para poder interpretarse en el futuro de forma compatible. Esto fue en 2013, cuando todavía en la Unión Europea no se había creado el estándar oficial eIDAS, que releva a las especificaciones previas, por ejemplo en el caso de PAdES las normas técnicas ETSI TS 102 778 (PAdES) y ETSI TS 103 172 (PAdES perfil <em>baseline</em>) se actualizan con el estándar europeo ETSI EN 319 142, publicado por primera vez en 2015 (donde se agrega el concepto de prueba de existencia). También apareció el primer estándar europeo para validar documentos AdES, el ETSI EN 319 102, basado en la norma técnica ETSI TS 119 102 que se sigue actualizando con enmiendas que posteriormente actualizarán el estándar.</p>
+<p>Sería conveniente que ya que hoy en día se dispone de estándares y software de validación mejor regulado en la Unión Europea, actualizar la normativa costarricense para adoptar selectivamente lo que permita de forma equivalente para disponer de un mecanismo de validación más sólido. El software de implementación de referencia (<em>Digital Signature Services</em>) dispone de mecanismos ajustables para configurar de forma afinada qué puntos de la validación son requeridos u opcionales para poder configurarse de la forma más conveniente y adaptado a las necesidades nacionales.</p>
+<p>Ejemplos de adaptación al sistema de validación ya existe en otros países fuera de la Unión Europea, como es el caso del Perú, que ya dispone de un sistema de validación nacional centralizado. Mientras no existan mecanismos precisos en Costa Rica, la herramienta Firmador utiliza los parámetros más predeterminados posibles (los utilizados en la Unión Europea) en el validador integrado, hasta que algún día, en caso de existir, pueda ajustarse a una normativa más precisa y local.</p>
+<p>El motivo de regular la validación de forma más precisa permitiría disponer de mecanismos eficaces y más seguros para garantizar la seguridad y fiabilidad de los documentos firmados digitalmente, como es el caso de los documentos a largo plazo (el caso de los LTV aquí tratado), así como de cómo manejar la validación adecuadamente en la jerarquía nacional; por ejemplo si llega el caso en que nuevas autoridades de registro (RAs, certificados intermedios como el del BCCR) y se incorporasen al conjunto de jerarquías y documentos firmados bajo estas para validar. Sobre los aspectos de certificados intermedios y la forma de distribuirlos hay algunos aspectos que podrían mejorar también, pero eso será para otro artículo de blog.</p>
+<p>La herramienta Firmador tiene previsto mejorar el reporte de validación de documentos para hacerlo más intuitivo y detallado. También está previsto este año publicar un validador web para quien quiera validar documentos sin necesidad de descargar software y que funcione en cualquier dispositivo que tenga conexión a Internet y un navegador web. Como en el caso de Firmador, se distribuirá como software libre, estando el código fuente del validador web para que cualquier persona pueda instalarlo en sus servidores y/o adaptarlo a sus necesidades.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/firmador-1-4-0-publicado/" class="u-url">Firmador 1.4.0 publicado</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/firmador-1-4-0-publicado/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-03-25T02:03:55-06:00" itemprop="datePublished" title="2019-03-25 02:03">2019-03-25 02:03</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Se acaba de publicar la nueva versión de este firmador digital de documentos para Costa Rica. La principal novedad es la implementación de firma visible en documentos PDF.<span id="more-358"></span></p>
+<p>La firma visible es como se conoce popularmente a la apariencia de la firma. Se trata una representación visual dentro el documento como las firmas manuscritas creadas por personas y que están vinculadas a una firma digital. Esta representación visual está recogida en la especificación técnica que se utiliza en documentos PDF firmados digitalmente acorde con la política de formato oficial de Costa Rica.</p>
+<p>El propósito de esta representación visual de las firmas es orientar a las personas que reciban un documento, sobre todo a las que no han recibido capacitación, para tener información dentro del documento que indica que contiene una firma digital. Esta representación muestra el nombre de la persona que firma, la fecha declarada de la firma y otros atributos.</p>
+<p>La implementación se ha realizado gracias a la versión en desarrollo de la librería DSS, que es la implementación de referencia que permite aplicar firma AdES, financiada por la Comisión Europea. A partir de la versión 5.5 implementan una característica que permite utilizar texto plano, permitiendo que la firma sea más accesible mediante lectores de pantalla y que el tamaño del fichero no sea significativamente mayor. En versiones anteriores se generaba una imagen de píxeles a partir del texto.</p>
+<p>Para ubicar la firma visible, tan solo hay que abrir un documento PDF a firmar para luego, en la pestaña Firmar, arrastrar el rectángulo “Firma visible” a la ubicación adecuada de la página deseada y finalmente hacer clic sobre el botón “Firmar documento”.</p>
+<p>Firmador es software libre y se puede descargar desde el sitio web <a href="https://firmador.app/" target="_blank" rel="noopener noreferrer">firmador.app</a> para GNU/Linux, macOS y Windows.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/sitios-web-rapidos-sin-sacrificar-seguridad/" class="u-url">Sitios web rápidos sin sacrificar seguridad</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/sitios-web-rapidos-sin-sacrificar-seguridad/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-03-09T01:03:15-06:00" itemprop="datePublished" title="2019-03-09 01:03">2019-03-09 01:03</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>En estas fechas, ya son mayoría los sitios web que utilizan conexión segura con TLS, existiendo certificados gratuitos como los de Let’s Encrypt y los de Buypass.</p>
+<p>Sin embargo, la seguridad de los sitios es algo más que proteger la comunicación entre el cliente y el servidor.<span id="more-323"></span> El mantenimiento preventivo del software que se utiliza para la gestión del contenido del sitio debe ser riguroso, ya que es habitual descubrir vulnerabilidades de vez en cuando.</p>
+<p>De estas vulnerabilidades, hay unas en particular que suelen suceder con mucha frecuencia pero no se le da tanta importancia como pueden ser las inyecciones de SQL. Lograr manipular el contenido de un sitio a partir de otro para extraer información o manipular formularios pueden ser dañinos si se realizan correctamente, como pueden ser los de tipo XSS y CSRF.</p>
+<p>Por ejemplo, el código JavaScript adicional que viene incluido con el marco de trabajo Bootstrap ha tenido numerosas correcciones para mitigar ataques XSS en los últimos años, a pesar de que la cantidad de JavaScript que contiene es relativamente pequeña. Si miramos otras librerías JavaScript más grandes, el riesgo es posiblemente mayor.</p>
+<p>Afortunadamente existen mecanismos para mitigar este tipo de ataques, sin embargo no son todavía muchos sitios web los que aplican estas medidas, ya que puede requerir modificar gran cantidad de código del lado del cliente (HTML, CSS y JavaScript) para que sea compatible con este tipo de prevención de ataques. Los navegadores web modernos permiten evitarlo, pero hay que indicarlo explícitamente por motivos de compatibilidad con el sitio.</p>
+<p>Existen diversas propuestas para mitigar los ataques XSS mediante cabeceras de seguridad mediante protocolo HTTP. Por ejemplo, el <a href="https://observatory.mozilla.org/analyze/fran.cr" target="_blank" rel="noopener noreferrer">observatorio web de Mozilla</a> permite analizar qué cabeceras se pueden utilizar y si están utilizándose para mitigar potenciales ataques. Una de las más importantes es <em>Content Security Policy</em>, que puede evitar inyecciones de scripts si estos no vienen definidos en el documento previamente. Es decir, se puede evitar inyectar por ejemplo JavaScript si no viene de una fuente autorizada. Hay unas cuantas cabeceras más que permiten otro tipo de técnicas como <em>clickjacking</em> y otro tipo de ataques. En ese sitio web viene una descripción de cada uno.</p>
+<p>Otra medida que puede emplearse en los navegadores modernos es el uso de cookies tipo <em>SameSite</em>. Por ejemplo, si se utilizan cookies de sesión, a partir de PHP 7.3 se puede definir que estas sean de este tipo para mitigar ataques CSRF en formularios sin necesidad de tener que rotar un token como era la mitigación del problema hasta ahora.</p>
+<p>Es conveniente mencionar que algunas de estas cabeceras tienen bastantes años de existir, por lo que no debería ser un pretexto no implementarlas y hacer uso de tecnología web que no arrastre demasiada deuda técnica como para que impida hacer uso de las mismas, sobre todo en nuevos proyectos.</p>
+<h2>La velocidad no se sacrifica</h2>
+<p>Puede parecer que utilizar medidas como esta impediría aprovechar las supuestas ventajas de emplear redes de entrega de contenidos (CDN), que al menos parece que permiten acelerar el tiempo de carga.</p>
+<p>En las cabeceras que cargan scripts que son de otros dominios, puede resultar un riesgo, en caso de que servicios de terceros se comprometan, de servir código que pudiera ser maligno. Y como no es la primera vez que sucede, existen soluciones como agregar una suma de comprobación (<em>hash</em>) o agregar nonces para evitar cargar scripts que hayan sido modificados. Tener que manejar estos aspectos podría complicar todavía más el desarrollo web.</p>
+<p>Pero sobre el uso de servicios de terceros y CDN en general, habría que reflexionar por qué comenzaron a utilizarse. Hasta hace unos años, el protocolo HTTP/1.1 tenía limitaciones para cargar múltiples recursos a la vez, ya que cada petición utilizaba una conexión TCP. Aunque el HTTP <em>pipelining</em> permitió mitigar el problema, no era la mejor solución porque también estaba limitada a un número de conexiones TCP. Sin embargo, hoy en día hay una mucho mejor, especialmente desde el momento en el que las conexiones seguras entraron en escena.</p>
+<p>Muchas personas pueden reconocen que tener que usar conexión HTTPS segura con TLS (HTTPS) es para evitar que aparezcan mensajes en los navegadores que su formulario o su dirección es insegura, pero HTTPS también es necesario para utilizar cada vez más características del navegador, como por ejemplo acceso a la geolocalización o incluso algunos dominios de primer nivel como los .app o .dev que cualquiera puede registrar, el navegador exige comunicación HTTPS de forma estricta.</p>
+<p>Existe una nueva especificación llamada HTTP/2 que permite resolver de golpe todas las limitaciones de HTTP/1.1. Se utiliza una única conexión TCP para la transmisión de los datos. Hace unos cuantos años que servidores web como Apache HTTPd soportan esta tecnología. La mayoría de navegadores modernos han decidido que para poder disfrutar de HTTP/2 se requiere HTTPS.</p>
+<p>Volviendo al tema de los CDN, una de las características de estos servicios es que han sido de los primeros en ofrecer HTTP/2 pero por una buena razón: el contenido se sirve mucho más rápido y por tanto aparenta competir mejor que si se sirve desde el propio sitio web, ya que todavía hay mucha gente que no ha considerado en servir sus sitios web con HTTP/2. En tiempos de HTTP/1.1 mejoraban el rendimiento, incluso sin que estos usaran HTTP/2, pero ya no es así.</p>
+<p>Si un sitio web decide usar HTTP/2 para servir la información, podría incluso ser más rápido que utilizando los CDN gracias a esto. El motivo es porque los CDN por HTTP/2 requieren usar HTTPS, lo que supone una negociación TLS completa, aparte del tiempo de resolución de cada uno de los nombres de dominio. Aunque existen técnicas como <em>DNS prefecthing</em>, el conjunto de negociaciones va a ser más costoso que realizarlo desde un mismo sitio, salvo excepciones en sitios web que sean realmente muy grandes donde distribuir la carga merezca la pena, aunque sea por unos pocos milisegundos. Si a esto le sumamos el tiempo ahorrado en configurar la seguridad del sitio para mitigar ataques, creo que es un aspecto relevante a tener en cuenta.</p>
+<p>Otra de las características de HTTP/2 además de dejar bastante obsoletos los CDN, también deja obsoletos los empaquetadores de recursos (JavaScript, CSS). Estos empaquetadores, como pueden ser Webpack y otros, complican y ralentizan el despliegue, además de tener que administrar una configuración monstruosa y también requiere trabajo adicional de descarga y de velocidad si hay que depurar errores. Además, evitan que el <em>cache</em> de los navegadores sea útil si hay cambios en los mismos, ya que habría que volver a descargar un enorme paquete si cambia una sola línea de un script, mientras que disponibles de forma individual no lo requeriría.</p>
+<p>HTTP/2 permite también utilizar un mecanismo llamado <em>server PUSH</em> para enviar al navegador contenidos antes de que se los pida. Esto permite acelerar en algunos sitios web el tiempo carga de forma muy significativa. Con HTTP/1.1 lo más parecido era el <em>preload</em> en etiquetas link, pero tenía que descargarse primero el documento HTML para poder saber que se tenían que descargar, perdiendo un ciclo valioso que se multiplica en conexiones con latencia elevada. En el caso de Costa Rica hay mucho tráfico que viene desde fuera incluso tráfico local rebotado con latencia significativa, por lo que reducir los <em>round trips</em> puede reducir varias veces el tiempo de carga en estos casos. Con PUSH puede enviarse la información a <em>Early Hints</em>, que se sirven incluso antes de comenzar a transmitir el documento solicitado (antes del HTTP 200).</p>
+<p>Es conveniente servir con compresión (aunque teniendo cuidado con ataques tipo CRIME). Mucha gente utiliza solamente compresión GZIP, sin embargo también existe Brotli, que permite ahorrar un porcentaje significativo de tráfico en las descargas y por tanto cargar más rápidamente. Otras formas de ahorro de ancho de banda en la conexión segura inicial es utilizar certificados de curva elíptica (ECC), soportado por todos los navegadores modernos y permitiendo descargar certificados más pequeños, además pueden aliviar la carga del servidor al cifrar la información sin necesidad de aceleración por hardware. Utilizar versiones del protocolo TLS más modernas (1.3) también permiten utilizar cifrados más eficientes y seguros. Por compatibilidad con sistemas antiguos se pueden ofrecer ambos certificados (ECC + RSA).</p>
+<p>Otro aspecto que implica una dependencia de terceros es la consulta de estado de revocación del certificado TLS. Esta consulta se realiza a los servidores OCSP de la autoridad de certificación, que podría tener momentos en los que funcionara más lento de lo habitual (como le podría suceder a un CDN), además de que implicaría una consulta adicional. Adicionalmente, las autoridades de certificación sabrían cuánto tráfico tendría tu sitio web y de dónde provienen sus visitantes, por lo que también, como en el caso de los CDN, tiene implicaciones de privacidad. Para mitigarlo existe el grapado OCSP, que es un mecanismo por el cual el estado de revocación se envía directamente desde el sitio web sin depender del tercero. Este grapado es un mecanismo que queda guardado en memoria cache del servidor web y contiene una consulta firmada digitalmente con sello de tiempo que garantiza que el estado de revocación del certificado era válido, teniendo un tiempo de vida relativamente corto, por lo que es el servidor web el que va renovando y cacheando estas consultas. Con esto se mejora también muy ligeramente el tiempo de negociación de la conexión HTTPS.</p>
+<h2>Recomendaciones</h2>
+<p>En resumen, algunas recomendaciones para el desarrollo web moderno, logrando seguridad, velocidad y un desarrollo más eficiente:</p>
+<ul>
+<li>No utilizar servicios CDN si no es necesario.</li>
+<li>Utilizar cabeceras de seguridad (CSP, HSTS y demás).</li>
+<li>Utilizar grapado OCSP.</li>
+<li>Utilizar cookies SameSite (si el sitio usa cookies).</li>
+<li>Utilizar HTTP/2.</li>
+<li>Utilizar server PUSH (si es con Early Hints, mejor).</li>
+<li>Utilizar compresión Brotli.</li>
+<li>Utilizar TLS 1.3.</li>
+<li>Utilizar certificados ECC (o dual ECC + RSA).</li>
+</ul>
+<p><a href="https://fran.cr/" target="_blank" rel="noopener noreferrer">Este sitio web</a> hace uso de todas estas características y probablemente se note en el tiempo inicial de carga, tanto en computadoras de escritorio como en dispositivos móviles en redes fijas y celulares. Recomiendo utilizar Apache HTTPd porque es el primer servidor HTTP en cumplir al 100% con la especificación HTTP/2 (y no, no es más lento que nginx, esto lo explicaré en otro artículo de blog).</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/esblogquality-checklist-before-audit/" class="u-url">Follow this quality checklist before an audit</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/esblogquality-checklist-before-audit/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-02-08T15:02:13-06:00" itemprop="datePublished" title="2019-02-08 15:02">2019-02-08 15:02</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>At <a href="https://zeppelin.solutions/">Zeppelin</a> we help protect the core
+infrastructure of open and decentralized applications. I'm part of the Research
+team, which is in charge of conducting
+<a href="https://zeppelin.solutions/security-audits/">security audits</a>.
+We review tons of lines of code written by very smart developers for projects
+that will shake the foundations of our society.</p>
+<p>Finding security vulnerabilities in this futuristic cypherpunk environment is
+super challenging and fun, but
+<a href="https://blog.zeppelin.solutions/">we have already covered those topics elsewhere</a>.
+I think that security actually starts in a
+pretty boring and traditional place, full of the wisdom that our elders have
+collected through millennia of developing software in community. Standing on
+their shoulders, I want to share our checklist for basic quality measures
+that your next awesome project should consider before you hand it over for an
+external audit.</p>
+<h2>✔️ Choose a free software license</h2>
+<p>Closed code is inherently insecure. If people who use your project can't inspect it,
+study it, hack it, and experiment on it, there's no way it can be trusted. If you
+hold abusive control over your users, nothing prevents you (or anyone
+more powerful than you) from making them vulnerable.</p>
+<p>Take a look at the
+<a href="https://www.gnu.org/philosophy/free-sw.en.html">Free Software Definition</a>,
+and begin with <a href="https://choosealicense.com/">choosing the license</a> that best
+suits your needs.</p>
+<p>This is a good moment to introduce our first wise elder!
+<a href="https://en.wikipedia.org/wiki/Richard_Stallman">Richard Stallman</a> 😜,
+who hacked copyright laws, started the free software movement, and wrote
+the above definition.</p>
+<p><a href="https://en.wikipedia.org/wiki/Richard_Stallman#/media/File:Richard_Stallman_by_gisleh_01.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Richard_Stallman_by_gisleh_01.jpg" alt="Richard Stallman" height="350"></a></p>
+<p>Richard Stallman in costume as St. IGNUcius (Monastir, Tunisia, 2012. Image taken from
+<a href="https://en.wikipedia.org/wiki/Richard_Stallman#/media/File:Richard_Stallman_by_gisleh_01.jpg">Wikipedia</a>)</p>
+<h2>✔️ Build your core team of maintainers</h2>
+<p>When your project succeeds, hundreds of external contributors will surely be supporting it. But in order to
+get to that point, you'll need to bootstrap with a strong and diverse team of core
+maintainers. They'll take care of the bulk of the work, the fun and the boring
+parts, proposing and reviewing the code of your shared project. Together,
+you all need to have strong knowledge of all points on this checklist.
+Look not only for technical knowledge, but also for a knack for cat-herding and a
+healthy work style—because, well, things will get complicated.</p>
+<p>Pay attention to your <a href="https://en.wikipedia.org/wiki/Bus_factor">bus factor</a>:
+make sure your team members are sharing their expertise, the lessons learned, and their
+responsibilities, while at the same time constantly mentoring new people
+that could potentially join the core team.</p>
+<p>And somebody will have to lead and orchestrate in order to get value out of the eternal
+tendency toward chaos. Let me introduce you to our second magician,
+<a href="http://www.camilletalk.com/">Camille Fournier</a>, who wrote THE book on technical
+management,
+<a href="https://www.goodreads.com/book/show/33369254-the-manager-s-path">The Manager's Path</a>.</p>
+<p><a href="http://www.camilletalk.com/contact/"><img src="https://static1.squarespace.com/static/56bf8b0622482edc3dc1919d/t/56bf8ef5f85082335f63196b/1455400011874/21793992240_b56cd4b3e2_o+%281%29.jpg?format=500w" alt="Camille Fournier" height="350"></a></p>
+<p>Camille Fournier (Image taken from
+<a href="http://www.camilletalk.com/contact/">her website</a>)</p>
+<h2>✔️ Write clean code</h2>
+<p><a href="https://www.osnews.com/story/19266/wtfsm/">The only valid measurement of code quality is WTFs per minute</a>. This point <em>must</em> be simple. If things get overly complicated or
+weird, you're doing it wrong. Go for a walk and try again with fresh eyes.</p>
+<p>But don't get me wrong: no interesting software project is simple. Add the
+complexity dimensions of decentralization, transparency, cryptography, and all
+these shiny ideas that are keeping us so busy these days. It's complicated by
+design. But with the correct abstractions, a well thought-out model, and proper encapsulation,
+you can start building the bank-killer app one line at a time. And each of
+those lines <em>must</em> be clean and readable.</p>
+<p>I'm not a spectacular programmer, I was just lucky to find Uncle Bob
+Martin's book
+<a href="https://www.goodreads.com/book/show/3735293-clean-code">Clean Code</a> at
+the right moment and to have read a never-ending stream of very, very ugly code.</p>
+<p><a href="https://en.wikipedia.org/wiki/Robert_C._Martin#/media/File:Robert_Cecil_Martin.png"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Robert_Cecil_Martin.png/800px-Robert_Cecil_Martin.png" alt="Robert C. Martin" height="250"></a></p>
+<p>Robert Cecil Martin (Image taken from
+<a href="https://en.wikipedia.org/wiki/Robert_C._Martin#/media/File:Robert_Cecil_Martin.png">Wikipedia</a>)</p>
+<p>Once all core maintainers reach common ground on this topic, you should
+enforce a consistent code style by running a
+<a href="https://en.wikipedia.org/wiki/Lint_(software)">linter</a> on every new line of
+code that's added. The particular rules aren't as important as
+following them strictly is, but if you can
+<a href="https://github.com/OpenZeppelin/openzeppelin-solidity/issues/1396#issuecomment-440426310">sacrifice your peculiar preferences to be consistent with the rest of the world</a>, your contributors will appreciate it a lot.</p>
+<p>I also practice slow-food... er, slow programming.
+Take your time, enjoy the journey to mastering this craft, and when you've built something you can
+proudly set free, let the masses read it and judge it.</p>
+<h2>✔️ Write unit tests</h2>
+<p>Write unit tests. Tons of them. 100% coverage. This might sound extreme, but hey, your code is now
+playing directly with somebody else's money. If you forget, or just get lazy and
+don't write a test for that super obvious line of code, you might be leaving an open
+door for an exploit later in the game that will make your project crash, and
+all this magic internet money will disappear in no time. It <em>has</em> happened.</p>
+<p>I feel immediately more secure when I do test-driven development. At least give
+an honest try to writing the tests first, and get into a cycle of
+red-green-refactor. There are other techniques that can achieve the same
+result, but I suggest starting there and then deviating if you find good
+reasons to do so. Never worked this way? Read
+<a href="https://www.goodreads.com/book/show/387190.Test_Driven_Development">Test Driven Development: By Example</a>
+by Kent Beck. It's a quick read that will help you avoid the temptation of
+just jumping into code without thinking it through.</p>
+<p>Then, even if you design for testability, you'll find many scenarios that are
+hard to test. Gerard Meszaros provides all the answers in
+<a href="https://www.goodreads.com/book/show/337302.xUnit_Test_Patterns">xUnit Test Patterns</a>.
+This book is huge, so I recommend choosing a designated test expert on your
+team.</p>
+<p><a href="https://en.wikipedia.org/wiki/Kent_Beck#/media/File:Kent_Beck_1.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Kent_Beck_1.jpg" alt="Kent Beck" height="350"></a> <a href="https://twitter.com/gerardmes"><img src="https://pbs.twimg.com/profile_images/71233259/Gerard_in_Vancouver__Brian_Foote-O-O_Canada_012_.jpg" alt="Gerard Meszaros" height="350"></a></p>
+<p>Left: Kent Beck speaking in 2001 (Image taken from
+<a href="https://en.wikipedia.org/wiki/Kent_Beck#/media/File:Kent_Beck_1.jpg">Wikipedia</a>)
+Right: Gerard Meszaros (Image taken from <a href="https://twitter.com/gerardmes">Twitter</a>)</p>
+<p>Finally, make sure to run your unit tests on every single pull request, and make sure
+they're <em>all</em> green before merging the changes. In addition, you can set up a
+test coverage report to ensure that test coverage never goes down.</p>
+<h2>✔️ Test early, test often, test agile</h2>
+<p>Now that you have your first layer of tests covered with tons of unit tests,
+what comes next is...more tests! You need to test the integration between
+all of your components, then go one level higher to test your
+application from the point of view of a real user, and then go even
+higher to test the interactions with other systems end-to-end.</p>
+<p>To me, this is the biggest challenge, and designing a good process that
+keeps many bugs out of your system can be as difficult as designing the system
+itself. Iterate, automate as much as possible, share the load of manual
+testing...and let your community help.</p>
+<p>We'll talk later about community, but I think this is the reason for
+publishing your code as early as possible: you can get help from early adopters
+and enthusiasts to validate your system, not only for correctness but also to
+verify that you're focusing on the right user stories and that you're tackling a
+real problem with a user-friendly solution.</p>
+<p>A lot has been written about iterative development processes that deliver
+functionalities in progressive sprints and milestones. I found Mike Cohn's
+<a href="https://www.goodreads.com/book/show/6707987-succeeding-with-agile">Succeeding with Agile: Software Development Using Scrum</a>
+a good place to start, but keep in mind that any methodology will have to be
+adjusted to your team, your users, and your context. There are a lot fewer
+resources focused on the quality and testing part; that's why I was so happy
+when I read
+<a href="https://www.goodreads.com/book/show/5341009-agile-testing">Agile Testing</a> by
+Lisa Crispin and Janet Gregory, which is full of good ideas and advice. But
+let me stress again: nothing you read will perfectly fit your project, so take your
+time to design the testing process with as much love and care as you use when
+designing the system's architecture.</p>
+<p><a href="https://en.wikipedia.org/wiki/Mike_Cohn#/media/File:Mike_Cohn_2013-06-12.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mike_Cohn_2013-06-12.jpg/1280px-Mike_Cohn_2013-06-12.jpg" alt="Mike Cohn" height="350"></a> <a href="https://agiletester.ca/about-the-authors/"><img src="https://agiletester.ca/wp-content/uploads/sites/26/2013/09/Lisa-Crispin-and-Janet-Gregory.jpg" alt="Lisa Crispin and Janet Gregory" height="350"></a></p>
+<p>Left: Mike Cohn in 2013 (Image taken from
+<a href="https://en.wikipedia.org/wiki/Mike_Cohn#/media/File:Mike_Cohn_2013-06-12.jpg">Wikipedia</a>)
+Right: Right: Lisa Crispin and Janet Gregory (Image taken from their
+<a href="https://agiletester.ca/about-the-authors/">website</a>)</p>
+<p>While there's still some debate about the perfect moment for auditing a project (i.e, before or after the code is
+published), I think audits should be performed when there's a release candidate
+ready to be deployed to mainnet, after you have performed extensive alpha and
+beta testing. I see room for auditing before the code has been published,
+but in this case, the audit would be more related to checking that the development
+process will lead to a high-quality, properly tested release candidate and
+validating the bases of your project than to performing a deep and thorough
+inspection of the codebase.</p>
+<p>However, this doesn’t mean that you have to wait until the end of a long
+development phase to prepare for a release and audit. Once you start writing and
+testing clean code in incremental iterations, it becomes easier to think about
+your complex system. Many smaller independent parts will start to pop up, which
+can be extracted, generalized, and packaged for reuse, reducing anxiety for
+developers and auditors. These packages are the focus of
+<a href="https://zeppelinos.org/">ZeppelinOS</a> for this year, to know more take a look at
+the <a href="https://blog.zeppelinos.org/state-of-evm-packages-end-of-2018/">State of EVM Packages</a>.</p>
+<h2>✔️ Write documentation</h2>
+<p>This is my least favorite part, by far. So let's keep it simple, starting at
+the beginning: the README, the most important file of your repository.
+And yet, it's usually either empty or bloated, outdated, and ugly. Ideally, as it's the
+first thing developers and potential contributors will read, it should work as a clear, straightforward index of
+your project.</p>
+<p>It's best not to get creative here. Just follow this simple specification that
+works for all cases, proposed by Richard Littauer in
+<a href="https://github.com/RichardLitt/standard-readme/blob/master/spec.md">Standard Readme</a>.
+<em>Do not forget</em> to include a specific section in the main README that states how people should disclose any security
+vulnerabilities found in your project.</p>
+<p><a href="https://twitter.com/richlitt"><img src="https://pbs.twimg.com/profile_images/853672023511490561/m_RAvJfy.jpg" alt="Richard Littauer" height="350"></a></p>
+<p>Richard Littauer (Image taken from <a href="https://twitter.com/richlitt">Twitter</a>)</p>
+<p>Next come the docstrings, the documentation inside your code files. We hit
+an apparent conflict here, since in theory, if your code is clean,
+it will not require documentation. However, note that we are no longer
+designing standalone systems that work as a black box. We are building
+protocols for decentralized applications, and your code will be called by all sorts
+of external agents. So by all means, document every function that's part
+of the contract's public API, following the
+<a href="https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format">NatSpec format</a>.</p>
+<p>Which brings me to the next point. I highly recommend that you document the
+specification of your protocol—that's how others will know what to call and
+what to expect. But more related to the topic at hand, in an audit, we check that
+the implemented code works as intended by the specification. That's why this
+document is a <em>must</em>: without it, auditors will just guess at your intentions, which
+might result in some issues getting missed because they're completely consistent
+within the system but take it to a state that you want to avoid.</p>
+<p>Finally, there's the user documentation. For high-quality systems,
+writing the user documentation should be mostly painless. The moment things get cumbersome
+while documenting, consider re-evaluating your user stories, and don't be afraid to go back to iterate on
+them.</p>
+<h2>✔️ Check your dependencies</h2>
+<p>Your project builds on top of many, many others. It will probably depend at least
+on the Ethereum protocol and its network of nodes, and on Solidity, a bunch of
+Ethereum Improvement Proposals and their implementation, libraries for testing and UI, and maybe hundreds
+of other small projects. Even if yours is secure, you need to check how healthy your dependencies are,
+since they can easily become the source of
+vulnerabilities.</p>
+<p>Earlier, I mentioned that your team should have strong and diverse knowledge.
+That includes knowledge of all the projects that surround you. You should be able to
+write idiomatic code following the best practices of the language, to identify
+and avoid known issues, always keeping an eye on new
+<a href="https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures">CVEs</a>
+that may directly (or indirectly, through third-party dependencies) affect your project. Moreover, try to participate in the communities around your
+dependencies, as it's an excellent way to see firsthand how safe and trustworthy they are.
+You should also consider <em>actively</em> participating in those communities, to gain some karma that will surely come in
+handy later when you need new features and bug fixes.</p>
+<p>Moreover, don't forget to pay attention to your dependencies' finances. When making your project's budget,
+take into account a share for your dependencies, as they may need it in order
+to remain actively maintained. There's a very nice project called
+<a href="https://opencollective.com/discover">OpenCollective</a>,
+led by Pia Mancini, which is making it extremely easy to transparently support
+the organizations and developers you depend on.</p>
+<p><a href="https://www.piamancini.com/"><img src="https://static.wixstatic.com/media/a7bdaa_ab650ff17e804731b7cf560bc5ee9a02~mv2.jpg/v1/crop/x_0,y_120,w_961,h_961/fill/w_530,h_530,al_c,q_80,usm_0.66_1.00_0.01/Pia%20Mancini%20-%20headshot.jpg" alt="Pia Mancini" height="350"></a></p>
+<p>Pia Mancini (Image taken from her <a href="https://www.piamancini.com/">website</a>)</p>
+<p>And, of course, with <a href="https://zeppelinos.org/">ZeppelinOS</a>, we're building a
+platform that will let you vouch for the security of a package. It's in beta
+testing, so expect exciting news very soon.</p>
+<p>Specific to Ethereum and Solidity, the community is collecting the lessons
+learned (usually in a painful way). You can learn a lot about interesting
+and tricky vulnerabilities playing the
+<a href="https://ethernaut.zeppelin.solutions/">Ethernaut capture-the-flag game</a>.
+We've
+<a href="https://blog.zeppelin.solutions/tagged/security">published many of our past audits</a>
+with descriptions of the issues found, recommendations, and usually a link
+to the patch that fixes them. All of our learnings from audits are distilled into
+the <a href="https://openzeppelin.org/">OpenZeppelin package</a>, which you should definitely add
+to your list of dependencies—if you're not one of the thousands that already did. The
+<a href="https://smartcontractsecurity.github.io/SWC-registry/">Smart Contracts Weakness Registry</a>
+maintained by the Mythril team is also a great resource for learning from the
+experience of others.</p>
+<p>Whatever approach you take, remember that as the Ethereum space is very young and unexplored, we're learning many things as we go, so <em>always</em>
+proceed with caution.</p>
+<h2>✔️ Build your community</h2>
+<p>This is a complement to the first point: code without a community is insecure.
+The community gives you eyes to monitor the project, hands to test it in a
+real environment, support to survive challenging problems, and resilience to
+adjust to the unexpected. No amount of money, experience, or knowledge
+can substitute for this.</p>
+<p>Once you publish the code, you can get started engaging your community. If your
+project is interesting, they will come, and this is where the cat-herding
+abilities of your team will shine. However, you definitely need to set up proper and fluent communication channels,
+invest in some marketing, and hire a bold community manager with a plan to disentangle
+and wisely leverage all the opportunities your community brings. I can't
+recommend highly enough the writings and videos by
+<a href="https://www.jonobacon.com/">Jono Bacon</a>, who has covered all the topics you
+can imagine about community management.</p>
+<p><a href="https://www.flickr.com/photos/jonobacon/12622356185/"><img src="https://farm4.staticflickr.com/3740/12622356185_b89d134675_k.jpg" alt="Jono Bacon" height="350"></a></p>
+<p>Jono Bacon in 2014 (Image taken from <a href="https://www.flickr.com/photos/jonobacon/12622356185/">Flickr</a>)</p>
+<p>You should be thoughtful and caring with your community. A small step that
+goes a long way is to adopt and enforce a
+<a href="https://www.contributor-covenant.org/">code of conduct</a> so you can all feel
+safe. Then, write some contribution guidelines to make sure that all of their
+enthusiasm can be put to good use and they don't get lost. Lastly, think about
+setting up a <a href="https://www.hackerone.com/">bug bounty program</a> that will
+encourage your community to watch out for vulnerabilities in the wild,
+providing hackers with enough incentives to disclose security issues in a responsible way.</p>
+<hr>
+<p>tldr:</p>
+<p>✅ Choose a free software license.</p>
+<p>✅ Build a strong and diverse team of core maintainers.</p>
+<p>✅️ Increase your bus factor: share knowledge and responsibilities.</p>
+<p>✅ Choose a good leader.</p>
+<p>✅️ Write clean code.</p>
+<p>✅️ Enforce a consistent code style.</p>
+<p>✅️ Ensure 100% unit test coverage.</p>
+<p>✅️ Enforce green tests on all your pull requests.</p>
+<p>✅️ Design your iterative development and testing process.</p>
+<p>✅️ Publish your code.</p>
+<p>✅️ Write a good README.</p>
+<p>✅️ Document the functions of your public API.</p>
+<p>✅️ Document your protocol.</p>
+<p>✅️ Write the end-user documentation.</p>
+<p>✅️ Make sure that your dependencies can be trusted.</p>
+<p>✅️ Review known issues and keep an eye out for new ones.</p>
+<p>✅️ Use OpenZeppelin, the community-vetted standard for smart contract development.</p>
+<p>✅️ Build and care for your community.</p>
+<hr>
+<h2>Ready to hire an auditing team?</h2>
+<p>That's us! :) The Zeppelin team can help you assess the quality of your project and
+processes. We'll take a deep and thorough dive into your code, with years of experience hacking,
+researching, and developing on blockchains, plus a little touch of Latin
+American fire, to give you and your users all the confidence you need to
+continue building the core systems of this new decentralized, global, and open economy.</p>
+<p>We're available for auditing services, so check out this information about
+<a href="https://zeppelin.solutions/security-audits/">security audits</a>.</p>
+<p>Thanks to <a href="https://notonlyowner.com/">Martín Abbatemarco</a> for editing this
+post, to the Zeppelin team for the continuous experimentation and feedback,
+and to <a href="https://blog.zeppelin.solutions/tagged/security">our customers</a> for
+trusting us and helping us better understand what makes a free software
+project awesome.</p>
+<hr>
+<h2>Be part of our community</h2>
+<ul>
+<li>Continue the discussion on our <a href="https://forum.zeppelin.solutions/">forum</a>
+</li>
+<li>Request a <a href="https://zeppelin.solutions/security-audits/">security audit</a>
+</li>
+<li>Even better, <a href="https://zeppelin.solutions/jobs/">join the team</a> 🚀</li>
+</ul>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/la-obsolescencia-de-java-8/" class="u-url">La obsolescencia de Java 8</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/la-obsolescencia-de-java-8/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-12-19T00:12:56-06:00" itemprop="datePublished" title="2018-12-19 00:12">2018-12-19 00:12</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>El lenguaje de programación Java se había diseñado para ser un lenguaje que funcionara sin tener que crear código específico para cada sistema donde se ejecutaba. También tenía algo que trataba de destacar frente a otros, que una vez “compilado” podía usarse el mismo “binario” en otras plataformas.</p>
+<p>Sin embargo, los planes para este lenguaje cambiaron hace tiempo por diversos motivos,<span id="more-299"></span> entre otros porque hay sistemas donde no se permite la ejecución de código privilegiado si no se tiene autorización del fabricante, como es el caso de Apple en su sistema operativo macOS.</p>
+<p>En la actualidad los propios autores de Java invitan a distribuir la máquina virtual con el propio programa creado en este para que pueda ejecutarse. Esto desvirtúa la utilidad con la que fue diseñado, no teniendo mayores ventajas con respecto a otros lenguajes de programación que podrían considerarse más eficientes.</p>
+<p>Hay diversos motivos por los que distribuir programas sin el entorno de ejecución de Java y su máquina virtual han quedado relegados a nichos muy particulares (por ejemplo, servlets de contenedores EE, applets de hardware empotrado y Android) y fuera del software tradicional de escritorio. Por ejemplo, para ejecutar programas en macOS sin bloqueos de seguridad por no estar firmados, siendo obligatorio si el programa se pretende distribuir en la App Store.</p>
+<p>A partir de la versión Java 11 se ha eliminado la tecnología Web Start del entorno de ejecución. Tampoco hay un instalador para usuarios finales, por lo que Java 8 es el último que se ofrece en el sitio web java.com, como parte de esta transición. Una salida que tienen los distribuidores de software desarrollado en Java para ambientes de escritorio pasa por incluir un <a href="https://adoptopenjdk.net/" target="_blank" rel="noopener noreferrer">entorno de ejecución OpenJDK</a>. En una entrada anterior de este blog ya se mencionó esta necesidad.</p>
+<p>Cabe mencionar que existe software de escritorio muy dependiente de Java, como es el caso de la firma de documentos PDF, donde las mejores librerías para manipular documentos con este tipo de elementos están programadas en Java. La implementación de referencia del estándar PAdES (DSS) utiliza este lenguaje, ya que librerías como iText/OpenPDF y Apache PDFBox siguen siendo las mejores para este propósito.</p>
+<p>Herramientas implementadas en Java como el Firmador de documentos que hemos realizado utilizan todavía Java para toda la interfaz. Incluso está disponible una <a href="https://firmador.app/firmador.jnlp">versión Web Start de Firmador</a> (requiere tener Java 8 instalado o bien OpenJDK con Icedtea-web), demostrando de la mejor forma una tecnología obsoleta. Hay planes de crear una versión de Firmador que utilice Java solamente para la parte que sea necesaria. El resto utilizaría otro lenguaje de programación más portable y eficiente.</p>
+<p>Cabe mencionar que para utilizar la obsoleta tecnología Web Start se ha requerido firmar el código con un certificado digital específico que tiene un costo anual significativo, sin embargo ya era necesario hacerse uno para crear ejecutables sin que aparezca el fatídico mensaje de “Windows protegió su PC”, por lo que la inversión estaba pensada para este caso. Para el caso de macOS también hay que costear aparte otro certificado oneroso para distribuir software.</p>
+<p>En cuanto al sector público, los firmadores ya distribuían el entorno de ejecución de Java con sus propios instaladores, por lo que ya están preparados para <a href="https://www.oracle.com/technetwork/java/java-se-support-roadmap.html" target="_blank" rel="noopener noreferrer">el fin de Java 8</a> en los próximos meses.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/instalar-firma-digital-costa-rica-gnu-linux-fedora/" class="u-url">Cómo instalar Firma Digital de Costa Rica en GNU/Linux Fedora 30</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/instalar-firma-digital-costa-rica-gnu-linux-fedora/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-10-25T19:10:09-06:00" itemprop="datePublished" title="2018-10-25 19:10">2018-10-25 19:10</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en el sistema operativo Fedora Workstation 30.<span id="more-14"></span></p>
+<p>Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones openSUSE Leap y Suse Linux Enterprise Server y Desktop, existe la guía sobre <a href="../instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/">cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1</a>. Para Debian y Ubuntu está la guía de <a href="../instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/">cómo instalar Firma Digital de Costa Rica en Debian y Ubuntu</a>.</p>
+<p>Esta guía de instalación tiene los siguientes propósitos:</p>
+<ul>
+<li>Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.</li>
+<li>Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.</li>
+<li>Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales).</li>
+</ul>
+<h2>Instalación de las dependencias</h2>
+<ul>
+<li>Instalar el soporte CCID de PC/SC para que reconozca el lector de tarjetas e IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets java, ya no es posible usar el del sitio web de la CCSS) y OpenJFX si pretende usarse algún firmador que lo use (NexU, por ejemplo).
+<pre>sudo dnf -y install pcsc-lite icedtea-web java-1.8.0-openjdk-openjfx</pre>
+</li>
+</ul>
+<h2>Descarga del “instalador”</h2>
+<ul>
+<li>Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de <a href="https://www.soportefirmadigital.com/">Soporte Firma Digital de Costa Rica</a>, introduciendo el número de serie de la tarjeta y aceptando las condiciones.</li>
+<li>Descomprimir el archivo zip descargado con <kbd>unzip</kbd>, en el momento de escribir esta documentación se llama <kbd>sfd_ClientesLinux_RPM64_Rev11.zip</kbd>. Se creará una carpeta llamada <kbd>Firma Digital</kbd>. Se asume que el archivo zip se ha descargado en la carpeta <kbd>Descargas</kbd>:
+<pre>cd ~/Descargas/
+
+unzip sfd_ClientesLinux_RPM64_Rev11.zip
+</pre>
+</li>
+</ul>
+<h2>Instalación de los certificados</h2>
+<p>Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. Para ello, un conjunto de comandos:</p>
+<ul>
+<li>Copiar los certificados:
+<pre>sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/share/pki/ca-trust-source/anchors/
+</pre>
+</li>
+<li>Regenerar los archivos de certificados para todas las aplicaciones:
+<pre>sudo update-ca-trust
+</pre>
+</li>
+</ul>
+<h2>Instalación del módulo PKCS#11</h2>
+<p>Aunque hay un módulo en el directorio <kbd>Librerías</kbd>, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.</p>
+<ul>
+<li>Instalar el módulo PKCS#11 privativo en <kbd>/usr/lib64/</kbd>:
+<pre>cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/RPM/
+
+rpm2cpio idprotectclient-641.01-0.x86_64.rpm | cpio -dim ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib64/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/
+</pre>
+</li>
+<li>Permitir temporalmente al usuario local cargar aplicaciones gráficas con sudo (para gedit):
+<pre>xhost si:localuser:root
+</pre>
+</li>
+<li>Crear el fichero <kbd>/etc/Athena/IDPClientDB.xml</kbd> y abrirlo para edición:
+<pre>sudo mkdir /etc/Athena/
+
+sudo gedit /etc/Athena/IDPClientDB.xml
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;IDProtect&gt;
+ &lt;TokenLibs&gt;
+  &lt;IDProtect&gt;
+   &lt;Cards&gt;
+    &lt;IDProtectXF&gt;
+     &lt;ATR type='hexBinary'&gt;3BDC00FF8091FE1FC38073C821106600000000000000&lt;/ATR&gt;
+     &lt;ATRMask type='hexBinary'&gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&lt;/ATRMask&gt;
+    &lt;/IDProtectXF&gt;
+   &lt;/Cards&gt;
+  &lt;/IDProtect&gt;
+ &lt;/TokenLibs&gt;
+&lt;/IDProtect&gt;
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/usr/share/p11-kit/modules/firma-digital.module</kbd> y abrirlo para edición:
+<pre>sudo gedit /usr/share/p11-kit/modules/firma-digital.module
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --symlink /usr/lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib64/libASEP11.so
+</pre>
+</li>
+</ul>
+<p>Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios.</p>
+<p>Quizás resulte interesante utilizar la herramienta <a href="https://firmador.app" target="_blank" rel="noopener noreferrer">Firmador</a>, software libre para firmar documentos.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/20180726road-to-mozillaactivate-el-salvador-2018/" class="u-url">Road to #MozillaActivate, El Salvador 2018</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/20180726road-to-mozillaactivate-el-salvador-2018/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-07-26T16:07:36-06:00" itemprop="datePublished" title="2018-07-26 16:07">2018-07-26 16:07</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Holi,</p>
+<p>No se ustedes, pero de tanto estar viajando no me ha quedado demasiado tiempo para hacer tutoriales, pero me encanta documentar las cosas asi que esta vez vamos a hablar sobre la fundación Mozilla y porque fue que pare una semana en El Salvador. Bienvenidos.</p>
+<h2>Antecedentes ( esto ya parece un informe jajaja, pero vamos a hacerlo bonito).</h2>
+<p>El año pasado para <a href="https://themicrofcontrol.wordpress.com/2017/08/06/experiencias-encuentro-centroamericano-de-software-libre-costa-rica-2017/">el encuentro Centroamericano de Software Libre, Costa Rica 2017 </a>hubo un evento alterno llamado #mozillaActivate, resulta que en el mismo encuentro hubo gente de #mozillaCentroamerica invitando a mas gente a unirse al movimiento de una internet libre, respetuosa con la privacidad y los derechos ( sí sé que suena medio raro,  pero lo que mozilla incentiva es que tengamos una internet libre y que todos seamos tratados por igual) a mi me parece excelente muchas cosas que esta haciendo Mozilla hasta que me dieron en el kokoro con algo llamado <em>Web of things</em>, que es una solución para el internet de las cosas preparada por Mozilla que realmente tiene un muy muy buen punto a su favor, Es realmente sencillo crear soluciones con su propuesta.<br>
+El contacto directo con Mozilla Centroamérica fue MoziKarlita, que amablemente nos invito a ser parte de Mozilla Centroamérica y pues con Lexo, dijimos esta bien.</p>
+<h2>Preparación del evento</h2>
+<p>Ponernos de acuerdo fue lento, tedioso y complicado.<br>
+Lo sé son palabras duras para un equipo que ya había trabajado junto, en este caso nosotros como integrantes nuevos de Mozilla Centroamérica y primeros miembros de Mozilla Guatemala fue un poco confuso saber como ayudar, ellos tenían sus métodos para hacer las cosas y yo y mis manías por andar mandando no se sintieron bien.</p>
+<p>Realmente de lo único que puedo quejarme fue de que entre todo dejamos muchas cosas para el ultimo minuto, como yo por ejemplo perdiendo mi tarjeta del banco sin haber comprado los boletos de ida y vuelta a El Salvador, los que me siguen en Instagram, facebook y Twitter (@yeffrimic) se dieron cuenta de que mi mente andaba en otro lado y pues aquí oficialmente me disculpo, La cague jajaja.</p>
+<p>La parte mas complicada de todo fue el hecho de que nadie quiso tomar la batuta de líder al principio  y se tuvieron que hacer malabares para que mozilla nos autorizara el evento y nos patrocinara. Al final y lo que importa fue que Mozilla nos aprobó el patrocinio (gracias David) y pues bueno ya teníamos todo preparado, charlas, presentaciones, lugar para dar las charlas asi que yeii, ya había viaje confirmado para El Salvador, Mozilla Activate y ECSL alla vamos.</p>
+<h3>Nos vamos a San Salvador, Gracias Mozilla</h3>
+<p><img data-attachment-id="2262" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/20180710_083538/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg" data-orig-size="3264,2448" data-comments-opened="1" data-image-meta='{"aperture":"1.7","credit":"","camera":"SM-G955X","caption":"","created_timestamp":"1531211737","copyright":"","focal_length":"2.95","iso":"100","shutter_speed":"0.02","title":"","orientation":"1"}' data-image-title="20180710_083538" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=740" class="alignnone size-full wp-image-2262" src="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=740" alt="20180710_083538" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=1480 1480w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/20180710_083538.jpg?w=1024 1024w" sizes="(max-width: 740px) 100vw, 740px">Él es Lexo, vive a 12 horas de la Ciudad de Guatemala y como a 24 de San Salvador.</p>
+<p>Bueno al final llegamos a San Salvador, salimos mas o menos a las 7 am y llegamos al medio día, listos para descansar y preparar todo para el día D</p>
+<h2>Día de exposiciones</h2>
+<p>Dejo la hermosa agenda aqui y dare mis impresiones de todos.</p>
+<p><a href="https://docs.google.com/document/d/1v9SlhDQ9EHm0Tdn14UlzivmkibtT08yIvotK7XAawcI/edit?usp=sharing" rel="nofollow">https://docs.google.com/document/d/1v9SlhDQ9EHm0Tdn14UlzivmkibtT08yIvotK7XAawcI/edit?usp=sharing</a></p>
+<p>Todos y cada uno de los que están en Mozilla CentroAmerica como representantes o asistieron como conferencistas al Mozilla Activate son unos putos cracks.</p>
+<p>Empezando con Aaron y su increible manera de exponer porque Mozilla y no solo firefox sino todo lo que representa la fundación es de las mejores cosas en internet hoy en dia.</p>
+<p><img data-attachment-id="2286" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059894245955053519/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059894245955053519" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=740" class="alignnone size-full wp-image-2286" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=740" alt="photo5059894245955053519" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053519.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p> </p>
+<p>Roni y su dominio con los temas de privacidad en la red</p>
+<p><img data-attachment-id="2274" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428666/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428666" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=740" class="alignnone size-full wp-image-2274" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=740" alt="photo5059856768070428666" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428666.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p>no hablemos de Lexo, Carcamo con Rust que los vi por allí haciendo travesuras con uno de los lenguajes mas nuevos y potentes del momento.</p>
+<p><img data-attachment-id="2285" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428659/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428659" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=740" class="alignnone size-full wp-image-2285" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=740" alt="photo5059856768070428659" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428659.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p> </p>
+<p><img data-attachment-id="2273" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428660/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428660" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=740" class="alignnone size-full wp-image-2273" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=740" alt="photo5059856768070428660" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428660.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p>Me impresiono bastante lo que puede hacer Firefox con web VR a cargo de David</p>
+<p><img data-attachment-id="2284" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059894245955053522/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059894245955053522" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=740" class="alignnone size-full wp-image-2284" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=740" alt="photo5059894245955053522" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059894245955053522.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p> </p>
+<p>Jorge estuvo hablando sobre programacion de videojuegos pero murphy fue su enemigo mortal no pudiendo proyectar porque el adaptador que tenía no funcionaba <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f626.png" alt="😦" class="wp-smiley" style="height: 1em; max-height: 1em;"><br><img data-attachment-id="2272" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428656/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428656" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=740" class="alignnone size-full wp-image-2272" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=740" alt="photo5059856768070428656" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428656.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"><br>
+aqui esta con lexo tratando de solucionarlo, no se para que usan mac jajaja</p>
+<p>moziKarlita hablando sobre la comunidad de mozilla y como ser parte de ella tambien alentó a muchos jovenes que estaban presentes.</p>
+<p><img data-attachment-id="2282" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428664/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428664" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=740" class="alignnone size-full wp-image-2282" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=740" alt="photo5059856768070428664" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428664.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p> </p>
+<p>y yo merengues hablando sobre lo que me encanta Internet de las cosas con al go llamado Mozilla IOT, y su web de las cosas, adjunto la <a href="https://docs.google.com/presentation/d/1sSc-7YYbH4M4ftplGg6r0cOlX0hKRHsp60Yn5rNCEB0/edit?usp=sharing" target="_blank" rel="noopener">presentación</a> para que le echen un ojo, como he dicho antes esta es una excelente iniciativa de parte de Mozilla y todos los voluntarios para el internet de las cosas</p>
+<p><img data-attachment-id="2287" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059856768070428668/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg" data-orig-size="960,1280" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059856768070428668" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=225" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=740" class="alignnone size-full wp-image-2287" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=740" alt="photo5059856768070428668" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=113 113w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=225 225w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo5059856768070428668.jpg 960w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p> </p>
+<p>Bueno, después de organizar, moverse y el calor de San Salvador cada uno fue cayendo a lo largo de la semana dormido por el cansancio unos en el ECSL y otros en el dia social y yo que siempre andaba con sueño.</p>
+<p><img data-attachment-id="2275" data-permalink="https://themicrofcontrol.wordpress.com/2018/07/26/road-to-mozillaactivate-el-salvador-2018/photo5059894245955053517-2/" data-orig-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg" data-orig-size="1280,960" data-comments-opened="1" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="photo5059894245955053517" data-image-description="" data-medium-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=300" data-large-file="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=740" class="alignnone size-full wp-image-2275" src="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=740" alt="photo5059894245955053517" srcset="https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=740 740w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=150 150w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=300 300w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=768 768w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg?w=1024 1024w, https://themicrofcontrol.files.wordpress.com/2018/07/photo50598942459550535171.jpg 1280w" sizes="(max-width: 740px) 100vw, 740px"></p>
+<p>Al final fue una experiencia increible hablandole a poco mas de 100 patojos( jovenes ) acerca de las bondades de fundación mozilla el proximo año será en Guatemala asi que quedan todos invitados a asistir.  No les conté muchas cosas que sucedieron para que el proximo año nos acompañen en Guatemala jajaja.</p>
+<p>Con esto termino el articulo del dia de hoy pronto mas acerca de las microfaventuras .</p>
+<p>Recuerden, solo necesitan una excusa para cambiar el mundo.</p>
+<p> </p>
+<p> </p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/guias-instalacion-firma-digital-gnu-linux-actualizadas/" class="u-url">Guías de instalación de Firma Digital en GNU/Linux actualizadas</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        JáquerEspeis
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/guias-instalacion-firma-digital-gnu-linux-actualizadas/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-07-21T04:07:34-06:00" itemprop="datePublished" title="2018-07-21 04:07">2018-07-21 04:07</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Se han actualizado las guías de instalación de Firma Digital de Costa Rica para GNU/Linux para Ubuntu y Fedora. Los cambios amplían la cantidad de software soportado, mayor estabilidad y otras ventajas.<span id="more-242"></span></p>
+<h2>Aislamiento de la librería en caja de arena</h2>
+<p>Una de las mejoras comunes en ambos sistemas permiten el aislamiento de la librería privativa en una “caja de arena” (sandbox). El propósito de este aislamiento es evitar caídas de los programas cuando dos usuarios distintos del mismo sistema tratan de acceder a la tarjeta. Esto es debido a que la librería <kbd>libASEP11.so</kbd> genera unos temporales en el directorio <kbd>/tmp/</kbd> con un usuario, pero cuando intenta crearlos desde otro usuario diferente, la librería genera un error de segmentación que se propaga a la aplicación que la está utilizando.</p>
+<p>Para solucionar el problema se utiliza un sistema de caja de arena que puede lanzarse sin privilegios administrativos mediante la herramienta <kbd>bubblewrap</kbd>, que permite montar en un espacio de nombres vacío del espacio de usuario la librería, por lo que en el caso de que dos usuarios del sistema utilicen la librería, la ruta <kbd>/tmp/</kbd> estará aislada en ambos casos, no existiendo en el sistema de ficheros físico, evitando el problema mencionado.</p>
+<p>Otra ventaja que se obtiene con este aislamiento es que la librería no genera el directorio oculto <kbd>~/.ase/</kbd> en los directorios de los usuarios, que llega a suponer una molestia cuando se generan búsquedas, ya que el directorio lo genera con permisos que impiden su acceso por defecto. Por otra parte, al tratarse de software privativo y no poder auditar el código fuente, el aislamiento mejora ligeramente la seguridad sobre lo que pueda realizar esta librería.</p>
+<p>Otra característica que permite resolver este defecto es poder utilizar la tarjeta de Firma Digital para iniciar sesión con el PIN de la tarjeta de Firma Digital, desde la ventana de selección de usuario (gdm, GNOME Display Manager) si se configura localmente con algún mecanismo tipo pam_pkcs11. Antes no se podía realizar porque el plug-in gsd-smartcard de GNOME Settings Daemon, encargado de comunicarse con la tarjeta, se ejecuta con otro usuario distinto al de la sesión (en este caso, <kbd>gdm</kbd>). Antes de esta solución, cuando un usuario inicia sesión en el sistema, ese servicio quedaba activo con los ficheros generados en <kbd>/tmp/</kbd> y provocaba que cualquier proceso que utilizara Firma Digital en la sesión de usuario se cerrara automáticamente, provocando gran inestabilidad.</p>
+<p>El método que se ha emplado para resolverlo ha sido mediante la característica <kbd>remote</kbd> de <kbd>p11-kit</kbd>. P11-kit es parte del proyecto p11-glue, cuyo propósito es actuar de “pegamento” para consolidar todas las herramientas criptográficas del sistema y permitir estandarizar el acceso a servicios con dispositivos PKCS#11 de forma unificada. En la actualidad dispone de integración con características PKCS#11 de GnuTLS, NSS, OpenSSL, OpenSC, Java, y otros, así como la confianza de las autoridades de certificación (CA).</p>
+<p>Hasta ahora se estaba utilizando p11-kit con un módulo que hacía referencia a una librería local (libASEP11.so). Sin embargo, p11-kit permite cargar módulos de forma remota, que puede resultar interesante para utilizar un dispositivo criptográfico existente en otra computadora, si bien en esta solución no se ejecuta nada remoto sino que sigue en local. El parámetro remote permite lanzar un comando personalizado que en este caso invoca el ejecutable <kbd>brwap</kbd> de bubblewrap, aislando la librería en esta caja de arena.</p>
+<p>Gracias a esta mejora, en próximas entradas de blog explicaría cómo iniciar sesión en el sistema mediante Firma Digital y cómo bloquear la pantalla (sesión) extrayendo la tarjeta del lector.</p>
+<h2>Soporte de NSS (Chromium, Evolution, Acceso a llaveros) en Ubuntu</h2>
+<p>Se ha actualizado la guía de Ubuntu para incorporar un reemplazo de la librería NSS genérica del sistema (NSS es la librería de servicios de seguridad de Mozilla), utilizada (además de Firefox y Thunderbird) por el navegador Chromium, cliente de correo Evolution o el acceso a llaveros, para poder utilizar Firma Digital desde ellos. Esto ya era posible con la guía de Fedora, pero no en Ubuntu hasta ahora.</p>
+<h2>Integración mejorada en Fedora</h2>
+<p>Fedora, así como Red Hat, ha sido siempre la distribución GNU/Linux que desde mi punto de vista se ha esforzado más en integrar los sistemas criptográficos, utilizados en sector público y corporativo. En la última actualización que se incluye a partir de Fedora 29 completan la consolidación para poder cargar el módulo p11-kit-proxy desde la configuración de política de NSS para poder cargar módulos de terceros sin tener que realizar enlaces simbólicos como hasta ahora.</p>
+<p>Fedora ya llevaba tiempo reemplazando libnssckbi.so (librería de módulos de seguridad de NSS) con p11-kit-trust por defecto, algo que permite unificar la confianza en los certificados de las CA de forma centralizada. También está unificada la configuración de cifrados utilizados en TLS a nivel de todo el sistema, para prevenir brechas de seguridad por configuraciones débiles. En este aspecto es indiscutiblemente la distribución mejor preparada, así como los aportes con los que se han beneficiado otras distribuciones, ya que se esfuerzan en que estas mejoras se incorporen en las versiones oficiales del software (upstream).</p>
+<p>En una próxima entrada de blog mostraré cómo iniciar sesión localmente (sin sssd, usando pam_pkcs11 con mapeo local, sin LDAP) con la tarjeta de Firma Digital.</p>
+                </div>
+            </article>
+</div>
+    
+        <ul class="pager postindexpager clearfix">
+<li class="next"><a href="index-2.html" rel="next">Older posts</a></li>
+        </ul>
+<!--End of body content--><footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+ - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("en");
+        fancydates(1, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

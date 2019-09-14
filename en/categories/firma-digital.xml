@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JáquerEspeis (Posts about Firma digital)</title><link>http://jaquerespeis.org/</link><description></description><atom:link href="http://jaquerespeis.org/en/categories/firma-digital.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:jaquerespeis@googlegroups.com"&gt;JáquerEspeis&lt;/a&gt; 
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;Publicado bajo una licencia &lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons Attribution-ShareAlike 4.0 International&lt;/a&gt;.
+</copyright><lastBuildDate>Sat, 14 Sep 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cómo usar Firma Digital en SICOP desde GNU/Linux</title><link>http://jaquerespeis.org/en/posts/como-usar-firma-digital-en-sicop-desde-gnu-linux/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Para quien utilice el sitio web del SICOP sabrá que se hace uso de un componente de firma. Este componente en la actualidad se ha publicado para Windows y macOS pero también funciona en GNU/Linux y no sería necesario usar Windows para estas tareas.&lt;span id="more-444"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Para hacerlo funcionar, se pueden seguir los siguientes pasos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Para que el componente inicie, ha de existir una carpeta llamada Documents dentro de nuestra carpeta de usuario (algo así como /home/tunombredeusuario/Documents/). La forma universal para crearla es mediante el comando &lt;kbd&gt;mkdir ~/Documents&lt;/kbd&gt;. Ojo porque es Documents, no Documentos.
+&lt;/li&gt;&lt;li&gt;Dirigirse al sitio web del Componente Firma, &lt;a href="http://www.componentefirmacr.go.cr" target="_blank" rel="noopener noreferrer"&gt;www.componentefirmacr.go.cr&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Clic en Descargas, clic en el botón Seleccionar a la derecha del Instalador Mac OS X (no importa si es para Mac aunque tengamos GNU/Linux).&lt;/li&gt;
+&lt;li&gt;Pedirá una dirección de correo electrónico por si se quieren recibir notificación de actualizaciones. Finalmente clic en Descargar.&lt;/li&gt;
+&lt;li&gt;Una vez descargado, el fichero Componente_Firma.pkg se puede desempaquetar con doble clic en Nautilus del entorno de escritorio GNOME. Si se utiliza otro entorno y la herramienta de descompresión no reconoce archivos pkg (xar) se puede descomprimir con la herramienta xar mediante &lt;kbd&gt;xar -xf Componente_Firma.pkg&lt;/kbd&gt;. Se creará una carpeta Componente_Firma.&lt;/li&gt;
+&lt;li&gt;Doble clic en la carpeta y dentro habrá una carpeta llamada Main.pkg.&lt;/li&gt;
+&lt;li&gt;Doble clic en la carpeta y dentro habrá un archivo comprimido llamado Payload.&lt;/li&gt;
+&lt;li&gt;En Nautilus en algunos escritorios se puede desempaquetar con doble clic o se abrirá una herramienta de descompresión. Si no, se puede hacer clic secundario -&amp;gt; Extraer a… y elegir por ejemplo la carpeta actual, donde creará una carpeta Payload (1) o similar. También se puede descomprimir de la forma tradicional con &lt;kbd&gt;tar xf Payload&lt;/kbd&gt;.&lt;/li&gt;
+&lt;li&gt;Doble clic en la carpeta descomprimida de Payload y aparecerá otra carpeta dentro llamada Componente_Firma.app.&lt;/li&gt;
+&lt;li&gt;Doble clic en la carpeta Componente_Firma.app y aparecerá otra carpeta dentro llamada Contents.&lt;/li&gt;
+&lt;li&gt;Doble clic en la carpeta Contents y aparecerán varias carpetas, entre ellas una llamada Java.&lt;/li&gt;
+&lt;li&gt;Doble clic en la carpeta Java. Aparecerá un archivo llamado MerlinkSignMV.jar.&lt;/li&gt;
+&lt;li&gt;En algunos sistemas se puede lanzar el jar con doble clic (Ubuntu) y se quedará cargado en memoria (no se abre ninguna ventana), en otros se puede lanzar desde la terminal con &lt;kbd&gt;java -jar MerlinkSignMV.jar&lt;/kbd&gt;. Se ha verificado que funciona con OpenJDK 8.
+&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Eso es todo. Tras realizar estos pasos se debería poder cargar el sitio web de SICOP en el navegador Chromium y hacer uso de Firma Digital para las operaciones habituales. En navegadores como Firefox o Epiphany el sitio web de SICOP no funciona porque usa protocolos y cifrados de seguridad obsoletos e inseguros y Firefox o Epiphany prefieren protegen a sus usuarios.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/como-usar-firma-digital-en-sicop-desde-gnu-linux/</guid><pubDate>Thu, 12 Sep 2019 10:09:00 GMT</pubDate></item><item><title>Cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1</title><link>http://jaquerespeis.org/en/posts/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en el sistema operativo openSUSE Leap 15.1, SUSE Linux Enterprise Server 15 SP1 y SUSE Linux Enterprise Desktop 15 SP1.&lt;span id="more-396"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones Fedora y Red Hat Enterprise Linux, existe la guía sobre &lt;a href="http://jaquerespeis.org/instalar-firma-digital-costa-rica-gnu-linux-fedora/"&gt;cómo instalar Firma Digital de Costa Rica en Fedora, Red Hat Enterprise Linux 8 y CentOS 8&lt;/a&gt;. Para Debian y Ubuntu está la guía de &lt;a href="http://jaquerespeis.org/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/"&gt;cómo instalar Firma Digital de Costa Rica en Debian y Ubuntu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esta guía de instalación tiene los siguientes propósitos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.&lt;/li&gt;
+&lt;li&gt;Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.&lt;/li&gt;
+&lt;li&gt;Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación de las dependencias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el soporte CCID de PC/SC para que reconozca el protocolo usado por el lector de tarjetas Instalar IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets Java, ya no es posible usar el del sitio web de la CCSS).
+&lt;pre&gt;sudo zypper install -y pcsc-ccid icedtea-web
+
+sudo systemctl restart pcscd.socket
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Descarga del “instalador”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de &lt;a href="https://www.soportefirmadigital.com/"&gt;Soporte Firma Digital de Costa Rica&lt;/a&gt;, introduciendo el número de serie de la tarjeta y aceptando las condiciones.&lt;/li&gt;
+&lt;li&gt;Descomprimir el archivo zip descargado con &lt;kbd&gt;unzip&lt;/kbd&gt;, en el momento de escribir esta documentación se llama &lt;kbd&gt;sfd_ClientesLinux_RPM64_Rev11.zip&lt;/kbd&gt;. Se creará una carpeta llamada &lt;kbd&gt;Firma Digital&lt;/kbd&gt;. Se asume que el archivo zip se ha descargado en la carpeta &lt;kbd&gt;Descargas&lt;/kbd&gt;:
+&lt;pre&gt;cd ~/Descargas/
+
+unzip sfd_ClientesLinux_RPM64_Rev11.zip
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación de los certificados&lt;/h2&gt;
+&lt;p&gt;Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. Para ello, un conjunto de comandos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copiar los certificados:
+&lt;pre&gt;sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/share/pki/trust/anchors/
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación del módulo PKCS#11&lt;/h2&gt;
+&lt;p&gt;Aunque hay un módulo en el directorio &lt;kbd&gt;Librerías&lt;/kbd&gt;, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el módulo PKCS#11 privativo en &lt;kbd&gt;/usr/lib64/&lt;/kbd&gt;:
+&lt;pre&gt;cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/RPM/
+
+rpm2cpio idprotectclient-641.01-0.x86_64.rpm | cpio -dim ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib64/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Permitir temporalmente al usuario local cargar aplicaciones gráficas con sudo (kate o gedit, según se use KDE o GNOME):
+&lt;pre&gt;export SUDO_EDITOR=kate
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear el fichero &lt;kbd&gt;/etc/Athena/IDPClientDB.xml&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo mkdir /etc/Athena/
+
+sudoedit /etc/Athena/IDPClientDB.xml
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;&amp;lt;?xml version="1.0" encoding="utf-8" ?&amp;gt;
+&amp;lt;IDProtect&amp;gt;
+ &amp;lt;TokenLibs&amp;gt;
+  &amp;lt;IDProtect&amp;gt;
+   &amp;lt;Cards&amp;gt;
+    &amp;lt;IDProtectXF&amp;gt;
+     &amp;lt;ATR type='hexBinary'&amp;gt;3BDC00FF8091FE1FC38073C821106600000000000000&amp;lt;/ATR&amp;gt;
+     &amp;lt;ATRMask type='hexBinary'&amp;gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&amp;lt;/ATRMask&amp;gt;
+    &amp;lt;/IDProtectXF&amp;gt;
+   &amp;lt;/Cards&amp;gt;
+  &amp;lt;/IDProtect&amp;gt;
+ &amp;lt;/TokenLibs&amp;gt;
+&amp;lt;/IDProtect&amp;gt;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/usr/share/p11-kit/modules/firma-digital.module&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudoedit /usr/share/p11-kit/modules/firma-digital.module
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --ro-bind /lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib64/libASEP11.so
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/usr/sbin/update-p11-kit-nss-proxy&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudoedit /usr/sbin/update-p11-kit-nss-proxy
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;#!/bin/sh
+
+if ! [ -L /usr/lib64/libnssckbi.so ]
+then
+    echo libnssckbi.so is not a symbolic link. Backing up...
+    mv -f /usr/lib64/libnssckbi.so /usr/lib64/libnssckbi.so.bak
+fi
+
+if ! [ "$(readlink /usr/lib64/libnssckbi.so)" = p11-kit-proxy.so ]
+then
+    echo libnssckbi.so is not pointing to p11-kit-proxy.so. Fixing...
+    ln -sf p11-kit-proxy.so /usr/lib64/libnssckbi.so
+fi
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Agregar el atributo de ejecutable al script:
+&lt;pre&gt;sudo chmod +x /usr/sbin/update-p11-kit-nss-proxy
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/etc/systemd/system/p11-kit-nss-proxy.service&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudoedit /etc/systemd/system/p11-kit-nss-proxy.service 
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;[Unit]
+Description=Update libnssckbi.so symbolic link
+Wants=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/update-p11-kit-nss-proxy
+
+[Install]
+WantedBy=default.target
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/etc/systemd/system/p11-kit-nss-proxy.path&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudoedit /etc/systemd/system/p11-kit-nss-proxy.path
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;[Unit]
+Description=Watch for changes in libnssckbi.so
+After=local-fs.target
+
+[Path]
+Unit=p11-kit-nss-proxy.service
+PathChanged=/usr/lib64/libnssckbi.so
+
+[Install]
+WantedBy=default.target
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Activar el servicio para que se ejecute al detectar cambios en la ruta:
+&lt;pre&gt;sudo systemctl enable --now p11-kit-nss-proxy.path
+
+sudo touch /usr/lib64/libnssckbi.so
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios.&lt;/p&gt;
+&lt;p&gt;Quizás resulte interesante utilizar la herramienta &lt;a href="https://firmador.app" target="_blank" rel="noopener noreferrer"&gt;Firmador&lt;/a&gt;, software libre para firmar documentos.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/</guid><pubDate>Mon, 03 Jun 2019 13:06:37 GMT</pubDate></item><item><title>Firma PDF avanzada: cuando LTV no es lo mismo que LTV</title><link>http://jaquerespeis.org/en/posts/firma-pdf-avanzada-cuando-ltv-no-es-lo-mismo-que-ltv/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;En Costa Rica, la “Política de Formatos Oficiales de los Documentos Electrónicos Firmados Digitalmente”, versión 1.0, indica en su punto 5, “Especificación de los Formatos Oficiales”, los formatos avanzados y configuración de niveles de los documentos firmados. Para el caso del formato PDF, indica que se basa en la norma técnica “ETSI TS 102 778”, indicado textualmente como “&lt;em&gt;PAdES Long Term&lt;/em&gt; (PAdES LTV)”.&lt;span id="more-372"&gt;&lt;/span&gt; Lo que hay entre paréntesis se refiere al perfil PAdES-LTV, que se especifica en la parte 4 de esa norma de la ETSI (TS 102 778-4).&lt;/p&gt;
+&lt;p&gt;LTV puede resultar engañoso. Es un acrónimo que significa &lt;em&gt;Long Term Validation&lt;/em&gt; o validación a largo plazo. Sin embargo, hay dos interpretaciones: la de los estándares de la ETSI y la de Adobe. Y esto es un problema.&lt;/p&gt;
+&lt;p&gt;Quienes hayan utilizado &lt;em&gt;Adobe Acrobat Reader DC&lt;/em&gt; para validar firmas digitales habrán visto en el panel de firmas el texto “Activada para LTV” o “No activada para LTV y expirará el xx/xx/xxxx”. De hecho, en las guías oficiales de validación en los sitios de mifirmadigital.co.cr o incluso en las de soportefirmadigital.com indican que este es el mecanismo para indicar si una firma tiene el nivel necesario, aunque discrepo y por esa razón escribo esta entrada de blog tratando de explicar por qué.&lt;/p&gt;
+&lt;h2&gt;¿Qué es LTV, según Adobe?&lt;/h2&gt;
+&lt;p&gt;No hay una definición oficial o documentada por parte de Adobe. Algunos empleados de esa empresa han indicado su opinión sobre qué entienden ellos por LTV para que su validador lo muestre. Una &lt;a href="https://stackoverflow.com/a/26124267" target="_blank" rel="noopener noreferrer"&gt;respuesta en StackOverflow sobre el significado de activación LTV&lt;/a&gt; detalla que lo que interpreta Adobe sobre activación LTV no solo no es lo mismo que PAdES-LTV sino que su validador Adobe Acrobat Reader DC puede interpretar documentos que cumplan perfectamente la especificación PAdES-LTV como que no están activados como LTV. No obstante, la herramienta Firmador hace uso de la librería implementación de referencia de la Unión Europea y en las pruebas realizadas con el validador de Adobe Acrobat Reader DC en sus últimas versiones, habría mejorado para ser más compatible con PAdES e incluso tiene un apartado algo escondido donde indica el nivel de firma PAdES &lt;em&gt;Baseline&lt;/em&gt;, pero esto no se refleja en las guías de verificación de firma del país porque es un poco más complicado encontrarlo.&lt;/p&gt;
+&lt;p&gt;A su vez, validadores que no son de Adobe, como es el caso de la herramienta Firmador, pueden indicar que un documento no cumple con el nivel PAdES-LTV y sin embargo aparecer como “activada para LTV” en Adobe Acrobat Reader DC.&lt;/p&gt;
+&lt;p&gt;Si en Adobe Acrobat Reader DC se instalan los certificados intermedios en la lista de certificados confiados (tal y como sugiere la guía oficial de instalación de certificados para este programa), el documento puede mostrar para un documento PDF que su firma está activada para LTV, aunque el documento no contenga los certificados intermedios tal y como indica la especificación PAdES requerido para el nivel PAdES-LTV o también como lo menciona explícitamente la normativa nacional. Ni siquiera es necesario que el documento tenga un sello de tiempo a nivel firma, por lo que podría incluso ser un nivel tipo PAdES-B y aun así mostraría que está activada para LTV en Adobe Acrobat Reader DC. Si se instalara solamente el certificado raíz nacional y no los intermedios (como sería lo ideal) y se desconecta de Internet, la validación en Adobe Acrobat Reader DC probablemente fracasará, al no poder verificar CRL y OCSP en línea y también fallará al no poder descargar desde las URLs especificadas en la extensión &lt;em&gt;Authority Information Access&lt;/em&gt; (AIA) los certificados intermedios faltantes. Los documentos firmados con la herramienta Firmador sí pueden validarse sin conexión a Internet, como otra demostración de que incluyen toda la información necesaria para su validación.&lt;/p&gt;
+&lt;h2&gt;¿Qué es LTV, según ETSI? (PAdES-LTV)&lt;/h2&gt;
+&lt;p&gt;PAdES-LTV es un nivel de perfil que está especificado en el el documento ETSI TS 102 778-4. De toda la norma, hay un punto especialmente importante que no contempla Adobe pero que sí está en el estándar y es necesario para cumplir con él. Sin embargo, pocos firmadores en el país realizan este procedimiento correctamente: el PDF firmado requiere que incluya al menos un &lt;strong&gt;sello de tiempo a nivel documento&lt;/strong&gt; para cumplir con el nivel PAdES-LTV.&lt;/p&gt;
+&lt;p&gt;El sello de tiempo a nivel documento no es lo mismo que el sello de tiempo que llevan las firmas. Este sello cubre todo el documento, por lo que también cubre la información de revocación, para demostrar desde el momento que tiene el sello, la información no solo no se había modificado y por tanto que la información de validación de la firma (CRL y OCSP), sino que esta información existía así en ese momento, así como que los certificados eran vigentes y que todo ello era válido. Esto permite que aunque los certificados venzan, esta información siga siendo válida porque en su momento lo era. Esto está claramente especificado en la parte 4 de la norma, concretamente en el punto 4.2 párrafo b) y además indica en el anexo B que incluso en el nivel de perfil equivalente a CAdES-X-L debe llevar un sello de tiempo a nivel documento en los PDF.&lt;/p&gt;
+&lt;p&gt;Si un documento no incluye un sello de tiempo a nivel documento, cuando los certificados venzan, aunque la información fuera válida en su momento, el documento no podrá ampliar su nivel de firma a PAdES-LTV porque debería haberse añadido este sello de tiempo antes de que vencieran. No se resuelve intentando agregar este sello de tiempo cuando ya están vencidos. Un ejemplo práctico de este caso se puede comprobar con el validador de la herramienta Firmador y abriendo el documento PDF de la política de formatos oficiales. Aparecerá un error indicando que el estado de validación es indeterminado con el código de error interno “NO_POE”. PoE es &lt;em&gt;Proof of Existence&lt;/em&gt; o prueba de existencia, que está especificado en nuevas normas técnicas de ETSI que indican formalmente qué significa el sello de tiempo a nivel documento y sus implicaciones. Lo que indica esta definición es que no hay manera de demostrar si los certificados intermedios eran válidos antes de que vencieran, en el hipotético caso de que pudiera comprometerse la seguridad y emitir nuevos certificados equivalentes para la infraestructura. En Costa Rica no hay una definición de validación basada en especificaciones técnicas que se publicaron después, aunque el documento de formato oficial indica claramente en el punto (5.2.2) un conjunto de atributos que son comunes a todos los perfiles AdES &lt;em&gt;long term&lt;/em&gt; y que en el caso de Adobe en su validador de PDF puede indicar “activado para LTV” incluso aunque le falten los atributos de sello de tiempo, rutas de certificación e información de revocación dentro del documento.&lt;/p&gt;
+&lt;h2&gt;Firmador, LTV y LTA&lt;/h2&gt;
+&lt;p&gt;Los problemas con la confusión y acceso en aspectos de Firma Digital, más específicamente en documentos PDF, además de la falta de un software libre con código fuente de acceso público fueron las motivaciones por las que se creó la herramienta Firmador: disponer de una herramienta que firme y valide ajustándose lo mejor posible a los estándares y a la normativa de Costa Rica.&lt;/p&gt;
+&lt;p&gt;Tal y como indica la política de formato oficial del país, las implementaciones a medida pueden utilizar el perfil Baseline. Este perfil, especificado en la norma técnica TS 103 172 de ETSI, es bastante similar al anterior, aunque &lt;a href="https://ec.europa.eu/cefdigital/DSS/webapp-demo/doc/dss-documentation.html#_signatures_profile_simplification" target="_blank" rel="noopener noreferrer"&gt;simplifica los niveles con ciertas equivalencias&lt;/a&gt;, por ejemplo el nivel B incorpora BES y EPES, el nivel X-L equivale a LT y el nivel A o LTV equivale LTA. Por este motivo, la herramienta validador puede mostrar PAdES-BASELINE-LTA en lugar de PAdES-LTV, ya que utiliza los nombres simplificados del nuevo estándar, aunque a efectos prácticos se trate prácticamente de lo mismo.&lt;/p&gt;
+&lt;p&gt;La Unión Europea financió la creación de una librería como implementación de referencia que permitiera firmar documentos llamada &lt;em&gt;Digital Signature Services&lt;/em&gt; (no confundir con el estándar de la OASIS), que permite firmar con los formatos estándar XAdES, CAdES y PAdES, parte de los cuales son los estándares en Costa Rica, así como la validación, basada en nuevos estándares no contemplados por la normativa nacional hasta la fecha. Puesto que todo software puede contener errores, es conveniente utilizar siempre la versión más reciente de la librería. Por ejemplo, para la versión 5.4 de esta librería implementaron una opción para poder incluir sellos de tiempo de jerarquías no confiadas, ya que el servidor de la TSA del SINPE está firmado con la jerarquía de certificados nacional, entonces al agregar el nivel LT no se estaban incluyendo los certificados intermedios de la TSA y al realizar la validación LT sin conexión a Internet fallaba al no detectar los certificados intermedios que se utilizaban para el proceso de validación OCSP. También corrigen diversas vulnerabilidades, como las de tipo XXE.&lt;/p&gt;
+&lt;p&gt;Pueda o no gustar desarrollar en Java, que es con el lenguaje con el que se desarrolla esta implementación de referencia, es probablemente la mejor apuesta para trabajar con estos formatos, ya que simplifica enormemente el proceso de firma, requiriendo unas pocas líneas de código para firmar un documento, a diferencia de librerías como iText, con las que además se pueden agregar errores con facilidad con respecto a la especificación del formato.&lt;/p&gt;
+&lt;h2&gt;Compatibilidad con las implementaciones&lt;/h2&gt;
+&lt;p&gt;En el momento de escribir este artículo, el validador de documentos del Poder Judicial, bastante utilizado para presentar recursos en línea, no funciona correctamente cuando el documento incluye el sello de tiempo a nivel documento. Este problema se ha notificado al departamento correspondiente y se está a la espera de que se confirme una posible corrección.&lt;/p&gt;
+&lt;p&gt;Muchos firmadores no incluyen este sello de tiempo pero debería agregarse eventualmente por los motivos indicados. Si todavía son válidos, con la herramienta Firmador puede realizarse este procedimiento, no es necesario disponer de dispositivo de Firma Digital. Es conveniente que para un archivado longevo de documentos este proceso sea realizado por todas aquellas personas que almacenen documentos firmados.&lt;/p&gt;
+&lt;p&gt;La herramienta Firmador es capaz de firmar documentos sin conexión a Internet y agregar en otra ocasión todos los atributos necesarios sin intervención del firmante sino que lo puede hacer otra persona como puede ser quien reciba los documentos (receptor), tal y como indican los puntos 5.2.1 y 5.2.3 de la especificación del formato oficial de Costa Rica. Sin embargo, algunos validadores no reconocen bien la firma ampliada/extendida desde el nivel PAdES B-B a B-LTA posteriormente (lo que en el documento del formato oficial se refiere a “incluir los atributos” de niveles superiores), ya que agregar el sello de tiempo a la firma no se representa de la misma manera a como lo entienden los validadores de iText o el validador de Adobe, aunque este último sí reconocerá la inclusión de los atributos de la firma como “activada para LTV”.&lt;/p&gt;
+&lt;p&gt;Existen numerosos firmadores en el país que no agregan los atributos con los nombres adecuados y conforme al estándar, provocando que el validador que usa Firmador muestre la firma como PKCS7-T o similar en lugar de PAdES-T o superior. Aunque la firma básica sea válida en estos casos, no es conforme al estándar que rige. En estos casos en los que la firma no es conforme al estándar y no se resuelve extendiéndola, o en otros supuestos como de certificados vencidos y no extendida con sello de tiempo a nivel documento, la única solución pasa por eliminar la firma del documento y crear una nueva. Quizás en el caso en el que una especificación local relajara la exigencia sobre el formato de firma, un validador podría ser menos estricto por motivos de compatibilidad con documentos heredados de una herramienta que no se adaptó tan bien a los estándares en el pasado.&lt;/p&gt;
+&lt;h2&gt;Conclusiones y recomendaciones&lt;/h2&gt;
+&lt;p&gt;Es un hecho que debido a la evolución de las implementaciones del software y de los estándares se han ido acumulando dificultades en cómo deben firmarse los documentos de forma correcta y adaptada a los estándares. En los casos en que el software por ejemplo no indicaba si el LTV se refería al estándar PAdES y la falta de herramientas años atrás de mecanismos para validar si se estaba realizando correctamente causa estas asperezas, suponiendo que haya que realizar una mejora continua para actualizar los procesos que hagan uso de Firma Digital y tener conciencia de ello por parte de las personas encargadas en lo personal y en instituciones públicas y privadas.&lt;/p&gt;
+&lt;p&gt;El documento actual de la especificación del formato oficial está escrito cuidadosamente y de manera más sencilla posible para el entendimiento de personas no capacitadas técnicamente sobre cómo deben ser firmados los documentos, los tipos y especificaciones técnicas que deben cumplir y qué deben contener (atributos), así como lo más genérico posible para poder interpretarse en el futuro de forma compatible. Esto fue en 2013, cuando todavía en la Unión Europea no se había creado el estándar oficial eIDAS, que releva a las especificaciones previas, por ejemplo en el caso de PAdES las normas técnicas ETSI TS 102 778 (PAdES) y ETSI TS 103 172 (PAdES perfil &lt;em&gt;baseline&lt;/em&gt;) se actualizan con el estándar europeo ETSI EN 319 142, publicado por primera vez en 2015 (donde se agrega el concepto de prueba de existencia). También apareció el primer estándar europeo para validar documentos AdES, el ETSI EN 319 102, basado en la norma técnica ETSI TS 119 102 que se sigue actualizando con enmiendas que posteriormente actualizarán el estándar.&lt;/p&gt;
+&lt;p&gt;Sería conveniente que ya que hoy en día se dispone de estándares y software de validación mejor regulado en la Unión Europea, actualizar la normativa costarricense para adoptar selectivamente lo que permita de forma equivalente para disponer de un mecanismo de validación más sólido. El software de implementación de referencia (&lt;em&gt;Digital Signature Services&lt;/em&gt;) dispone de mecanismos ajustables para configurar de forma afinada qué puntos de la validación son requeridos u opcionales para poder configurarse de la forma más conveniente y adaptado a las necesidades nacionales.&lt;/p&gt;
+&lt;p&gt;Ejemplos de adaptación al sistema de validación ya existe en otros países fuera de la Unión Europea, como es el caso del Perú, que ya dispone de un sistema de validación nacional centralizado. Mientras no existan mecanismos precisos en Costa Rica, la herramienta Firmador utiliza los parámetros más predeterminados posibles (los utilizados en la Unión Europea) en el validador integrado, hasta que algún día, en caso de existir, pueda ajustarse a una normativa más precisa y local.&lt;/p&gt;
+&lt;p&gt;El motivo de regular la validación de forma más precisa permitiría disponer de mecanismos eficaces y más seguros para garantizar la seguridad y fiabilidad de los documentos firmados digitalmente, como es el caso de los documentos a largo plazo (el caso de los LTV aquí tratado), así como de cómo manejar la validación adecuadamente en la jerarquía nacional; por ejemplo si llega el caso en que nuevas autoridades de registro (RAs, certificados intermedios como el del BCCR) y se incorporasen al conjunto de jerarquías y documentos firmados bajo estas para validar. Sobre los aspectos de certificados intermedios y la forma de distribuirlos hay algunos aspectos que podrían mejorar también, pero eso será para otro artículo de blog.&lt;/p&gt;
+&lt;p&gt;La herramienta Firmador tiene previsto mejorar el reporte de validación de documentos para hacerlo más intuitivo y detallado. También está previsto este año publicar un validador web para quien quiera validar documentos sin necesidad de descargar software y que funcione en cualquier dispositivo que tenga conexión a Internet y un navegador web. Como en el caso de Firmador, se distribuirá como software libre, estando el código fuente del validador web para que cualquier persona pueda instalarlo en sus servidores y/o adaptarlo a sus necesidades.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/firma-pdf-avanzada-cuando-ltv-no-es-lo-mismo-que-ltv/</guid><pubDate>Fri, 24 May 2019 02:05:53 GMT</pubDate></item><item><title>Firmador 1.4.0 publicado</title><link>http://jaquerespeis.org/en/posts/firmador-1-4-0-publicado/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Se acaba de publicar la nueva versión de este firmador digital de documentos para Costa Rica. La principal novedad es la implementación de firma visible en documentos PDF.&lt;span id="more-358"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;La firma visible es como se conoce popularmente a la apariencia de la firma. Se trata una representación visual dentro el documento como las firmas manuscritas creadas por personas y que están vinculadas a una firma digital. Esta representación visual está recogida en la especificación técnica que se utiliza en documentos PDF firmados digitalmente acorde con la política de formato oficial de Costa Rica.&lt;/p&gt;
+&lt;p&gt;El propósito de esta representación visual de las firmas es orientar a las personas que reciban un documento, sobre todo a las que no han recibido capacitación, para tener información dentro del documento que indica que contiene una firma digital. Esta representación muestra el nombre de la persona que firma, la fecha declarada de la firma y otros atributos.&lt;/p&gt;
+&lt;p&gt;La implementación se ha realizado gracias a la versión en desarrollo de la librería DSS, que es la implementación de referencia que permite aplicar firma AdES, financiada por la Comisión Europea. A partir de la versión 5.5 implementan una característica que permite utilizar texto plano, permitiendo que la firma sea más accesible mediante lectores de pantalla y que el tamaño del fichero no sea significativamente mayor. En versiones anteriores se generaba una imagen de píxeles a partir del texto.&lt;/p&gt;
+&lt;p&gt;Para ubicar la firma visible, tan solo hay que abrir un documento PDF a firmar para luego, en la pestaña Firmar, arrastrar el rectángulo “Firma visible” a la ubicación adecuada de la página deseada y finalmente hacer clic sobre el botón “Firmar documento”.&lt;/p&gt;
+&lt;p&gt;Firmador es software libre y se puede descargar desde el sitio web &lt;a href="https://firmador.app/" target="_blank" rel="noopener noreferrer"&gt;firmador.app&lt;/a&gt; para GNU/Linux, macOS y Windows.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/firmador-1-4-0-publicado/</guid><pubDate>Mon, 25 Mar 2019 08:03:55 GMT</pubDate></item><item><title>Cómo instalar Firma Digital de Costa Rica en GNU/Linux Fedora 30</title><link>http://jaquerespeis.org/en/posts/instalar-firma-digital-costa-rica-gnu-linux-fedora/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en el sistema operativo Fedora Workstation 30.&lt;span id="more-14"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones openSUSE Leap y Suse Linux Enterprise Server y Desktop, existe la guía sobre &lt;a href="http://jaquerespeis.org/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/"&gt;cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1&lt;/a&gt;. Para Debian y Ubuntu está la guía de &lt;a href="http://jaquerespeis.org/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/"&gt;cómo instalar Firma Digital de Costa Rica en Debian y Ubuntu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esta guía de instalación tiene los siguientes propósitos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.&lt;/li&gt;
+&lt;li&gt;Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.&lt;/li&gt;
+&lt;li&gt;Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación de las dependencias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el soporte CCID de PC/SC para que reconozca el lector de tarjetas e IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets java, ya no es posible usar el del sitio web de la CCSS) y OpenJFX si pretende usarse algún firmador que lo use (NexU, por ejemplo).
+&lt;pre&gt;sudo dnf -y install pcsc-lite icedtea-web java-1.8.0-openjdk-openjfx&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Descarga del “instalador”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de &lt;a href="https://www.soportefirmadigital.com/"&gt;Soporte Firma Digital de Costa Rica&lt;/a&gt;, introduciendo el número de serie de la tarjeta y aceptando las condiciones.&lt;/li&gt;
+&lt;li&gt;Descomprimir el archivo zip descargado con &lt;kbd&gt;unzip&lt;/kbd&gt;, en el momento de escribir esta documentación se llama &lt;kbd&gt;sfd_ClientesLinux_RPM64_Rev11.zip&lt;/kbd&gt;. Se creará una carpeta llamada &lt;kbd&gt;Firma Digital&lt;/kbd&gt;. Se asume que el archivo zip se ha descargado en la carpeta &lt;kbd&gt;Descargas&lt;/kbd&gt;:
+&lt;pre&gt;cd ~/Descargas/
+
+unzip sfd_ClientesLinux_RPM64_Rev11.zip
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación de los certificados&lt;/h2&gt;
+&lt;p&gt;Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. Para ello, un conjunto de comandos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copiar los certificados:
+&lt;pre&gt;sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/share/pki/ca-trust-source/anchors/
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Regenerar los archivos de certificados para todas las aplicaciones:
+&lt;pre&gt;sudo update-ca-trust
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación del módulo PKCS#11&lt;/h2&gt;
+&lt;p&gt;Aunque hay un módulo en el directorio &lt;kbd&gt;Librerías&lt;/kbd&gt;, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el módulo PKCS#11 privativo en &lt;kbd&gt;/usr/lib64/&lt;/kbd&gt;:
+&lt;pre&gt;cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/RPM/
+
+rpm2cpio idprotectclient-641.01-0.x86_64.rpm | cpio -dim ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib64/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib64/libASEP11.so /usr/lib/
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Permitir temporalmente al usuario local cargar aplicaciones gráficas con sudo (para gedit):
+&lt;pre&gt;xhost si:localuser:root
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear el fichero &lt;kbd&gt;/etc/Athena/IDPClientDB.xml&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo mkdir /etc/Athena/
+
+sudo gedit /etc/Athena/IDPClientDB.xml
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;&amp;lt;?xml version="1.0" encoding="utf-8" ?&amp;gt;
+&amp;lt;IDProtect&amp;gt;
+ &amp;lt;TokenLibs&amp;gt;
+  &amp;lt;IDProtect&amp;gt;
+   &amp;lt;Cards&amp;gt;
+    &amp;lt;IDProtectXF&amp;gt;
+     &amp;lt;ATR type='hexBinary'&amp;gt;3BDC00FF8091FE1FC38073C821106600000000000000&amp;lt;/ATR&amp;gt;
+     &amp;lt;ATRMask type='hexBinary'&amp;gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&amp;lt;/ATRMask&amp;gt;
+    &amp;lt;/IDProtectXF&amp;gt;
+   &amp;lt;/Cards&amp;gt;
+  &amp;lt;/IDProtect&amp;gt;
+ &amp;lt;/TokenLibs&amp;gt;
+&amp;lt;/IDProtect&amp;gt;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/usr/share/p11-kit/modules/firma-digital.module&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo gedit /usr/share/p11-kit/modules/firma-digital.module
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --symlink /usr/lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib64/libASEP11.so
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios.&lt;/p&gt;
+&lt;p&gt;Quizás resulte interesante utilizar la herramienta &lt;a href="https://firmador.app" target="_blank" rel="noopener noreferrer"&gt;Firmador&lt;/a&gt;, software libre para firmar documentos.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/instalar-firma-digital-costa-rica-gnu-linux-fedora/</guid><pubDate>Fri, 26 Oct 2018 01:10:09 GMT</pubDate></item><item><title>Guías de instalación de Firma Digital en GNU/Linux actualizadas</title><link>http://jaquerespeis.org/en/posts/guias-instalacion-firma-digital-gnu-linux-actualizadas/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Se han actualizado las guías de instalación de Firma Digital de Costa Rica para GNU/Linux para Ubuntu y Fedora. Los cambios amplían la cantidad de software soportado, mayor estabilidad y otras ventajas.&lt;span id="more-242"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Aislamiento de la librería en caja de arena&lt;/h2&gt;
+&lt;p&gt;Una de las mejoras comunes en ambos sistemas permiten el aislamiento de la librería privativa en una “caja de arena” (sandbox). El propósito de este aislamiento es evitar caídas de los programas cuando dos usuarios distintos del mismo sistema tratan de acceder a la tarjeta. Esto es debido a que la librería &lt;kbd&gt;libASEP11.so&lt;/kbd&gt; genera unos temporales en el directorio &lt;kbd&gt;/tmp/&lt;/kbd&gt; con un usuario, pero cuando intenta crearlos desde otro usuario diferente, la librería genera un error de segmentación que se propaga a la aplicación que la está utilizando.&lt;/p&gt;
+&lt;p&gt;Para solucionar el problema se utiliza un sistema de caja de arena que puede lanzarse sin privilegios administrativos mediante la herramienta &lt;kbd&gt;bubblewrap&lt;/kbd&gt;, que permite montar en un espacio de nombres vacío del espacio de usuario la librería, por lo que en el caso de que dos usuarios del sistema utilicen la librería, la ruta &lt;kbd&gt;/tmp/&lt;/kbd&gt; estará aislada en ambos casos, no existiendo en el sistema de ficheros físico, evitando el problema mencionado.&lt;/p&gt;
+&lt;p&gt;Otra ventaja que se obtiene con este aislamiento es que la librería no genera el directorio oculto &lt;kbd&gt;~/.ase/&lt;/kbd&gt; en los directorios de los usuarios, que llega a suponer una molestia cuando se generan búsquedas, ya que el directorio lo genera con permisos que impiden su acceso por defecto. Por otra parte, al tratarse de software privativo y no poder auditar el código fuente, el aislamiento mejora ligeramente la seguridad sobre lo que pueda realizar esta librería.&lt;/p&gt;
+&lt;p&gt;Otra característica que permite resolver este defecto es poder utilizar la tarjeta de Firma Digital para iniciar sesión con el PIN de la tarjeta de Firma Digital, desde la ventana de selección de usuario (gdm, GNOME Display Manager) si se configura localmente con algún mecanismo tipo pam_pkcs11. Antes no se podía realizar porque el plug-in gsd-smartcard de GNOME Settings Daemon, encargado de comunicarse con la tarjeta, se ejecuta con otro usuario distinto al de la sesión (en este caso, &lt;kbd&gt;gdm&lt;/kbd&gt;). Antes de esta solución, cuando un usuario inicia sesión en el sistema, ese servicio quedaba activo con los ficheros generados en &lt;kbd&gt;/tmp/&lt;/kbd&gt; y provocaba que cualquier proceso que utilizara Firma Digital en la sesión de usuario se cerrara automáticamente, provocando gran inestabilidad.&lt;/p&gt;
+&lt;p&gt;El método que se ha emplado para resolverlo ha sido mediante la característica &lt;kbd&gt;remote&lt;/kbd&gt; de &lt;kbd&gt;p11-kit&lt;/kbd&gt;. P11-kit es parte del proyecto p11-glue, cuyo propósito es actuar de “pegamento” para consolidar todas las herramientas criptográficas del sistema y permitir estandarizar el acceso a servicios con dispositivos PKCS#11 de forma unificada. En la actualidad dispone de integración con características PKCS#11 de GnuTLS, NSS, OpenSSL, OpenSC, Java, y otros, así como la confianza de las autoridades de certificación (CA).&lt;/p&gt;
+&lt;p&gt;Hasta ahora se estaba utilizando p11-kit con un módulo que hacía referencia a una librería local (libASEP11.so). Sin embargo, p11-kit permite cargar módulos de forma remota, que puede resultar interesante para utilizar un dispositivo criptográfico existente en otra computadora, si bien en esta solución no se ejecuta nada remoto sino que sigue en local. El parámetro remote permite lanzar un comando personalizado que en este caso invoca el ejecutable &lt;kbd&gt;brwap&lt;/kbd&gt; de bubblewrap, aislando la librería en esta caja de arena.&lt;/p&gt;
+&lt;p&gt;Gracias a esta mejora, en próximas entradas de blog explicaría cómo iniciar sesión en el sistema mediante Firma Digital y cómo bloquear la pantalla (sesión) extrayendo la tarjeta del lector.&lt;/p&gt;
+&lt;h2&gt;Soporte de NSS (Chromium, Evolution, Acceso a llaveros) en Ubuntu&lt;/h2&gt;
+&lt;p&gt;Se ha actualizado la guía de Ubuntu para incorporar un reemplazo de la librería NSS genérica del sistema (NSS es la librería de servicios de seguridad de Mozilla), utilizada (además de Firefox y Thunderbird) por el navegador Chromium, cliente de correo Evolution o el acceso a llaveros, para poder utilizar Firma Digital desde ellos. Esto ya era posible con la guía de Fedora, pero no en Ubuntu hasta ahora.&lt;/p&gt;
+&lt;h2&gt;Integración mejorada en Fedora&lt;/h2&gt;
+&lt;p&gt;Fedora, así como Red Hat, ha sido siempre la distribución GNU/Linux que desde mi punto de vista se ha esforzado más en integrar los sistemas criptográficos, utilizados en sector público y corporativo. En la última actualización que se incluye a partir de Fedora 29 completan la consolidación para poder cargar el módulo p11-kit-proxy desde la configuración de política de NSS para poder cargar módulos de terceros sin tener que realizar enlaces simbólicos como hasta ahora.&lt;/p&gt;
+&lt;p&gt;Fedora ya llevaba tiempo reemplazando libnssckbi.so (librería de módulos de seguridad de NSS) con p11-kit-trust por defecto, algo que permite unificar la confianza en los certificados de las CA de forma centralizada. También está unificada la configuración de cifrados utilizados en TLS a nivel de todo el sistema, para prevenir brechas de seguridad por configuraciones débiles. En este aspecto es indiscutiblemente la distribución mejor preparada, así como los aportes con los que se han beneficiado otras distribuciones, ya que se esfuerzan en que estas mejoras se incorporen en las versiones oficiales del software (upstream).&lt;/p&gt;
+&lt;p&gt;En una próxima entrada de blog mostraré cómo iniciar sesión localmente (sin sssd, usando pam_pkcs11 con mapeo local, sin LDAP) con la tarjeta de Firma Digital.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/guias-instalacion-firma-digital-gnu-linux-actualizadas/</guid><pubDate>Sat, 21 Jul 2018 10:07:34 GMT</pubDate></item><item><title>Cómo instalar Firma Digital de Costa Rica en GNU/Linux Ubuntu 18.04, 19.04, Debian 9 y 10</title><link>http://jaquerespeis.org/en/posts/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en los sistemas operativos Ubuntu 18.04 LTS, Ubuntu 19.04, Debian 9 y 10.&lt;span id="more-24"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones Fedora y Red Hat Enterprise Linux, existe la guía sobre &lt;a href="http://jaquerespeis.org/instalar-firma-digital-costa-rica-gnu-linux-fedora/"&gt;cómo instalar Firma Digital de Costa Rica en Fedora, Red Hat Enterprise Linux 8 y CentOS 8&lt;/a&gt;. Para openSUSE Leap y Suse Linux Enterprise Server y Desktop está la guía de &lt;a href="http://jaquerespeis.org/instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/"&gt;cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esta guía de instalación tiene los siguientes propósitos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.&lt;/li&gt;
+&lt;li&gt;Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.&lt;/li&gt;
+&lt;li&gt;Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales). Esta característica no está disponible en Debian 9.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación de las dependencias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el soporte CCID de PC/SC para que reconozca el lector de tarjetas e IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets Java, ya no es posible usar el firmador de la CCSS) y OpenJFX si pretende usarse algún firmador que lo use (NexU, por ejemplo). Bubblewrap es la herramienta para aislar la librería en la caja de arena. Binutils y sudo no vienen instalados en Debian por defecto.
+&lt;pre&gt;sudo apt -y install pcscd bubblewrap icedtea-netx openjfx binutils sudo
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;En el caso de Debian, para poder usar los comandos con sudo, ejecutar como root &lt;kbd&gt;usermod -a -G sudo nombredeusuario&lt;/kbd&gt; reemplazando nombredeusuario por el nombre de usuario que se desee usar con sudo y reiniciar para aplicar cambios. En Ubuntu no es necesario este paso.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;Descarga del “instalador”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de &lt;a href="https://www.soportefirmadigital.com/"&gt;Soporte Firma Digital de Costa Rica&lt;/a&gt;, introduciendo el número de serie de la tarjeta y aceptando las condiciones.&lt;/li&gt;
+&lt;li&gt;Descomprimir el archivo zip descargado con &lt;kbd&gt;unzip&lt;/kbd&gt;, en el momento de escribir esta documentación se llama &lt;kbd&gt;sfd_ClientesLinux_DEB64_Rev11.zip&lt;/kbd&gt;. Se creará una carpeta llamada &lt;kbd&gt;Firma Digital&lt;/kbd&gt;. Se asume que el archivo zip se ha descargado en la carpeta &lt;kbd&gt;Descargas&lt;/kbd&gt;:
+&lt;pre&gt;cd ~/Descargas/
+
+unzip sfd_ClientesLinux_DEB64_Rev11.zip
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación de los certificados&lt;/h2&gt;
+&lt;p&gt;Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. El último instalador también incluye una CA del BCCR, probablemente para el certificado de código de su propio firmador (que en teoría tampoco debería ser necesario si el sistema operativo está correctamente actualizado). Para ello, un conjunto de comandos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copiar los certificados:
+&lt;pre&gt;sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/local/share/ca-certificates/
+
+sudo rename.ul -- .cer .crt /usr/local/share/ca-certificates/*.cer
+
+for file in /usr/local/share/ca-certificates/*.crt; do sudo openssl x509 -inform DER -in "$file" -out "$file.tmp"; done 2&amp;gt;/dev/null
+
+sudo find /usr/local/share/ca-certificates/ -type f -empty -delete
+
+sudo rename.ul -- .tmp '' /usr/local/share/ca-certificates/*.tmp
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Regenerar los archivos de certificados para todas las aplicaciones:
+&lt;pre&gt;sudo update-ca-certificates --fresh
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Instalación del módulo PKCS#11&lt;/h2&gt;
+&lt;p&gt;Aunque hay un módulo en el directorio &lt;kbd&gt;Librerías&lt;/kbd&gt;, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el módulo PKCS#11 privativo en &lt;kbd&gt;/usr/lib/x86_64-linux-gnu/&lt;/kbd&gt;:
+&lt;pre&gt;cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/DEB/
+
+ar p idprotectclient_641.01-0_amd64.deb data.tar.gz | tar zx ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib/x86_64-linux-gnu/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib/x86_64-linux-gnu/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib/x86_64-linux-gnu/libASEP11.so /usr/lib/
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear el fichero &lt;kbd&gt;/etc/Athena/IDPClientDB.xml&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo mkdir /etc/Athena/
+
+sudo gedit /etc/Athena/IDPClientDB.xml
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;&amp;lt;?xml version="1.0" encoding="utf-8" ?&amp;gt;
+&amp;lt;IDProtect&amp;gt;
+ &amp;lt;TokenLibs&amp;gt;
+  &amp;lt;IDProtect&amp;gt;
+   &amp;lt;Cards&amp;gt;
+    &amp;lt;IDProtectXF&amp;gt;
+     &amp;lt;ATR type='hexBinary'&amp;gt;3BDC00FF8091FE1FC38073C821106600000000000000&amp;lt;/ATR&amp;gt;
+     &amp;lt;ATRMask type='hexBinary'&amp;gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&amp;lt;/ATRMask&amp;gt;
+    &amp;lt;/IDProtectXF&amp;gt;
+   &amp;lt;/Cards&amp;gt;
+  &amp;lt;/IDProtect&amp;gt;
+ &amp;lt;/TokenLibs&amp;gt;
+&amp;lt;/IDProtect&amp;gt;
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/usr/share/p11-kit/modules/firma-digital.module&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo gedit /usr/share/p11-kit/modules/firma-digital.module
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --ro-bind /lib /lib --ro-bind /lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib/x86_64-linux-gnu/libASEP11.so
+&lt;/pre&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Solamente para Debian 9&lt;/strong&gt; (sí funciona en Debian 10): la línea anterior no funciona porque incluye una versión demasiado antigua de p11-kit. En su lugar debe usarse esta otra línea: &lt;kbd&gt;module: /usr/lib/x86_64-linux-gnu/libASEP11.so&lt;/kbd&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/usr/local/sbin/update-p11-kit-symlinks&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo gedit /usr/local/sbin/update-p11-kit-symlinks
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;#!/bin/sh
+
+FIREFOX_LIB=/usr/lib/firefox/libnssckbi.so
+FIREFOX_ESR_LIB=/usr/lib/firefox-esr/libnssckbi.so
+THUNDERBIRD_LIB=/usr/lib/thunderbird/libnssckbi.so
+NSS_LIB=/usr/lib/x86_64-linux-gnu/nss/libnssckbi.so
+
+if [ -e "$FIREFOX_LIB" ]
+then
+    if ! [ -L "$FIREFOX_LIB" ]
+    then
+        echo "Firefox libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$FIREFOX_LIB" "$FIREFOX_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$FIREFOX_LIB"
+    fi
+fi
+
+if [ -e "$FIREFOX_ESR_LIB" ]
+then
+    if ! [ -L "$FIREFOX_ESR_LIB" ]
+    then
+        echo "Firefox ESR libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$FIREFOX_ESR_LIB" "$FIREFOX_ESR_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$FIREFOX_ESR_LIB"
+    fi
+fi
+
+if [ -e "$THUNDERBIRD_LIB" ]
+then
+    if ! [ -L "$THUNDERBIRD_LIB" ]
+    then
+        echo "Thunderbird libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$THUNDERBIRD_LIB" "$THUNDERBIRD_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$THUNDERBIRD_LIB"
+    fi
+fi
+
+if [ -e "$NSS_LIB" ]
+then
+    if ! [ -L "$NSS_LIB" ]
+    then
+        echo "NSS libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$NSS_LIB" "$NSS_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$NSS_LIB"
+    fi
+fi
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Agregar el atributo de ejecutable al script:
+&lt;pre&gt;sudo chmod +x /usr/local/sbin/update-p11-kit-symlinks
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Crear un fichero llamado &lt;kbd&gt;/etc/systemd/system/p11-kit-proxy-updater.service&lt;/kbd&gt; y abrirlo para edición:
+&lt;pre&gt;sudo gedit /etc/systemd/system/p11-kit-proxy-updater.service 
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+&lt;pre&gt;[Unit]
+Description=mantenimiento de enlaces a p11-kit-proxy
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/update-p11-kit-symlinks
+
+[Install]
+WantedBy=multi-user.target
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;Activar el servicio al arranque y ejecutarlo una primera vez para comprobar que funciona:
+&lt;pre&gt;sudo systemctl enable --now p11-kit-proxy-updater.service
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Solamente para Ubuntu 18.10, Debian 10 y posteriores:&lt;/strong&gt; a partir de versiones recientes de p11-kit hay que modificar el fichero &lt;kbd&gt;/usr/share/p11-kit/modules/p11-kit-trust.module&lt;/kbd&gt; y eliminar o desactivar la línea &lt;kbd&gt;disable-in: p11-kit-proxy&lt;/kbd&gt; agregando un “#” al inicio de esa línea.&lt;/p&gt;
+&lt;pre&gt;sudo gedit /usr/share/p11-kit/modules/p11-kit-trust.module
+&lt;/pre&gt;
+&lt;p&gt;La línea quedaría como sigue, el resto no hay que modificarlo:&lt;/p&gt;
+&lt;pre&gt;#disable-in: p11-kit-proxy
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios. Si se ha insertado el lector y la tarjeta al lector, estas aplicaciones preguntarán por el PIN en páginas donde se solicite autenticación (por ejemplo en el sitio web de Internet Banking del Banco Nacional), lo que indicará que se la instalación ha sido exitosa.&lt;/p&gt;
+&lt;p&gt;Si el componente de firma del Banco Central está instalado debería funcionar para poder realizar la prueba de firma. El sitio web de Soporte Firma Digital podría usar todavía la prueba de Java y no funciona con los navegadores modernos. En su lugar podría usarse la prueba con el firmador BCCR desde la &lt;a href="https://www.firmadigital.go.cr/verificacion/Verificacion.aspx" target="_blank" rel="noopener noreferrer"&gt;página de Firma Digital de verificación de certificados&lt;/a&gt; (requiere instalar los certificados para poder entrar).&lt;/p&gt;
+&lt;p&gt;Quizás resulte interesante utilizar la herramienta &lt;a href="https://firmador.app" target="_blank" rel="noopener noreferrer"&gt;Firmador&lt;/a&gt;, software libre para firmar documentos.&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/</guid><pubDate>Sun, 13 May 2018 21:05:05 GMT</pubDate></item><item><title>Firmador digital de documentos para Costa Rica</title><link>http://jaquerespeis.org/en/posts/firmador-digital-de-documentos-para-costa-rica/</link><dc:creator>JáquerEspeis</dc:creator><description>&lt;p&gt;Firmador es un pequeño programa de escritorio para firmar documentos que cumplan la &lt;a href="https://www.mifirmadigital.go.cr/wp-content/uploads/2016/03/DCFD-Poli%CC%81tica-de-Formato-Oficial-v1.0.pdf"&gt;Política de Formatos Oficiales de los Documentos Electrónicos Firmados Digitalmente&lt;/a&gt; publicada por el MICITT.&lt;span id="more-183"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Esta herramienta se ha diseñado para ser simple, fácil de usar y que funcione en múltiples sistemas operativos. La descarga es relativamente ligera y requiere tener instalado Java 8 y los controladores de Soporte Firma Digital.&lt;/p&gt;
+&lt;p&gt;Por ahora firma documentos PDF. En próximas versiones el programa soportará otros formatos de documento electrónico oficial y otras mejoras.&lt;/p&gt;
+&lt;p&gt;El programa es software libre y abierto a la colaboración de cualquier persona interesada para mejorar su código o utilizarlo para cualquier propósito.&lt;/p&gt;
+&lt;p&gt;Firmador tiene su propio sitio web: &lt;a href="https://firmador.app" target="_blank" rel="noopener noreferrer"&gt;https://firmador.app&lt;/a&gt;&lt;/p&gt;</description><guid>http://jaquerespeis.org/en/posts/firmador-digital-de-documentos-para-costa-rica/</guid><pubDate>Fri, 13 Apr 2018 23:04:57 GMT</pubDate></item></channel></rss>

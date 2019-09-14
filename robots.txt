@@ -1,0 +1,4 @@
+Sitemap: http://jaquerespeis.org/sitemapindex.xml
+
+User-Agent: *
+Host: jaquerespeis.org

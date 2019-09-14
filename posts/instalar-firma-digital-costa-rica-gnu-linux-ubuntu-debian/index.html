@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo instalar Firma Digital de Costa Rica en GNU/Linux Ubuntu 18.04, 19.04, Debian 9 y 10 | JáquerEspeis</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="canonical" href="http://jaquerespeis.org/posts/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="JáquerEspeis">
+<link rel="prev" href="../firmador-digital-de-documentos-para-costa-rica/" title="Firmador digital de documentos para Costa Rica" type="text/html">
+<link rel="next" href="../guias-instalacion-firma-digital-gnu-linux-actualizadas/" title="Guías de instalación de Firma Digital en GNU/Linux actualizadas" type="text/html">
+<meta property="og:site_name" content="JáquerEspeis">
+<meta property="og:title" content="Cómo instalar Firma Digital de Costa Rica en GNU/Linux Ubuntu 18.04, 1">
+<meta property="og:url" content="http://jaquerespeis.org/posts/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/">
+<meta property="og:description" content="Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en los sistemas operativos Ubuntu 18">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-05-13T15:05:05-06:00">
+<meta property="article:tag" content="Firma digital">
+<meta property="article:tag" content="Software libre">
+<link rel="alternate" hreflang="en" href="../../en/posts/instalar-firma-digital-costa-rica-gnu-linux-ubuntu-debian/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://jaquerespeis.org/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://jaquerespeis.org/">
+
+            <span id="blog-title">JáquerEspeis</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://jaquerespeis.org/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="index.src.html" id="sourcelink" class="nav-link">Código fuente</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../stories/calendario" class="nav-link">Calendario</a>
+                </li>
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="../../categories/" class="nav-link">Categorías</a>
+                </li>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Cómo instalar Firma Digital de Costa Rica en GNU/Linux Ubuntu 18.04, 19.04, Debian 9 y 10</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    JáquerEspeis
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2018-05-13T15:05:05-06:00" itemprop="datePublished" title="2018-05-13 15:05">2018-05-13 15:05</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.src.html" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>Esta guía documenta cómo instalar el controlador de la tarjeta de Firma Digital de Costa Rica y la jerarquía de certificados del Banco Central (SINPE) y del MICITT en los sistemas operativos Ubuntu 18.04 LTS, Ubuntu 19.04, Debian 9 y 10.<span id="more-24"></span></p>
+<p>Las instrucciones están diseñadas para las distribuciones mencionadas previamente. Si se desea utilizar en distribuciones Fedora y Red Hat Enterprise Linux, existe la guía sobre <a href="../../instalar-firma-digital-costa-rica-gnu-linux-fedora/">cómo instalar Firma Digital de Costa Rica en Fedora, Red Hat Enterprise Linux 8 y CentOS 8</a>. Para openSUSE Leap y Suse Linux Enterprise Server y Desktop está la guía de <a href="../../instalar-firma-digital-costa-rica-gnu-linux-opensuse-leap-sles-sle/">cómo instalar Firma Digital de Costa Rica en openSUSE Leap 15.1, SLES 15 SP1 y SLE 15 SP1</a>.</p>
+<p>Esta guía de instalación tiene los siguientes propósitos:</p>
+<ul>
+<li>Configurar de la forma más sencilla y adecuada el sistema para que funcione con la mayor cantidad de programas.</li>
+<li>Lograr que funcione para todos los usuarios del sistema, incluyendo los nuevos usuarios creados tras las instalación.</li>
+<li>Aislar la librería de Firma Digital en una “caja de arena” (sandbox) para que funcione con múltiples usuarios del sistema simultáneamente (soluciona un defecto en la librería al crear ficheros temporales). Esta característica no está disponible en Debian 9.</li>
+</ul>
+<h2>Instalación de las dependencias</h2>
+<ul>
+<li>Instalar el soporte CCID de PC/SC para que reconozca el lector de tarjetas e IcedTea-Web para poder cargar algunos lanzadores que usan Java Web Start como por ejemplo el del sitio web de CrearEmpresa.go.cr (los navegadores ya no soportan applets Java, ya no es posible usar el firmador de la CCSS) y OpenJFX si pretende usarse algún firmador que lo use (NexU, por ejemplo). Bubblewrap es la herramienta para aislar la librería en la caja de arena. Binutils y sudo no vienen instalados en Debian por defecto.
+<pre>sudo apt -y install pcscd bubblewrap icedtea-netx openjfx binutils sudo
+</pre>
+</li>
+</ul>
+<blockquote><p>En el caso de Debian, para poder usar los comandos con sudo, ejecutar como root <kbd>usermod -a -G sudo nombredeusuario</kbd> reemplazando nombredeusuario por el nombre de usuario que se desee usar con sudo y reiniciar para aplicar cambios. En Ubuntu no es necesario este paso.</p></blockquote>
+<h2>Descarga del “instalador”</h2>
+<ul>
+<li>Descargar el “instalador” en el desplegable llamado “Usuarios Linux” en la página de descarga de instaladores del sitio web de <a href="https://www.soportefirmadigital.com/">Soporte Firma Digital de Costa Rica</a>, introduciendo el número de serie de la tarjeta y aceptando las condiciones.</li>
+<li>Descomprimir el archivo zip descargado con <kbd>unzip</kbd>, en el momento de escribir esta documentación se llama <kbd>sfd_ClientesLinux_DEB64_Rev11.zip</kbd>. Se creará una carpeta llamada <kbd>Firma Digital</kbd>. Se asume que el archivo zip se ha descargado en la carpeta <kbd>Descargas</kbd>:
+<pre>cd ~/Descargas/
+
+unzip sfd_ClientesLinux_DEB64_Rev11.zip
+</pre>
+</li>
+</ul>
+<h2>Instalación de los certificados</h2>
+<p>Es necesario agregar a la lista de confianza la jerarquía de certificados del SINPE y del MICITT. En teoría solamente sería necesario instalar los certificados raíz del MICITT pero en la práctica hay algunas aplicaciones que necesitan los certificados intermedios del SINPE para completar la cadena a la hora de validar. El último instalador también incluye una CA del BCCR, probablemente para el certificado de código de su propio firmador (que en teoría tampoco debería ser necesario si el sistema operativo está correctamente actualizado). Para ello, un conjunto de comandos:</p>
+<ul>
+<li>Copiar los certificados:
+<pre>sudo cp -p ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/Certificados/* /usr/local/share/ca-certificates/
+
+sudo rename.ul -- .cer .crt /usr/local/share/ca-certificates/*.cer
+
+for file in /usr/local/share/ca-certificates/*.crt; do sudo openssl x509 -inform DER -in "$file" -out "$file.tmp"; done 2&gt;/dev/null
+
+sudo find /usr/local/share/ca-certificates/ -type f -empty -delete
+
+sudo rename.ul -- .tmp '' /usr/local/share/ca-certificates/*.tmp
+</pre>
+</li>
+<li>Regenerar los archivos de certificados para todas las aplicaciones:
+<pre>sudo update-ca-certificates --fresh
+</pre>
+</li>
+</ul>
+<h2>Instalación del módulo PKCS#11</h2>
+<p>Aunque hay un módulo en el directorio <kbd>Librerías</kbd>, no es la versión más reciente y tiene varios defectos de enlazado. La versión distribuida en el paquete PinTool es más reciente y funciona correctamente en todos los programas probados. En el siguiente proceso se extrae y se instala conservando la fecha original de la librería.</p>
+<ul>
+<li>Instalar el módulo PKCS#11 privativo en <kbd>/usr/lib/x86_64-linux-gnu/</kbd>:
+<pre>cd ~/Descargas/sfd_ClientesLinux_Rev11/Firma\ Digital/PinTool/IDProtect\ PINTool\ 6.41.01/DEB/
+
+ar p idprotectclient_641.01-0_amd64.deb data.tar.gz | tar zx ./usr/lib/x64-athena/libASEP11.so
+
+sudo cp -p usr/lib/x64-athena/libASEP11.so /usr/lib/x86_64-linux-gnu/
+
+sudo mkdir -p /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib/x86_64-linux-gnu/libASEP11.so /usr/lib/x64-athena/
+
+sudo ln -s /usr/lib/x86_64-linux-gnu/libASEP11.so /usr/lib/
+</pre>
+</li>
+<li>Crear el fichero <kbd>/etc/Athena/IDPClientDB.xml</kbd> y abrirlo para edición:
+<pre>sudo mkdir /etc/Athena/
+
+sudo gedit /etc/Athena/IDPClientDB.xml
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;IDProtect&gt;
+ &lt;TokenLibs&gt;
+  &lt;IDProtect&gt;
+   &lt;Cards&gt;
+    &lt;IDProtectXF&gt;
+     &lt;ATR type='hexBinary'&gt;3BDC00FF8091FE1FC38073C821106600000000000000&lt;/ATR&gt;
+     &lt;ATRMask type='hexBinary'&gt;FFFF00FFF0FFFFFFFFFFFFFFFFF0FF00000000000000&lt;/ATRMask&gt;
+    &lt;/IDProtectXF&gt;
+   &lt;/Cards&gt;
+  &lt;/IDProtect&gt;
+ &lt;/TokenLibs&gt;
+&lt;/IDProtect&gt;
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/usr/share/p11-kit/modules/firma-digital.module</kbd> y abrirlo para edición:
+<pre>sudo gedit /usr/share/p11-kit/modules/firma-digital.module
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>remote: |bwrap --unshare-all --dir /tmp --ro-bind /etc/Athena /etc/Athena --proc /proc --dev /dev --ro-bind /usr /usr --ro-bind /lib /lib --ro-bind /lib64 /lib64 --ro-bind /var/run/pcscd /var/run/pcscd p11-kit remote /usr/lib/x86_64-linux-gnu/libASEP11.so
+</pre>
+<blockquote><p><strong>Solamente para Debian 9</strong> (sí funciona en Debian 10): la línea anterior no funciona porque incluye una versión demasiado antigua de p11-kit. En su lugar debe usarse esta otra línea: <kbd>module: /usr/lib/x86_64-linux-gnu/libASEP11.so</kbd></p></blockquote>
+</li>
+<li>Crear un fichero llamado <kbd>/usr/local/sbin/update-p11-kit-symlinks</kbd> y abrirlo para edición:
+<pre>sudo gedit /usr/local/sbin/update-p11-kit-symlinks
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>#!/bin/sh
+
+FIREFOX_LIB=/usr/lib/firefox/libnssckbi.so
+FIREFOX_ESR_LIB=/usr/lib/firefox-esr/libnssckbi.so
+THUNDERBIRD_LIB=/usr/lib/thunderbird/libnssckbi.so
+NSS_LIB=/usr/lib/x86_64-linux-gnu/nss/libnssckbi.so
+
+if [ -e "$FIREFOX_LIB" ]
+then
+    if ! [ -L "$FIREFOX_LIB" ]
+    then
+        echo "Firefox libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$FIREFOX_LIB" "$FIREFOX_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$FIREFOX_LIB"
+    fi
+fi
+
+if [ -e "$FIREFOX_ESR_LIB" ]
+then
+    if ! [ -L "$FIREFOX_ESR_LIB" ]
+    then
+        echo "Firefox ESR libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$FIREFOX_ESR_LIB" "$FIREFOX_ESR_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$FIREFOX_ESR_LIB"
+    fi
+fi
+
+if [ -e "$THUNDERBIRD_LIB" ]
+then
+    if ! [ -L "$THUNDERBIRD_LIB" ]
+    then
+        echo "Thunderbird libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$THUNDERBIRD_LIB" "$THUNDERBIRD_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$THUNDERBIRD_LIB"
+    fi
+fi
+
+if [ -e "$NSS_LIB" ]
+then
+    if ! [ -L "$NSS_LIB" ]
+    then
+        echo "NSS libnssckbi.so is not a symlink. Fixing..."
+        mv -f "$NSS_LIB" "$NSS_LIB".bak
+        ln -s /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so "$NSS_LIB"
+    fi
+fi
+</pre>
+</li>
+<li>Agregar el atributo de ejecutable al script:
+<pre>sudo chmod +x /usr/local/sbin/update-p11-kit-symlinks
+</pre>
+</li>
+<li>Crear un fichero llamado <kbd>/etc/systemd/system/p11-kit-proxy-updater.service</kbd> y abrirlo para edición:
+<pre>sudo gedit /etc/systemd/system/p11-kit-proxy-updater.service 
+</pre>
+</li>
+<li>En la ventana del editor de textos gedit, pegar el siguiente texto, guardar y cerrar el editor:
+<pre>[Unit]
+Description=mantenimiento de enlaces a p11-kit-proxy
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/update-p11-kit-symlinks
+
+[Install]
+WantedBy=multi-user.target
+</pre>
+</li>
+<li>Activar el servicio al arranque y ejecutarlo una primera vez para comprobar que funciona:
+<pre>sudo systemctl enable --now p11-kit-proxy-updater.service
+</pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>Solamente para Ubuntu 18.10, Debian 10 y posteriores:</strong> a partir de versiones recientes de p11-kit hay que modificar el fichero <kbd>/usr/share/p11-kit/modules/p11-kit-trust.module</kbd> y eliminar o desactivar la línea <kbd>disable-in: p11-kit-proxy</kbd> agregando un “#” al inicio de esa línea.</p>
+<pre>sudo gedit /usr/share/p11-kit/modules/p11-kit-trust.module
+</pre>
+<p>La línea quedaría como sigue, el resto no hay que modificarlo:</p>
+<pre>#disable-in: p11-kit-proxy
+</pre>
+</blockquote>
+<p>Eso es todo. Es necesario reiniciar Firefox y cualquier otra aplicación que use certificados para que se apliquen los cambios. Si se ha insertado el lector y la tarjeta al lector, estas aplicaciones preguntarán por el PIN en páginas donde se solicite autenticación (por ejemplo en el sitio web de Internet Banking del Banco Nacional), lo que indicará que se la instalación ha sido exitosa.</p>
+<p>Si el componente de firma del Banco Central está instalado debería funcionar para poder realizar la prueba de firma. El sitio web de Soporte Firma Digital podría usar todavía la prueba de Java y no funciona con los navegadores modernos. En su lugar podría usarse la prueba con el firmador BCCR desde la <a href="https://www.firmadigital.go.cr/verificacion/Verificacion.aspx" target="_blank" rel="noopener noreferrer">página de Firma Digital de verificación de certificados</a> (requiere instalar los certificados para poder entrar).</p>
+<p>Quizás resulte interesante utilizar la herramienta <a href="https://firmador.app" target="_blank" rel="noopener noreferrer">Firmador</a>, software libre para firmar documentos.</p>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/firma-digital/" rel="tag">Firma digital</a></li>
+            <li><a class="tag p-category" href="../../categories/software-libre/" rel="tag">Software libre</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../firmador-digital-de-documentos-para-costa-rica/" rel="prev" title="Firmador digital de documentos para Costa Rica">Publicación anterior</a>
+            </li>
+            <li class="next">
+                <a href="../guias-instalacion-firma-digital-gnu-linux-actualizadas/" rel="next" title="Guías de instalación de Firma Digital en GNU/Linux actualizadas">Siguiente publicación</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
+ - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><!-- fancy dates --><script>
+        moment.locale("es");
+        fancydates(1, "YYYY-MM-DD HH:mm");
+        </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
